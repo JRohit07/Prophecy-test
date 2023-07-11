@@ -12,7 +12,7 @@ buildSystemDetails:
   createdAt: '2023-07-11 11:52:30'
 pipelines:
   pipelines/P1:
-    name: P1
+    name: P1_changed
     description: ''
     author: abhisheks+backend@simpledatalabs.com
     mode: batch
@@ -25,7 +25,7 @@ pipelines:
     subgraphs: []
     dependencies: {}
   pipelines/P2:
-    name: P2
+    name: P2_changed
     description: ''
     author: abhisheks+backend@simpledatalabs.com
     mode: batch
