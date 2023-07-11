@@ -25,7 +25,7 @@ pipelines:
     subgraphs: []
     dependencies: {}
   pipelines/P2:
-    name: P2_renamed
+    name: P2_changed
     description: ''
     author: abhisheks+backend@simpledatalabs.com
     mode: batch
