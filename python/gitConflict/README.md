@@ -1,0 +1,1 @@
+# MergeConflictAutomationTest Repository
