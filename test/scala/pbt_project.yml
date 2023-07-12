@@ -1,0 +1,59 @@
+name: testProject
+description: ''
+version: 0.0.1
+author: abhisheks+backend@simpledatalabs.com
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: testproject
+  parentArtefactID: abhisheksbackendsimpledatalabs.com_team
+  buildSystem: maven
+  author: null
+  createdAt: '2023-07-12 11:54:33'
+pipelines:
+  pipelines/P1:
+    name: P1
+    description: ''
+    author: abhisheks+backend@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-07-12 11:54:33'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/P2:
+    name: P2
+    description: ''
+    author: abhisheks+backend@simpledatalabs.com
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-07-12 11:55:04'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-12 11:54:33'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
