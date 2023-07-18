@@ -1,6 +1,6 @@
 name: temp
 description: ''
-version: 0.0.1
+version: v1
 author: jrohit@prophecy.io
 language: python
 buildSystem: ''
