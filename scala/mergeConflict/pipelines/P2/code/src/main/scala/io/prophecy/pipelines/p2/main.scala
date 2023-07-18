@@ -30,7 +30,11 @@ object Main {
     val context = Context(spark, config)
     spark.conf.set("prophecy.metadata.pipeline.uri", "pipelines/P2")
     registerUDFs(spark)
-    MetricsCollector.start(spark, "pipelines/P2")
+    try MetricsCollector.start(spark, "pipelines/P2", context.config)
+    catch {
+      case _: Throwable =>
+        MetricsCollector.start(spark, "pipelines/P2")
+    }
     apply(context)
     MetricsCollector.end(spark)
   }
