@@ -1,0 +1,46 @@
+name: temp
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: temp
+  parentArtefactID: jrohite2eprophecy.io_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-07-18 05:38:11'
+pipelines:
+  pipelines/Pipeiinee:
+    name: Pipeiinee
+    description: ''
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-18 05:38:11'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-18 05:38:11'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
