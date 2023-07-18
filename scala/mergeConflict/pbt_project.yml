@@ -1,6 +1,6 @@
 name: TestGitMerge
 description: ''
-version: 0.0.1
+version: v122
 author: abhisheks+backend@simpledatalabs.com
 language: scala
 buildSystem: ''
