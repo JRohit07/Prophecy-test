@@ -1,0 +1,40 @@
+name: testProject
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: testproject
+  parentArtefactID: ''
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-07-18 06:19:32'
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-18 06:19:32'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '30377':
+    projectUID: 30377
+    projectName: temp
+    repositoryPath: gitUri=https://github.com/JRohit07/Prophecy-test&subPath=Spark/TestingProject22
+    version: temp/v1
+    author: null
+    createdAt: '2023-07-18 06:19:20'
+pipelineConfigurations: {}
