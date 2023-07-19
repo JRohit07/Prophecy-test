@@ -1,8 +1,9 @@
 {
   "metainfo" : {
     "id" : "1",
+    "uri" : "pipelines/P2",
     "language" : "scala",
-    "fabricId" : "5282",
+    "fabricId" : "7993",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
