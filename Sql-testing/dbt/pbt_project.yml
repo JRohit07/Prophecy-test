@@ -1,6 +1,6 @@
 name: SQL_projectDepedancy
 description: test description
-version: 0.0.1
+version: v22
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
