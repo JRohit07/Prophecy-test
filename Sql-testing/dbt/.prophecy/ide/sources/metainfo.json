@@ -1,0 +1,25 @@
+{
+  "name" : "SQL_projectDepedancy",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "databricks",
+  "fabricId" : "9125",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : {
+      "https://github.com/JRohit07/Prophecy-test" : "30421"
+    }
+  },
+  "frontEndLanguage" : "sql"
+}
