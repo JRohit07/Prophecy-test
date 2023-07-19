@@ -1,6 +1,6 @@
 name: Python_dependancy
 description: ''
-version: DepedancyReleaseVersion
+version: v2-depedancy
 author: jrohit@prophecy.io
 language: python
 buildSystem: ''
