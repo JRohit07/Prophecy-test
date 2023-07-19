@@ -1,0 +1,184 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "VnTng-f-ANrJf-rogVQAB$$q0o9R5V7gpwQOuTN8H6r1" : {
+        "values" : [ [ "2011", "A", "Agriculture, Forestry and Fishing", "Activity unit", "46134", "COUNT" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Rolling mean employees", "0", "COUNT" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Salaries and wages paid", "279", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Sales, government funding, grants and subsidies", "8187", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Total income", "8866", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Total expenditure", "7618", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Operating profit before tax", "770", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Total assets", "55700", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Fixed tangible assets", "32155", "DOLLARS(millions)" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "Activity unit", "21777", "COUNT" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_code_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_name_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "variable",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "value",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "unit",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "09dIQcs7g6_-riO19Um88$$gTpzkrEYrYTIf_QAwnEzd" : {
+        "values" : [ [ "WrappedArray(2011, 46134, COUNT)", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 46134, COUNT),WrappedArray(A, Agriculture, Forestry and Fishing),COUNT]", "2011", "Activity unit" ], [ "WrappedArray(2011, 0, COUNT)", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 0, COUNT),WrappedArray(A, Agriculture, Forestry and Fishing),COUNT]", "2011", "Rolling mean employees" ], [ "WrappedArray(2011, 279, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 279, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Salaries and wages paid" ], [ "WrappedArray(2011, 8187, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 8187, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Sales, government funding, grants and subsidies" ], [ "WrappedArray(2011, 8866, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 8866, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Total income" ], [ "WrappedArray(2011, 7618, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 7618, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Total expenditure" ], [ "WrappedArray(2011, 770, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 770, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Operating profit before tax" ], [ "WrappedArray(2011, 55700, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 55700, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Total assets" ], [ "WrappedArray(2011, 32155, DOLLARS(millions))", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 32155, DOLLARS(millions)),WrappedArray(A, Agriculture, Forestry and Fishing),DOLLARS(millions)]", "2011", "Fixed tangible assets" ], [ "WrappedArray(2011, 21777, COUNT)", "WrappedArray(A, Agriculture, Forestry and Fishing)", "WrappedArray(1, 2, 2011)", "[WrappedArray(2011, 21777, COUNT),WrappedArray(A, Agriculture, Forestry and Fishing),COUNT]", "2011", "Activity unit" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "arr_str1",
+            "type" : {
+              "type" : "array",
+              "elementType" : "string",
+              "containsNull" : true
+            },
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "arr_str2",
+            "type" : {
+              "type" : "array",
+              "elementType" : "string",
+              "containsNull" : true
+            },
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "arr_int",
+            "type" : {
+              "type" : "array",
+              "elementType" : "integer",
+              "containsNull" : true
+            },
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "struct_complex",
+            "type" : {
+              "type" : "struct",
+              "fields" : [ {
+                "name" : "col1",
+                "type" : {
+                  "type" : "array",
+                  "elementType" : "string",
+                  "containsNull" : true
+                },
+                "nullable" : false,
+                "metadata" : {
+                  "description" : "",
+                  "mappings" : [ ],
+                  "tags" : [ ]
+                }
+              }, {
+                "name" : "col2",
+                "type" : {
+                  "type" : "array",
+                  "elementType" : "string",
+                  "containsNull" : true
+                },
+                "nullable" : false,
+                "metadata" : {
+                  "description" : "",
+                  "mappings" : [ ],
+                  "tags" : [ ]
+                }
+              }, {
+                "name" : "unit",
+                "type" : "string",
+                "nullable" : true,
+                "metadata" : {
+                  "description" : "",
+                  "mappings" : [ ],
+                  "tags" : [ ]
+                }
+              } ]
+            },
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "variable",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "scala"
+  } ],
+  "language" : "scala"
+}

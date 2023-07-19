@@ -1,0 +1,28 @@
+{
+  "livyscalaSG1_1" : {
+    "c_int" : 22,
+    "c_string" : "this is test instance1",
+    "Subgraph_2_1_2" : {
+      "c_int" : 22,
+      "c_string" : "this is test instance1",
+      "Subgraph_3_1_2" : {
+        "c_int" : 22,
+        "c_string" : "this is test instance1"
+      }
+    }
+  },
+  "c_string" : "this is test instance1",
+  "c_int" : 22,
+  "Subgraph_4" : {
+    "c_int" : 22,
+    "c_string" : "this is test instance1",
+    "Subgraph_2_1_2" : {
+      "c_int" : 22,
+      "c_string" : "this is test instance1",
+      "Subgraph_3_1_2" : {
+        "c_int" : 22,
+        "c_string" : "this is test instance1"
+      }
+    }
+  }
+}

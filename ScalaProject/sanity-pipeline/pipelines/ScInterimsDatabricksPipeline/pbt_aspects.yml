@@ -1,0 +1,8 @@
+version: 1
+dependencies:
+- type: workflow
+  id: '59965868'
+  name: mysql
+  enabled: true
+configurations:
+- default

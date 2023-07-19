@@ -1,0 +1,207 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: C_NUM
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_NUM10
+    type: decimal(10,1)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_DEC
+    type: decimal(20,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_NUMERIC
+    type: decimal(30,3)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_INT
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_INTEGER
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_DOUBLE
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_FLOAT
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_COUBLE_PRECISION
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_REAL
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_VARCHAR
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_VARCHAR50
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_CHAR
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_CHAR10
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_STRING
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_STRING20
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_TEXT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_TEXT30
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_BINARY
+    type: binary
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_BINARY100
+    type: binary
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_VARBINARY
+    type: binary
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_BOOL
+    type: boolean
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_TIMESTAMP
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_DATE
+    type: date
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_DATETIME
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_TIME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_ARRAY
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_OBJECT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: C_GEOGRAPHY
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

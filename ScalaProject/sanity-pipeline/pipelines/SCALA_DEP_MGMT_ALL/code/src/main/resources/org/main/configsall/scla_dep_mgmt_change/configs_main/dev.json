@@ -1,0 +1,24 @@
+{
+  "c_record_complex" : {
+    "cr_record" : { }
+  },
+  "c_config_50" : "this is test string",
+  "SubGraph_1" : {
+    "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+    "c_record_complex" : {
+      "cr_record" : { }
+    },
+    "c_config_50" : "this is test string"
+  },
+  "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+  "Subgraph_2" : {
+    "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+    "c_record_complex" : {
+      "cr_record" : { }
+    },
+    "c_config_50" : "this is test string"
+  },
+  "pm_shared_graph" : {
+    "Subgraph_1" : { }
+  }
+}

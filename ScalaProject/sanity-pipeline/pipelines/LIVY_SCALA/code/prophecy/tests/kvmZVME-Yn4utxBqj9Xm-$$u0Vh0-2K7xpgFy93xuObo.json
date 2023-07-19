@@ -1,0 +1,98 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "ivYRIdVqBFJPoJadQj7oX$$Idu9mL5CmfsNHNMrVYfag" : {
+        "values" : [ [ "2011", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2011", "A", "Agriculture, Forestry and Fishing", "i_Industry_Total" ], [ "2012", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2012", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2012", "A", "Agriculture, Forestry and Fishing", "i_Industry_Total" ], [ "2013", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2013", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2013", "A", "Agriculture, Forestry and Fishing", "i_Industry_Total" ], [ "2014", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2014", "A", "Agriculture, Forestry and Fishing", "a_0" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_code_ANZSIC",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_name_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "rme_size_grp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "nxOaLQ-GM0bpkgwIRBMOf$$3UCjKDDIpCdMUuZryLPse" : {
+        "values" : [ [ "2011", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2012", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2013", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2014", "A", "Agriculture, Forestry and Fishing", "a_0" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_code_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_name_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "rme_size_grp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "scala"
+  } ],
+  "language" : "scala"
+}

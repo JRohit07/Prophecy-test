@@ -1,0 +1,211 @@
+{
+  "mergeCondition" : null,
+  "minFlagCol" : null,
+  "format" : "delta",
+  "path" : "dbfs:/tmp/e2e/target_scala_vector_1",
+  "mergeTargetAlias" : "target",
+  "overwriteSchema" : null,
+  "flagValue" : "integer",
+  "versionAsOf" : null,
+  "writeMode" : "overwrite",
+  "description" : "",
+  "replaceWhere" : null,
+  "historicColumns" : [ ],
+  "mergeSourceAlias" : "source",
+  "notMatchedTable" : [ ],
+  "fromTimeCol" : null,
+  "notMatchedCondition" : null,
+  "matchedTable" : [ ],
+  "notMatchedAction" : "insert",
+  "partitionColumns" : null,
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "Y_Value_of_Occupied_Homes",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Crime_Rate",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Residential_Land_Zone",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Non_retail_Business_acres",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Charles_River",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Nitric_Oxide",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Average_Rooms",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Owner_Occupied_Units",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Distance_to_Employment_Centers",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Accessibility_to_Highways",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Property_Tax_Rate",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Pupil_Teacher_Ratio",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "Lower_Status",
+      "type" : "double",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "features",
+      "type" : {
+        "type" : "udt",
+        "class" : "org.apache.spark.ml.linalg.VectorUDT",
+        "pyClass" : "pyspark.ml.linalg.VectorUDT",
+        "sqlType" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "type",
+            "type" : "byte",
+            "nullable" : false,
+            "metadata" : { }
+          }, {
+            "name" : "size",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "indices",
+            "type" : {
+              "type" : "array",
+              "elementType" : "integer",
+              "containsNull" : false
+            },
+            "nullable" : true,
+            "metadata" : { }
+          }, {
+            "name" : "values",
+            "type" : {
+              "type" : "array",
+              "elementType" : "double",
+              "containsNull" : false
+            },
+            "nullable" : true,
+            "metadata" : { }
+          } ]
+        }
+      },
+      "nullable" : true,
+      "metadata" : {
+        "description" : "testt",
+        "mappings" : [ ],
+        "tags" : [ {
+          "type" : "user",
+          "name" : "complex data tag (- *&^%$#@!~()+-+)"
+        } ]
+      }
+    }, {
+      "name" : "prediction",
+      "type" : "double",
+      "nullable" : false,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    } ]
+  },
+  "activeTab" : "whenMatched",
+  "maxFlagCol" : null,
+  "matchedConditionDelete" : null,
+  "matchedActionDelete" : "ignore",
+  "timestampAsOf" : null,
+  "mergeSchema" : null,
+  "toTimeCol" : null,
+  "optimizeWrite" : null,
+  "keyColumns" : [ ],
+  "matchedCondition" : null,
+  "matchedAction" : "update",
+  "datasetType" : "File"
+}

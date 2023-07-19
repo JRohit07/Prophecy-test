@@ -1,0 +1,168 @@
+{
+  "c_record_complex" : {
+    "cr_record" : { }
+  },
+  "c_limit_11" : 1,
+  "c_config_1" : "config 1 test instance 1",
+  "c_sql_expr" : "%[^aeiouAB]@%",
+  "CONFIG_FLOAT" : 34,
+  "CONFIG_BOOLEAN" : false,
+  "CONFIG_DOUBLE" : 11,
+  "CONFIG_INT" : 123,
+  "PERF_SG" : {
+    "CONFIG_DOUBLE" : 11,
+    "c_sql_expr" : "%[^aeiouAB]@%",
+    "c_config_1" : "config 1 test instance 1",
+    "c_record_complex" : {
+      "cr_record" : { }
+    },
+    "CONFIG_FLOAT" : 34,
+    "CONFIG_INT" : 123,
+    "CONFIG_BOOLEAN" : false,
+    "c_limit_11" : 1,
+    "recursive_1_1" : {
+      "CONFIG_DOUBLE" : 11,
+      "c_sql_expr" : "%[^aeiouAB]@%",
+      "c_config_1" : "config 1 test instance 1",
+      "c_record_complex" : {
+        "cr_record" : { }
+      },
+      "CONFIG_FLOAT" : 34,
+      "CONFIG_INT" : 123,
+      "CONFIG_BOOLEAN" : false,
+      "Subgraph_2_1_1" : {
+        "CONFIG_DOUBLE" : 11,
+        "c_sql_expr" : "%[^aeiouAB]@%",
+        "c_config_1" : "config 1 test instance 1",
+        "c_record_complex" : {
+          "cr_record" : { }
+        },
+        "CONFIG_FLOAT" : 34,
+        "Subgraph_3_1_1" : {
+          "CONFIG_DOUBLE" : 11,
+          "c_sql_expr" : "%[^aeiouAB]@%",
+          "c_config_1" : "config 1 test instance 1",
+          "c_record_complex" : {
+            "cr_record" : { }
+          },
+          "CONFIG_FLOAT" : 34,
+          "CONFIG_INT" : 123,
+          "CONFIG_BOOLEAN" : false,
+          "Subgraph_4_1_1" : {
+            "CONFIG_DOUBLE" : 11,
+            "c_sql_expr" : "%[^aeiouAB]@%",
+            "c_config_1" : "config 1 test instance 1",
+            "c_record_complex" : {
+              "cr_record" : { }
+            },
+            "CONFIG_FLOAT" : 34,
+            "CONFIG_INT" : 123,
+            "CONFIG_BOOLEAN" : false,
+            "Subgraph_1" : {
+              "CONFIG_DOUBLE" : 11,
+              "c_sql_expr" : "%[^aeiouAB]@%",
+              "c_config_1" : "config 1 test instance 1",
+              "c_record_complex" : {
+                "cr_record" : { }
+              },
+              "CONFIG_FLOAT" : 34,
+              "Subgraph_2" : {
+                "CONFIG_DOUBLE" : 11,
+                "c_sql_expr" : "%[^aeiouAB]@%",
+                "c_config_1" : "config 1 test instance 1",
+                "c_record_complex" : {
+                  "cr_record" : { }
+                },
+                "CONFIG_FLOAT" : 34,
+                "CONFIG_INT" : 123,
+                "CONFIG_BOOLEAN" : false,
+                "Subgraph_3" : {
+                  "CONFIG_DOUBLE" : 11,
+                  "c_sql_expr" : "%[^aeiouAB]@%",
+                  "c_config_1" : "config 1 test instance 1",
+                  "c_record_complex" : {
+                    "cr_record" : { }
+                  },
+                  "CONFIG_FLOAT" : 34,
+                  "CONFIG_INT" : 123,
+                  "CONFIG_BOOLEAN" : false,
+                  "c_limit_11" : 1,
+                  "Subgraph_4" : {
+                    "CONFIG_DOUBLE" : 11,
+                    "c_sql_expr" : "%[^aeiouAB]@%",
+                    "c_config_1" : "config 1 test instance 1",
+                    "c_record_complex" : {
+                      "cr_record" : { }
+                    },
+                    "CONFIG_FLOAT" : 34,
+                    "CONFIG_INT" : 123,
+                    "CONFIG_BOOLEAN" : false,
+                    "c_limit_11" : 1,
+                    "Subgraph_5" : {
+                      "CONFIG_DOUBLE" : 11,
+                      "c_sql_expr" : "%[^aeiouAB]@%",
+                      "c_config_1" : "config 1 test instance 1",
+                      "Subgraph_6" : {
+                        "CONFIG_DOUBLE" : 11,
+                        "c_sql_expr" : "%[^aeiouAB]@%",
+                        "c_config_1" : "config 1 test instance 1",
+                        "c_record_complex" : {
+                          "cr_record" : { }
+                        },
+                        "CONFIG_FLOAT" : 34,
+                        "Subgraph_7" : {
+                          "CONFIG_DOUBLE" : 11,
+                          "c_sql_expr" : "%[^aeiouAB]@%",
+                          "c_config_1" : "config 1 test instance 1",
+                          "c_record_complex" : {
+                            "cr_record" : { }
+                          },
+                          "CONFIG_FLOAT" : 34,
+                          "CONFIG_INT" : 123,
+                          "CONFIG_BOOLEAN" : false,
+                          "Subgraph_8" : {
+                            "CONFIG_DOUBLE" : 11,
+                            "c_sql_expr" : "%[^aeiouAB]@%",
+                            "c_config_1" : "config 1 test instance 1",
+                            "c_record_complex" : {
+                              "cr_record" : { }
+                            },
+                            "CONFIG_FLOAT" : 34,
+                            "CONFIG_INT" : 123,
+                            "CONFIG_BOOLEAN" : false,
+                            "c_limit_11" : 1
+                          },
+                          "c_limit_11" : 1
+                        },
+                        "CONFIG_INT" : 123,
+                        "CONFIG_BOOLEAN" : false,
+                        "c_limit_11" : 1
+                      },
+                      "c_record_complex" : {
+                        "cr_record" : { }
+                      },
+                      "CONFIG_FLOAT" : 34,
+                      "CONFIG_INT" : 123,
+                      "CONFIG_BOOLEAN" : false,
+                      "c_limit_11" : 1
+                    }
+                  }
+                },
+                "c_limit_11" : 1
+              },
+              "CONFIG_INT" : 123,
+              "CONFIG_BOOLEAN" : false,
+              "c_limit_11" : 1
+            },
+            "c_limit_11" : 1
+          },
+          "c_limit_11" : 1
+        },
+        "CONFIG_INT" : 123,
+        "CONFIG_BOOLEAN" : false,
+        "c_limit_11" : 1
+      },
+      "c_limit_11" : 1
+    }
+  }
+}

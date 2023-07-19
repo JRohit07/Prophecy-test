@@ -1,0 +1,25 @@
+version: 1
+configurations:
+- test-instance2
+- test-instance3
+- newfabric
+- ebs_ssd
+- dev_11rt
+- dev1
+- dev
+- test-instance1
+- default
+- captain_livy
+dependencies:
+- name: mysql
+  id: '59965868'
+  type: workflow
+  enabled: true
+- name: postgres
+  id: '1360721423'
+  type: workflow
+  enabled: true
+- name: cats
+  id: '1575366423'
+  type: workflow
+  enabled: true

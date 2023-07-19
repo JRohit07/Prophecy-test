@@ -1,0 +1,125 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "94ePWwS1rMRWEPlKK_22x$$vdDqyFFEbc3hYnNpjkefM" : {
+        "values" : [ [ "2020", "A", "Agriculture, Forestry and Fishing", "a_0" ], [ "2020", "B", "Mining", "a_0" ], [ "2020", "C", "Manufacturing", "a_0" ], [ "2020", "D", "Electricity, Gas, Water and Waste Services", "a_0" ], [ "2020", "E", "Construction", "a_0" ], [ "2020", "F", "Wholesale Trade", "a_0" ], [ "2020", "G", "Retail Trade", "a_0" ], [ "2020", "H", "Accommodation and Food Services", "a_0" ], [ "2020", "I", "Transport, Postal and Warehousing", "a_0" ], [ "2020", "J", "Information Media and Telecommunications", "a_0" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_code_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_name_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "rme_size_grp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "kEiogCVNiJJX0dQI8jGYg$$WLVRzvRPjWGXBxDg4EVDH" : {
+        "values" : [ [ "2020", "A", "Agriculture, Forestry and Fishing", "a_0", "1", "1", "1" ], [ "2020", "B", "Mining", "a_0", "1", "1", "1" ], [ "2020", "C", "Manufacturing", "a_0", "1", "1", "1" ], [ "2020", "D", "Electricity, Gas, Water and Waste Services", "a_0", "1", "1", "1" ], [ "2020", "E", "Construction", "a_0", "1", "1", "1" ], [ "2020", "F", "Wholesale Trade", "a_0", "1", "1", "1" ], [ "2020", "G", "Retail Trade", "a_0", "1", "1", "1" ], [ "2020", "H", "Accommodation and Food Services", "a_0", "1", "1", "1" ], [ "2020", "I", "Transport, Postal and Warehousing", "a_0", "1", "1", "1" ], [ "2020", "J", "Information Media and Telecommunications", "a_0", "1", "1", "1" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "year",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_code_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "industry_name_ANZSIC",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "rme_size_grp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "variable",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "value",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "unit",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "scala"
+  } ],
+  "language" : "scala"
+}

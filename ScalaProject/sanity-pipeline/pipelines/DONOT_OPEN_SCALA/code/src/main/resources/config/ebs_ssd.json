@@ -1,0 +1,15 @@
+{
+  "SubGraph_1" : {
+    "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database"
+  },
+  "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+  "all_type_scala_sg_1" : {
+    "recursive_1" : {
+      "Subgraph_2_1" : {
+        "Subgraph_3_1" : {
+          "Subgraph_4_1" : { }
+        }
+      }
+    }
+  }
+}

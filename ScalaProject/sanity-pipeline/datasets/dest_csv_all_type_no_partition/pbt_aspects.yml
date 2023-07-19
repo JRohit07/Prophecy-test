@@ -1,0 +1,44 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: _c0
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c1
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c2
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c3
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c4
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c5
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c6
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c7
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c8
+    type: string
+    nullable: true
+    metadata: {}
+  - name: _c9
+    type: string
+    nullable: true
+    metadata: {}
