@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "id" : "1",
-    "uri" : "pipelines/workflow",
+    "uri" : "pipelines/TestPipeline",
     "language" : "scala",
     "fabricId" : "8010",
     "frontEndLanguage" : "sql",
@@ -49,7 +49,34 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ ],
-  "processes" : { },
+  "processes" : {
+    "U9uHctVX0temaKOLLJtOT$$v5XErn_LH6KlxW0e32aTz" : {
+      "id" : "U9uHctVX0temaKOLLJtOT$$v5XErn_LH6KlxW0e32aTz",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "test",
+        "slug" : "test",
+        "x" : 400,
+        "y" : 260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "nCYCdFz4nIB0rgqQlqRsy$$mpZasFzYrwMGPIYLwxZSx",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/test"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
