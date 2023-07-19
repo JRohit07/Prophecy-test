@@ -1,6 +1,6 @@
 name: scala-depedency-project
 description: project description
-version: 0.0.1
+version: v1-scala
 author: jrohit@prophecy.io
 language: scala
 buildSystem: ''
