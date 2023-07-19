@@ -1,6 +1,6 @@
-package io.prophecy.pipelines.testpipeline.config
+package aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.config
 
-import io.prophecy.pipelines.testpipeline.config.Context
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.config.Context
 import pureconfig.ConfigReader.Result
 import pureconfig._
 import pureconfig.generic.ProductHint

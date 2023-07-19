@@ -1,12 +1,12 @@
-package io.prophecy.pipelines.testpipeline
+package aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd
 
 import io.prophecy.libs._
-import io.prophecy.pipelines.testpipeline.config.Context
-import io.prophecy.pipelines.testpipeline.config._
-import io.prophecy.pipelines.testpipeline.udfs.UDFs._
-import io.prophecy.pipelines.testpipeline.udfs._
-import io.prophecy.pipelines.testpipeline.udfs.PipelineInitCode._
-import io.prophecy.pipelines.testpipeline.graph._
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.config.Context
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.config._
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.udfs.UDFs._
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.udfs._
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.udfs.PipelineInitCode._
+import aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.graph._
 import org.apache.spark._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._

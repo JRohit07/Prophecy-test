@@ -1,4 +1,4 @@
-package io.prophecy.pipelines.testpipeline.config
+package aasdasd.asdasdasdasd.pipelines.testpipelinesdasdd.config
 
 import pureconfig._
 import pureconfig.generic.ProductHint

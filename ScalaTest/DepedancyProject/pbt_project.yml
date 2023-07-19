@@ -55,6 +55,6 @@ sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
-dependencies: '[]'
+dependencies: []
 projectDependencies: {}
 pipelineConfigurations: {}
