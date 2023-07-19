@@ -1,0 +1,46 @@
+name: scala-testing
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: scalatesting
+  parentArtefactID: jrohitprophecy.io_team
+  buildSystem: maven
+  author: null
+  createdAt: '2023-07-19 05:36:03'
+pipelines:
+  pipelines/TestPipelineScala:
+    name: TestPipelineScala
+    description: 'Description for pipeline '
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-07-19 05:36:03'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-19 05:36:03'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
