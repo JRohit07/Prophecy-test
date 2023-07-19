@@ -1,0 +1,46 @@
+name: Scala_dependancyProject
+description: Project Description
+version: 0.0.1
+author: jrohit+e2e@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: scala_dependancyproject
+  parentArtefactID: jrohite2eprophecy.io_team
+  buildSystem: maven
+  author: null
+  createdAt: '2023-07-19 06:03:55'
+pipelines:
+  pipelines/TestPipeline:
+    name: TestPipeline
+    description: Pipeline Description
+    author: jrohit+e2e@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-07-19 06:03:55'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-19 06:03:55'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
