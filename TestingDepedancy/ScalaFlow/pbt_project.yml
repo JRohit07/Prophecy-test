@@ -1,6 +1,6 @@
 name: scala-testing
 description: ''
-version: 0.0.1
+version: v2-release-scala
 author: jrohit@prophecy.io
 language: scala
 buildSystem: ''
