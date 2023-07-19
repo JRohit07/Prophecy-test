@@ -7,3 +7,7 @@ Release notes
 *** Release notes for version: 3.1.2.0-1 ***
 
 3.1.2.0-1
+
+*** Release notes for version: 3.1.2.0-2 ***
+
+3.1.2.0-2
