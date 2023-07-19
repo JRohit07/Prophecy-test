@@ -50,4 +50,11 @@ projectDependencies:
     version: testProject/v22
     author: null
     createdAt: '2023-07-19 04:43:56'
+  '30377':
+    projectUID: 30377
+    projectName: temp
+    repositoryPath: gitUri=https://github.com/JRohit07/Prophecy-test&subPath=Spark/TestingProject22
+    version: temp/v1
+    author: null
+    createdAt: '2023-07-19 05:22:59'
 pipelineConfigurations: {}
