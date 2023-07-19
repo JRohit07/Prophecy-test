@@ -1,6 +1,6 @@
 name: SQL
 description: ''
-version: 0.0.1
+version: newRelease
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
