@@ -687,3 +687,7 @@ bn
 *** Release notes for version: 3.1.1.22 ***
 
 d
+
+*** Release notes for version: scala-release ***
+
+release
