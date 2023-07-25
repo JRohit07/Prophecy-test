@@ -12,7 +12,7 @@ buildSystemDetails:
   createdAt: '2023-07-25 06:24:02'
 pipelines:
   pipelines/p1:
-    name: p1
+    name: p1-renamed
     description: ''
     author: abhisheks+e2etests@prophecy.io
     mode: batch
