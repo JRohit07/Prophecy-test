@@ -1,0 +1,59 @@
+name: TestProject
+description: ''
+version: 0.0.1
+author: jrohit+e2e@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: testproject
+  parentArtefactID: jrohite2eprophecy.io_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-07-25 07:08:39'
+pipelines:
+  pipelines/P1-new:
+    name: P1-new
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-25 07:08:39'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/P2-new:
+    name: P2-new
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-07-25 07:08:48'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-07-25 07:08:39'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
