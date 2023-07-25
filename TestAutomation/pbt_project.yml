@@ -12,7 +12,7 @@ buildSystemDetails:
   createdAt: '2023-07-25 07:20:11'
 pipelines:
   pipelines/P12:
-    name: P12
+    name: P12-renamed
     description: ''
     author: jrohit+e2e@prophecy.io
     mode: batch
