@@ -11,19 +11,6 @@ buildSystemDetails:
   author: null
   createdAt: '2023-07-25 06:33:59'
 pipelines:
-  pipelines/P1:
-    name: P1
-    description: ''
-    author: abhisheks+e2etests@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-07-25 06:33:59'
-    datasets:
-      inputs: []
-      outputs: []
-    subgraphs: []
-    dependencies: {}
   pipelines/P2:
     name: P2
     description: ''
