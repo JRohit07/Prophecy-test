@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "id" : "1",
-    "uri" : "pipelines/workflow",
+    "uri" : "pipelines/P22",
     "language" : "python",
     "fabricId" : "9125",
     "frontEndLanguage" : "sql",

@@ -11,19 +11,6 @@ buildSystemDetails:
   author: null
   createdAt: '2023-07-25 07:20:11'
 pipelines:
-  pipelines/P12:
-    name: P12
-    description: ''
-    author: jrohit+e2e@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-07-25 07:20:11'
-    datasets:
-      inputs: []
-      outputs: []
-    subgraphs: []
-    dependencies: {}
   pipelines/P22:
     name: P22
     description: ''
