@@ -10,20 +10,7 @@ buildSystemDetails:
   buildSystem: wheel
   author: null
   createdAt: '2023-07-25 06:33:59'
-pipelines:
-  pipelines/P111:
-    name: P111
-    description: ''
-    author: jrohit+e2e@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-07-25 07:00:11'
-    datasets:
-      inputs: []
-      outputs: []
-    subgraphs: []
-    dependencies: {}
+pipelines: {}
 datasets: {}
 templates: {}
 jobs: {}
