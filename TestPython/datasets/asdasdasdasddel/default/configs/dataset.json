@@ -1,0 +1,198 @@
+{
+  "textPassword" : "asdas",
+  "format" : "Kafka",
+  "queryName" : null,
+  "minOffsetsPerTrigger" : null,
+  "minPartitions" : null,
+  "triggerInterval" : null,
+  "messageKey" : null,
+  "security" : "SASL_SSL",
+  "saslMechanism" : "SCRAM-SHA-256",
+  "writeMode" : null,
+  "description" : "",
+  "groupIdPrefix" : null,
+  "dummyState" : 0,
+  "offsetRetrievalType" : "startingOffsets",
+  "maxTriggerDelay" : null,
+  "includeHeaders" : true,
+  "sessionTimeout" : "6000",
+  "kafkaAssignTopic" : null,
+  "messageHeaders" : [ ],
+  "groupId" : "",
+  "isValueFormat" : "avro",
+  "credentialScope" : null,
+  "fetchOffsetNumRetries" : null,
+  "offsetMetaTable" : "",
+  "failOnDataLoss" : null,
+  "kafkaTopic" : "asdsad",
+  "partitionColumns" : null,
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "key",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "value",
+      "type" : {
+        "type" : "struct",
+        "fields" : [ {
+          "name" : "order_id",
+          "type" : "long",
+          "nullable" : false,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "customer_id",
+          "type" : "long",
+          "nullable" : false,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_category",
+          "type" : "string",
+          "nullable" : false,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_date",
+          "type" : "string",
+          "nullable" : false,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "amount",
+          "type" : "double",
+          "nullable" : false,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        } ]
+      },
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "topic",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "partition",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "offset",
+      "type" : "long",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestamp",
+      "type" : "timestamp",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestampType",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "headers",
+      "type" : {
+        "type" : "array",
+        "elementType" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "key",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "value",
+            "type" : "binary",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "containsNull" : true
+      },
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    } ]
+  },
+  "kafkaConsumerPollTimeoutMs" : null,
+  "jsonSchemaConfig" : "{\n  \"type\": \"record\",\n  \"name\": \"Record\",\n  \"fields\": [\n    {\n      \"name\": \"order_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"customer_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"order_category\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_date\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"amount\",\n      \"type\": \"double\"\n    }\n  ]\n}",
+  "startingOffsetsByTimestamp" : null,
+  "currentJsonSchemaConfig" : "{\n  \"type\": \"record\",\n  \"name\": \"Record\",\n  \"fields\": [\n    {\n      \"name\": \"order_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"customer_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"order_category\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_date\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"amount\",\n      \"type\": \"double\"\n    }\n  ]\n}",
+  "kafkaGroupId" : null,
+  "fetchOffsetRetryIntervalMs" : null,
+  "checkpointLocation" : "",
+  "brokerList" : "sadsad",
+  "textUsername" : "asdsad",
+  "startingTimestamp" : null,
+  "startingOffsets" : "latest",
+  "credentialScopeKeyPassword" : "password",
+  "startingOffsetsByTimestampStrategy" : null,
+  "maxOffsetsPerTrigger" : null,
+  "kafkaTopicSubscribePatternTopic" : null,
+  "credentialScopeKeyUsername" : "username",
+  "topicAssignmentType" : "subscribe",
+  "datasetType" : "File",
+  "credType" : "userPwd",
+  "trigger" : null
+}

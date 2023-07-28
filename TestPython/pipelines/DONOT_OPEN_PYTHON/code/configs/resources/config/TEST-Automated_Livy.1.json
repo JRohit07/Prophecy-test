@@ -1,0 +1,34 @@
+{
+  "SubGraph_7" : {
+    "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database"
+  },
+  "SubGraph_2" : {
+    "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+    "SubGraph_3" : {
+      "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+      "SubGraph_4" : {
+        "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+        "SubGraph_5" : {
+          "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+          "SubGraph_6" : {
+            "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database"
+          }
+        }
+      }
+    }
+  },
+  "CONFIG_STR" : "jdbc_url-jdbc:mysql://18.144.156.219:3306/test_database",
+  "all_type_main_1" : {
+    "Subgraph_2" : { },
+    "Subgraph_4_1_1" : {
+      "Subgraph_3_1_1" : {
+        "Subgraph_7_1_1" : {
+          "Subgraph_8_1_1" : {
+            "Subgraph_9_1_1" : { }
+          }
+        }
+      }
+    },
+    "Subgraph_1" : { }
+  }
+}

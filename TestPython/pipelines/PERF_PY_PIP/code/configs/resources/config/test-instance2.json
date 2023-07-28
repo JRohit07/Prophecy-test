@@ -1,0 +1,48 @@
+{
+  "CONFIG_FLOAT" : 12,
+  "CONFIG_BOOLEAN" : false,
+  "PERF_SG" : {
+    "CONFIG_BOOLEAN" : false,
+    "CONFIG_FLOAT" : 12,
+    "Subgraph_4_1_1_1" : {
+      "CONFIG_BOOLEAN" : false,
+      "CONFIG_FLOAT" : 12,
+      "Subgraph_3_1_1_1" : {
+        "CONFIG_BOOLEAN" : false,
+        "CONFIG_FLOAT" : 12,
+        "Subgraph_7_1_1_1" : {
+          "CONFIG_BOOLEAN" : false,
+          "CONFIG_FLOAT" : 12,
+          "Subgraph_8_1_1_1" : {
+            "CONFIG_BOOLEAN" : false,
+            "CONFIG_FLOAT" : 12,
+            "Subgraph_9_1_1_1" : {
+              "CONFIG_BOOLEAN" : false,
+              "CONFIG_FLOAT" : 12,
+              "Subgraph_1" : {
+                "CONFIG_BOOLEAN" : false,
+                "CONFIG_FLOAT" : 12,
+                "Subgraph_2" : {
+                  "CONFIG_BOOLEAN" : false,
+                  "CONFIG_FLOAT" : 12,
+                  "Subgraph_3" : {
+                    "CONFIG_BOOLEAN" : false,
+                    "CONFIG_FLOAT" : 12,
+                    "Subgraph_4" : {
+                      "CONFIG_BOOLEAN" : false,
+                      "CONFIG_FLOAT" : 12,
+                      "Subgraph_5" : {
+                        "CONFIG_BOOLEAN" : false,
+                        "CONFIG_FLOAT" : 12
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

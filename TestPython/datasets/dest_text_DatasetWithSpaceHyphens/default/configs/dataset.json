@@ -1,0 +1,1 @@
+{"format":"text","path":"dbfs:/tmp/e2e/dataset_out_34355","writeMode":"overwrite","compression":null,"wholetext":null,"recursiveFileLookup":null,"partitionColumns":null,"schema":{"type":"struct","fields":[{"name":"value","type":"string","nullable":true,"metadata":{}}]},"lineSep":null,"datasetType":"File","useSchema":true}

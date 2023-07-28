@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: value_order_category
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sum_amount
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

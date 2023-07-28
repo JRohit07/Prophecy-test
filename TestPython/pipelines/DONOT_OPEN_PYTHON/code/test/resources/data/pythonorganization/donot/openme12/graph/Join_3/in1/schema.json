@@ -1,0 +1,22 @@
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "c_short",
+    "type" : "short",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  }, {
+    "name" : "c_int",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : {
+      "description" : "",
+      "mappings" : [ ],
+      "tags" : [ ]
+    }
+  } ]
+}

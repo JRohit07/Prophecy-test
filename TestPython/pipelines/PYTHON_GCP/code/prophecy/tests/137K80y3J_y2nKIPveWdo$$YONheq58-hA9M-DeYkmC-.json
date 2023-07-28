@@ -1,0 +1,307 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "512FyJ-R0KS8xn-3jc0MR$$5GlvXGpmvAEcJIhFMCu0P" : {
+        "values" : [ [ "35", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!425", "2015-06-06", "2015-08-07T10:20:44.000Z" ], [ "null", "null", "null", "null", "null", "null", "null" ], [ "36", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!430", "2016-07-07", "2016-09-08T10:20:44.000Z" ], [ "null", "null", "null", "null", "null", "null", "null" ], [ "37", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!435", "2017-08-08", "2017-10-09T10:20:44.000Z" ], [ "null", "null", "null", "null", "null", "null", "null" ], [ "38", "-3123.123", "true", "45734.345341", "r#$%@#4!*&^()_=ASD~!440", "2018-01-09", "2018-03-10T10:20:44.000Z" ], [ "null", "null", "null", "null", "null", "null", "null" ], [ "39", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!445", "2019-02-10", "2019-04-11T10:20:44.000Z" ], [ "null", "null", "null", "null", "null", "null", "null" ], [ "40", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!450", "1990-03-11", "1990-05-12T10:20:44.000Z" ], [ "37", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!185", "1997-06-18", "1997-08-19T10:20:44.000Z" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c   short  --",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  float",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c--boolean",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c- - -double",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c___-- string",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_timestamp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "2Zf-0e_g3nX3IgrrGEuxI$$LC6UpNBmaQGw73k_7ZOAE" : {
+        "values" : [ [ "2015-06-06" ], [ "null" ], [ "2016-07-07" ], [ "null" ], [ "2017-08-08" ], [ "null" ], [ "2018-01-09" ], [ "null" ], [ "2019-02-10" ], [ "null" ], [ "1990-03-11" ], [ "1997-06-18" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c  date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "U46BB73bjEtFcl76lH0jo$$DcndQOeVDhSuNJ7kd0NI7" : {
+        "values" : [ [ "40", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!450", "1990-05-12T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "37", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!185", "1997-08-19T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "35", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!425", "2015-08-07T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "36", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!430", "2016-09-08T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "37", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!435", "2017-10-09T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "38", "-3123.123", "true", "45734.345341", "r#$%@#4!*&^()_=ASD~!440", "2018-03-10T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ], [ "39", "-3123.123", "false", "45734.345341", "r#$%@#4!*&^()_=ASD~!445", "2019-04-11T10:20:44.000Z", "-3123.123false :: 10101.111 :: 22.0 :: 11 :: 122 :: 12 :: hey@#%^&*()-=+/*-+\\'\"/.,@~" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c   short  --",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  float",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c--boolean",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c- - -double",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c___-- string",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_timestamp",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c_new_col",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "python"
+  }, {
+    "data" : {
+      "512FyJ-R0KS8xn-3jc0MR$$5GlvXGpmvAEcJIhFMCu0P" : {
+        "values" : [ [ "35", "85", "2342374324123", "12321", "-3123.123", "2015-06-06" ], [ "null", "null", "null", "null", "null", "null" ], [ "36", "86", "2342374324123", "12321", "-3123.123", "2016-07-07" ], [ "null", "null", "null", "null", "null", "null" ], [ "37", "87", "2342374324123", "12321", "-3123.123", "2017-08-08" ], [ "null", "null", "null", "null", "null", "null" ], [ "38", "88", "2342374324123", "12321", "-3123.123", "2018-01-09" ], [ "null", "null", "null", "null", "null", "null" ], [ "39", "89", "2342374324123", "12321", "-3123.123", "2019-02-10" ], [ "null", "null", "null", "null", "null", "null" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c   short  --",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c-int-column type",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "-- c-long",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c-decimal",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  float",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "2Zf-0e_g3nX3IgrrGEuxI$$LC6UpNBmaQGw73k_7ZOAE" : {
+        "values" : [ [ "2015-06-06" ], [ "null" ], [ "2016-07-07" ], [ "null" ], [ "2017-08-08" ], [ "null" ], [ "2018-01-09" ], [ "null" ], [ "2019-02-10" ], [ "null" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c  date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "U46BB73bjEtFcl76lH0jo$$DcndQOeVDhSuNJ7kd0NI7" : {
+        "values" : [ [ "35", "85", "2342374324123", "12321", "-3123.123" ], [ "36", "86", "2342374324123", "12321", "-3123.123" ], [ "37", "87", "2342374324123", "12321", "-3123.123" ], [ "38", "88", "2342374324123", "12321", "-3123.123" ], [ "39", "89", "2342374324123", "12321", "-3123.123" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "c   short  --",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c-int-column type",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "-- c-long",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c-decimal",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "c  float",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 1",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}

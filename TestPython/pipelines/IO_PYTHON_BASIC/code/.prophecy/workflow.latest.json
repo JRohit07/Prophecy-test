@@ -1,0 +1,1069 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "uri" : "pipelines/IO_PYTHON_BASIC",
+    "language" : "python",
+    "fabricId" : "2730",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecy.io_team.pythonproject.functions",
+      "sharedFunctionPackageNames" : [ ],
+      "initialCode" : "int_value=15\nN=10"
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "c_string",
+          "kind" : {
+            "type" : "string",
+            "value" : "IO_PYTHON_BASIC - DEFAULT"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "c_int",
+          "kind" : {
+            "type" : "int",
+            "value" : 1
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "test-common-with-another",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ {
+      "type" : "coordinates",
+      "coordinates" : "mysql:mysql-connector-java:8.0.29",
+      "name" : "mysql",
+      "enabled" : false,
+      "id" : "1658827323",
+      "exclusions" : [ ]
+    }, {
+      "type" : "pypi",
+      "id" : "410081255",
+      "name" : "matplotlib",
+      "enabled" : false,
+      "package" : "matplotlib==3.5.2"
+    }, {
+      "type" : "pypi",
+      "id" : "171138274",
+      "name" : "pandas",
+      "enabled" : false,
+      "package" : "pandas>=1.4.2"
+    }, {
+      "type" : "pypi",
+      "id" : "2121735476",
+      "name" : "numpy",
+      "enabled" : false,
+      "package" : "numpy==1.22.*"
+    }, {
+      "type" : "pypi",
+      "id" : "211888696",
+      "name" : "requests",
+      "enabled" : false,
+      "package" : "requests~=2.28.0"
+    }, {
+      "type" : "pypi",
+      "package" : "scipy>=1.6.3,<=1.8.1",
+      "name" : "scipy",
+      "enabled" : false,
+      "id" : "69834547",
+      "repo" : ""
+    }, {
+      "type" : "pypi",
+      "id" : "1722369069",
+      "name" : "torch",
+      "enabled" : false,
+      "package" : "torch==1.11.0"
+    }, {
+      "type" : "coordinates",
+      "coordinates" : "com.crealytics:spark-excel_2.12:3.2.1_0.17.1",
+      "name" : "spark-excel",
+      "enabled" : false,
+      "id" : "40864959",
+      "exclusions" : [ ]
+    }, {
+      "type" : "coordinates",
+      "coordinates" : "org.apache.commons:commons-lang3:3.8",
+      "name" : "apache-commons",
+      "enabled" : false,
+      "id" : "424233105",
+      "exclusions" : [ ]
+    }, {
+      "type" : "pypi",
+      "package" : "ComponentBuilderPython",
+      "name" : "component-builder-with-url",
+      "enabled" : false,
+      "id" : "701579940",
+      "repo" : "https://rajat@prophecy.io:AP6irTPPsV6xeRczg3vuuRAiQUo@prophecyio2.jfrog.io/artifactory/api/pypi/pypi-local/simple"
+    }, {
+      "type" : "coordinates",
+      "coordinates" : "com.crealytics:spark-excel_2.12:3.3.1_0.18.7",
+      "name" : "sparkexcel",
+      "enabled" : false,
+      "id" : "x_rzG",
+      "exclusions" : [ ]
+    } ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "IO",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "IO",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pythonbasicio.test.mainone",
+    "configTopLevelPackage" : "pythonbasicio.test.mainone.configall",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "PG0PXemrp2IXnHQ8f0x08",
+    "source" : "vlcUd7KAM_zvifvMwu9pZ$$8MswNyzCALGAeJjSxRNDZ",
+    "sourcePort" : "CHZEgFOxU2vx1Q32ysboc$$LB9injlM6BGINFq1djzRE",
+    "target" : "oSnCy6FWydBV675_CTMv8$$In5C4VfAlHsx5qLzItDuW",
+    "targetPort" : "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_"
+  }, {
+    "id" : "xNEUzKY1CUc6emkqrlQyZ",
+    "source" : "oSnCy6FWydBV675_CTMv8$$In5C4VfAlHsx5qLzItDuW",
+    "sourcePort" : "OgcPwunAgx_Y_Y3m8Krd0$$2IcX9S_gny3CS3TcShBZe",
+    "target" : "Uooc3h8tVmdPw5lJv48-v$$8fU6UMC7OvanJjkndel2x",
+    "targetPort" : "zqgMuruDRcxP9L0gCGFS7$$JNCurZ9IuBczN7K-ao6cl"
+  }, {
+    "id" : "cYJ3ts49gx4Harzicffqb",
+    "source" : "vlcUd7KAM_zvifvMwu9pZ$$8MswNyzCALGAeJjSxRNDZ",
+    "sourcePort" : "CHZEgFOxU2vx1Q32ysboc$$LB9injlM6BGINFq1djzRE",
+    "target" : "2asYObWPU5LTeK5quA_Y6$$j6AVMgNkfy9f2PyXW2Apb",
+    "targetPort" : "-igSIdKq3yqst_O4ncUkn$$oN6h2TcSW274gq1E8x8Ce"
+  }, {
+    "id" : "YL4pSHgH5u13z3Ay9I9QX",
+    "source" : "2asYObWPU5LTeK5quA_Y6$$j6AVMgNkfy9f2PyXW2Apb",
+    "sourcePort" : "IyTLFxYC1V6hn64VpC3kw$$In-71aGN5Ovd2ygKVYWRH",
+    "target" : "Z2MampB4oCcGewquXgPE1$$jta-gpnDuEhM598aJtDiT",
+    "targetPort" : "9d05N9dxZBs62mlbyLbgm$$pzxcI5gxeD5pCSKwzAoYM"
+  }, {
+    "id" : "GPlbHWe2Pr6dkEE_LMVvt",
+    "source" : "oSnCy6FWydBV675_CTMv8$$In5C4VfAlHsx5qLzItDuW",
+    "sourcePort" : "OgcPwunAgx_Y_Y3m8Krd0$$2IcX9S_gny3CS3TcShBZe",
+    "target" : "rcjVoUsO3iweIp3gwIfZT$$KI1PioFWP32c3TqrdmaOo",
+    "targetPort" : "1PbIVxdYjd2Hx94SmESdc$$DAl1_a8eUi7qlM286oJVW"
+  }, {
+    "id" : "7XfWO7xDp2JH-dD2PXDYo",
+    "source" : "vlcUd7KAM_zvifvMwu9pZ$$8MswNyzCALGAeJjSxRNDZ",
+    "sourcePort" : "CHZEgFOxU2vx1Q32ysboc$$LB9injlM6BGINFq1djzRE",
+    "target" : "QkILG1xdwXUxI1thdhnHs$$HX-nL8BicRrKIOLcVgxCK",
+    "targetPort" : "0ulO2rGot_U6dkIWZJKEx$$YTTg54J5sNY8AZplzFH0S"
+  } ],
+  "processes" : {
+    "Uooc3h8tVmdPw5lJv48-v$$8fU6UMC7OvanJjkndel2x" : {
+      "id" : "Uooc3h8tVmdPw5lJv48-v$$8fU6UMC7OvanJjkndel2x",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_4",
+        "slug" : "Script_4",
+        "x" : 1081.9931678489402,
+        "y" : 563.2272644042969,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zqgMuruDRcxP9L0gCGFS7$$JNCurZ9IuBczN7K-ao6cl",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c   short  --",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "this is showrt col",
+                "mappings" : [ ],
+                "tags" : [ {
+                  "type" : "user",
+                  "name" : "tag1"
+                }, {
+                  "type" : "user",
+                  "name" : "tag2"
+                }, {
+                  "type" : "user",
+                  "name" : "short"
+                }, {
+                  "type" : "user",
+                  "name" : "primary"
+                } ]
+              }
+            }, {
+              "name" : "c-int-column type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "-- c-long",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c-decimal",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  float",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c--boolean",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c- - -double",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "`c___-- string`",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_timestamp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "1DpbGVDq4gDguuxlp-FsI$$a6wwBFUElAoCP-OZd2Dyj",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "print(\"hello\")\nout0=in0",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "QkILG1xdwXUxI1thdhnHs$$HX-nL8BicRrKIOLcVgxCK" : {
+      "id" : "QkILG1xdwXUxI1thdhnHs$$HX-nL8BicRrKIOLcVgxCK",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "DONOT_DELETE",
+        "slug" : "DONOT_DELETE",
+        "x" : 560,
+        "y" : 0,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0ulO2rGot_U6dkIWZJKEx$$YTTg54J5sNY8AZplzFH0S",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c   short  --",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "this is showrt col",
+                "mappings" : [ ],
+                "tags" : [ {
+                  "type" : "user",
+                  "name" : "tag1"
+                }, {
+                  "type" : "user",
+                  "name" : "tag2"
+                }, {
+                  "type" : "user",
+                  "name" : "short"
+                }, {
+                  "type" : "user",
+                  "name" : "primary"
+                } ]
+              }
+            }, {
+              "name" : "c-int-column type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "-- c-long",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c-decimal",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  float",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c--boolean",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c- - -double",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c___-- string",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_timestamp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "13fvaMfG6O23PExl0wi9W$$UX6E4x_CAa5BY2z4I32uE",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "print(f\"String: {Config.c_string}, Int: ${Config.c_int}\")\nout0=in0",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    },
+    "oSnCy6FWydBV675_CTMv8$$In5C4VfAlHsx5qLzItDuW" : {
+      "id" : "oSnCy6FWydBV675_CTMv8$$In5C4VfAlHsx5qLzItDuW",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 780,
+        "y" : 460,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c   short  --",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "this is showrt col",
+                "mappings" : [ ],
+                "tags" : [ {
+                  "type" : "user",
+                  "name" : "tag1"
+                }, {
+                  "type" : "user",
+                  "name" : "tag2"
+                }, {
+                  "type" : "user",
+                  "name" : "short"
+                }, {
+                  "type" : "user",
+                  "name" : "primary"
+                } ]
+              }
+            }, {
+              "name" : "c-int-column type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "-- c-long",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c-decimal",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  float",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c--boolean",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c- - -double",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c___-- string",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_timestamp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "OgcPwunAgx_Y_Y3m8Krd0$$2IcX9S_gny3CS3TcShBZe",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c_timestamp", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c- - -double", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c   short  --", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c  date", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c--boolean", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c___-- string", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##-- c-long", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c-decimal", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c  float", "7ECgoDlUZyxK6rMiCvgls$$tXDInzQqtzOwp_VXgXz6_##c-int-column type" ],
+        "expressions" : [ {
+          "target" : "`c   short  --`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c   short  --`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c-int-column type`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c-int-column type`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`-- c-long`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`-- c-long`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c-decimal`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c-decimal`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c  float`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c  float`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c--boolean`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c--boolean`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c- - -double`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c- - -double`"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c___-- string`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "concat(`c___-- string`, '$c_string')"
+          },
+          "description" : ""
+        }, {
+          "target" : "`c  date`",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "`c  date`"
+          },
+          "description" : ""
+        }, {
+          "target" : "c_timestamp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_timestamp"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "Z2MampB4oCcGewquXgPE1$$jta-gpnDuEhM598aJtDiT" : {
+      "id" : "Z2MampB4oCcGewquXgPE1$$jta-gpnDuEhM598aJtDiT",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_3",
+        "slug" : "Reformat_3",
+        "x" : 1160,
+        "y" : 60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9d05N9dxZBs62mlbyLbgm$$pzxcI5gxeD5pCSKwzAoYM",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "CdFT_y4Eg_9ZqT8q7xG0q$$0DgBGM5ndnDRhNPCkYNI5",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "rcjVoUsO3iweIp3gwIfZT$$KI1PioFWP32c3TqrdmaOo" : {
+      "id" : "rcjVoUsO3iweIp3gwIfZT$$KI1PioFWP32c3TqrdmaOo",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dest_csv_py_io_only",
+        "slug" : "dest_csv_py_io_only",
+        "x" : 1140,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1PbIVxdYjd2Hx94SmESdc$$DAl1_a8eUi7qlM286oJVW",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c   short  --",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "this is showrt col",
+                "mappings" : [ ],
+                "tags" : [ {
+                  "type" : "user",
+                  "name" : "tag1"
+                }, {
+                  "type" : "user",
+                  "name" : "tag2"
+                }, {
+                  "type" : "user",
+                  "name" : "short"
+                }, {
+                  "type" : "user",
+                  "name" : "primary"
+                } ]
+              }
+            }, {
+              "name" : "c-int-column type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "-- c-long",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c-decimal",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  float",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c--boolean",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c- - -double",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "`c___-- string`",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_timestamp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dest_csv_py_io_only"
+      }
+    },
+    "vlcUd7KAM_zvifvMwu9pZ$$8MswNyzCALGAeJjSxRNDZ" : {
+      "id" : "vlcUd7KAM_zvifvMwu9pZ$$8MswNyzCALGAeJjSxRNDZ",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "src_csv_special_char_column_name",
+        "slug" : "src_csv_special_char_column_name",
+        "x" : 240,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "CHZEgFOxU2vx1Q32ysboc$$LB9injlM6BGINFq1djzRE",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/src_csv_special_char_column_name"
+      }
+    },
+    "2asYObWPU5LTeK5quA_Y6$$j6AVMgNkfy9f2PyXW2Apb" : {
+      "id" : "2asYObWPU5LTeK5quA_Y6$$j6AVMgNkfy9f2PyXW2Apb",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_5",
+        "slug" : "Script_5",
+        "x" : 780,
+        "y" : 100,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-igSIdKq3yqst_O4ncUkn$$oN6h2TcSW274gq1E8x8Ce",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c   short  --",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "this is showrt col",
+                "mappings" : [ ],
+                "tags" : [ {
+                  "type" : "user",
+                  "name" : "tag1"
+                }, {
+                  "type" : "user",
+                  "name" : "tag2"
+                }, {
+                  "type" : "user",
+                  "name" : "short"
+                }, {
+                  "type" : "user",
+                  "name" : "primary"
+                } ]
+              }
+            }, {
+              "name" : "c-int-column type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "-- c-long",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c-decimal",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  float",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c--boolean",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c- - -double",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c___-- string",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_timestamp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "IyTLFxYC1V6hn64VpC3kw$$In-71aGN5Ovd2ygKVYWRH",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c  date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true
+      },
+      "properties" : {
+        "script" : "def test_random_script():\n\tspark.sql(\"USE CATALOG apollo11\")\n\n\tisInputEmpty = input102.rdd.isEmpty()\n\tif isInputEmpty:\n\t    columns = [lit(None).cast(f.dataType).alias(f.name) for f in input102.schema.fields]\n\t    input102 = spark.createDataFrame([Row()]).select(columns)\n\n\toutput101 = None\n\tinput102 = input102.withColumn(\"_sql_query\", array(lit(\"\"\"truncate table bz_marketing_data.mktg_stg_master_lead_contact;\"\"\"), lit(\"\"\"INSERT INTO bz_marketing_data.mktg_stg_master_lead_contact\n\t(\n\t  Lead_Contact_ID,\n\t  Contact_id,\n\t  Lead_id,\n\t  Account_id,\n\t  Name,\n\t  Street,\n\t  City,\n\t  State,\n\t  PostalCode,\n\t  Country,\n\t  State_Code,\n\t  Country_Code,\n\t  phone,\n\t  mobilephone,\n\t  email,\n\t  Title,\n\t  LeadSource,\n\t  createddate,\n\t  lastmodifieddate,\n\t  lastactivitydate,\n\t  no_longer_w_company__c,\n\t  functional_role__c,\n\t  job_level__c,\n\t  marketingcloudid__c,\n\t  engagement_status__c,\n\t  engagement_product__c,\n\t  marketing_suspended__c,\n\t  current_sequence_name__c,\n\t  name_of_currently_active_sequence__c,\n\t  marketo_person_id__c,\n\t  isconverted,\n\t  converteddate,\n\t  valid_domain,\n\t  last_qualified_campaign__c,\n\t  Reject_Reason,\n\t  LeadCreateddate,\n\t  Email_Opt_In__c,\n\t  Is_Exec_Sponsor_Contact__c,\n\t  Is_Named_Supp__c,\n\t  owner,\n\t  CSD_Prospecting__c,\n\t  HasOptedOutOfEmail,\n\t  Last_MQL__c,\n\t  isdeleted,\n\t  Zoominfo_Contact_Source__c,\n\t  etl_updated_date\n\t)\n\tSELECT Lead_Contact_ID,\n\t       Contact_id,\n\t       Lead_id,\n\t       Account_id,\n\t       Name,\n\t       Street,\n\t       City,\n\t       State,\n\t       PostalCode,\n\t       Country,\n\t       State_Code,\n\t       Country_Code,\n\t       phone,\n\t       mobilephone,\n\t       email,\n\t       Title,\n\t       LeadSource,\n\t       createddate,\n\t       lastmodifieddate,\n\t       lastactivitydate,\n\t       no_longer_w_company__c,\n\t       functional_role__c,\n\t       job_level__c,\n\t       marketingcloudid__c,\n\t       engagement_status__c,\n\t       engagement_product__c,\n\t       marketing_suspended__c,\n\t       current_sequence_name__c,\n\t       name_of_currently_active_sequence__c,\n\t       marketo_person_id__c,\n\t       isconverted,\n\t       converteddate,\n\t       valid_domain,\n\t       last_qualified_campaign__c,\n\t       Reject_Reason,\n\t       LeadCreateddate,\n\t       Email_Opt_In__c,\n\t       Is_Exec_Sponsor_Contact__c,\n\t       Is_Named_Supp__c,\n\t       OWNER,\n\t       CSD_Prospecting__c,\n\t       HasOptedOutOfEmail,\n\t       Last_MQL__c,\n\t       isdeleted,\n\t       Zoominfo_Contact_Source__c,\n\t       CURRENT_TIMESTAMP\n\tFROM (SELECT Id AS Lead_Contact_ID,\n\t             Id AS Contact_id,\n\t             NULL AS Lead_id,\n\t             accountid AS Account_id,\n\t             name AS Name,\n\t             mailingstreet AS Street,\n\t             mailingcity AS City,\n\t             mailingstate AS State,\n\t             mailingpostalcode AS PostalCode,\n\t             mailingcountry AS Country,\n\t             mailingstatecode AS State_Code,\n\t             mailingcountrycode AS Country_Code,\n\t             phone AS phone,\n\t             mobilephone AS mobilephone,\n\t             email AS email,\n\t             title AS Title,\n\t             leadsource AS LeadSource,\n\t             createddate AS createddate,\n\t             lastmodifieddate AS lastmodifieddate,\n\t             lastactivitydate AS lastactivitydate,\n\t             no_longer_w_company__c AS no_longer_w_company__c,\n\t             functional_role__c AS functional_role__c,\n\t             job_level__c AS job_level__c,\n\t             marketingcloudid__c AS marketingcloudid__c,\n\t             engagement_status__c AS engagement_status__c,\n\t             engagement_product__c AS engagement_product__c,\n\t             marketing_suspended__c AS marketing_suspended__c,\n\t             current_sequence_name__c AS current_sequence_name__c,\n\t             name_of_currently_active_sequence__c AS name_of_currently_active_sequence__c,\n\t             marketo_person_id__c AS marketo_person_id__c,\n\t             NULL AS isconverted,\n\t             NULL AS converteddate,\n\t             email_in_valid_domain__c AS valid_domain,\n\t             last_qualified_campaign__c AS last_qualified_campaign__c,\n\t             Reject_Recycle_Reason__c AS Reject_Reason,\n\t             NULL AS LeadCreateddate,\n\t             Email_Opt_In__c,\n\t             Is_Exec_Sponsor_Contact__c,\n\t             Is_Named_Supp__c,\n\t             ownerid AS OWNER,\n\t             CSD_Prospecting__c,\n\t             HasOptedOutOfEmail,\n\t             Last_MQL__c,\n\t             isdeleted,\n\t             Zoominfo_Contact_Source__c\n\t      FROM (SELECT dl_sfdc_contact.id,\n\t                   dl_sfdc_contact.isdeleted,\n\t                   dl_sfdc_contact.masterrecordid,\n\t                   dl_sfdc_contact.accountid,\n\t                   dl_sfdc_contact.lastname,\n\t                   dl_sfdc_contact.firstname,\n\t                   dl_sfdc_contact.salutation,\n\t                   dl_sfdc_contact.name,\n\t                   dl_sfdc_contact.recordtypeid,\n\t                   dl_sfdc_contact.otherstreet,\n\t                   dl_sfdc_contact.othercity,\n\t                   dl_sfdc_contact.otherstate,\n\t                   dl_sfdc_contact.otherpostalcode,\n\t                   dl_sfdc_contact.othercountry,\n\t                   dl_sfdc_contact.otherstatecode,\n\t                   dl_sfdc_contact.othercountrycode,\n\t                   dl_sfdc_contact.othergeocodeaccuracy,\n\t                   dl_sfdc_contact.mailingstreet,\n\t                   dl_sfdc_contact.mailingcity,\n\t                   dl_sfdc_contact.mailingstate,\n\t                   dl_sfdc_contact.mailingpostalcode,\n\t                   dl_sfdc_contact.mailingcountry,\n\t                   dl_sfdc_contact.mailingstatecode,\n\t                   dl_sfdc_contact.mailingcountrycode,\n\t                   dl_sfdc_contact.mailinggeocodeaccuracy,\n\t                   dl_sfdc_contact.phone,\n\t                   dl_sfdc_contact.fax,\n\t                   dl_sfdc_contact.mobilephone,\n\t                   dl_sfdc_contact.homephone,\n\t                   dl_sfdc_contact.otherphone,\n\t                   dl_sfdc_contact.assistantphone,\n\t                   dl_sfdc_contact.reportstoid,\n\t                   dl_sfdc_contact.email,\n\t                   dl_sfdc_contact.title,\n\t                   dl_sfdc_contact.department,\n\t                   dl_sfdc_contact.assistantname,\n\t                   dl_sfdc_contact.leadsource,\n\t                   dl_sfdc_contact.birthdate,\n\t                   dl_sfdc_contact.description,\n\t                   dl_sfdc_contact.currencyisocode,\n\t                   dl_sfdc_contact.ownerid,\n\t                   dl_sfdc_contact.hasoptedoutofemail,\n\t                   dl_sfdc_contact.hasoptedoutoffax,\n\t                   dl_sfdc_contact.donotcall,\n\t                   dl_sfdc_contact.canallowportalselfreg,\n\t                   dl_sfdc_contact.createddate,\n\t                   dl_sfdc_contact.createdbyid,\n\t                   dl_sfdc_contact.lastmodifieddate,\n\t                   dl_sfdc_contact.lastmodifiedbyid,\n\t                   dl_sfdc_contact.systemmodstamp,\n\t                   dl_sfdc_contact.lastactivitydate,\n\t                   dl_sfdc_contact.lastcurequestdate,\n\t                   dl_sfdc_contact.lastcuupdatedate,\n\t                   dl_sfdc_contact.lastvieweddate,\n\t                   dl_sfdc_contact.lastreferenceddate,\n\t                   dl_sfdc_contact.emailbouncedreason,\n\t                   dl_sfdc_contact.emailbounceddate,\n\t                   dl_sfdc_contact.isemailbounced,\n\t                   dl_sfdc_contact.photourl,\n\t                   dl_sfdc_contact.jigsaw,\n\t                   dl_sfdc_contact.jigsawcontactid,\n\t                   dl_sfdc_contact.cleanstatus,\n\t                   dl_sfdc_contact.alma_mater__c,\n\t                   dl_sfdc_contact.preferred_communication__c,\n\t                   dl_sfdc_contact.comments_handling_instructions__c,\n\t                   dl_sfdc_contact.names_of_pets__c,\n\t                   dl_sfdc_contact.former_employers__c,\n\t                   dl_sfdc_contact.names_of_family__c,\n\t                   dl_sfdc_contact.asst_email__c,\n\t                   dl_sfdc_contact.newsletter__c,\n\t                   dl_sfdc_contact.no_longer_w_company__c,\n\t                   dl_sfdc_contact.hr_webinar_11_14_06__c,\n\t                   dl_sfdc_contact.it_webinar_11_14_06__c,\n\t                   dl_sfdc_contact.registered_through__c,\n\t                   dl_sfdc_contact.contact_bio__c,\n\t                   dl_sfdc_contact.primary_contact__c,\n\t                   dl_sfdc_contact.name_of_referral__c,\n\t                   dl_sfdc_contact.release_bulletin__c,\n\t                   dl_sfdc_contact.functional_role__c,\n\t                   dl_sfdc_contact.event_location__c,\n\t                   dl_sfdc_contact.purge_or_archive__c,\n\t                   dl_sfdc_contact.job_level__c,\n\t                   dl_sfdc_contact.validation__c,\n\t                   dl_sfdc_contact.validation_date__c,\n\t                   dl_sfdc_contact.roi_analysis_link__c,\n\t                   dl_sfdc_contact.engagement_stage_time_delay__c,\n\t                   dl_sfdc_contact.sd_contactid__c,\n\t                   dl_sfdc_contact.sd_contactchk__c,\n\t                   dl_sfdc_contact.program_name__c,\n\t                   dl_sfdc_contact.account_update__c,\n\t                   dl_sfdc_contact.tempmailingcountry__c,\n\t                   dl_sfdc_contact.tempmailingstate__c,\n\t                   dl_sfdc_contact.tempothercountry__c,\n\t                   dl_sfdc_contact.tempotherstate__c,\n\t                   dl_sfdc_contact.consent_last_updated__c,\n\t                   dl_sfdc_contact.token__c,\n\t                   dl_sfdc_contact.events__c,\n\t                   dl_sfdc_contact.legacy_rn_orgid__c,\n\t                   dl_sfdc_contact.legacy_rn_contactid__c,\n\t                   dl_sfdc_contact.support_notes__c,\n\t                   dl_sfdc_contact.support_relationship__c,\n\t                   dl_sfdc_contact.inactive__c,\n\t                   dl_sfdc_contact.timezone__c,\n\t                   dl_sfdc_contact.reference__c,\n\t                   dl_sfdc_contact.reference_status__c,\n\t                   dl_sfdc_contact.reference_rank__c,\n\t                   dl_sfdc_contact.reference_talk_track__c,\n\t                   dl_sfdc_contact.references_given__c,\n\t                   dl_sfdc_contact.reference_feedback__c,\n\t                   dl_sfdc_contact.account_status__c,\n\t                   dl_sfdc_contact.account_type__c,\n\t                   dl_sfdc_contact.named_support_contact__c,\n\t                   dl_sfdc_contact.employee_range__c,\n\t                   dl_sfdc_contact.upgrade_replace__c,\n\t                   dl_sfdc_contact.fortune_1_000__c,\n\t                   dl_sfdc_contact.ls_lead_rating__c,\n\t                   dl_sfdc_contact.jsimpacts__data_com_does_not_auto_update__c,\n\t                   dl_sfdc_contact.server_path__c,\n\t                   dl_sfdc_contact.lead_rating_image__c,\n\t                   dl_sfdc_contact.qualification_meter__c,\n\t                   dl_sfdc_contact.interest_meter__c,\n\t                   dl_sfdc_contact.profile_completeness_meter__c,\n\t                   dl_sfdc_contact.profile_status__c,\n\t                   dl_sfdc_contact.interest_score_changed__c,\n\t                   dl_sfdc_contact.last_interest_score_change_date__c,\n\t                   dl_sfdc_contact.unsync_with_mkto__c,\n\t                   dl_sfdc_contact.tenant_administrator_email_date__c,\n\t                   dl_sfdc_contact.contact_subcontracting_status__c,\n\t                   dl_sfdc_contact.is_customer_account__c,\n\t                   dl_sfdc_contact.qbdialer__closedate__c,\n\t                   dl_sfdc_contact.qbdialer__contactdate__c,\n\t                   dl_sfdc_contact.qbdialer__contactscoreid__c,\n\t                   dl_sfdc_contact.marketingcloudid__c,\n\t                   dl_sfdc_contact.integrate_publisher_id__c,\n\t                   dl_sfdc_contact.secondary_training_coordinator__c,\n\t                   dl_sfdc_contact.jira_username__c,\n\t                   dl_sfdc_contact.lid__linkedin_company_id__c,\n\t                   dl_sfdc_contact.lid__linkedin_member_token__c,\n\t                   dl_sfdc_contact.case_team_member_opt_in__c,\n\t                   dl_sfdc_contact.contact_prior_company_email__c,\n\t                   dl_sfdc_contact.marketo_phone__c,\n\t                   dl_sfdc_contact.certification_date_expired__c,\n\t                   dl_sfdc_contact.demand_funnel_stage__c,\n\t                   dl_sfdc_contact.partner_merger_indicator__c,\n\t                   dl_sfdc_contact.email_in_valid_domain__c,\n\t                   dl_sfdc_contact.named_support_contact_inactivation_date__c,\n\t                   dl_sfdc_contact.do_not_notify_community__c,\n\t                   dl_sfdc_contact.laptop_workday_certified__c,\n\t                   dl_sfdc_contact.security_message__c,\n\t                   dl_sfdc_contact.partner_region_map__c,\n\t                   dl_sfdc_contact.primary_work_country__c,\n\t                   dl_sfdc_contact.primary_work_state_province__c,\n\t                   dl_sfdc_contact.address_comments_primary_country__c,\n\t                   dl_sfdc_contact.converted_from_lead__c,\n\t                   dl_sfdc_contact.certification_status_new__c,\n\t                   dl_sfdc_contact.product_lead__c,\n\t                   dl_sfdc_contact.contact_status__c,\n\t                   dl_sfdc_contact.date_onboarded__c,\n\t                   dl_sfdc_contact.exclude_from_reporting__c,\n\t                   dl_sfdc_contact.partner_contact_role__c,\n\t                   dl_sfdc_contact.partner_offering_map__c,\n\t                   dl_sfdc_contact.product_function__c,\n\t                   dl_sfdc_contact.partner_segment__c,\n\t                   dl_sfdc_contact.rm_comments__c,\n\t                   dl_sfdc_contact.offshore__c,\n\t                   dl_sfdc_contact.certification_status__c,\n\t                   dl_sfdc_contact.merge_status__c,\n\t                   dl_sfdc_contact.consultant_type__c,\n\t                   dl_sfdc_contact.primary_language__c,\n\t                   dl_sfdc_contact.contact_intelligence_dashboard__c,\n\t                   dl_sfdc_contact.partner_stage__c,\n\t                   dl_sfdc_contact.extension__c,\n\t                   dl_sfdc_contact.address_comments__c,\n\t                   dl_sfdc_contact.lms_user_id__c,\n\t                   dl_sfdc_contact.partner_onboarding_comments__c,\n\t                   dl_sfdc_contact.prior_consultant_record__c,\n\t                   dl_sfdc_contact.consultant_internal_validation_complete__c,\n\t                   dl_sfdc_contact.consultant_internal_validation_required__c,\n\t                   dl_sfdc_contact.contact_exist_in_workday_ecosystem_prior__c,\n\t                   dl_sfdc_contact.partner_validation_requested_by__c,\n\t                   dl_sfdc_contact.primary_main_contact__c,\n\t                   dl_sfdc_contact.prior_company_name__c,\n\t                   dl_sfdc_contact.prior_consultnat_lms_id__c,\n\t                   dl_sfdc_contact.request_it_jira_request__c,\n\t                   dl_sfdc_contact.full_name__c,\n\t                   dl_sfdc_contact.survey_responses__c,\n\t                   dl_sfdc_contact.hire_date__c,\n\t                   dl_sfdc_contact.prior_partner_contact_role__c,\n\t                   dl_sfdc_contact.keep_informed_about_workday__c,\n\t                   dl_sfdc_contact.main_concerns_with_current_hr_system__c,\n\t                   dl_sfdc_contact.plans_for_hr_system__c,\n\t                   dl_sfdc_contact.plans_for_current_financial_system__c,\n\t                   dl_sfdc_contact.plans_for_your_current_system__c,\n\t                   dl_sfdc_contact.demand_base_id__c,\n\t                   dl_sfdc_contact.certification_name_expired__c,\n\t                   dl_sfdc_contact.workday_services_region__c,\n\t                   dl_sfdc_contact.send_exp_notification__c,\n\t                   dl_sfdc_contact.workday_market_place_coordinator__c,\n\t                   dl_sfdc_contact.date_offboarded__c,\n\t                   dl_sfdc_contact.leave_of_absence__c,\n\t                   dl_sfdc_contact.transfered__c,\n\t                   dl_sfdc_contact.certification_image__c,\n\t                   dl_sfdc_contact.oldest_certification_year__c,\n\t                   dl_sfdc_contact.contacts_user__c,\n\t                   dl_sfdc_contact.privacy_policy_agreement__c,\n\t                   dl_sfdc_contact.contact_not_eligible_for_subcontracting__c,\n\t                   dl_sfdc_contact.training_coordinator__c,\n\t                   dl_sfdc_contact.user__c,\n\t                   dl_sfdc_contact.industry__c,\n\t                   dl_sfdc_contact.rising_14__c,\n\t                   dl_sfdc_contact.rising_14_job_level__c,\n\t                   dl_sfdc_contact.rising_14_job_title__c,\n\t                   dl_sfdc_contact.rising_14_what_workday_applications_s__c,\n\t                   dl_sfdc_contact.rising_14_how_many_years_of_experience__c,\n\t                   dl_sfdc_contact.custom_start__c,\n\t                   dl_sfdc_contact.new_cert_status__c,\n\t                   dl_sfdc_contact.oldest_cert_date__c,\n\t                   dl_sfdc_contact.oldest_active_cert_date__c,\n\t                   dl_sfdc_contact.workday_user__c,\n\t                   dl_sfdc_contact.worker_type__c,\n\t                   dl_sfdc_contact.expiration_notification__c,\n\t                   dl_sfdc_contact.date_of_check__c,\n\t                   dl_sfdc_contact.encryption_check_performed__c,\n\t                   dl_sfdc_contact.results_of_check__c,\n\t                   dl_sfdc_contact.comments_laptopencryption__c,\n\t                   dl_sfdc_contact.location_worker_type_interim__c,\n\t                   dl_sfdc_contact.account_name__c,\n\t                   dl_sfdc_contact.lef_access__c,\n\t                   dl_sfdc_contact.lef_certified_contact__c,\n\t                   dl_sfdc_contact.lef_enabled__c,\n\t                   dl_sfdc_contact.lms_sync__c,\n\t                   dl_sfdc_contact.lms_divison_status__c,\n\t                   dl_sfdc_contact.marketo_job_title__c,\n\t                   dl_sfdc_contact.ps_region__c,\n\t                   dl_sfdc_contact.date_onboarded_depricated__c,\n\t                   dl_sfdc_contact.user_department__c,\n\t                   dl_sfdc_contact.engagement_status__c,\n\t                   dl_sfdc_contact.send_email__c,\n\t                   dl_sfdc_contact.qbdialer__lastcalltime__c,\n\t                   dl_sfdc_contact.tenant_administrator__c,\n\t                   dl_sfdc_contact.expired_wd24__c,\n\t                   dl_sfdc_contact.partner_user__c,\n\t                   dl_sfdc_contact.partner_user_access__c,\n\t                   dl_sfdc_contact.consultant_internal_external_transfer__c,\n\t                   dl_sfdc_contact.qbdialer__timezonesidkey__c,\n\t                   dl_sfdc_contact.department_local_language__c,\n\t                   dl_sfdc_contact.ae_connect_skuid__c,\n\t                   dl_sfdc_contact.ae_connect__c,\n\t                   dl_sfdc_contact.csd_comments__c,\n\t                   dl_sfdc_contact.reject_sub_reason__c,\n\t                   dl_sfdc_contact.disposition_detail__c,\n\t                   dl_sfdc_contact.first_csd_ae_connect__c,\n\t                   dl_sfdc_contact.first_csd_connect__c,\n\t                   dl_sfdc_contact.first_csd_reachout__c,\n\t                   dl_sfdc_contact.first_mql__c,\n\t                   dl_sfdc_contact.first_marketing_response__c,\n\t                   dl_sfdc_contact.first_sales_ae_connect__c,\n\t                   dl_sfdc_contact.first_sales_connect__c,\n\t                   dl_sfdc_contact.first_sales_reach_out__c,\n\t                   dl_sfdc_contact.last_csd_ae_connect__c,\n\t                   dl_sfdc_contact.last_csd_connect__c,\n\t                   dl_sfdc_contact.last_csd_reachout__c,\n\t                   dl_sfdc_contact.last_mql__c,\n\t                   dl_sfdc_contact.last_marketing_response__c,\n\t                   dl_sfdc_contact.last_sales_ae_connect__c,\n\t                   dl_sfdc_contact.last_sales_connect__c,\n\t                   dl_sfdc_contact.last_sales_reach_out__c,\n\t                   dl_sfdc_contact.next_follow_up_date__c,\n\t                   dl_sfdc_contact.next_step__c,\n\t                   dl_sfdc_contact.how_long_in_current_role__c,\n\t                   dl_sfdc_contact.last_email_csd__c,\n\t                   dl_sfdc_contact.reject_recycle_reason__c,\n\t                   dl_sfdc_contact.certified_consultant_workday_years_exp__c,\n\t                   dl_sfdc_contact.marketing_opt_out__c,\n\t                   dl_sfdc_contact.is_same_company_transfer__c,\n\t                   dl_sfdc_contact.mkto_si__add_to_marketo_campaign__c,\n\t                   dl_sfdc_contact.mkto_si__hidedate__c,\n\t                   dl_sfdc_contact.mkto_si__last_interesting_moment_date__c,\n\t                   dl_sfdc_contact.mkto_si__last_interesting_moment_desc__c,\n\t                   dl_sfdc_contact.mkto_si__last_interesting_moment_source__c,\n\t                   dl_sfdc_contact.mkto_si__last_interesting_moment_type__c,\n\t                   dl_sfdc_contact.mkto_si__last_interesting_moment__c,\n\t                   dl_sfdc_contact.mkto_si__relative_score__c,\n\t                   dl_sfdc_contact.mkto_si__sales_insight__c,\n\t                   dl_sfdc_contact.mkto_si__urgency__c,\n\t                   dl_sfdc_contact.mkto_si__view_in_marketo__c,\n\t                   dl_sfdc_contact.financials_logistics_systems_of_record2__c,\n\t                   dl_sfdc_contact.hcm_systems_of_record__c,\n\t                   dl_sfdc_contact.annual_revenue_range__c,\n\t                   dl_sfdc_contact.contact_request__c,\n\t                   dl_sfdc_contact.name_local_language__c,\n\t                   dl_sfdc_contact.title_local_language__c,\n\t                   dl_sfdc_contact.address_local_language__c,\n\t                   dl_sfdc_contact.account_name_local_language__c,\n\t                   dl_sfdc_contact.contact_id_case_safe__c,\n\t                   dl_sfdc_contact.engagement_status_priority__c,\n\t                   dl_sfdc_contact.marketing_notes__c,\n\t                   dl_sfdc_contact.last_email_sales__c,\n\t                   dl_sfdc_contact.most_recent_prequalified__c,\n\t                   dl_sfdc_contact.fix__c,\n\t                   dl_sfdc_contact.reject_reason_detail__c,\n\t                   dl_sfdc_contact.most_recent_qualified_opportunity__c,\n\t                   dl_sfdc_contact.adoption_kit_access__c,\n\t                   dl_sfdc_contact.lms_access__c,\n\t                   dl_sfdc_contact.support_role_integrations__c,\n\t                   dl_sfdc_contact.training_coordinator_name__c,\n\t                   dl_sfdc_contact.training_manager_lms_id__c,\n\t                   dl_sfdc_contact.workday_role__c,\n\t                   dl_sfdc_contact.contact_record_type__c,\n\t                   dl_sfdc_contact.newsletters_blogs__c,\n\t                   dl_sfdc_contact.isdupedelete__c,\n\t                   dl_sfdc_contact.isdupeupdate__c,\n\t                   dl_sfdc_contact.processed__c,\n\t                   dl_sfdc_contact.istempdupe1__c,\n\t                   dl_sfdc_contact.is_fax_blank__c,\n\t                   dl_sfdc_contact.is_mobile_blank__c,\n\t                   dl_sfdc_contact.is_name_blank__c,\n\t                   dl_sfdc_contact.is_other_address_blank__c,\n\t                   dl_sfdc_contact.is_other_phone_blank__c,\n\t                   dl_sfdc_contact.is_email_blank__c,\n\t                   dl_sfdc_contact.product_information_announcements__c,\n\t                   dl_sfdc_contact.start_date_of_current_engagement_stage__c,\n\t                   dl_sfdc_contact.key_contact__c,\n\t                   dl_sfdc_contact.last_csd_reachout_task__c,\n\t                   dl_sfdc_contact.sla_status__c,\n\t                   dl_sfdc_contact.engagement_stage_end_date__c,\n\t                   dl_sfdc_contact.prior_engagement_stage__c,\n\t                   dl_sfdc_contact.engagement_type__c,\n\t                   dl_sfdc_contact.consent_type__c,\n\t                   dl_sfdc_contact.consent_source__c,\n\t                   dl_sfdc_contact.etl_created_date,\n\t                   dl_sfdc_contact.etl_created_by,\n\t                   dl_sfdc_contact.etl_updated_date,\n\t                   dl_sfdc_contact.etl_updated_by,\n\t                   dl_sfdc_contact.certification_count__c,\n\t                   dl_sfdc_contact.certification_status_code__c,\n\t                   dl_sfdc_contact.contact_count__c,\n\t                   dl_sfdc_contact.customer_contact_number__c,\n\t                   dl_sfdc_contact.days_in_engagement_stage__c,\n\t                   dl_sfdc_contact.engagement_stage_days_remaining__c,\n\t                   dl_sfdc_contact.int_score__c,\n\t                   dl_sfdc_contact.is_exec_sponsor_contact__c,\n\t                   dl_sfdc_contact.is_named_supp__c,\n\t                   dl_sfdc_contact.jsimpacts__data_com_managed__c,\n\t                   dl_sfdc_contact.jsimpacts__imported_from_jigsaw__c,\n\t                   dl_sfdc_contact.ls_completion__c,\n\t                   dl_sfdc_contact.mailinglatitude,\n\t                   dl_sfdc_contact.mailinglongitude,\n\t                   dl_sfdc_contact.marketing_response_count__c,\n\t                   dl_sfdc_contact.mkto_si__priority__c,\n\t                   dl_sfdc_contact.mkto_si__relative_score_value__c,\n\t                   dl_sfdc_contact.mkto_si__urgency_value__c,\n\t                   dl_sfdc_contact.of_certifications__c,\n\t                   dl_sfdc_contact.otherlatitude,\n\t                   dl_sfdc_contact.otherlongitude,\n\t                   dl_sfdc_contact.partner_contact_number__c,\n\t                   dl_sfdc_contact.pm_certification__c,\n\t                   dl_sfdc_contact.prior_workday_experience__c,\n\t                   dl_sfdc_contact.qbdialer__closescore__c,\n\t                   dl_sfdc_contact.qbdialer__contactscore__c,\n\t                   dl_sfdc_contact.qbdialer__dials__c,\n\t                   dl_sfdc_contact.qbdialer__responsetime__c,\n\t                   dl_sfdc_contact.qual_score__c,\n\t                   dl_sfdc_contact.touches_in_engagement_count__c,\n\t                   dl_sfdc_contact.workday_years_of_experience__c,\n\t                   dl_sfdc_contact.account_active_oppty_count__c,\n\t                   dl_sfdc_contact.account_employee_count__c,\n\t                   dl_sfdc_contact.account_financials_status__c,\n\t                   dl_sfdc_contact.account_hcm_status__c,\n\t                   dl_sfdc_contact.account_industry__c,\n\t                   dl_sfdc_contact.account_message__c,\n\t                   dl_sfdc_contact.account_owner__c,\n\t                   dl_sfdc_contact.account_student_status__c,\n\t                   dl_sfdc_contact.account_super_industry__c,\n\t                   dl_sfdc_contact.bizible2__ad_campaign_name_ft__c,\n\t                   dl_sfdc_contact.bizible2__ad_campaign_name_lc__c,\n\t                   dl_sfdc_contact.bizible2__bizibleid__c,\n\t                   dl_sfdc_contact.bizible2__landing_page_ft__c,\n\t                   dl_sfdc_contact.bizible2__landing_page_lc__c,\n\t                   dl_sfdc_contact.bizible2__marketing_channel_ft__c,\n\t                   dl_sfdc_contact.bizible2__marketing_channel_lc__c,\n\t                   dl_sfdc_contact.bizible2__touchpoint_date_ft__c,\n\t                   dl_sfdc_contact.bizible2__touchpoint_date_lc__c,\n\t                   dl_sfdc_contact.bizible2__touchpoint_source_ft__c,\n\t                   dl_sfdc_contact.bizible2__touchpoint_source_lc__c,\n\t                   dl_sfdc_contact.campaign__c,\n\t                   dl_sfdc_contact.csd_prospecting__c,\n\t                   dl_sfdc_contact.current_sequence_name__c,\n\t                   dl_sfdc_contact.external_notes__c,\n\t                   dl_sfdc_contact.key_contacts__c,\n\t                   dl_sfdc_contact.mailingaddress,\n\t                   dl_sfdc_contact.name_of_currently_active_sequence__c,\n\t                   dl_sfdc_contact.nsc_training_verified__c,\n\t                   dl_sfdc_contact.otheraddress,\n\t                   dl_sfdc_contact.outreach_id__c,\n\t                   dl_sfdc_contact.pl_customer_score__c,\n\t                   dl_sfdc_contact.pl_prospect_score__c,\n\t                   dl_sfdc_contact.primary_partner_technical_contact__c,\n\t                   dl_sfdc_contact.primary_training_coordinator__c,\n\t                   dl_sfdc_contact.sales_play_campaign_name__c,\n\t                   dl_sfdc_contact.secondary_language__c,\n\t                   dl_sfdc_contact.skip_for_self_profile_update__c,\n\t                   dl_sfdc_contact.wallet__c,\n\t                   dl_sfdc_contact.leandata__ld_segment__c,\n\t                   dl_sfdc_contact.leandata__matched_buyer_persona__c,\n\t                   dl_sfdc_contact.leandata__modified_score__c,\n\t                   dl_sfdc_contact.leandata__routing_action__c,\n\t                   dl_sfdc_contact.leandata__tag__c,\n\t                   dl_sfdc_contact.marketo_person_id__c,\n\t                   dl_sfdc_contact.last_qualified_campaign__c,\n\t                   dl_sfdc_contact.engagement_product__c,\n\t                   dl_sfdc_contact.blacklisted__c,\n\t                   dl_sfdc_contact.cs_communication_preferences__c,\n\t                   dl_sfdc_contact.do_not_call_date__c,\n\t                   dl_sfdc_contact.dozisf__zoominfo_company_id__c,\n\t                   dl_sfdc_contact.dozisf__zoominfo_first_updated__c,\n\t                   dl_sfdc_contact.dozisf__zoominfo_id__c,\n\t                   dl_sfdc_contact.dozisf__zoominfo_last_updated__c,\n\t                   dl_sfdc_contact.email_invalid__c,\n\t                   dl_sfdc_contact.email_opt_in__c,\n\t                   dl_sfdc_contact.email_opt_in_date__c,\n\t                   dl_sfdc_contact.email_opt_out_date__c,\n\t                   dl_sfdc_contact.email_verification_confidence_level__c,\n\t                   dl_sfdc_contact.email_verification_details__c,\n\t                   dl_sfdc_contact.external_id__c,\n\t                   dl_sfdc_contact.first_response_date__c,\n\t                   dl_sfdc_contact.industry_or_line_of_business__c,\n\t                   dl_sfdc_contact.integrate_asset_code__c,\n\t                   dl_sfdc_contact.integrate_asset_name__c,\n\t                   dl_sfdc_contact.leandata_routing__c,\n\t                   dl_sfdc_contact.marketing_notes_ringlead__c,\n\t                   dl_sfdc_contact.marketing_suspended__c,\n\t                   dl_sfdc_contact.mql_follow_up_date__c,\n\t                   dl_sfdc_contact.ringlead_dms_status__c,\n\t                   dl_sfdc_contact.secondary_functional_area__c,\n\t                   dl_sfdc_contact.sfdc_campaign_id__c,\n\t                   dl_sfdc_contact.zoominfo_action__c,\n\t                   dl_sfdc_contact.zoominfo_no_longer_with_company__c,\n\t                   dl_sfdc_contact.outreach_tag__c,\n\t                   dl_sfdc_contact.Zoominfo_Contact_Source__c,\n\t                   row_number() OVER (PARTITION BY dl_sfdc_contact.id ORDER BY dl_sfdc_contact.etl_updated_date DESC) AS rw_nbr\n\t            FROM data_lake.dl_sfdc_contact) derived_table1\n\t      WHERE derived_table1.rw_nbr = 1\n\t      UNION\n\t      SELECT Id AS Lead_Contact_ID,\n\t             convertedcontactid AS Contact_id,\n\t             Id AS Lead_id,\n\t             COALESCE(convertedaccountid,account_id__c,matched_account_id__c) AS Account_id,\n\t             name AS Name,\n\t             street AS Street,\n\t             city AS City,\n\t             state AS State,\n\t             postalcode AS PostalCode,\n\t             country AS Country,\n\t             statecode AS State_Code,\n\t             countrycode AS Country_Code,\n\t             phone AS phone,\n\t             mobilephone AS mobilephone,\n\t             email AS email,\n\t             title AS Title,\n\t             leadsource AS LeadSource,\n\t             createddate AS createddate,\n\t             lastmodifieddate AS lastmodifieddate,\n\t             lastactivitydate AS lastactivitydate,\n\t             no_longer_w_company__c AS no_longer_w_company__c,\n\t             functional_role__c AS functional_role__c,\n\t             job_level__c AS job_level__c,\n\t             marketingcloudid__c AS marketingcloudid__c,\n\t             engagement_status__c AS engagement_status__c,\n\t             engagement_product__c AS engagement_product__c,\n\t             marketing_suspended__c AS marketing_suspended__c,\n\t             current_sequence_name__c AS current_sequence_name__c,\n\t             name_of_currently_active_sequence__c AS name_of_currently_active_sequence__c,\n\t             marketo_person_id__c AS marketo_person_id__c,\n\t             isconverted AS isconverted,\n\t             converteddate AS converteddate,\n\t             lead_domain__c AS valid_domain,\n\t             last_qualified_campaign__c AS last_qualified_campaign__c,\n\t             Reject_Recycle_Reason__c AS Reject_Reason,\n\t             createddate AS LeadCreateddate,\n\t             Email_Opt_In__c,\n\t             NULL AS Is_Exec_Sponsor_Contact__c,\n\t             NULL AS Is_Named_Supp__c,\n\t             ownerid AS OWNER,\n\t             CSD_Prospecting__c,\n\t             HasOptedOutOfEmail,\n\t             Last_MQL__c,\n\t             isdeleted,\n\t             NULL AS Zoominfo_Contact_Source__c\n\t      FROM (SELECT dl_sfdc_lead.id,\n\t                   dl_sfdc_lead.isdeleted,\n\t                   dl_sfdc_lead.masterrecordid,\n\t                   dl_sfdc_lead.lastname,\n\t                   dl_sfdc_lead.firstname,\n\t                   dl_sfdc_lead.salutation,\n\t                   dl_sfdc_lead.name,\n\t                   dl_sfdc_lead.title,\n\t                   dl_sfdc_lead.company,\n\t                   dl_sfdc_lead.street,\n\t                   dl_sfdc_lead.city,\n\t                   dl_sfdc_lead.state,\n\t                   dl_sfdc_lead.postalcode,\n\t                   dl_sfdc_lead.country,\n\t                   dl_sfdc_lead.statecode,\n\t                   dl_sfdc_lead.countrycode,\n\t                   dl_sfdc_lead.latitude,\n\t                   dl_sfdc_lead.longitude,\n\t                   dl_sfdc_lead.geocodeaccuracy,\n\t                   dl_sfdc_lead.phone,\n\t                   dl_sfdc_lead.mobilephone,\n\t                   dl_sfdc_lead.fax,\n\t                   dl_sfdc_lead.email,\n\t                   dl_sfdc_lead.website,\n\t                   dl_sfdc_lead.photourl,\n\t                   dl_sfdc_lead.description,\n\t                   dl_sfdc_lead.leadsource,\n\t                   dl_sfdc_lead.status,\n\t                   dl_sfdc_lead.industry,\n\t                   dl_sfdc_lead.rating,\n\t                   dl_sfdc_lead.currencyisocode,\n\t                   dl_sfdc_lead.annualrevenue,\n\t                   dl_sfdc_lead.numberofemployees,\n\t                   dl_sfdc_lead.ownerid,\n\t                   dl_sfdc_lead.hasoptedoutofemail,\n\t                   dl_sfdc_lead.isconverted,\n\t                   dl_sfdc_lead.converteddate,\n\t                   dl_sfdc_lead.convertedaccountid,\n\t                   dl_sfdc_lead.convertedcontactid,\n\t                   dl_sfdc_lead.convertedopportunityid,\n\t                   dl_sfdc_lead.isunreadbyowner,\n\t                   dl_sfdc_lead.createddate,\n\t                   dl_sfdc_lead.createdbyid,\n\t                   dl_sfdc_lead.lastmodifieddate,\n\t                   dl_sfdc_lead.lastmodifiedbyid,\n\t                   dl_sfdc_lead.systemmodstamp,\n\t                   dl_sfdc_lead.lastactivitydate,\n\t                   dl_sfdc_lead.donotcall,\n\t                   dl_sfdc_lead.hasoptedoutoffax,\n\t                   dl_sfdc_lead.lastvieweddate,\n\t                   dl_sfdc_lead.lastreferenceddate,\n\t                   dl_sfdc_lead.lasttransferdate,\n\t                   dl_sfdc_lead.partneraccountid,\n\t                   dl_sfdc_lead.jigsaw,\n\t                   dl_sfdc_lead.jigsawcontactid,\n\t                   dl_sfdc_lead.cleanstatus,\n\t                   dl_sfdc_lead.companydunsnumber,\n\t                   dl_sfdc_lead.dandbcompanyid,\n\t                   dl_sfdc_lead.emailbouncedreason,\n\t                   dl_sfdc_lead.emailbounceddate,\n\t                   dl_sfdc_lead.hcm_systems_of_record__c,\n\t                   dl_sfdc_lead.financials_logistics_systems_of_record2__c,\n\t                   dl_sfdc_lead.hcm_products__c,\n\t                   dl_sfdc_lead.project_timeline__c,\n\t                   dl_sfdc_lead.existing_rdbms__c,\n\t                   dl_sfdc_lead.comments_handling_instructions__c,\n\t                   dl_sfdc_lead.preferred_communication__c,\n\t                   dl_sfdc_lead.financials_products__c,\n\t                   dl_sfdc_lead.payroll_providers__c,\n\t                   dl_sfdc_lead.referral_source__c,\n\t                   dl_sfdc_lead.existing_environment__c,\n\t                   dl_sfdc_lead.marketing_touch_points__c,\n\t                   dl_sfdc_lead.marketing_activity__c,\n\t                   dl_sfdc_lead.project_drivers__c,\n\t                   dl_sfdc_lead.employee_range__c,\n\t                   dl_sfdc_lead.revenue_range__c,\n\t                   dl_sfdc_lead.workday_country__c,\n\t                   dl_sfdc_lead.resource_management_products__c,\n\t                   dl_sfdc_lead.project_funded__c,\n\t                   dl_sfdc_lead.reject_reason__c,\n\t                   dl_sfdc_lead.engagement_type__c,\n\t                   dl_sfdc_lead.lead_profile__c,\n\t                   dl_sfdc_lead.revenue_management_products__c,\n\t                   dl_sfdc_lead.next_steps__c,\n\t                   dl_sfdc_lead.newsletter__c,\n\t                   dl_sfdc_lead.upgrade__c,\n\t                   dl_sfdc_lead.relationship_to_workday__c,\n\t                   dl_sfdc_lead.hr_webinar_11_14_06__c,\n\t                   dl_sfdc_lead.it_webinar_11_16_06__c,\n\t                   dl_sfdc_lead.you_would_describe_your_company_as__c,\n\t                   dl_sfdc_lead.partner_provides__c,\n\t                   dl_sfdc_lead.partner_interest__c,\n\t                   dl_sfdc_lead.registered_through__c,\n\t                   dl_sfdc_lead.other_phone__c,\n\t                   dl_sfdc_lead.integration__c,\n\t                   dl_sfdc_lead.functional_role__c,\n\t                   dl_sfdc_lead.referred_from__c,\n\t                   dl_sfdc_lead.hr_niche_system__c,\n\t                   dl_sfdc_lead.rejection_segment__c,\n\t                   dl_sfdc_lead.support__c,\n\t                   dl_sfdc_lead.event_location__c,\n\t                   dl_sfdc_lead.product_interest__c,\n\t                   dl_sfdc_lead.referral_specifics__c,\n\t                   dl_sfdc_lead.average_customer_size_employ_rev__c,\n\t                   dl_sfdc_lead.contingent_workers__c,\n\t                   dl_sfdc_lead.number_of_years_in_business__c,\n\t                   dl_sfdc_lead.global_company__c,\n\t                   dl_sfdc_lead.of_new_revenue__c,\n\t                   dl_sfdc_lead.current_customer_size__c,\n\t                   dl_sfdc_lead.oskeyid__c,\n\t                   dl_sfdc_lead.product_preview_demos__c,\n\t                   dl_sfdc_lead.do_you_have_workday_customers__c,\n\t                   dl_sfdc_lead.of_offices__c,\n\t                   dl_sfdc_lead.headquaters__c,\n\t                   dl_sfdc_lead.hq_location__c,\n\t                   dl_sfdc_lead.erp_experience__c,\n\t                   dl_sfdc_lead.sic_code__c,\n\t                   dl_sfdc_lead.who_do_you_compete_with__c,\n\t                   dl_sfdc_lead.how_do_you_differentiate_from_others__c,\n\t                   dl_sfdc_lead.name_of_workday_sponsor__c,\n\t                   dl_sfdc_lead.customers_that_requesting_workday__c,\n\t                   dl_sfdc_lead.target_market__c,\n\t                   dl_sfdc_lead.currently_partner_with_other_hcm_vendors__c,\n\t                   dl_sfdc_lead.duns_number__c,\n\t                   dl_sfdc_lead.sic_description__c,\n\t                   dl_sfdc_lead.job_level__c,\n\t                   dl_sfdc_lead.validation__c,\n\t                   dl_sfdc_lead.validation_date__c,\n\t                   dl_sfdc_lead.roi_analysis_link__c,\n\t                   dl_sfdc_lead.program_name__c,\n\t                   dl_sfdc_lead.trade_show_notes__c,\n\t                   dl_sfdc_lead.tempcountry__c,\n\t                   dl_sfdc_lead.converted_from_lead__c,\n\t                   dl_sfdc_lead.purge_or_archive__c,\n\t                   dl_sfdc_lead.lead_number__c,\n\t                   dl_sfdc_lead.round_robin_id__c,\n\t                   dl_sfdc_lead.tempstate__c,\n\t                   dl_sfdc_lead.consent_last_updated__c,\n\t                   dl_sfdc_lead.token__c,\n\t                   dl_sfdc_lead.newsletters_blogs__c,\n\t                   dl_sfdc_lead.events__c,\n\t                   dl_sfdc_lead.product_information_announcements__c,\n\t                   dl_sfdc_lead.consent_type__c,\n\t                   dl_sfdc_lead.consent_source__c,\n\t                   dl_sfdc_lead.area_code__c,\n\t                   dl_sfdc_lead.area_code_format_1__c,\n\t                   dl_sfdc_lead.area_code_format_2__c,\n\t                   dl_sfdc_lead.country_format_1__c,\n\t                   dl_sfdc_lead.area_code_calc__c,\n\t                   dl_sfdc_lead.assignment_rule_change_del__c,\n\t                   dl_sfdc_lead.lead_update_del__c,\n\t                   dl_sfdc_lead.fortune_1_000__c,\n\t                   dl_sfdc_lead.upgrade_replace__c,\n\t                   dl_sfdc_lead.qual_score__c,\n\t                   dl_sfdc_lead.int_score__c,\n\t                   dl_sfdc_lead.ls_lead_rating__c,\n\t                   dl_sfdc_lead.financials_response__c,\n\t                   dl_sfdc_lead.server_path__c,\n\t                   dl_sfdc_lead.lead_rating_image__c,\n\t                   dl_sfdc_lead.qualification_meter__c,\n\t                   dl_sfdc_lead.interest_meter__c,\n\t                   dl_sfdc_lead.hcm_system_of_record__c,\n\t                   dl_sfdc_lead.financials_logistics_systems_of_record__c,\n\t                   dl_sfdc_lead.ls_completion__c,\n\t                   dl_sfdc_lead.profile_completeness_meter__c,\n\t                   dl_sfdc_lead.profile_status__c,\n\t                   dl_sfdc_lead.unsync_with_mkto__c,\n\t                   dl_sfdc_lead.sflma__subscriber_org_type__c,\n\t                   dl_sfdc_lead.csd_flag__c,\n\t                   dl_sfdc_lead.matched_account_type__c,\n\t                   dl_sfdc_lead.custom_convert__c,\n\t                   dl_sfdc_lead.matched_contact_id__c,\n\t                   dl_sfdc_lead.matched_by_code__c,\n\t                   dl_sfdc_lead.marketingcloudid__c,\n\t                   dl_sfdc_lead.account_name_local_language__c,\n\t                   dl_sfdc_lead.address_local_language__c,\n\t                   dl_sfdc_lead.name_local_language__c,\n\t                   dl_sfdc_lead.lid__linkedin_company_id__c,\n\t                   dl_sfdc_lead.lid__linkedin_member_token__c,\n\t                   dl_sfdc_lead.title_local_language__c,\n\t                   dl_sfdc_lead.jsimpacts__added_from_data_com__c,\n\t                   dl_sfdc_lead.jsimpacts__data_com_do_not_auto_update__c,\n\t                   dl_sfdc_lead.jsimpacts__data_com_managed__c,\n\t                   dl_sfdc_lead.jsimpacts__imported_from_jigsaw__c,\n\t                   dl_sfdc_lead.marketo_phone__c,\n\t                   dl_sfdc_lead.demand_funnel_stage__c,\n\t                   dl_sfdc_lead.lead_count__c,\n\t                   dl_sfdc_lead.is_converted_lead__c,\n\t                   dl_sfdc_lead.send_reject_notification__c,\n\t                   dl_sfdc_lead.year_founded__c,\n\t                   dl_sfdc_lead.complimentary_workday_solution__c,\n\t                   dl_sfdc_lead.privacy_policy_agreement__c,\n\t                   dl_sfdc_lead.customer_base_response__c,\n\t                   dl_sfdc_lead.e_g_exec_change__c,\n\t                   dl_sfdc_lead.expansion_growth__c,\n\t                   dl_sfdc_lead.fins_exec_change__c,\n\t                   dl_sfdc_lead.hr_exec_change__c,\n\t                   dl_sfdc_lead.ipo_or_funding_growth__c,\n\t                   dl_sfdc_lead.it_exec_change__c,\n\t                   dl_sfdc_lead.lattice_attach_score__c,\n\t                   dl_sfdc_lead.contact_intelligence_dashboard__c,\n\t                   dl_sfdc_lead.survey_responses__c,\n\t                   dl_sfdc_lead.time_attendance_system_of_record__c,\n\t                   dl_sfdc_lead.demand_base_id__c,\n\t                   dl_sfdc_lead.forbes_2000__c,\n\t                   dl_sfdc_lead.keep_informed_about_workday__c,\n\t                   dl_sfdc_lead.main_concerns_with_current_hr_system__c,\n\t                   dl_sfdc_lead.plans_for_hr_system__c,\n\t                   dl_sfdc_lead.plans_for_current_financial_system__c,\n\t                   dl_sfdc_lead.plans_for_your_current_system__c,\n\t                   dl_sfdc_lead.lattice_financials_score__c,\n\t                   dl_sfdc_lead.lattice_hcm_score__c,\n\t                   dl_sfdc_lead.m_a_divest_growth__c,\n\t                   dl_sfdc_lead.ops_exec_change__c,\n\t                   dl_sfdc_lead.positive_financial_performance__c,\n\t                   dl_sfdc_lead.rising_14_functional_role__c,\n\t                   dl_sfdc_lead.rising_14_industry__c,\n\t                   dl_sfdc_lead.rising_14_job_title__c,\n\t                   dl_sfdc_lead.rising_14_job_level__c,\n\t                   dl_sfdc_lead.rising_14_what_workday_applications_s__c,\n\t                   dl_sfdc_lead.rising_14_how_many_years_of_experience__c,\n\t                   dl_sfdc_lead.venturemessage__c,\n\t                   dl_sfdc_lead.qbdialer__closedate__c,\n\t                   dl_sfdc_lead.lattice_account_id__c,\n\t                   dl_sfdc_lead.marketo_job_title__c,\n\t                   dl_sfdc_lead.qbdialer__closescore__c,\n\t                   dl_sfdc_lead.qbdialer__contactdate__c,\n\t                   dl_sfdc_lead.qbdialer__contactscoreid__c,\n\t                   dl_sfdc_lead.qbdialer__contactscore__c,\n\t                   dl_sfdc_lead.qbdialer__dials__c,\n\t                   dl_sfdc_lead.qbdialer__lastcalltime__c,\n\t                   dl_sfdc_lead.qbdialer__responsetime__c,\n\t                   dl_sfdc_lead.lead_domain__c,\n\t                   dl_sfdc_lead.qbdialer__timezonesidkey__c,\n\t                   dl_sfdc_lead.lead_id_case_safe__c,\n\t                   dl_sfdc_lead.matched_account_id__c,\n\t                   dl_sfdc_lead.integrate_publisher_id__c,\n\t                   dl_sfdc_lead.department__c,\n\t                   dl_sfdc_lead.department_local_language__c,\n\t                   dl_sfdc_lead.first_csd_ae_connect__c,\n\t                   dl_sfdc_lead.first_csd_connect__c,\n\t                   dl_sfdc_lead.first_csd_reachout__c,\n\t                   dl_sfdc_lead.first_mql__c,\n\t                   dl_sfdc_lead.first_marketing_response__c,\n\t                   dl_sfdc_lead.last_csd_ae_connect__c,\n\t                   dl_sfdc_lead.last_csd_connect__c,\n\t                   dl_sfdc_lead.last_csd_reachout__c,\n\t                   dl_sfdc_lead.last_mql__c,\n\t                   dl_sfdc_lead.last_marketing_response__c,\n\t                   dl_sfdc_lead.touches_in_engagement_count__c,\n\t                   dl_sfdc_lead.marketing_response_count__c,\n\t                   dl_sfdc_lead.marketing_opt_out__c,\n\t                   dl_sfdc_lead.mkto_si__add_to_marketo_campaign__c,\n\t                   dl_sfdc_lead.mkto_si__hidedate__c,\n\t                   dl_sfdc_lead.mkto_si__last_interesting_moment_date__c,\n\t                   dl_sfdc_lead.mkto_si__last_interesting_moment_desc__c,\n\t                   dl_sfdc_lead.mkto_si__last_interesting_moment_source__c,\n\t                   dl_sfdc_lead.mkto_si__last_interesting_moment_type__c,\n\t                   dl_sfdc_lead.mkto_si__last_interesting_moment__c,\n\t                   dl_sfdc_lead.mkto_si__msicontactid__c,\n\t                   dl_sfdc_lead.mkto_si__priority__c,\n\t                   dl_sfdc_lead.mkto_si__relative_score_value__c,\n\t                   dl_sfdc_lead.mkto_si__relative_score__c,\n\t                   dl_sfdc_lead.mkto_si__urgency_value__c,\n\t                   dl_sfdc_lead.mkto_si__urgency__c,\n\t                   dl_sfdc_lead.mkto_si__view_in_marketo__c,\n\t                   dl_sfdc_lead.account_id__c,\n\t                   dl_sfdc_lead.annual_revenue_range__c,\n\t                   dl_sfdc_lead.contact_request__c,\n\t                   dl_sfdc_lead.marketing_notes__c,\n\t                   dl_sfdc_lead.engagement_status__c,\n\t                   dl_sfdc_lead.last_email_sales__c,\n\t                   dl_sfdc_lead.last_email_csd__c,\n\t                   dl_sfdc_lead.reject_recycle_reason__c,\n\t                   dl_sfdc_lead.engagement_status_priority__c,\n\t                   dl_sfdc_lead.matched_account_opps__c,\n\t                   dl_sfdc_lead.start_date_of_current_engagement_stage__c,\n\t                   dl_sfdc_lead.last_csd_reachout_task__c,\n\t                   dl_sfdc_lead.sla_status__c,\n\t                   dl_sfdc_lead.engagement_stage_end_date__c,\n\t                   dl_sfdc_lead.engagement_stage_days_remaining__c,\n\t                   dl_sfdc_lead.prior_engagement_stage__c,\n\t                   dl_sfdc_lead.update_lead__c,\n\t                   dl_sfdc_lead.copy_of_email_adress__c,\n\t                   dl_sfdc_lead.pre_trigger_account_match__c,\n\t                   dl_sfdc_lead.pre_trigger_engagement_stage__c,\n\t                   dl_sfdc_lead.accountcsid__c,\n\t                   dl_sfdc_lead.reject_sub_reason__c,\n\t                   dl_sfdc_lead.reject_reason_detail__c,\n\t                   dl_sfdc_lead.etl_created_date,\n\t                   dl_sfdc_lead.etl_created_by,\n\t                   dl_sfdc_lead.etl_updated_date,\n\t                   dl_sfdc_lead.etl_updated_by,\n\t                   dl_sfdc_lead.account_active_oppty_count__c,\n\t                   dl_sfdc_lead.account_employee_count__c,\n\t                   dl_sfdc_lead.account_financials_status__c,\n\t                   dl_sfdc_lead.account_hcm_status__c,\n\t                   dl_sfdc_lead.account_industry__c,\n\t                   dl_sfdc_lead.account_name__c,\n\t                   dl_sfdc_lead.account_owner__c,\n\t                   dl_sfdc_lead.account_student_status__c,\n\t                   dl_sfdc_lead.account_super_industry__c,\n\t                   dl_sfdc_lead.address,\n\t                   dl_sfdc_lead.bizible2__account__c,\n\t                   dl_sfdc_lead.bizible2__ad_campaign_name_ft__c,\n\t                   dl_sfdc_lead.bizible2__ad_campaign_name_lc__c,\n\t                   dl_sfdc_lead.bizible2__bizibleid__c,\n\t                   dl_sfdc_lead.bizible2__landing_page_ft__c,\n\t                   dl_sfdc_lead.bizible2__landing_page_lc__c,\n\t                   dl_sfdc_lead.bizible2__marketing_channel_ft__c,\n\t                   dl_sfdc_lead.bizible2__marketing_channel_lc__c,\n\t                   dl_sfdc_lead.bizible2__touchpoint_date_ft__c,\n\t                   dl_sfdc_lead.bizible2__touchpoint_date_lc__c,\n\t                   dl_sfdc_lead.bizible2__touchpoint_source_ft__c,\n\t                   dl_sfdc_lead.bizible2__touchpoint_source_lc__c,\n\t                   dl_sfdc_lead.csd_prospecting__c,\n\t                   dl_sfdc_lead.current_sequence_name__c,\n\t                   dl_sfdc_lead.name_of_currently_active_sequence__c,\n\t                   dl_sfdc_lead.outreach_id__c,\n\t                   dl_sfdc_lead.pl_customer_score__c,\n\t                   dl_sfdc_lead.pl_prospect_score__c,\n\t                   dl_sfdc_lead.leandata__a2b_account__c,\n\t                   dl_sfdc_lead.leandata__a2b_group__c,\n\t                   dl_sfdc_lead.leandata__ld_segment__c,\n\t                   dl_sfdc_lead.leandata__marketing_sys_created_date__c,\n\t                   dl_sfdc_lead.leandata__matched_account__c,\n\t                   dl_sfdc_lead.leandata__matched_buyer_persona__c,\n\t                   dl_sfdc_lead.leandata__matched_lead__c,\n\t                   dl_sfdc_lead.leandata__modified_score__c,\n\t                   dl_sfdc_lead.leandata__reporting_matched_account__c,\n\t                   dl_sfdc_lead.leandata__reporting_timestamp__c,\n\t                   dl_sfdc_lead.leandata__router_status__c,\n\t                   dl_sfdc_lead.leandata__routing_action__c,\n\t                   dl_sfdc_lead.leandata__routing_status__c,\n\t                   dl_sfdc_lead.leandata__search__c,\n\t                   dl_sfdc_lead.leandata__search_index__c,\n\t                   dl_sfdc_lead.leandata__status_info__c,\n\t                   dl_sfdc_lead.leandata__tag__c,\n\t                   dl_sfdc_lead.marketo_person_id__c,\n\t                   dl_sfdc_lead.last_qualified_campaign__c,\n\t                   dl_sfdc_lead.engagement_product__c,\n\t                   dl_sfdc_lead.blacklisted__c,\n\t                   dl_sfdc_lead.bombora_app__bombora_last_date_time_updated__c,\n\t                   dl_sfdc_lead.bombora_app__bombora_surge_record_count__c,\n\t                   dl_sfdc_lead.bombora_app__bombora_total_composite_score__c,\n\t                   dl_sfdc_lead.do_not_call_date__c,\n\t                   dl_sfdc_lead.dozisf__zoominfo_company_id__c,\n\t                   dl_sfdc_lead.dozisf__zoominfo_first_updated__c,\n\t                   dl_sfdc_lead.dozisf__zoominfo_id__c,\n\t                   dl_sfdc_lead.dozisf__zoominfo_last_updated__c,\n\t                   dl_sfdc_lead.email_invalid__c,\n\t                   dl_sfdc_lead.email_opt_in__c,\n\t                   dl_sfdc_lead.email_opt_in_date__c,\n\t                   dl_sfdc_lead.email_opt_out_date__c,\n\t                   dl_sfdc_lead.email_verification_confidence_level__c,\n\t                   dl_sfdc_lead.email_verification_details__c,\n\t                   dl_sfdc_lead.external_id__c,\n\t                   dl_sfdc_lead.fins_wam__c,\n\t                   dl_sfdc_lead.first_response_date__c,\n\t                   dl_sfdc_lead.hcm_wam__c,\n\t                   dl_sfdc_lead.integrate_asset_code__c,\n\t                   dl_sfdc_lead.integrate_asset_name__c,\n\t                   dl_sfdc_lead.leandata_routing__c,\n\t                   dl_sfdc_lead.marketing_notes_ringlead__c,\n\t                   dl_sfdc_lead.marketing_suspended__c,\n\t                   dl_sfdc_lead.matched_account_active_opportunity_count__c,\n\t                   dl_sfdc_lead.matched_account_additional_ae__c,\n\t                   dl_sfdc_lead.matched_account_annual_revenue__c,\n\t                   dl_sfdc_lead.matched_account_classification__c,\n\t                   dl_sfdc_lead.matched_account_classification_range__c,\n\t                   dl_sfdc_lead.matched_account_csd_prospecting__c,\n\t                   dl_sfdc_lead.matched_account_cust_satisfaction_ind__c,\n\t                   dl_sfdc_lead.matched_account_customer_base_ae__c,\n\t                   dl_sfdc_lead.matched_account_customer_of__c,\n\t                   dl_sfdc_lead.matched_account_deploy_total_tenant_cnt__c,\n\t                   dl_sfdc_lead.matched_account_employees__c,\n\t                   dl_sfdc_lead.matched_account_fin_systems_of_record__c,\n\t                   dl_sfdc_lead.matched_account_financials_lead__c,\n\t                   dl_sfdc_lead.matched_account_financials_status__c,\n\t                   dl_sfdc_lead.matched_account_fins_wam__c,\n\t                   dl_sfdc_lead.matched_account_forbes_2000__c,\n\t                   dl_sfdc_lead.matched_account_group__c,\n\t                   dl_sfdc_lead.matched_account_hcm_status__c,\n\t                   dl_sfdc_lead.matched_account_hcm_wam__c,\n\t                   dl_sfdc_lead.matched_account_hr_systems_of_record__c,\n\t                   dl_sfdc_lead.matched_account_industry__c,\n\t                   dl_sfdc_lead.matched_account_init_deployment_approach__c,\n\t                   dl_sfdc_lead.matched_account_name__c,\n\t                   dl_sfdc_lead.matched_account_new_implementing_cust__c,\n\t                   dl_sfdc_lead.matched_account_not_renewing__c,\n\t                   dl_sfdc_lead.matched_account_oppty_count_sourcing__c,\n\t                   dl_sfdc_lead.matched_account_oppty_count_workday__c,\n\t                   dl_sfdc_lead.matched_account_owner__c,\n\t                   dl_sfdc_lead.matched_account_pbu_engagement_level__c,\n\t                   dl_sfdc_lead.matched_account_pbu_name__c,\n\t                   dl_sfdc_lead.matched_account_pbu_status__c,\n\t                   dl_sfdc_lead.matched_account_pbu_type__c,\n\t                   dl_sfdc_lead.matched_account_planning_lead__c,\n\t                   dl_sfdc_lead.matched_account_product_deployed_fin__c,\n\t                   dl_sfdc_lead.matched_account_product_deployed_hcm__c,\n\t                   dl_sfdc_lead.matched_account_product_deployed_payro__c,\n\t                   dl_sfdc_lead.matched_account_region__c,\n\t                   dl_sfdc_lead.matched_account_segment__c,\n\t                   dl_sfdc_lead.matched_account_status__c,\n\t                   dl_sfdc_lead.matched_account_student_admin_systems__c,\n\t                   dl_sfdc_lead.matched_account_student_status__c,\n\t                   dl_sfdc_lead.matched_account_super_industry__c,\n\t                   dl_sfdc_lead.matched_account_suspend_marketing_emails__c,\n\t                   dl_sfdc_lead.matched_account_total_products_deployed__c,\n\t                   dl_sfdc_lead.matched_account_type_ld__c,\n\t                   dl_sfdc_lead.most_recent_sales_connect__c,\n\t                   dl_sfdc_lead.most_recent_sales_reach_out__c,\n\t                   dl_sfdc_lead.mql_follow_up_date__c,\n\t                   dl_sfdc_lead.no_longer_w_company__c,\n\t                   dl_sfdc_lead.ringlead_dms_status__c,\n\t                   dl_sfdc_lead.sfdc_campaign_id__c,\n\t                   dl_sfdc_lead.zoominfo_no_longer_with_company__c,\n\t                   dl_sfdc_lead.outreach_tag__c,\n\t                   row_number() OVER (PARTITION BY dl_sfdc_lead.id ORDER BY dl_sfdc_lead.etl_updated_date DESC) AS rw_nbr\n\t            FROM data_lake.dl_sfdc_lead) derived_table1\n\t      WHERE derived_table1.rw_nbr = 1\n\t      AND   convertedcontactid IS NULL);\n\t\"\"\")))\n\tdef merge_original(original):\n\t    def internal(element):\n\t        data = element.asDict(recursive=True)\n\t        data['original'] = original\n\t        return Row(**data)\n\t    return internal\n\tfor row in input102.rdd.toLocalIterator():\n\t    result = []\n\t    index = 0\n\t    for query in row._sql_query:\n\t      spark.sql(query)\n\t      result += [Row(execution= str(index), sqlStatement=query, count=0, message=\"success\")]\n\t      index += 1\n\t    tmp = spark.createDataFrame([Row(result = result)])\n\t    tmp = tmp.rdd.map(merge_original(row)).toDF(StructType(tmp.schema.fields + [StructField(\"original\", input102.schema, True)]))\n\t    if output101 is None:\n\t        output101 = tmp\n\t    else:\n\t        output101 = output101.union(tmp)\n\n\tif isInputEmpty:\n\t    output101 = spark.createDataFrame([], output101.schema)\n\nimport subprocess\nresult=subprocess.run([\"ls\"], capture_output=True, text=True)\n# result1=subprocess.run([\"pwd\"], capture_output=True, text=True)\ndata = [StructField(item, StringType(), True) for item in result.stdout.split(\"\\n\")]\n# data.append((result1.stdout,))\nprint(data)\ndeptDF = spark.createDataFrame(data=[], schema=StructType(data))\ndeptDF.printSchema()\nout0=in0.select(\"c  date\")",
+        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
+        "scriptMethodFooter" : "    return out0"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.Uooc3h8tVmdPw5lJv48-v$$8fU6UMC7OvanJjkndel2x.ports.outputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 3,
+    "message" : "Please infer output schema from the cluster",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.QkILG1xdwXUxI1thdhnHs$$HX-nL8BicRrKIOLcVgxCK.ports.outputs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 3,
+    "message" : "Please infer output schema from the cluster",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
