@@ -19,16 +19,17 @@ object src_parquet_all_type_and_partition_withspacehyphens1 {
       .schema(
         StructType(
           Array(
-            StructField("c   short  --",     StringType, true),
-            StructField("c-int-column type", StringType, true),
-            StructField("-- c-long",         StringType, true),
-            StructField("c-decimal",         StringType, true),
-            StructField("c  float",          StringType, true),
-            StructField("c--boolean",        StringType, true),
-            StructField("c- - -double",      StringType, true),
-            StructField("c___-- string",     StringType, true),
-            StructField("c  date",           StringType, true),
-            StructField("c_timestamp",       StringType, true)
+            StructField("c   short  --",     StringType,          true),
+            StructField("c-int-column type", StringType,          true),
+            StructField("-- c-long",         StringType,          true),
+            StructField("c-decimal",         StringType,          true),
+            StructField("c  float",          StringType,          true),
+            StructField("c--boolean",        StringType,          true),
+            StructField("c- - -double",      StringType,          true),
+            StructField("c___-- string",     StringType,          true),
+            StructField("c  date",           StringType,          true),
+            StructField("c_timestamp",       StringType,          true),
+            StructField("c_decimal",         DecimalType(20, 10), true)
           )
         )
       )

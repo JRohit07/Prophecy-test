@@ -3,7 +3,7 @@
     "id" : "1",
     "uri" : "pipelines/EM_DISABLED_SCALA_BASIC",
     "language" : "scala",
-    "fabricId" : "2730",
+    "fabricId" : "2",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -1078,6 +1078,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -1217,6 +1226,15 @@
             }, {
               "name" : "c_timestamp",
               "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -1433,6 +1451,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -1540,6 +1567,15 @@
             }, {
               "name" : "c_timestamp",
               "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -1782,6 +1818,15 @@
             }, {
               "name" : "c_timestamp",
               "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -2074,6 +2119,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -2213,6 +2267,15 @@
             }, {
               "name" : "c_timestamp",
               "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -2375,6 +2438,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -2525,6 +2597,15 @@
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
+                }, {
+                  "name" : "c_decimal",
+                  "type" : "decimal(20,10)",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
                 } ]
               },
               "isStreaming" : false
@@ -2669,6 +2750,15 @@
                     }, {
                       "name" : "c_timestamp",
                       "type" : "string",
+                      "nullable" : true,
+                      "metadata" : {
+                        "description" : "",
+                        "mappings" : [ ],
+                        "tags" : [ ]
+                      }
+                    }, {
+                      "name" : "c_decimal",
+                      "type" : "decimal(20,10)",
                       "nullable" : true,
                       "metadata" : {
                         "description" : "",
@@ -3100,6 +3190,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "c_decimal",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -3244,6 +3343,15 @@
                 }, {
                   "name" : "c_timestamp",
                   "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "c_decimal",
+                  "type" : "decimal(20,10)",
                   "nullable" : true,
                   "metadata" : {
                     "description" : "",

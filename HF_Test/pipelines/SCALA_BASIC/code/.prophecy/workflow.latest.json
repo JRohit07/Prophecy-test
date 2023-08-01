@@ -3,7 +3,7 @@
     "id" : "1",
     "uri" : "pipelines/SCALA_BASIC",
     "language" : "scala",
-    "fabricId" : "2730",
+    "fabricId" : "2",
     "frontEndLanguage" : "scala",
     "mode" : "batch",
     "udfs" : {

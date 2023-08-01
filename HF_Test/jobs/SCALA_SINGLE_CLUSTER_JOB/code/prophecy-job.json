@@ -27,11 +27,11 @@
       }
     },
     "availableFabrics" : [ {
-      "id" : "9425",
-      "name" : "deleted",
+      "id" : "4",
+      "name" : "db_1",
       "clusterSizes" : {
-        "default" : "nmn",
-        "availableClusterSizes" : [ "nmn" ]
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "test" ]
       },
       "pylibsResolutionMode" : {
         "PublicCentral" : { }
@@ -40,38 +40,25 @@
         "PublicCentral" : { }
       }
     }, {
-      "id" : "2420",
-      "name" : "dev_sdl_acl_dbfs",
+      "id" : "26",
+      "name" : "dev_new",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
       },
       "pylibsResolutionMode" : {
         "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
+          "path" : "dbfs:/FileStore/jars/io/prophecy/prophecy_libs-1.5.8-py3-none-any.whl"
         }
       },
       "scalalibsResolutionMode" : {
         "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
+          "path" : "dbfs:/FileStore/jars/maven/io/prophecy/prophecy-libs-assembly-3.3.0-7.1.3-SNAPSHOT.jar"
         }
       }
     }, {
-      "id" : "9569",
-      "name" : "SingleCluster_1",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json1", "adv-json2" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7620",
-      "name" : "dev_7_3_LTS",
+      "id" : "24",
+      "name" : "dev_shared",
       "clusterSizes" : {
         "default" : "small",
         "availableClusterSizes" : [ "small" ]
@@ -83,466 +70,8 @@
         "PublicCentral" : { }
       }
     }, {
-      "id" : "9547",
-      "name" : "ACLFabric_SDL",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2601",
-      "name" : "dev_unity_catalog",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-unrestricted-shared", "adv-power-shared", "adv-shared-compute" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "4821",
-      "name" : "dev_azure",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "singlenodewithphoton" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2730",
-      "name" : "dev",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium", "adv-json1", "adv-json2", "adv-jsoncomplex", "11-3-adv-json1", "adv-jsonWithJobPool", "job_all_fields_policy_job_compute", "qa_abhisheks_cluster_random" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2404",
-      "name" : "dev_dbfs_fs",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium" ]
-      },
-      "pylibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
-        }
-      }
-    }, {
-      "id" : "9313",
-      "name" : "FabricAutomatedEBS",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "small2", "small3" ]
-      },
-      "pylibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://pypi.python.org/simple"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://repo1.maven.org/"
-        }
-      }
-    }, {
-      "id" : "9563",
-      "name" : "AdvJson_adv_json_power_shared",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json-1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6945",
-      "name" : "ACLFabric",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "8006",
-      "name" : "AutomationFabric",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9549",
-      "name" : "AdvJson_adv_json_all_custom_config",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json-1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9421",
-      "name" : "Azure-TEST_Automated_1",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7619",
-      "name" : "dev_9_1_LTS",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2403",
-      "name" : "testPublicCentral",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6948",
-      "name" : "Config_unity_catalog_shared",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9450",
-      "name" : "Automated-Databricks-ACLNewDude",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9548",
-      "name" : "ACLCanAttachFabric",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "8167",
-      "name" : "test_pankaj_fabric",
-      "clusterSizes" : {
-        "default" : "Omega",
-        "availableClusterSizes" : [ "Omega" ]
-      },
-      "pylibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/jars/maven/io/prophecy/prophecy_libs-1.5.6-py3-none-any.whl"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/jars/maven/io/prophecy/prophecy-libs-assembly-3.3.0-7.0.51-SNAPSHOT.jar"
-        }
-      }
-    }, {
-      "id" : "5164",
-      "name" : "dev_s3",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json_9_1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "s3://prophecy-public-bucket/prophecy-libs/"
-        }
-      }
-    }, {
-      "id" : "9464",
-      "name" : "dev_shared_another",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9567",
-      "name" : "FabricAutomatedADVJobSize",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "small2", "small3", "adv-json1", "adv-json2" ]
-      },
-      "pylibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "DBFS" : {
-          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
-        }
-      }
-    }, {
-      "id" : "9625",
-      "name" : "JobSize-Automated",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7622",
-      "name" : "dev_12_2_LTS_ML",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "4887",
-      "name" : "dev_customartifactory",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://pypi.python.org/simple"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://repo1.maven.org/"
-        }
-      }
-    }, {
-      "id" : "2080",
-      "name" : "dev_gcp",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium", "singlenodephoton" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9622",
-      "name" : "UCFabric",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "3855",
-      "name" : "dev_expired_donotdelete",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "4626",
-      "name" : "dev_12_2_LTS",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9572",
-      "name" : "AdvJson_adv_json_job_pool",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json-1" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "5159",
-      "name" : "ebs_ssd",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "8734",
-      "name" : "Dev_new",
-      "clusterSizes" : {
-        "default" : "Default",
-        "availableClusterSizes" : [ "Default" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7897",
-      "name" : "dev_databricks_all_fabric",
-      "clusterSizes" : {
-        "default" : "12.2 LTS",
-        "availableClusterSizes" : [ "12.2 LTS", "11.3 LTS", "10.4 LTS", "9.1 LTS", "12.2 LTS ML GPU", "12.2 LTS ML", "SingleNode12.2", "MultiShared12.2", "NoIsolationshared12.2", "AllConfigs", "small", "very-large_name-test123very-large_name-test123very-large_name-test123very-large_name-test123very-large_name-test123" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2394",
-      "name" : "dev_sdl_acl",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "adv-json-acl" ]
-      }
-    }, {
-      "id" : "4525",
-      "name" : "dev_10_4_LTS",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7623",
-      "name" : "dev_12_2_LTS_ML_GPU",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6932",
-      "name" : "dev_prophecy_donotdelete",
+      "id" : "27",
+      "name" : "prop_managed",
       "clusterSizes" : {
         "default" : "Small",
         "availableClusterSizes" : [ "Small" ]
@@ -554,106 +83,11 @@
         "PublicCentral" : { }
       }
     }, {
-      "id" : "3579",
-      "name" : "sanityFabric-sony",
+      "id" : "2",
+      "name" : "dev",
       "clusterSizes" : {
         "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7898",
-      "name" : "devasdasd",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "2405",
-      "name" : "dev_custom_artifactory",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium" ]
-      },
-      "pylibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://pypi.python.org/simple"
-        }
-      },
-      "scalalibsResolutionMode" : {
-        "CustomArtifactory" : {
-          "url" : "https://repo1.maven.org/"
-        }
-      }
-    }, {
-      "id" : "2068",
-      "name" : "dev_shared",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "medium", "adv-JobPool", "adv-unrestricted-multi-node", "adv-shared-compute", "adv-json-power-user-compute", "adv-personal", "adv-unrestricted-single", "adv_autoscale" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7018",
-      "name" : "Config_shared_acl",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "7673",
-      "name" : "omega",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "6991",
-      "name" : "Config_hc_acl",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small" ]
-      },
-      "pylibsResolutionMode" : {
-        "PublicCentral" : { }
-      },
-      "scalalibsResolutionMode" : {
-        "PublicCentral" : { }
-      }
-    }, {
-      "id" : "9571",
-      "name" : "TEST-Automated_Databricks1",
-      "clusterSizes" : {
-        "default" : "small",
-        "availableClusterSizes" : [ "small", "smallAdded", "adv-json1", "adv-json2", "small2" ]
+        "availableClusterSizes" : [ "small", "medium_updated", "adv-json" ]
       },
       "pylibsResolutionMode" : {
         "PublicCentral" : { }
@@ -1290,7 +724,7 @@
             "isWorkflowNodeConfiguration" : false
           } ],
           "instances" : {
-            "Scala_Sanity_Project" : [ "default", "test-common-with-another", "newinstance1" ]
+            "ScalaProject_HFTesting-clone" : [ "default", "test-common-with-another", "newinstance1" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
@@ -2413,7 +1847,7 @@
             "isWorkflowNodeConfiguration" : false
           } ],
           "instances" : {
-            "Scala_Sanity_Project" : [ "test-random3", "asdsad", "test-random2", "default", "test_all_instancevalues", "test-random11", "test-common-with-another" ]
+            "ScalaProject_HFTesting-clone" : [ "test-random3", "asdsad", "test-random2", "default", "test_all_instancevalues", "test-random11", "test-common-with-another" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
@@ -7191,7 +6625,7 @@
             "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "Scala_Sanity_Project" : [ "test-instance2", "test-instance3", "newfabric", "ebs_ssd", "dev_11rt", "dev1", "dev", "test-instance1", "default", "captain_livy" ]
+            "ScalaProject_HFTesting-clone" : [ "test-instance2", "test-instance3", "newfabric", "ebs_ssd", "dev_11rt", "dev1", "dev", "test-instance1", "default", "captain_livy" ]
           },
           "overrides" : {
             "CONFIG_DOUBLE" : 3333,
@@ -7696,7 +7130,7 @@
             "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "Scala_Sanity_Project" : [ "newfabric", "ebs_ssd", "dev_11rt", "dev1", "dev", "default", "captain_livy" ]
+            "ScalaProject_HFTesting-clone" : [ "newfabric", "ebs_ssd", "dev_11rt", "dev1", "dev", "default", "captain_livy" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
@@ -8312,7 +7746,7 @@
             "isWorkflowNodeConfiguration" : true
           } ],
           "instances" : {
-            "Scala_Sanity_Project" : [ "test-random3", "test-random1", "test-random2", "default", "test_all_instancevalues" ]
+            "ScalaProject_HFTesting-clone" : [ "test-random3", "test-random1", "test-random2", "default", "test_all_instancevalues" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
