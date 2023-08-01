@@ -1,6 +1,6 @@
 name: ScalaProject
 description: ' b'
-version: v3.1.3.0-3
+version: newRelease
 author: abhisheks+e2etests@simpledatalabs.com
 language: scala
 buildSystem: ''

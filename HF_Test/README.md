@@ -719,3 +719,7 @@ test
 *** Release notes for version: v3.1.3.0-3 ***
 
 test
+
+*** Release notes for version: newRelease ***
+
+release
