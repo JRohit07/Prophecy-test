@@ -1,0 +1,74 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: l_returnflag
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: l_linestatus
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sum_qty
+    type: decimal(18,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sum_base_price
+    type: decimal(28,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sum_disc_price
+    type: decimal(31,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sum_charge
+    type: decimal(32,2)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: avg_qty
+    type: decimal(22,6)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: avg_price
+    type: decimal(22,6)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: avg_disc
+    type: decimal(22,6)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: count_order
+    type: long
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

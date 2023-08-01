@@ -1,0 +1,1 @@
+{"initCode":"//import org.apache.spark.ml.linalg.Matrix","code":"//udf((mat: Matrix) => mat.numCols)\nudf((value: Int) => value * value)"}

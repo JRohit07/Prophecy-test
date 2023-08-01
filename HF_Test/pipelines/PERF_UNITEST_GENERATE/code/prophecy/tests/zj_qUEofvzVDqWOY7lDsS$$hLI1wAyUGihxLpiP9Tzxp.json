@@ -1,0 +1,187 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "f0IC9dVtE8Nkr6A2OzlKc$$V35lsyDRvr4mow55LhLAx" : {
+        "values" : [ [ "E", "2019-06-06", "ID", "aduncombe2f@behance.net", "Abbott", "Duncombe", "414-581-6114" ], [ "D", "2020-02-14", "MA", "aloudwella@youku.com", "Adaline", "Loudwell", "159-634-2408" ], [ "E", "2020-03-11", "PH", "alipman1r@clickbank.net", "Aguistin", "Lipman", "854-863-4663" ], [ "E", "2019-06-02", "CN", "adelph21@craigslist.org", "Alexandre", "Delph", "679-674-1281" ], [ "E", "2020-03-09", "BR", "agarshore23@sina.com.cn", "Alfred", "Garshore", "310-587-2230" ], [ "C", "2019-07-05", "CN", "abeach2e@illinois.edu", "Alina", "Beach", "458-226-3734" ], [ "C", "2020-02-24", "CN", "aloade17@netvibes.com", "Allyn", "Loade", "308-570-0883" ], [ "E", "2019-08-10", "CN", "amanceo@archive.org", "Alyssa", "Mance", "786-118-2070" ], [ "E", "2019-12-12", "EG", "aklimpt27@tripadvisor.com", "Ange", "Klimpt", "396-441-1480" ], [ "E", "2019-06-23", "ID", "afarrall1j@amazon.co.uk", "April", "Farrall", "905-726-9402" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "RoN3xrM1n9XKiUKfhIxQA$$2XPWUfO1xKSR9sMFiXSJy" : {
+        "values" : [ [ "88", "Abbott" ], [ "11", "Adaline" ], [ "64", "Aguistin" ], [ "74", "Alexandre" ], [ "76", "Alfred" ], [ "87", "Alina" ], [ "44", "Allyn" ], [ "25", "Alyssa" ], [ "80", "Ange" ], [ "56", "April" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "customer_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "9DXOWkGTHVbVFj4lLUI_z$$2ZE-QNspWefIy6OHi1p57" : {
+        "values" : [ [ "E", "2019-06-06", "ID", "88", "aduncombe2f@behance.net", "Abbott", "Duncombe", "414-581-6114" ], [ "D", "2020-02-14", "MA", "11", "aloudwella@youku.com", "Adaline", "Loudwell", "159-634-2408" ], [ "E", "2020-03-11", "PH", "64", "alipman1r@clickbank.net", "Aguistin", "Lipman", "854-863-4663" ], [ "E", "2019-06-02", "CN", "74", "adelph21@craigslist.org", "Alexandre", "Delph", "679-674-1281" ], [ "E", "2020-03-09", "BR", "76", "agarshore23@sina.com.cn", "Alfred", "Garshore", "310-587-2230" ], [ "C", "2019-07-05", "CN", "87", "abeach2e@illinois.edu", "Alina", "Beach", "458-226-3734" ], [ "C", "2020-02-24", "CN", "44", "aloade17@netvibes.com", "Allyn", "Loade", "308-570-0883" ], [ "E", "2019-08-10", "CN", "25", "amanceo@archive.org", "Alyssa", "Mance", "786-118-2070" ], [ "E", "2019-12-12", "EG", "80", "aklimpt27@tripadvisor.com", "Ange", "Klimpt", "396-441-1480" ], [ "E", "2019-06-23", "ID", "56", "afarrall1j@amazon.co.uk", "April", "Farrall", "905-726-9402" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "customer_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "scala"
+  } ],
+  "language" : "scala"
+}

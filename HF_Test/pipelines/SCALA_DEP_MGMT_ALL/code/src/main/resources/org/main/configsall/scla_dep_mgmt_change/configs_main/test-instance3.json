@@ -1,0 +1,24 @@
+{
+  "c_record_complex" : {
+    "cr_record" : { }
+  },
+  "SubGraph_1" : {
+    "CONFIG_BOOLEAN" : false,
+    "CONFIG_FLOAT" : 3454.345458984375,
+    "c_record_complex" : {
+      "cr_record" : { }
+    }
+  },
+  "CONFIG_FLOAT" : 3454.345458984375,
+  "CONFIG_BOOLEAN" : false,
+  "Subgraph_2" : {
+    "CONFIG_BOOLEAN" : false,
+    "CONFIG_FLOAT" : 3454.345458984375,
+    "c_record_complex" : {
+      "cr_record" : { }
+    }
+  },
+  "pm_shared_graph" : {
+    "Subgraph_1" : { }
+  }
+}

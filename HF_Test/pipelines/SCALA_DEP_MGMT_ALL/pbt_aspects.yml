@@ -1,0 +1,29 @@
+version: 1
+configurations:
+- test-instance2
+- test-instance3
+- newfabric
+- ebs_ssd
+- dev_11rt
+- dev1
+- dev
+- test-instance1
+- default
+- captain_livy
+dependencies:
+- type: workflow
+  id: '59965868'
+  name: mysql
+  enabled: true
+- type: workflow
+  id: '1575366423'
+  name: cats
+  enabled: true
+- type: workflow
+  id: WsJw2
+  name: mllib
+  enabled: true
+- type: workflow
+  id: VJIAR
+  name: sparkexcel
+  enabled: true

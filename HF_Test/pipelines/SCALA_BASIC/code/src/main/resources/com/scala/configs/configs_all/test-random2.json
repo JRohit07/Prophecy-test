@@ -1,0 +1,24 @@
+{
+  "SubgraphMain" : {
+    "c_record3" : { }
+  },
+  "c_record3" : { },
+  "Subgraph_4" : {
+    "c_record3" : { },
+    "Subgraph_5" : {
+      "c_record3" : { }
+    }
+  },
+  "Subgraph_3" : {
+    "c_record3" : { }
+  },
+  "Subgraph_1" : {
+    "c_record3" : { },
+    "Subgraph_2" : {
+      "c_record3" : { }
+    }
+  },
+  "c_test" : "asdasd",
+  "bool" : true,
+  "c_array" : [ "asdasd" ]
+}

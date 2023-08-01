@@ -1,0 +1,10 @@
+version: 1
+dependencies: []
+configurations:
+- newfabric
+- ebs_ssd
+- dev_11rt
+- dev1
+- dev
+- default
+- captain_livy
