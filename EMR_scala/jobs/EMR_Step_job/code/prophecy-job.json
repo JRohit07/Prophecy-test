@@ -6,7 +6,7 @@
     "name" : "EMR_Step_job",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_Step_job",
     "schedule" : "0 0/1 * * *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
@@ -131,7 +131,7 @@
       "properties" : {
         "awsConnId" : "aws_default",
         "emrConnId" : "emr_small",
-        "jobFlowOverrides" : "",
+        "jobFlowOverrides" : "{\n\t\"Name\": \"PropohecyDevEmr-Demo\",\n\t\"ReleaseLabel\": \"emr-6.11.0\",\n\t\"Applications\": [{\"Name\": \"Spark\"},{\"Name\": \"Livy\"}],\n}",
         "taskId" : null
       }
     }

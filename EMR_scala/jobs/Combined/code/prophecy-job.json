@@ -6,7 +6,7 @@
     "name" : "Combined",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_Combined",
     "schedule" : "*/10 8-10 * * *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,

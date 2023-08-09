@@ -6,7 +6,7 @@
     "name" : "EMR_operator_job",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_operator_job",
     "schedule" : "*/10 8-10 * * *",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
