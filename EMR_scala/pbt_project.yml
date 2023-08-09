@@ -1,0 +1,175 @@
+name: EMR_Synapse
+description: ''
+version: 0.0.1
+author: jrohit+e2e@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: emr_synapse
+  parentArtefactID: jrohite2eprophecy.io_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-08-08 07:20:06'
+pipelines:
+  pipelines/EMR_Synapse:
+    name: EMR_Synapse
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-08-08 07:20:06'
+    datasets:
+      inputs:
+      - datasets/mydataset
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/mydataset:
+    name: mydataset
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    createdAt: '2023-08-09 07:18:55'
+    mode: batch
+    physicalDatasets:
+      EMR_fabric:
+        fabricId: 9540
+        datasetType: File
+        description: ''
+        author: jrohit+e2e@prophecy.io
+        createdAt: '2023-08-09 07:18:56'
+templates: {}
+jobs:
+  jobs/EMR_operator_job:
+    name: EMR_operator_job
+    description: ''
+    fabricUID: 10097
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: '*/10 8-10 * * *'
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-08-08 11:06:59'
+    author: jrohit+e2e@prophecy.io
+  jobs/EMR_Step_job:
+    name: EMR_Step_job
+    description: ''
+    fabricUID: 10097
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-08-09 06:05:08'
+    author: jrohit+e2e@prophecy.io
+  jobs/Combined:
+    name: Combined
+    description: Job
+    fabricUID: 10097
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: '*/10 8-10 * * *'
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-08-09 08:41:38'
+    author: jrohit+e2e@prophecy.io
+  jobs/CustomFlow:
+    name: CustomFlow
+    description: ''
+    fabricUID: 10097
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-08-09 09:09:17'
+    author: jrohit+e2e@prophecy.io
+  jobs/custom2:
+    name: custom2
+    description: ''
+    fabricUID: 10097
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-08-09 09:38:01'
+    author: jrohit+e2e@prophecy.io
+functions:
+  author: null
+  createdAt: '2023-08-08 07:20:06'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}

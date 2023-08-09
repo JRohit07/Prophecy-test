@@ -1,0 +1,119 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/EMR_Step_job",
+    "name" : "EMR_Step_job",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_Step_job",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "8166",
+      "name" : "ProphecyManaged_airflowfabric",
+      "trialStartDate" : 1689042094455
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt" : {
+      "id" : "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt",
+      "component" : "EMRAddStep",
+      "metadata" : {
+        "label" : "EMRAddStep_0",
+        "slug" : "EMRAddStep_0",
+        "x" : -60,
+        "y" : 260
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "y1l-RFgHhS2dB6igf1BAO$$EBf-LQdoGcEbYanTKB3pa",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "AQGuWajlUuVrzciHxIbgP$$8kxp7j6uXxqpocPd9h5RI",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "actionOnFailure" : "TERMINATE_CLUSTER",
+        "clusterSize" : "10033/small_job_1",
+        "jobFlowId" : "",
+        "awsConnId" : "aws_default",
+        "steps" : null,
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "EMR_Synapse" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/EMR_Synapse"
+      }
+    },
+    "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7" : {
+      "id" : "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7",
+      "component" : "EMRStepSensor",
+      "metadata" : {
+        "label" : "EMRStepSensor_1",
+        "slug" : "EMRStepSensor_1",
+        "x" : 180,
+        "y" : 260
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JQi57Hpp7stF_9piL5rqF$$XckxQHam1JVz0jdr24BWh",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "H7I94o_6k-qlwRXD90EeQ$$MPzXffCoAG06_TTIlDTK7",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "9537",
+        "jobFlowId" : "",
+        "awsConnId" : "aws_default",
+        "stepId" : "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "-jZgy5htMCeQFqtVHQgWh$$z18SPUWbVvkdvIDTeq4Va",
+    "source" : "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt",
+    "target" : "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7",
+    "sourcePort" : "AQGuWajlUuVrzciHxIbgP$$8kxp7j6uXxqpocPd9h5RI",
+    "targetPort" : "JQi57Hpp7stF_9piL5rqF$$XckxQHam1JVz0jdr24BWh"
+  } ]
+}

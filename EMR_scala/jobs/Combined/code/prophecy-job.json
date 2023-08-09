@@ -1,0 +1,184 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/Combined",
+    "name" : "Combined",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_Combined",
+    "schedule" : "*/10 8-10 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "8166",
+      "name" : "ProphecyManaged_airflowfabric",
+      "trialStartDate" : 1689042094455
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "1gpOqDTF6h01aglNhyYTH" : {
+      "id" : "1gpOqDTF6h01aglNhyYTH",
+      "component" : "EMRAddStep",
+      "metadata" : {
+        "label" : "EMRAddStep_0",
+        "slug" : "EMRAddStep_0",
+        "x" : 820,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "n8pmBJlFevZTZwHDpfpza",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ZQi1DbrnnDjM2ObBYfUr1",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "actionOnFailure" : "TERMINATE_CLUSTER",
+        "clusterSize" : "10033/small_job_1",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1')}}",
+        "awsConnId" : "aws_default",
+        "steps" : null,
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "EMR_Synapse" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/EMR_Synapse"
+      }
+    },
+    "ZUBKhsAHOab3hM9GX1a3x" : {
+      "id" : "ZUBKhsAHOab3hM9GX1a3x",
+      "component" : "EMRStepSensor",
+      "metadata" : {
+        "label" : "EMRStepSensor_1",
+        "slug" : "EMRStepSensor_1",
+        "x" : 1060,
+        "y" : 280
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sXTTo__qXXGsr-jvsvO8y",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "0CbSuC8i_ETj3udmzVVde",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "9537",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1')}}",
+        "awsConnId" : "aws_default",
+        "stepId" : "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
+        "taskId" : null
+      }
+    },
+    "S3vGzCg5-2ZTiG5bWO6UP" : {
+      "id" : "S3vGzCg5-2ZTiG5bWO6UP",
+      "component" : "EMRJobFlow",
+      "metadata" : {
+        "label" : "EMRJobFlow_1",
+        "slug" : "EMRJobFlow_1",
+        "x" : 500,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_MDhGeAublIj6Y7exVJyh",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "Cw4gmlU_FHPmQGt7kpKUF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnId" : "aws_default",
+        "emrConnId" : "emr_small",
+        "jobFlowOverrides" : "{\n\t\"Name\": \"PropohecyDevEmr-Demo\",\n\t\"ReleaseLabel\": \"emr-6.11.0\",\n\t\"Applications\": [{\"Name\": \"Spark\"},{\"Name\": \"Livy\"}],\n}",
+        "taskId" : null
+      }
+    },
+    "WEkqYpoMdjLligGP0brkK" : {
+      "id" : "WEkqYpoMdjLligGP0brkK",
+      "component" : "EMRJobFlowSensor",
+      "metadata" : {
+        "label" : "EMRJobFlowSensor_1",
+        "slug" : "EMRJobFlowSensor_1",
+        "x" : 640,
+        "y" : 280
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JMkrCuFtFZAEakuDMBzGa",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ecnKBcC6XkfWTv7Oorpn4",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1')}}",
+        "awsConnId" : "aws_default",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ReCKzouH2NR9HO3lsKP52",
+    "source" : "1gpOqDTF6h01aglNhyYTH",
+    "target" : "ZUBKhsAHOab3hM9GX1a3x",
+    "sourcePort" : "ZQi1DbrnnDjM2ObBYfUr1",
+    "targetPort" : "sXTTo__qXXGsr-jvsvO8y"
+  }, {
+    "id" : "uTqbcBXX_yPbmzocycAUZ",
+    "source" : "S3vGzCg5-2ZTiG5bWO6UP",
+    "target" : "WEkqYpoMdjLligGP0brkK",
+    "sourcePort" : "Cw4gmlU_FHPmQGt7kpKUF",
+    "targetPort" : "JMkrCuFtFZAEakuDMBzGa"
+  }, {
+    "id" : "0wP8vzAvCnYUJ3O7NvJha",
+    "source" : "WEkqYpoMdjLligGP0brkK",
+    "target" : "1gpOqDTF6h01aglNhyYTH",
+    "sourcePort" : "ecnKBcC6XkfWTv7Oorpn4",
+    "targetPort" : "n8pmBJlFevZTZwHDpfpza"
+  } ]
+}

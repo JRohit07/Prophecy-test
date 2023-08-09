@@ -1,0 +1,278 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "uri" : "pipelines/EMR_Synapse",
+    "language" : "python",
+    "fabricId" : "9540",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "jrohite2eprophecy.io_team.emr_synapse.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "emr_synapse",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "mkxwHZ1_AQl5VIgJektDb",
+    "source" : "C54c0LpeCW1BlnlqnGviY$$kPe4a3EYshLOQdcuh3Ml4",
+    "sourcePort" : "gJvJfc1eK2Mj20hSUGGWE$$wp3UFuIzwwgxVT-zLTW6z",
+    "target" : "_f2fBdD25QIJbGYU8RpYY$$tYTp5d8Q5x3GDaZGF-AEH",
+    "targetPort" : "ElAeqZbVfZpZu7Td5b7YS$$hh78MncHxqReS4dgOMLNN"
+  }, {
+    "id" : "fMqI9ckVyL0dSMMh86u8j",
+    "source" : "_f2fBdD25QIJbGYU8RpYY$$tYTp5d8Q5x3GDaZGF-AEH",
+    "sourcePort" : "-Nruf1nfqVZBODjjGt9hJ$$KkFiERYWu5KPvcnr7QdKt",
+    "target" : "DdZID2fMYcjheoapm6cnI$$eTG1ogEnYYV_hindeIcBp",
+    "targetPort" : "z1WxTm_OG0jSCBzQL2_bm$$hQBzgOpsqTT-bnCAccvk3"
+  } ],
+  "processes" : {
+    "C54c0LpeCW1BlnlqnGviY$$kPe4a3EYshLOQdcuh3Ml4" : {
+      "id" : "C54c0LpeCW1BlnlqnGviY$$kPe4a3EYshLOQdcuh3Ml4",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "mydataset",
+        "slug" : "mydataset",
+        "x" : 200,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "gJvJfc1eK2Mj20hSUGGWE$$wp3UFuIzwwgxVT-zLTW6z",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/mydataset"
+      }
+    },
+    "_f2fBdD25QIJbGYU8RpYY$$tYTp5d8Q5x3GDaZGF-AEH" : {
+      "id" : "_f2fBdD25QIJbGYU8RpYY$$tYTp5d8Q5x3GDaZGF-AEH",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 380,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ElAeqZbVfZpZu7Td5b7YS$$hh78MncHxqReS4dgOMLNN",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-Nruf1nfqVZBODjjGt9hJ$$KkFiERYWu5KPvcnr7QdKt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      }
+    },
+    "DdZID2fMYcjheoapm6cnI$$eTG1ogEnYYV_hindeIcBp" : {
+      "id" : "DdZID2fMYcjheoapm6cnI$$eTG1ogEnYYV_hindeIcBp",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_1",
+        "slug" : "Limit_1",
+        "x" : 580,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "z1WxTm_OG0jSCBzQL2_bm$$hQBzgOpsqTT-bnCAccvk3",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "_qAZGHwVKQ3gyjFHLJGn2$$gbRQYH7qwP3u2gqUWnS-A",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/EMR_operator_job",
+    "name" : "EMR_operator_job",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_operator_job",
+    "schedule" : "*/10 8-10 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "8166",
+      "name" : "ProphecyManaged_airflowfabric",
+      "trialStartDate" : 1689042094455
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ" : {
+      "id" : "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ",
+      "component" : "EMRJobFlow",
+      "metadata" : {
+        "label" : "EMRJobFlow_1",
+        "slug" : "EMRJobFlow_1",
+        "x" : -520,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "m3B7k5WcKGfi1c-HkGDjX$$hRC-S8SU4Ve4bx-wLC_Sr",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "SPkaikCHVzoBzZWC71uGE$$8jeVjbSc4G0hEJywIFRWb",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnId" : "aws_default",
+        "emrConnId" : "emr_small",
+        "jobFlowOverrides" : "{\n\t\"Name\": \"PropohecyDevEmr-Demo\",\n\t\"ReleaseLabel\": \"emr-6.11.0\",\n\t\"Applications\": [{\"Name\": \"Spark\"},{\"Name\": \"Livy\"}],\n}",
+        "taskId" : null
+      }
+    },
+    "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T" : {
+      "id" : "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T",
+      "component" : "EMRJobFlowSensor",
+      "metadata" : {
+        "label" : "EMRJobFlowSensor_1",
+        "slug" : "EMRJobFlowSensor_1",
+        "x" : -320,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hlZhHGoJ8YRXk0XGmzqYJ$$tMH99iKqcJKg4R3INS7Af",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "3Juu3eXhMyCe77HtNvdx_$$e3NLryhDnqO2s0dTN5z7-",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1')}}",
+        "awsConnId" : "aws_default",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "eobxY024UQV6gvLWEhDko$$TBiiXE2O7v_WZYrsPZMwI",
+    "source" : "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ",
+    "target" : "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T",
+    "sourcePort" : "SPkaikCHVzoBzZWC71uGE$$8jeVjbSc4G0hEJywIFRWb",
+    "targetPort" : "hlZhHGoJ8YRXk0XGmzqYJ$$tMH99iKqcJKg4R3INS7Af"
+  } ]
+}
