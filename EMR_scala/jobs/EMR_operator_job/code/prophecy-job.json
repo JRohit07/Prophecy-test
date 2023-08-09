@@ -48,8 +48,8 @@
       "metadata" : {
         "label" : "EMRJobFlow_1",
         "slug" : "EMRJobFlow_1",
-        "x" : -520,
-        "y" : -20
+        "x" : -600,
+        "y" : -240
       },
       "ports" : {
         "inputs" : [ {
@@ -65,7 +65,7 @@
       "properties" : {
         "awsConnId" : "aws_default",
         "emrConnId" : "emr_small",
-        "jobFlowOverrides" : "{\n\t\"Name\": \"PropohecyDevEmr-Demo\",\n\t\"ReleaseLabel\": \"emr-6.11.0\",\n\t\"Applications\": [{\"Name\": \"Spark\"},{\"Name\": \"Livy\"}],\n}",
+        "jobFlowOverrides" : "",
         "taskId" : null
       }
     },
@@ -75,8 +75,8 @@
       "metadata" : {
         "label" : "EMRJobFlowSensor_1",
         "slug" : "EMRJobFlowSensor_1",
-        "x" : -320,
-        "y" : -20
+        "x" : -400,
+        "y" : -240
       },
       "ports" : {
         "inputs" : [ {

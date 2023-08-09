@@ -48,8 +48,8 @@
       "metadata" : {
         "label" : "EMRAddStep_0",
         "slug" : "EMRAddStep_0",
-        "x" : -300,
-        "y" : 200
+        "x" : -660,
+        "y" : 100
       },
       "ports" : {
         "inputs" : [ {
@@ -65,7 +65,7 @@
       "properties" : {
         "actionOnFailure" : "TERMINATE_CLUSTER",
         "clusterSize" : "10033/small_job_1",
-        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1') }}",
+        "jobFlowId" : "j-3TRCD2D3YKSKW",
         "awsConnId" : "aws_default",
         "steps" : null,
         "configurations" : {
@@ -86,8 +86,8 @@
       "metadata" : {
         "label" : "EMRStepSensor_1",
         "slug" : "EMRStepSensor_1",
-        "x" : -20,
-        "y" : 200
+        "x" : -380,
+        "y" : 100
       },
       "ports" : {
         "inputs" : [ {
@@ -102,36 +102,9 @@
       "settings" : { },
       "properties" : {
         "fabricId" : "9537",
-        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1') }}",
+        "jobFlowId" : "j-3TRCD2D3YKSKW",
         "awsConnId" : "aws_default",
         "stepId" : "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
-        "taskId" : null
-      }
-    },
-    "d7t1rL_I72VCx7x4rgFKG$$uyIKDWziyiNIkwEHqcpY-" : {
-      "id" : "d7t1rL_I72VCx7x4rgFKG$$uyIKDWziyiNIkwEHqcpY-",
-      "component" : "EMRJobFlow",
-      "metadata" : {
-        "label" : "EMRJobFlow_1",
-        "slug" : "EMRJobFlow_1",
-        "x" : -560,
-        "y" : 180
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "WDY2AmTvJUIBIkAwuYiwf$$iskdk6nVqnYTCrp9mgBto",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "P5mYGAmsGzeY6E5ehI2Qx$$2Hgr4teAymipfsvu_WelY",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "awsConnId" : "aws_default",
-        "emrConnId" : "emr_small",
-        "jobFlowOverrides" : "{\n\t\"Name\": \"PropohecyDevEmr-Demo\",\n\t\"ReleaseLabel\": \"emr-6.11.0\",\n\t\"Applications\": [{\"Name\": \"Spark\"},{\"Name\": \"Livy\"}],\n}",
         "taskId" : null
       }
     }
@@ -142,11 +115,5 @@
     "target" : "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7",
     "sourcePort" : "AQGuWajlUuVrzciHxIbgP$$8kxp7j6uXxqpocPd9h5RI",
     "targetPort" : "JQi57Hpp7stF_9piL5rqF$$XckxQHam1JVz0jdr24BWh"
-  }, {
-    "id" : "kpJJi8DaS1m_sGRztrWrz",
-    "source" : "d7t1rL_I72VCx7x4rgFKG$$uyIKDWziyiNIkwEHqcpY-",
-    "target" : "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt",
-    "sourcePort" : "P5mYGAmsGzeY6E5ehI2Qx$$2Hgr4teAymipfsvu_WelY",
-    "targetPort" : "y1l-RFgHhS2dB6igf1BAO$$EBf-LQdoGcEbYanTKB3pa"
   } ]
 }

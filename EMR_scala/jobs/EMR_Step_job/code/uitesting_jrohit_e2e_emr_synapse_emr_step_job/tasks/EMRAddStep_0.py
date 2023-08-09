@@ -5,7 +5,7 @@ def EMRAddStep_0():
 
     return EmrAddStepsOperator(
         task_id = "EMRAddStep_0",
-        job_flow_id = "{{ ti.xcom_pull('EMRJobFlow_1') }}",
+        job_flow_id = "j-3TRCD2D3YKSKW",
         aws_conn_id = "aws_default",
         steps = [{
            "Name": "pipelines_EMR_Synapse", 
