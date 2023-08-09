@@ -5,7 +5,7 @@ def EMRStepSensor_1():
 
     return EmrStepSensor(
         task_id = "EMRStepSensor_1",
-        job_flow_id = "j-3TRCD2D3YKSKW",
+        job_flow_id = "{{ ti.xcom_pull('EMRJobFlow_1') }}",
         aws_conn_id = "aws_default",
         step_id = "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
         **settings,
