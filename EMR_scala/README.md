@@ -39,3 +39,7 @@ jyryu
 *** Release notes for version: v6 ***
 
 khj
+
+*** Release notes for version: vvv ***
+
+kjb
