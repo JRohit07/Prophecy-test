@@ -1,6 +1,6 @@
 name: EMR_Synapse
 description: ''
-version: v6
+version: vvv
 author: jrohit+e2e@prophecy.io
 language: python
 buildSystem: ''
