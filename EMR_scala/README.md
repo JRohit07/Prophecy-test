@@ -35,3 +35,7 @@ dvbvbb
 *** Release notes for version: v1112 ***
 
 jyryu
+
+*** Release notes for version: v6 ***
+
+khj
