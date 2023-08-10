@@ -11,20 +11,6 @@ buildSystemDetails:
   author: null
   createdAt: '2023-08-08 07:20:06'
 pipelines:
-  pipelines/EMR_Synapse:
-    name: Synapse-pipeline
-    description: ''
-    author: jrohit+e2e@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2023-08-08 07:20:06'
-    datasets:
-      inputs:
-      - datasets/mydataset
-      outputs: []
-    subgraphs: []
-    dependencies: {}
   pipelines/Synapse_pipeline:
     name: EMR_pipeline
     description: ''
