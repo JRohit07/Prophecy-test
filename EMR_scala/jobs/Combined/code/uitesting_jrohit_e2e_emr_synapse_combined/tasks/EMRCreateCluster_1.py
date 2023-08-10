@@ -1,16 +1,12 @@
-def EMRJobFlow_1():
+def EMRCreateCluster_1():
     settings = {}
     from airflow.providers.amazon.aws.operators.emr import (EmrCreateJobFlowOperator, )
     from datetime import timedelta
 
     return EmrCreateJobFlowOperator(
-        task_id = "EMRJobFlow_1",
+        task_id = "EMRCreateCluster_1",
         aws_conn_id = "aws_default",
         emr_conn_id = "emr_small",
-        job_flow_overrides = {
-          "Name": "PropohecyDevEmr-Demo",
-          "ReleaseLabel": "emr-6.11.0",
-          "Applications": [{"Name" : "Spark"}, {"Name" : "Livy"}],
-        },
+        job_flow_overrides = {},
         **settings
     )
