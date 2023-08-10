@@ -133,29 +133,6 @@ jobs:
     enabled: null
     createdAt: '2023-08-09 09:09:17'
     author: jrohit+e2e@prophecy.io
-  jobs/custom2:
-    name: custom2
-    description: ''
-    fabricUID: 10097
-    scheduler:
-      MWAA: {}
-    cloudProvider: null
-    jobSize: null
-    scheduleCron: 0 0/1 * * *
-    timeout: null
-    alerting:
-      emails: ''
-      onStart: false
-      onSuccess: false
-      onFailure: false
-    pipelines: []
-    jobClusterMode:
-      clusterMode:
-        Single: {}
-      clusterId: null
-    enabled: null
-    createdAt: '2023-08-09 09:38:01'
-    author: jrohit+e2e@prophecy.io
   jobs/Prophecy:
     name: Prophecy
     description: ''
