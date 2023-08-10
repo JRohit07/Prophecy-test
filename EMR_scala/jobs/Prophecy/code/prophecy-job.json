@@ -1,0 +1,46 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "10127",
+    "jobId" : "jobs/Prophecy",
+    "name" : "Prophecy",
+    "dagName" : "PFzoZb_a9ImCuuVWLu_h3Q_",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "pool" : "UgvnbeCt",
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
+    } ],
+    "catchup" : true,
+    "endDate" : "2023-08-30",
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : { },
+  "connections" : [ ]
+}

@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'Synapse-pipeline',
+    name = 'EMR_pipeline',
     version = '1.0',
-    packages = find_packages(include = ('emr_synapse*', )) + ['prophecy_config_instances'],
+    packages = find_packages(include = ('synapse_pipeline*', )) + ['prophecy_config_instances'],
     package_dir = {'prophecy_config_instances' : 'configs/resources/config'},
     package_data = {'prophecy_config_instances' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
@@ -10,7 +10,7 @@ setup(
 'prophecy-libs==1.5.10'],
     entry_points = {
 'console_scripts' : [
-'main = emr_synapse.pipeline:main'], },
+'main = synapse_pipeline.pipeline:main'], },
     data_files = [(".prophecy", [".prophecy/workflow.latest.json"])],
     extras_require = {
 'test' : ['pytest', 'pytest-html'], }

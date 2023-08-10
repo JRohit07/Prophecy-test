@@ -6,7 +6,7 @@ import airflow
 from airflow import DAG
 from airflow.models.param import Param
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-from uitesting_jrohit_e2e_emr_synapse_emr_step_job.tasks import EMRAddStep_0, EMRStepSensor_1
+from uitesting_jrohit_e2e_emr_synapse_emr_step_job.tasks import EMRPipelineSensor_1, EMRPipeline_0
 PROPHECY_RELEASE_TAG = "__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__"
 
 with DAG(
@@ -17,6 +17,6 @@ with DAG(
     catchup = True, 
     tags = []
 ) as dag:
-    EMRAddStep_0_op = EMRAddStep_0()
-    EMRStepSensor_1_op = EMRStepSensor_1()
-    EMRAddStep_0_op >> EMRStepSensor_1_op
+    EMRPipeline_0_op = EMRPipeline_0()
+    EMRPipelineSensor_1_op = EMRPipelineSensor_1()
+    EMRPipeline_0_op >> EMRPipelineSensor_1_op

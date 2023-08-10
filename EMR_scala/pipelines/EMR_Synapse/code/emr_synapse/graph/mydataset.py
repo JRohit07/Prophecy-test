@@ -15,4 +15,4 @@ def mydataset(spark: SparkSession) -> DataFrame:
         )\
         .option("header", True)\
         .option("sep", ",")\
-        .csv("s3://prophecy-dataset-samples/OrdersDatasetInput.csv")
+        .csv("wasbs://data@prophecydevpublic.blob.core.windows.net/OrdersDatasetInput.csv")

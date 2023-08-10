@@ -26,9 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
-      "id" : "8166",
-      "name" : "ProphecyManaged_airflowfabric",
-      "trialStartDate" : 1689042094455
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
     } ],
     "catchup" : true,
     "tags" : [ ],
@@ -42,22 +42,22 @@
     }
   },
   "processes" : {
-    "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt" : {
-      "id" : "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt",
-      "component" : "EMRAddStep",
+    "UlkMW2pL8gYIviNnfN8p4$$Y6Zz3HxjMhOAy1w2nfKQp" : {
+      "id" : "UlkMW2pL8gYIviNnfN8p4$$Y6Zz3HxjMhOAy1w2nfKQp",
+      "component" : "EMRPipeline",
       "metadata" : {
-        "label" : "EMRAddStep_0",
-        "slug" : "EMRAddStep_0",
-        "x" : -660,
-        "y" : 100
+        "label" : "EMRPipeline_0",
+        "slug" : "EMRPipeline_0",
+        "x" : -1120,
+        "y" : -100
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "y1l-RFgHhS2dB6igf1BAO$$EBf-LQdoGcEbYanTKB3pa",
+          "id" : "aeUMzo7XUQm1gWSXokhyG$$M6NatrkbW77PaJI89v_M-",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "AQGuWajlUuVrzciHxIbgP$$8kxp7j6uXxqpocPd9h5RI",
+          "id" : "Q7mD5wQNWAsKuyXsNN6Km$$JHzIK0rUPpfefg149cMC7",
           "slug" : ""
         } ]
       },
@@ -71,49 +71,49 @@
         "configurations" : {
           "schema" : [ ],
           "instances" : {
-            "EMR_Synapse" : [ "default" ]
+            "EMR_Synapse-python" : [ "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"
         },
         "taskId" : null,
-        "pipelineId" : "pipelines/EMR_Synapse"
+        "pipelineId" : "pipelines/Synapse_pipeline"
       }
     },
-    "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7" : {
-      "id" : "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7",
-      "component" : "EMRStepSensor",
+    "XiDU5cb49Zop4cryIL-se$$c00eAfOshiz7SBISAGdHt" : {
+      "id" : "XiDU5cb49Zop4cryIL-se$$c00eAfOshiz7SBISAGdHt",
+      "component" : "EMRPipelineSensor",
       "metadata" : {
-        "label" : "EMRStepSensor_1",
-        "slug" : "EMRStepSensor_1",
-        "x" : -380,
-        "y" : 100
+        "label" : "EMRPipelineSensor_1",
+        "slug" : "EMRPipelineSensor_1",
+        "x" : -860,
+        "y" : -80
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "JQi57Hpp7stF_9piL5rqF$$XckxQHam1JVz0jdr24BWh",
+          "id" : "oRlJPmptfTnzcr8Q71jna$$zmyqjMSQ-wPFzTPDmVjSF",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "H7I94o_6k-qlwRXD90EeQ$$MPzXffCoAG06_TTIlDTK7",
+          "id" : "uq8_04YXaRAk2hgbh8fMO$$dHkFQeqpuXm_z9XoFAoMi",
           "slug" : ""
         } ]
       },
       "settings" : { },
       "properties" : {
-        "fabricId" : "9537",
-        "jobFlowId" : "j-3TRCD2D3YKSKW",
+        "fabricId" : "10033",
+        "jobFlowId" : "",
         "awsConnId" : "aws_default",
-        "stepId" : "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
+        "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
         "taskId" : null
       }
     }
   },
   "connections" : [ {
-    "id" : "-jZgy5htMCeQFqtVHQgWh$$z18SPUWbVvkdvIDTeq4Va",
-    "source" : "LZInUQiIdNy1wdZ-coJnT$$BSziDgIU1OSBwPngVNedt",
-    "target" : "E9zMNSRAO5iAwnx6YRJnd$$Pa-9YH4qyGf4k1GQiPq_7",
-    "sourcePort" : "AQGuWajlUuVrzciHxIbgP$$8kxp7j6uXxqpocPd9h5RI",
-    "targetPort" : "JQi57Hpp7stF_9piL5rqF$$XckxQHam1JVz0jdr24BWh"
+    "id" : "R_z6VZqnhdFsvOcewqqD4$$-mOkBq9sj-zeWaSyc1NFP",
+    "source" : "UlkMW2pL8gYIviNnfN8p4$$Y6Zz3HxjMhOAy1w2nfKQp",
+    "target" : "XiDU5cb49Zop4cryIL-se$$c00eAfOshiz7SBISAGdHt",
+    "sourcePort" : "Q7mD5wQNWAsKuyXsNN6Km$$JHzIK0rUPpfefg149cMC7",
+    "targetPort" : "oRlJPmptfTnzcr8Q71jna$$zmyqjMSQ-wPFzTPDmVjSF"
   } ]
 }

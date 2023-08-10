@@ -26,9 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
-      "id" : "8166",
-      "name" : "ProphecyManaged_airflowfabric",
-      "trialStartDate" : 1689042094455
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
     } ],
     "catchup" : true,
     "tags" : [ ],
@@ -42,22 +42,22 @@
     }
   },
   "processes" : {
-    "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ" : {
-      "id" : "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ",
-      "component" : "EMRJobFlow",
+    "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U" : {
+      "id" : "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U",
+      "component" : "EMRCreateCluster",
       "metadata" : {
-        "label" : "EMRJobFlow_1",
-        "slug" : "EMRJobFlow_1",
-        "x" : -600,
-        "y" : -240
+        "label" : "EMRCreateCluster_1",
+        "slug" : "EMRCreateCluster_1",
+        "x" : -1180,
+        "y" : -340
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "m3B7k5WcKGfi1c-HkGDjX$$hRC-S8SU4Ve4bx-wLC_Sr",
+          "id" : "KOvPFpnU7ZKof-AYVn672$$QRW15-I5IqqnLA86QS3Ho",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "SPkaikCHVzoBzZWC71uGE$$8jeVjbSc4G0hEJywIFRWb",
+          "id" : "xmDOiJHCR11fGjUlj5vT_$$1szakRlsDBOy9ztZzui2l",
           "slug" : ""
         } ]
       },
@@ -65,42 +65,44 @@
       "properties" : {
         "awsConnId" : "aws_default",
         "emrConnId" : "emr_small",
-        "jobFlowOverrides" : "",
+        "jobFlowOverrides" : "{}",
         "taskId" : null
       }
     },
-    "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T" : {
-      "id" : "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T",
-      "component" : "EMRJobFlowSensor",
+    "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG" : {
+      "id" : "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG",
+      "component" : "EMRCreateClusterSensor",
       "metadata" : {
-        "label" : "EMRJobFlowSensor_1",
-        "slug" : "EMRJobFlowSensor_1",
-        "x" : -400,
-        "y" : -240
+        "label" : "EMRCreateClusterSensor_1",
+        "slug" : "EMRCreateClusterSensor_1",
+        "x" : -980,
+        "y" : -360
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "hlZhHGoJ8YRXk0XGmzqYJ$$tMH99iKqcJKg4R3INS7Af",
+          "id" : "MTpKkmqYJWbEK6_mhJ58U$$yoAZDIeBOUkTymFSYV4_-",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "3Juu3eXhMyCe77HtNvdx_$$e3NLryhDnqO2s0dTN5z7-",
+          "id" : "Rw2My_H3G9JjmKYIkQ499$$uPK3taWhgcSzAzZkyAG40",
           "slug" : ""
         } ]
       },
       "settings" : { },
       "properties" : {
-        "jobFlowId" : "{{ ti.xcom_pull('EMRJobFlow_1')}}",
+        "failedStates" : [ "TERMINATED", "TERMINATED_WITH_ERRORS", "TERMINATING" ],
+        "targetStates" : [ "WAITING", "RUNNING", "STARTING" ],
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
         "awsConnId" : "aws_default",
         "taskId" : null
       }
     }
   },
   "connections" : [ {
-    "id" : "eobxY024UQV6gvLWEhDko$$TBiiXE2O7v_WZYrsPZMwI",
-    "source" : "7onCZX72WVbzUkVGa14uH$$m7xdSA_acFrz6UK0jttVZ",
-    "target" : "Pvyjct4cYZWkDMQC9ffIO$$3tk555DxmjDYZMJUa711T",
-    "sourcePort" : "SPkaikCHVzoBzZWC71uGE$$8jeVjbSc4G0hEJywIFRWb",
-    "targetPort" : "hlZhHGoJ8YRXk0XGmzqYJ$$tMH99iKqcJKg4R3INS7Af"
+    "id" : "vYnNOgrOi9y3-J3KN-CgS$$MC5sDT3R_0xIbgokM9qer",
+    "source" : "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U",
+    "target" : "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG",
+    "sourcePort" : "xmDOiJHCR11fGjUlj5vT_$$1szakRlsDBOy9ztZzui2l",
+    "targetPort" : "MTpKkmqYJWbEK6_mhJ58U$$yoAZDIeBOUkTymFSYV4_-"
   } ]
 }
