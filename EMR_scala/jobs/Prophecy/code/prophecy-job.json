@@ -26,6 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
       "id" : "10127",
       "name" : "ProphecyMangedAirflow",
       "trialStartDate" : 1691581801780
