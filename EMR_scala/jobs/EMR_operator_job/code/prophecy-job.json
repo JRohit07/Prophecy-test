@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "10097",
+    "fabricId" : "10173",
     "jobId" : "jobs/EMR_operator_job",
     "name" : "EMR_operator_job",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_operator_job",
@@ -26,6 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
       "id" : "10127",
       "name" : "ProphecyMangedAirflow",
       "trialStartDate" : 1691581801780
@@ -48,8 +51,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : -1180,
-        "y" : -340
+        "x" : -1500,
+        "y" : -480
       },
       "ports" : {
         "inputs" : [ {
@@ -64,7 +67,7 @@
       "settings" : { },
       "properties" : {
         "awsConnId" : "aws_default",
-        "emrConnId" : "emr_small",
+        "emrConnId" : "emr_default",
         "jobFlowOverrides" : "{}",
         "taskId" : null
       }
@@ -75,8 +78,8 @@
       "metadata" : {
         "label" : "EMRCreateClusterSensor_1",
         "slug" : "EMRCreateClusterSensor_1",
-        "x" : -980,
-        "y" : -360
+        "x" : -1240,
+        "y" : -460
       },
       "ports" : {
         "inputs" : [ {

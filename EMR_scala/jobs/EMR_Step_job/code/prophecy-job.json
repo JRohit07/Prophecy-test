@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "10097",
+    "fabricId" : "10173",
     "jobId" : "jobs/EMR_Step_job",
     "name" : "EMR_Step_job",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_Step_job",
@@ -26,6 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
       "id" : "10127",
       "name" : "ProphecyMangedAirflow",
       "trialStartDate" : 1691581801780
@@ -49,7 +52,7 @@
         "label" : "EMRPipeline_0",
         "slug" : "EMRPipeline_0",
         "x" : -1120,
-        "y" : -100
+        "y" : -60
       },
       "ports" : {
         "inputs" : [ {
@@ -65,7 +68,7 @@
       "properties" : {
         "actionOnFailure" : "TERMINATE_CLUSTER",
         "clusterSize" : "10033/small_job_1",
-        "jobFlowId" : "j-3TRCD2D3YKSKW",
+        "jobFlowId" : "",
         "awsConnId" : "aws_default",
         "steps" : null,
         "configurations" : {
@@ -86,8 +89,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : -860,
-        "y" : -80
+        "x" : -880,
+        "y" : -60
       },
       "ports" : {
         "inputs" : [ {

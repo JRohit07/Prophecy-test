@@ -71,7 +71,7 @@ jobs:
   jobs/EMR_operator_job:
     name: EMR_operator_job
     description: ''
-    fabricUID: 10097
+    fabricUID: 10173
     scheduler:
       MWAA: {}
     cloudProvider: null
@@ -94,7 +94,7 @@ jobs:
   jobs/EMR_Step_job:
     name: EMR_Step_job
     description: ''
-    fabricUID: 10097
+    fabricUID: 10173
     scheduler:
       MWAA: {}
     cloudProvider: null
@@ -117,7 +117,7 @@ jobs:
   jobs/Combined:
     name: Combined
     description: Job
-    fabricUID: 10097
+    fabricUID: 10173
     scheduler:
       MWAA: {}
     cloudProvider: null

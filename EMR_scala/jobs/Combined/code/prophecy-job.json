@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "10097",
+    "fabricId" : "10173",
     "jobId" : "jobs/Combined",
     "name" : "Combined",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_Combined",
@@ -26,6 +26,9 @@
       "id" : "10097",
       "name" : "EMR_airflow_operator_fabric"
     }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
       "id" : "10127",
       "name" : "ProphecyMangedAirflow",
       "trialStartDate" : 1691581801780
@@ -48,8 +51,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : 160,
-        "y" : 140
+        "x" : 20,
+        "y" : 0
       },
       "ports" : {
         "inputs" : [ {
@@ -64,7 +67,7 @@
       "settings" : { },
       "properties" : {
         "awsConnId" : "aws_default",
-        "emrConnId" : "emr_small",
+        "emrConnId" : "emr_default",
         "jobFlowOverrides" : "{}",
         "taskId" : null
       }
@@ -75,8 +78,8 @@
       "metadata" : {
         "label" : "EMRCreateClusterSensor_1",
         "slug" : "EMRCreateClusterSensor_1",
-        "x" : 340,
-        "y" : 20
+        "x" : 200,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
@@ -103,8 +106,8 @@
       "metadata" : {
         "label" : "EMRPipeline_0",
         "slug" : "EMRPipeline_0",
-        "x" : 500,
-        "y" : 140
+        "x" : 360,
+        "y" : 0
       },
       "ports" : {
         "inputs" : [ {
@@ -120,7 +123,7 @@
       "properties" : {
         "actionOnFailure" : "TERMINATE_CLUSTER",
         "clusterSize" : "10033/small_job_1",
-        "jobFlowId" : "j-3TRCD2D3YKSKW",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
         "awsConnId" : "aws_default",
         "steps" : null,
         "configurations" : {
@@ -141,8 +144,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : 700,
-        "y" : 20
+        "x" : 560,
+        "y" : -120
       },
       "ports" : {
         "inputs" : [ {
@@ -157,7 +160,7 @@
       "settings" : { },
       "properties" : {
         "fabricId" : "10033",
-        "jobFlowId" : "j-3TRCD2D3YKSKW",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
         "awsConnId" : "aws_default",
         "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
         "taskId" : null
