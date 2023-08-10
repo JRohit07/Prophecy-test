@@ -157,7 +157,7 @@
       "settings" : { },
       "properties" : {
         "fabricId" : "10033",
-        "jobFlowId" : "",
+        "jobFlowId" : "j-3TRCD2D3YKSKW",
         "awsConnId" : "aws_default",
         "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
         "taskId" : null
