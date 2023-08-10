@@ -72,40 +72,40 @@
         "taskId" : null
       }
     },
-    "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG" : {
-      "id" : "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG",
-      "component" : "EMRCreateClusterSensor",
+    "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ" : {
+      "id" : "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ",
+      "component" : "EMRClusterSensor",
       "metadata" : {
-        "label" : "EMRCreateClusterSensor_1",
-        "slug" : "EMRCreateClusterSensor_1",
-        "x" : -1240,
-        "y" : -460
+        "label" : "EMRClusterSensor_1",
+        "slug" : "EMRClusterSensor_1",
+        "x" : -1320,
+        "y" : -500
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "MTpKkmqYJWbEK6_mhJ58U$$yoAZDIeBOUkTymFSYV4_-",
+          "id" : "aGOnBSlDSXyc54m9rygj4$$NDvSH5HR3bIV9ao-R8zvc",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "Rw2My_H3G9JjmKYIkQ499$$uPK3taWhgcSzAzZkyAG40",
+          "id" : "DTsX6YBMZXDXEXyiNUYPr$$aLG5ulm8wOn70gAG0k21s",
           "slug" : ""
         } ]
       },
       "settings" : { },
       "properties" : {
-        "failedStates" : [ "TERMINATED", "TERMINATED_WITH_ERRORS", "TERMINATING" ],
-        "targetStates" : [ "WAITING", "RUNNING", "STARTING" ],
-        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "failedStates" : [ ],
+        "targetStates" : [ ],
+        "jobFlowId" : null,
         "awsConnId" : "aws_default",
         "taskId" : null
       }
     }
   },
   "connections" : [ {
-    "id" : "vYnNOgrOi9y3-J3KN-CgS$$MC5sDT3R_0xIbgokM9qer",
+    "id" : "eX2oJSCL9hjHuCudJLO2t$$-q6Mzt_5F3Y4Mr5lzH5Hi",
     "source" : "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U",
-    "target" : "hNTUvQ1yhK_qERqOFPOcx$$Po4zo1vlq7RhJOPEiFfwG",
+    "target" : "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ",
     "sourcePort" : "xmDOiJHCR11fGjUlj5vT_$$1szakRlsDBOy9ztZzui2l",
-    "targetPort" : "MTpKkmqYJWbEK6_mhJ58U$$yoAZDIeBOUkTymFSYV4_-"
+    "targetPort" : "aGOnBSlDSXyc54m9rygj4$$NDvSH5HR3bIV9ao-R8zvc"
   } ]
 }

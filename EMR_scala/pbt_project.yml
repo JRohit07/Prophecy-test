@@ -117,7 +117,7 @@ jobs:
   jobs/Combined:
     name: Combined
     description: Job
-    fabricUID: 10173
+    fabricUID: 10097
     scheduler:
       MWAA: {}
     cloudProvider: null

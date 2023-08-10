@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "10173",
+    "fabricId" : "10097",
     "jobId" : "jobs/Combined",
     "name" : "Combined",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_Combined",
@@ -51,8 +51,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : 20,
-        "y" : 0
+        "x" : -440,
+        "y" : -180
       },
       "ports" : {
         "inputs" : [ {
@@ -67,36 +67,8 @@
       "settings" : { },
       "properties" : {
         "awsConnId" : "aws_default",
-        "emrConnId" : "emr_default",
+        "emrConnId" : "emr_small",
         "jobFlowOverrides" : "{}",
-        "taskId" : null
-      }
-    },
-    "WeB8JwvQv3x-RhM0Azxt5" : {
-      "id" : "WeB8JwvQv3x-RhM0Azxt5",
-      "component" : "EMRCreateClusterSensor",
-      "metadata" : {
-        "label" : "EMRCreateClusterSensor_1",
-        "slug" : "EMRCreateClusterSensor_1",
-        "x" : 200,
-        "y" : -120
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "ONtpBo7-ddhZJo-u6C-tp",
-          "slug" : ""
-        } ],
-        "outputs" : [ {
-          "id" : "qMU1eUh81GECN7lQC0gp9",
-          "slug" : ""
-        } ]
-      },
-      "settings" : { },
-      "properties" : {
-        "failedStates" : [ "TERMINATED", "TERMINATED_WITH_ERRORS", "TERMINATING" ],
-        "targetStates" : [ "WAITING", "RUNNING", "STARTING" ],
-        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
-        "awsConnId" : "aws_default",
         "taskId" : null
       }
     },
@@ -106,8 +78,8 @@
       "metadata" : {
         "label" : "EMRPipeline_0",
         "slug" : "EMRPipeline_0",
-        "x" : 360,
-        "y" : 0
+        "x" : -100,
+        "y" : -180
       },
       "ports" : {
         "inputs" : [ {
@@ -144,8 +116,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : 560,
-        "y" : -120
+        "x" : 100,
+        "y" : -240
       },
       "ports" : {
         "inputs" : [ {
@@ -165,25 +137,53 @@
         "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
         "taskId" : null
       }
+    },
+    "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1" : {
+      "id" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
+      "component" : "EMRClusterSensor",
+      "metadata" : {
+        "label" : "EMRClusterSensor_1",
+        "slug" : "EMRClusterSensor_1",
+        "x" : -280,
+        "y" : -260
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-nH8l68x0IIAgrVnbDell$$A3Dm9qLIX0A-kH6lwTGCJ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "OU8U8_emKnAmcSndCkLXI$$vXA_Qm4QxX5bdbfY99JB9",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "failedStates" : [ "TERMINATING", "TERMINATED", "TERMINATED_WITH_ERRORS" ],
+        "targetStates" : [ "STARTING", "RUNNING", "WAITING" ],
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "awsConnId" : "aws_default",
+        "taskId" : null
+      }
     }
   },
   "connections" : [ {
-    "id" : "vZCiPRU9nGrvlrYP9Lbro",
-    "source" : "PILfD-abKx5okDYLtcgdD",
-    "target" : "WeB8JwvQv3x-RhM0Azxt5",
-    "sourcePort" : "yMd2TAAq15nPMmy_Gmxbx",
-    "targetPort" : "ONtpBo7-ddhZJo-u6C-tp"
-  }, {
     "id" : "ijyFmSZ2NAn0nLVfP3KJE",
     "source" : "1WFj7Sq7sFmcJxsCD5Kft",
     "target" : "1ihBLRNt8uOjQg0-EpNnd",
     "sourcePort" : "QstnntNgSCG_MtkZKEpwF",
     "targetPort" : "JJoZvg5H9pR8laTz-w_w0"
   }, {
-    "id" : "p2EZ6-P2Om4zW91zedsAi",
-    "source" : "WeB8JwvQv3x-RhM0Azxt5",
+    "id" : "L6farrEkT2DR_36dQh_Ar$$nIQdKAH5fb2VPXMsaFalf",
+    "source" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
     "target" : "1WFj7Sq7sFmcJxsCD5Kft",
-    "sourcePort" : "qMU1eUh81GECN7lQC0gp9",
+    "sourcePort" : "OU8U8_emKnAmcSndCkLXI$$vXA_Qm4QxX5bdbfY99JB9",
     "targetPort" : "CEQrmDF9T_7jZsGNlqOYd"
+  }, {
+    "id" : "1D2H9TSMpRabBjYn3_F-V",
+    "source" : "PILfD-abKx5okDYLtcgdD",
+    "target" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
+    "sourcePort" : "yMd2TAAq15nPMmy_Gmxbx",
+    "targetPort" : "-nH8l68x0IIAgrVnbDell$$A3Dm9qLIX0A-kH6lwTGCJ"
   } ]
 }
