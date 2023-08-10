@@ -48,8 +48,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : 480,
-        "y" : 180
+        "x" : 160,
+        "y" : 140
       },
       "ports" : {
         "inputs" : [ {
@@ -75,8 +75,8 @@
       "metadata" : {
         "label" : "EMRCreateClusterSensor_1",
         "slug" : "EMRCreateClusterSensor_1",
-        "x" : 680,
-        "y" : 160
+        "x" : 340,
+        "y" : 20
       },
       "ports" : {
         "inputs" : [ {
@@ -96,6 +96,72 @@
         "awsConnId" : "aws_default",
         "taskId" : null
       }
+    },
+    "1WFj7Sq7sFmcJxsCD5Kft" : {
+      "id" : "1WFj7Sq7sFmcJxsCD5Kft",
+      "component" : "EMRPipeline",
+      "metadata" : {
+        "label" : "EMRPipeline_0",
+        "slug" : "EMRPipeline_0",
+        "x" : 500,
+        "y" : 140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CEQrmDF9T_7jZsGNlqOYd",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "QstnntNgSCG_MtkZKEpwF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "actionOnFailure" : "TERMINATE_CLUSTER",
+        "clusterSize" : "10033/small_job_1",
+        "jobFlowId" : "j-3TRCD2D3YKSKW",
+        "awsConnId" : "aws_default",
+        "steps" : null,
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "EMR_Synapse-python" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/Synapse_pipeline"
+      }
+    },
+    "1ihBLRNt8uOjQg0-EpNnd" : {
+      "id" : "1ihBLRNt8uOjQg0-EpNnd",
+      "component" : "EMRPipelineSensor",
+      "metadata" : {
+        "label" : "EMRPipelineSensor_1",
+        "slug" : "EMRPipelineSensor_1",
+        "x" : 700,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JJoZvg5H9pR8laTz-w_w0",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "DaPgPF9qS9_qYzSRoVc4f",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "10033",
+        "jobFlowId" : "",
+        "awsConnId" : "aws_default",
+        "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
+        "taskId" : null
+      }
     }
   },
   "connections" : [ {
@@ -104,5 +170,17 @@
     "target" : "WeB8JwvQv3x-RhM0Azxt5",
     "sourcePort" : "yMd2TAAq15nPMmy_Gmxbx",
     "targetPort" : "ONtpBo7-ddhZJo-u6C-tp"
+  }, {
+    "id" : "ijyFmSZ2NAn0nLVfP3KJE",
+    "source" : "1WFj7Sq7sFmcJxsCD5Kft",
+    "target" : "1ihBLRNt8uOjQg0-EpNnd",
+    "sourcePort" : "QstnntNgSCG_MtkZKEpwF",
+    "targetPort" : "JJoZvg5H9pR8laTz-w_w0"
+  }, {
+    "id" : "p2EZ6-P2Om4zW91zedsAi",
+    "source" : "WeB8JwvQv3x-RhM0Azxt5",
+    "target" : "1WFj7Sq7sFmcJxsCD5Kft",
+    "sourcePort" : "qMU1eUh81GECN7lQC0gp9",
+    "targetPort" : "CEQrmDF9T_7jZsGNlqOYd"
   } ]
 }
