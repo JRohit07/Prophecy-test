@@ -51,8 +51,8 @@
       "metadata" : {
         "label" : "EMRPipeline_0",
         "slug" : "EMRPipeline_0",
-        "x" : -1120,
-        "y" : -60
+        "x" : -1660,
+        "y" : -320
       },
       "ports" : {
         "inputs" : [ {
@@ -89,8 +89,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : -880,
-        "y" : -60
+        "x" : -1420,
+        "y" : -320
       },
       "ports" : {
         "inputs" : [ {

@@ -51,8 +51,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : -440,
-        "y" : -180
+        "x" : -480,
+        "y" : -420
       },
       "ports" : {
         "inputs" : [ {
@@ -78,8 +78,8 @@
       "metadata" : {
         "label" : "EMRPipeline_0",
         "slug" : "EMRPipeline_0",
-        "x" : -100,
-        "y" : -180
+        "x" : -140,
+        "y" : -420
       },
       "ports" : {
         "inputs" : [ {
@@ -116,8 +116,8 @@
       "metadata" : {
         "label" : "EMRPipelineSensor_1",
         "slug" : "EMRPipelineSensor_1",
-        "x" : 100,
-        "y" : -240
+        "x" : 60,
+        "y" : -480
       },
       "ports" : {
         "inputs" : [ {
@@ -144,8 +144,8 @@
       "metadata" : {
         "label" : "EMRClusterSensor_1",
         "slug" : "EMRClusterSensor_1",
-        "x" : -280,
-        "y" : -260
+        "x" : -320,
+        "y" : -500
       },
       "ports" : {
         "inputs" : [ {

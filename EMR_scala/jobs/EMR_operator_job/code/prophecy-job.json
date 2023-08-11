@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "MWAA",
-    "fabricId" : "10173",
+    "fabricId" : "10097",
     "jobId" : "jobs/EMR_operator_job",
     "name" : "EMR_operator_job",
     "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_operator_job",
@@ -51,8 +51,8 @@
       "metadata" : {
         "label" : "EMRCreateCluster_1",
         "slug" : "EMRCreateCluster_1",
-        "x" : -1500,
-        "y" : -480
+        "x" : -2180,
+        "y" : -680
       },
       "ports" : {
         "inputs" : [ {
@@ -78,8 +78,8 @@
       "metadata" : {
         "label" : "EMRClusterSensor_1",
         "slug" : "EMRClusterSensor_1",
-        "x" : -1320,
-        "y" : -500
+        "x" : -1960,
+        "y" : -680
       },
       "ports" : {
         "inputs" : [ {
@@ -93,9 +93,9 @@
       },
       "settings" : { },
       "properties" : {
-        "failedStates" : [ ],
-        "targetStates" : [ ],
-        "jobFlowId" : null,
+        "failedStates" : [ "TERMINATING", "TERMINATED", "TERMINATED_WITH_ERRORS" ],
+        "targetStates" : [ "STARTING", "RUNNING", "WAITING" ],
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
         "awsConnId" : "aws_default",
         "taskId" : null
       }
