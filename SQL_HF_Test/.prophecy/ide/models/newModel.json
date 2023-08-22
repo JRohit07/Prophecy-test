@@ -14,15 +14,16 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "newModel",
-        "x" : 120,
-        "y" : 120,
-        "phase" : 0
+        "x" : 920,
+        "y" : -340,
+        "phase" : 0,
+        "macroDependencies" : [ ]
       },
       "properties" : {
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "",
+        "query" : "SELECT * \n\nFROM in0\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
