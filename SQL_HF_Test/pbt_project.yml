@@ -17,7 +17,19 @@ functions:
   udafs: {}
   expressions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/newModel:
+    name: newModel
+    schema: null
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - models/newModel.sql
+    - .prophecy/ide/models/newModel.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-08-22 07:42:59'
 sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
