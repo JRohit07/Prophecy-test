@@ -1,5 +1,5 @@
 {
-  "name" : "SQL_HF_test",
+  "name" : "SQL_HF_test_remote_change",
   "fileSystem" : {
     "type" : "Folder",
     "name" : "",
