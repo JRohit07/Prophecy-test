@@ -1,6 +1,6 @@
 name: SQL_HF_test
 description: local-Change
-version: 0.0.1
+version: 0.0.1-SNAPSHOT
 author: null
 language: sql
 buildSystem: ''
