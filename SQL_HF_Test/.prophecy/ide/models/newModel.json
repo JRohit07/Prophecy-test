@@ -14,8 +14,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "newModel",
-        "x" : 120,
-        "y" : 120,
+        "x" : 180,
+        "y" : 140,
         "phase" : 0
       },
       "properties" : {
