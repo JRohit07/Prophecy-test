@@ -1,1 +1,116 @@
-
+{
+  "id" : "model2",
+  "metainfo" : {
+    "label" : "model2",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    }
+  },
+  "processes" : {
+    "seed##wysO2gpv" : {
+      "id" : "seed##wysO2gpv",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "seed",
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "seed",
+          "sourceType" : "Seed"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "dJI2y9ZK",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "model2##iSqN4utj" : {
+      "id" : "model2##iSqN4utj",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model2",
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dLiX6wyK",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "seed"
+        } ],
+        "outputs" : [ {
+          "id" : "n4fQ6PGt",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "BDpzXpJi",
+    "source" : "seed##wysO2gpv",
+    "sourcePort" : "dJI2y9ZK",
+    "target" : "model2##iSqN4utj",
+    "targetPort" : "dLiX6wyK"
+  } ],
+  "component" : "Model"
+}

@@ -20,18 +20,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/model1:
     name: model1
-    schema:
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-      - name: first_name
-        dataType:
-          type: String
-      - name: last_name
-        dataType:
-          type: String
+    schema: null
     description: null
     author: sony@prophecy.io
     files:
@@ -43,18 +32,7 @@ sqlModels:
     createdAt: '2023-09-06 11:53:56'
   .prophecy/metadata/sqlmodels/model2:
     name: model2
-    schema:
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-      - name: first_name
-        dataType:
-          type: String
-      - name: last_name
-        dataType:
-          type: String
+    schema: null
     description: null
     author: sony@prophecy.io
     files:
