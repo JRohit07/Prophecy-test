@@ -1,0 +1,179 @@
+{
+  "id" : "model2",
+  "metainfo" : {
+    "label" : "model2",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "model_1",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "model_1",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_seed",
+          "processId" : "AZxuwqhgI1oWoO_YNvLq2",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "customer_seed",
+              "expression" : {
+                "expression" : "customer_seed.id = model_1.id AND customer_seed.first_name = model_1.first_name AND customer_seed.last_name = model_1.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customer_seed.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "customer_seed.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customer_seed.last_name"
+              },
+              "alias" : "last_name"
+            } ],
+            "headAlias" : "model_1"
+          },
+          "joinColumns" : [ "id", "first_name", "last_name" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    }
+  },
+  "processes" : {
+    "model2##rWVKE8kP" : {
+      "id" : "model2##rWVKE8kP",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model2",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM customer_seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Fp92zUl6",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "customer_seed"
+        } ],
+        "outputs" : [ {
+          "id" : "QDRlnIpK",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "AZxuwqhgI1oWoO_YNvLq2" : {
+      "id" : "AZxuwqhgI1oWoO_YNvLq2",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "customer_seed",
+        "slug" : "customer_seed",
+        "x" : -20,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "customer_seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "yiK410yjHjyWoZQ62hxfb",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "jO-zxGXBvPKqDmVowGmr4$$cuQOATCUG7fj5AIHkqSz7",
+    "source" : "AZxuwqhgI1oWoO_YNvLq2",
+    "sourcePort" : "yiK410yjHjyWoZQ62hxfb",
+    "target" : "model2##rWVKE8kP",
+    "targetPort" : "Fp92zUl6"
+  } ],
+  "component" : "Model"
+}
