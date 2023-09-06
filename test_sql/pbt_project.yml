@@ -17,9 +17,97 @@ functions:
   udafs: {}
   expressions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/model1:
+    name: model1
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/model1.sql
+    - .prophecy/ide/models/model1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-09-06 11:53:56'
+  .prophecy/metadata/sqlmodels/model2:
+    name: model2
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/model2.sql
+    - .prophecy/ide/models/model2.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-09-06 11:54:03'
+  .prophecy/metadata/sqlmodels/model3:
+    name: model3
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/model3.sql
+    - .prophecy/ide/models/model3.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-09-06 11:54:10'
 sqlMacros: {}
-sqlSeeds: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/seed:
+    name: seed
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - seeds/seed.csv
+    createdAt: '2023-09-06 11:53:39'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:
