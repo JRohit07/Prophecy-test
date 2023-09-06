@@ -12,7 +12,7 @@ buildSystemDetails:
   createdAt: '2023-09-06 06:19:43'
 pipelines:
   pipelines/NewPipeline:
-    name: NewPipeline
+    name: NewPipeline_name_from_remote
     description: ''
     author: jrohit+e2e@prophecy.io
     mode: batch
