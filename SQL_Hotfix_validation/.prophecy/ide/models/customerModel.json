@@ -1,0 +1,136 @@
+{
+  "id" : "customerModel",
+  "metainfo" : {
+    "label" : "customerModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    }
+  },
+  "processes" : {
+    "customerModel##R7GiuFWC" : {
+      "id" : "customerModel##R7GiuFWC",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customerModel",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM newSeed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cE7jnqKE",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "newSeed"
+        } ],
+        "outputs" : [ {
+          "id" : "nxB5Ja6P",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "ZJQV_5DY_7oRbm5A3zxW4" : {
+      "id" : "ZJQV_5DY_7oRbm5A3zxW4",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "newSeed",
+        "slug" : "newSeed",
+        "x" : -20,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "newSeed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "qGklfddVdS09_OZ4TW34R",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Mpdc4rGGQl8BszmwFkkvH$$mgBRDkLzdut-Q8iESN9xd",
+    "source" : "ZJQV_5DY_7oRbm5A3zxW4",
+    "sourcePort" : "qGklfddVdS09_OZ4TW34R",
+    "target" : "customerModel##R7GiuFWC",
+    "targetPort" : "cE7jnqKE"
+  } ],
+  "component" : "Model"
+}
