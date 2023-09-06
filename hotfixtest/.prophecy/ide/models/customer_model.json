@@ -15,7 +15,7 @@
       "metadata" : {
         "label" : "customer_model",
         "x" : -40,
-        "y" : -80,
+        "y" : -320,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -86,7 +86,7 @@
         "label" : "seed",
         "slug" : "seed",
         "x" : -200,
-        "y" : -80,
+        "y" : -320,
         "phase" : 0
       },
       "properties" : {
