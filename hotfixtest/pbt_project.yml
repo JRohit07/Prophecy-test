@@ -32,10 +32,13 @@ jobs:
     enabled: null
     createdAt: '2023-09-01 13:20:52'
     author: sony@prophecy.io
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
 functions:
   author: null
   createdAt: '2023-09-01 13:19:32'
-  gems: {}
   udfs: {}
   udafs: {}
   expressions: {}

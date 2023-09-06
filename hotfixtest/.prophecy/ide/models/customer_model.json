@@ -14,8 +14,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "customer_model",
-        "x" : 120,
-        "y" : 120,
+        "x" : -40,
+        "y" : -80,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -85,8 +85,8 @@
       "metadata" : {
         "label" : "seed",
         "slug" : "seed",
-        "x" : -40,
-        "y" : 120,
+        "x" : -200,
+        "y" : -80,
         "phase" : 0
       },
       "properties" : {
