@@ -1,0 +1,111 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/EMR_operator_job",
+    "name" : "EMR_operator_job",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_EMR_operator_job",
+    "schedule" : "*/10 8-10 * * *",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U" : {
+      "id" : "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U",
+      "component" : "EMRCreateCluster",
+      "metadata" : {
+        "label" : "EMRCreateCluster_1",
+        "slug" : "EMRCreateCluster_1",
+        "x" : -2180,
+        "y" : -680
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KOvPFpnU7ZKof-AYVn672$$QRW15-I5IqqnLA86QS3Ho",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "xmDOiJHCR11fGjUlj5vT_$$1szakRlsDBOy9ztZzui2l",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnId" : "aws_default",
+        "emrConnId" : "emr_default",
+        "jobFlowOverrides" : "{}",
+        "taskId" : null
+      }
+    },
+    "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ" : {
+      "id" : "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ",
+      "component" : "EMRClusterSensor",
+      "metadata" : {
+        "label" : "EMRClusterSensor_1",
+        "slug" : "EMRClusterSensor_1",
+        "x" : -1960,
+        "y" : -680
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "aGOnBSlDSXyc54m9rygj4$$NDvSH5HR3bIV9ao-R8zvc",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "DTsX6YBMZXDXEXyiNUYPr$$aLG5ulm8wOn70gAG0k21s",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "failedStates" : [ "TERMINATING", "TERMINATED", "TERMINATED_WITH_ERRORS" ],
+        "targetStates" : [ "STARTING", "RUNNING", "WAITING" ],
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "awsConnId" : "aws_default",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "eX2oJSCL9hjHuCudJLO2t$$-q6Mzt_5F3Y4Mr5lzH5Hi",
+    "source" : "mKRckU-3MzRLJHcEylDRx$$LHijXXmvHPV_5odTd7s-U",
+    "target" : "I-0BAxhg8l-C3uGm_r7hl$$VApGoYDbahkjHxo_4OOGJ",
+    "sourcePort" : "xmDOiJHCR11fGjUlj5vT_$$1szakRlsDBOy9ztZzui2l",
+    "targetPort" : "aGOnBSlDSXyc54m9rygj4$$NDvSH5HR3bIV9ao-R8zvc"
+  } ]
+}

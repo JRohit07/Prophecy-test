@@ -1,0 +1,187 @@
+{
+  "textPassword" : "asdsad",
+  "format" : "Kafka",
+  "queryName" : null,
+  "minOffsetsPerTrigger" : null,
+  "minPartitions" : null,
+  "triggerInterval" : null,
+  "messageKey" : null,
+  "security" : "SASL_SSL",
+  "saslMechanism" : "SCRAM-SHA-256",
+  "writeMode" : null,
+  "description" : "this is kafka gajab source asdasd",
+  "groupIdPrefix" : null,
+  "dummyState" : 0,
+  "offsetRetrievalType" : "startingOffsets",
+  "maxTriggerDelay" : null,
+  "includeHeaders" : true,
+  "sessionTimeout" : "6000",
+  "kafkaAssignTopic" : null,
+  "messageHeaders" : [ ],
+  "groupId" : "asdasdasdasd",
+  "isValueFormat" : "json",
+  "credentialScope" : "qasecrets_mysql",
+  "fetchOffsetNumRetries" : null,
+  "offsetMetaTable" : "",
+  "failOnDataLoss" : null,
+  "kafkaTopic" : "asdasd",
+  "partitionColumns" : null,
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "key",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "value",
+      "type" : {
+        "type" : "struct",
+        "fields" : [ {
+          "name" : "amount",
+          "type" : "double",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "customer_id",
+          "type" : "long",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_category",
+          "type" : "string",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_date",
+          "type" : "string",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_id",
+          "type" : "long",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "",
+            "mappings" : [ ],
+            "tags" : [ ]
+          }
+        }, {
+          "name" : "order_status",
+          "type" : "string",
+          "nullable" : true,
+          "metadata" : {
+            "description" : "order stats",
+            "mappings" : [ {
+              "columnName" : "c_tinyint",
+              "type" : "foreign",
+              "datasetName" : "src_streaming_csv_autoloader",
+              "datasetId" : "datasets/src_streaming_csv_autoloader"
+            } ],
+            "tags" : [ {
+              "type" : "user",
+              "name" : "primary"
+            }, {
+              "type" : "user",
+              "name" : "tag1"
+            }, {
+              "type" : "user",
+              "name" : "tag2"
+            } ]
+          }
+        } ]
+      },
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "topic",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "partition",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "offset",
+      "type" : "long",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestamp",
+      "type" : "timestamp",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestampType",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    } ]
+  },
+  "kafkaConsumerPollTimeoutMs" : null,
+  "jsonSchemaConfig" : "{\"order_id\": 966476, \"customer_id\": 6, \"order_status\": \"Pending\", \"order_category\": \"Sales\", \"order_date\": \"2003-12-05\", \"amount\": 35967.42}",
+  "startingOffsetsByTimestamp" : null,
+  "currentJsonSchemaConfig" : "{\"order_id\": 966476, \"customer_id\": 6, \"order_status\": \"Pending\", \"order_category\": \"Sales\", \"order_date\": \"2003-12-05\", \"amount\": 35967.42}",
+  "kafkaGroupId" : null,
+  "fetchOffsetRetryIntervalMs" : null,
+  "checkpointLocation" : "",
+  "brokerList" : "sdas,asdas,asd",
+  "textUsername" : "adsad",
+  "startingTimestamp" : null,
+  "startingOffsets" : "latest",
+  "credentialScopeKeyPassword" : "password",
+  "startingOffsetsByTimestampStrategy" : null,
+  "maxOffsetsPerTrigger" : null,
+  "kafkaTopicSubscribePatternTopic" : null,
+  "credentialScopeKeyUsername" : "username",
+  "topicAssignmentType" : "subscribe",
+  "datasetType" : "File",
+  "credType" : "databricksSecrets",
+  "trigger" : null
+}

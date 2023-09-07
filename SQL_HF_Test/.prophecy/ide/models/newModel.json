@@ -1,0 +1,46 @@
+{
+  "id" : "newModel",
+  "metainfo" : {
+    "label" : "newModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    }
+  },
+  "processes" : {
+    "newModel##BBzkVhp9" : {
+      "id" : "newModel##BBzkVhp9",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "newModel",
+        "x" : 1330,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CAMkDr7P",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "X5mkrZH6",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}

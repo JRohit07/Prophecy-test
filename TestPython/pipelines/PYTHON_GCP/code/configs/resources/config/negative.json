@@ -1,0 +1,10 @@
+{
+  "c_float" : -123.12300109863281,
+  "c_string1" : "222hey@#%^&*()-=+/*-+\\'\"/.,@~",
+  "c_short" : 5,
+  "c_expr_schematransform" : "concat('222', `c  - int`, `c- short`)",
+  "c_db_secret" : "qasecrets_mysql:password",
+  "c_double" : -10101.111,
+  "c_long" : -123233354523,
+  "c_int" : -195
+}

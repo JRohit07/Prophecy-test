@@ -1,0 +1,919 @@
+{
+  "metainfo" : {
+    "id" : "1",
+    "uri" : "pipelines/NewPipeline",
+    "language" : "scala",
+    "fabricId" : "4212",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "jrohite2eprophecy.io_team.scala_basic_external_git.functions",
+      "sharedFunctionPackageNames" : [ ]
+    },
+    "udafs" : {
+      "language" : "scala",
+      "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\n\nobject UDAFs {\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n\n  }\n}\n"
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "io.prophecy.pipelines.newpipeline",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "_t-Rw8yzlYcZ645dAAtMC$$TdGgH44bG5j3HL5QqA0Pc",
+    "source" : "LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc",
+    "sourcePort" : "ZfJoH5kJ6DsBooZrk9Ak1$$3VZEKIR2k-M6PTDLSUW0n",
+    "target" : "9kQZ_lfcHtZbUI_Vaypvi$$GtY-_UUYl2V2neeOIJgoD",
+    "targetPort" : "xUmZPCONI38glKjpWHEds$$5oAuxNU6AirA7HhDnjTLD"
+  }, {
+    "id" : "TjqE-VkHvBh555w2f3uOA",
+    "source" : "2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb",
+    "sourcePort" : "dbH9SvBG36u51JvzRlXX4$$NT8tDyRUrDFFJXVAG3WVY",
+    "target" : "wGLBQF0y-WDLC4huYUwHk$$eBEZAB4L722uW6ORXKdPB",
+    "targetPort" : "pW7hXMHrxyayTmqOj3wO2$$51h2LORNBdQS86kcQ6Nxj"
+  }, {
+    "id" : "Bpa5WIeTPVr0VbQF_PVLW",
+    "source" : "Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP",
+    "sourcePort" : "70SB2j7VLkCEsRVVH4q_M$$JmgV-l2uNNruBBzVXxppD",
+    "target" : "mJLtXi6XHCqn5iHE4eqLq$$Tqu4ghRGxP43J94bZzgTG",
+    "targetPort" : "VDgq07mM-f3QEdATHNfsm$$AxTK4JFLs2myx8ET3ZJ0f"
+  } ],
+  "processes" : {
+    "Xe0kAeO9RUriIwVXyLIwh$$6aMgy6u7Nl44WaT3njfno" : {
+      "id" : "Xe0kAeO9RUriIwVXyLIwh$$6aMgy6u7Nl44WaT3njfno",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_1",
+        "slug" : "Deduplicate_1",
+        "x" : 760,
+        "y" : 200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "aXSZSSSIr-2-d765ZTFlV$$5_Cd0rBq4waHHwZiPV31Z",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "2SscP38KkjbWOPhcj6yVL$$aulTuY3GLuFUsspLxgVSw",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "any",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      }
+    },
+    "mJLtXi6XHCqn5iHE4eqLq$$Tqu4ghRGxP43J94bZzgTG" : {
+      "id" : "mJLtXi6XHCqn5iHE4eqLq$$Tqu4ghRGxP43J94bZzgTG",
+      "component" : "Lookup",
+      "metadata" : {
+        "label" : "Lookup_0_2",
+        "slug" : "Lookup_0_2",
+        "x" : 800,
+        "y" : 20,
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VDgq07mM-f3QEdATHNfsm$$AxTK4JFLs2myx8ET3ZJ0f",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "isRange" : false,
+        "processName" : "",
+        "keyColumns" : [ ],
+        "valueColumns" : [ ]
+      }
+    },
+    "2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb" : {
+      "id" : "2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1_1",
+        "slug" : "Join_1_1",
+        "x" : 820,
+        "y" : 380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QUxDTnPIkWol6qnEHR1I1$$2mC4DwOpkkCTgbxeRd8J8",
+          "slug" : "in0"
+        }, {
+          "id" : "_qpUYRNXnDFw5YvEII4aI$$FzhrgHgA4Dkmt26E-5qUF",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "dbH9SvBG36u51JvzRlXX4$$NT8tDyRUrDFFJXVAG3WVY",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "JMpZH5fuBk3zt59N8Dwly$$g_w-t36I0fke8AySCKCW7",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "gr9nsejjuXReFy5hxOXyj$$7DsDCW8vfYMAPVcQG9Y_t",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
+    "FdJsS2JH67s8f4l8aI0KQ$$ME4UHD-AXFaAkMcvAMEYQ" : {
+      "id" : "FdJsS2JH67s8f4l8aI0KQ$$ME4UHD-AXFaAkMcvAMEYQ",
+      "component" : "DataValidator",
+      "metadata" : {
+        "label" : "DataValidator_1_2",
+        "slug" : "DataValidator_1_2",
+        "x" : 1300,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KswLuj8X7XO8ulWMsS4eP$$nS2l9hk-rRYKxsCLMTeEM",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "RC-ldMK1Ntzrs7oLa05Im$$wl1I3xE8D1hQle49U3O8J",
+          "slug" : "out0"
+        }, {
+          "id" : "hthpBctHAQeZaT4acqmMz$$kPmMYbHfoZemS34fpM5d1",
+          "slug" : "out1"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "activeTab" : "rules",
+        "columnsSelector" : [ ],
+        "rules" : [ ],
+        "transformations" : [ ]
+      }
+    },
+    "9kQZ_lfcHtZbUI_Vaypvi$$GtY-_UUYl2V2neeOIJgoD" : {
+      "id" : "9kQZ_lfcHtZbUI_Vaypvi$$GtY-_UUYl2V2neeOIJgoD",
+      "component" : "Lookup",
+      "metadata" : {
+        "label" : "Lookup_0",
+        "slug" : "Lookup_0",
+        "x" : 560,
+        "y" : 180,
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xUmZPCONI38glKjpWHEds$$5oAuxNU6AirA7HhDnjTLD",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "isRange" : false,
+        "processName" : "",
+        "keyColumns" : [ ],
+        "valueColumns" : [ ]
+      }
+    },
+    "Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP" : {
+      "id" : "Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1_2",
+        "slug" : "Join_1_2",
+        "x" : 620,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8GaVv55PMTUKD2pk5lA4X$$sQFqQKAGFEPRnYizDvOFk",
+          "slug" : "in0"
+        }, {
+          "id" : "Ww-gpHsvW83sFPCwfowOj$$uWxX1Fjg2wk3jpURh0I4W",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "70SB2j7VLkCEsRVVH4q_M$$JmgV-l2uNNruBBzVXxppD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "8GaVv55PMTUKD2pk5lA4X$$sQFqQKAGFEPRnYizDvOFk",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "Ww-gpHsvW83sFPCwfowOj$$uWxX1Fjg2wk3jpURh0I4W",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
+    "wGLBQF0y-WDLC4huYUwHk$$eBEZAB4L722uW6ORXKdPB" : {
+      "id" : "wGLBQF0y-WDLC4huYUwHk$$eBEZAB4L722uW6ORXKdPB",
+      "component" : "Lookup",
+      "metadata" : {
+        "label" : "Lookup_0_1",
+        "slug" : "Lookup_0_1",
+        "x" : 1000,
+        "y" : 380,
+        "phase" : -1,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pW7hXMHrxyayTmqOj3wO2$$51h2LORNBdQS86kcQ6Nxj",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "isRange" : false,
+        "processName" : "",
+        "keyColumns" : [ ],
+        "valueColumns" : [ ]
+      }
+    },
+    "CuCsHmMdDoUyY4p5pOVfV$$imwKxRsiD_9SPvuHIAHfs" : {
+      "id" : "CuCsHmMdDoUyY4p5pOVfV$$imwKxRsiD_9SPvuHIAHfs",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_1_1",
+        "slug" : "Deduplicate_1_1",
+        "x" : 1200,
+        "y" : 400,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AAFNrs7DMt74onJPUZlD-$$3xBr2SQUaSMr5v3tNyJw4",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "_EJ4KUNasj0iHp3VV-MDO$$3XpxKRduoQz5eenzk-h87",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "any",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      }
+    },
+    "mUhFsywlvUMVg4s38Q7Fk$$cM1jLhkcdsTllAAY9zvEg" : {
+      "id" : "mUhFsywlvUMVg4s38Q7Fk$$cM1jLhkcdsTllAAY9zvEg",
+      "component" : "DataValidator",
+      "metadata" : {
+        "label" : "DataValidator_1_1",
+        "slug" : "DataValidator_1_1",
+        "x" : 1500,
+        "y" : 380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4MpJHE3ra7qKvnaIvEHAF$$hdVGcOa9Y9R4K7cardCph",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "H5w8BfVmJiDCctbYsTDt-$$7JU-WCZsD3rPwod83ajVp",
+          "slug" : "out0"
+        }, {
+          "id" : "Uk1hQ5Lfzxude-VI_4Nm5$$lkhhCRoFR3zBPN6r9f3xD",
+          "slug" : "out1"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "activeTab" : "rules",
+        "columnsSelector" : [ ],
+        "rules" : [ ],
+        "transformations" : [ ]
+      }
+    },
+    "NwNXL0OU1C4oQoEa3AJla$$qhmxpyq7n-Mve9klevFe2" : {
+      "id" : "NwNXL0OU1C4oQoEa3AJla$$qhmxpyq7n-Mve9klevFe2",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_1_2",
+        "slug" : "Deduplicate_1_2",
+        "x" : 1000,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mJujIACGm8eOf-J5r-9MJ$$EddfbTl2SrN4x19Z4UcvA",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "7a4K39SPJu29UwFRWFea0$$K5vozuzTPg_ZqwycBM4Nj",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "any",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      }
+    },
+    "LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc" : {
+      "id" : "LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : 380,
+        "y" : 180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JMpZH5fuBk3zt59N8Dwly$$g_w-t36I0fke8AySCKCW7",
+          "slug" : "in0"
+        }, {
+          "id" : "gr9nsejjuXReFy5hxOXyj$$7DsDCW8vfYMAPVcQG9Y_t",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "ZfJoH5kJ6DsBooZrk9Ak1$$3VZEKIR2k-M6PTDLSUW0n",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : ""
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "JMpZH5fuBk3zt59N8Dwly$$g_w-t36I0fke8AySCKCW7",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "gr9nsejjuXReFy5hxOXyj$$7DsDCW8vfYMAPVcQG9Y_t",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ ],
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
+    "gUZrLy5ICutgrHoXsnEcO$$dDvVI32pD25TI9Wp5_oB5" : {
+      "id" : "gUZrLy5ICutgrHoXsnEcO$$dDvVI32pD25TI9Wp5_oB5",
+      "component" : "DataValidator",
+      "metadata" : {
+        "label" : "DataValidator_1",
+        "slug" : "DataValidator_1",
+        "x" : 1060,
+        "y" : 180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4Z98OdJapf5ibXeO4gPmV$$_kH1bu7lUTryVpKtIDdi4",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "uMLp9G7WAArVq5_NcgUrl$$FB0dde3uFfsmIimcIOspL",
+          "slug" : "out0"
+        }, {
+          "id" : "r_2OUgEvPjDLPAptMGImW$$bMWFk3158MJkFJNL-M96c",
+          "slug" : "out1"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "activeTab" : "rules",
+        "columnsSelector" : [ ],
+        "rules" : [ ],
+        "transformations" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in1",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.Z3Q2lxGGYsar_zl-09Zug$$S07RZjJtM8MKtDM4nhiDP.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Expression cannot be empty. [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.mJLtXi6XHCqn5iHE4eqLq$$Tqu4ghRGxP43J94bZzgTG",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.mJLtXi6XHCqn5iHE4eqLq$$Tqu4ghRGxP43J94bZzgTG.properties.processName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Lookup name cannot be empty.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in1",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.LH_aVUc8kiz7u2XogLM6h$$48n_5wA185QzD0W1_qYOc.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Expression cannot be empty. [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.9kQZ_lfcHtZbUI_Vaypvi$$GtY-_UUYl2V2neeOIJgoD",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.9kQZ_lfcHtZbUI_Vaypvi$$GtY-_UUYl2V2neeOIJgoD.properties.processName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Lookup name cannot be empty.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in1",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.2FhGLFsga4FXZ1TqcZIr8$$TEWSrLPoO2tWAds8rFnVb.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Expression cannot be empty. [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.wGLBQF0y-WDLC4huYUwHk$$eBEZAB4L722uW6ORXKdPB",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.wGLBQF0y-WDLC4huYUwHk$$eBEZAB4L722uW6ORXKdPB.properties.processName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Lookup name cannot be empty.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.Xe0kAeO9RUriIwVXyLIwh$$6aMgy6u7Nl44WaT3njfno",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.Xe0kAeO9RUriIwVXyLIwh$$6aMgy6u7Nl44WaT3njfno.properties.dedupColumns",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one rule has to be specified",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.FdJsS2JH67s8f4l8aI0KQ$$ME4UHD-AXFaAkMcvAMEYQ",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.CuCsHmMdDoUyY4p5pOVfV$$imwKxRsiD_9SPvuHIAHfs",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.CuCsHmMdDoUyY4p5pOVfV$$imwKxRsiD_9SPvuHIAHfs.properties.dedupColumns",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one rule has to be specified",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.mUhFsywlvUMVg4s38Q7Fk$$cM1jLhkcdsTllAAY9zvEg",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.NwNXL0OU1C4oQoEa3AJla$$qhmxpyq7n-Mve9klevFe2",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.NwNXL0OU1C4oQoEa3AJla$$qhmxpyq7n-Mve9klevFe2.properties.dedupColumns",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "At least one rule has to be specified",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.gUZrLy5ICutgrHoXsnEcO$$dDvVI32pD25TI9Wp5_oB5",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

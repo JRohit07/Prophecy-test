@@ -1,0 +1,937 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "2730",
+    "jobId" : "jobs/PythonStreamingJobRelease",
+    "name" : "PythonStreamingJobRelease",
+    "schedule" : "0 0 0 * * ? 2090",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "abhisheks@prophecy.io,abhisheks@simpledatalabs.com",
+      "onStart" : false,
+      "onSuccess" : true,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "7474",
+      "name" : "ACLFabric_SDL",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7519",
+      "name" : "TEST-Automated_Databricks1",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1", "adv-json2", "small2" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2420",
+      "name" : "dev_sdl_acl_dbfs",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
+        }
+      }
+    }, {
+      "id" : "7526",
+      "name" : "GCP-TEST_Automated",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7479",
+      "name" : "ACLCanAttachFabric",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2601",
+      "name" : "dev_unity_catalog",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-unrestricted-shared", "adv-power-shared", "adv-shared-compute" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "4821",
+      "name" : "dev_azure",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2730",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "medium", "adv-json1", "adv-json2", "adv-jsoncomplex", "11-3-adv-json1", "adv-jsonWithJobPool", "job_all_fields_policy_job_compute" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2404",
+      "name" : "dev_dbfs_fs",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "medium" ]
+      },
+      "pylibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
+        }
+      }
+    }, {
+      "id" : "7492",
+      "name" : "FabricAutomatedEBS",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "small2", "small3" ]
+      },
+      "pylibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://pypi.python.org/simple"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://repo1.maven.org/"
+        }
+      }
+    }, {
+      "id" : "6945",
+      "name" : "ACLFabric",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7491",
+      "name" : "UCFabric",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2403",
+      "name" : "testPublicCentral",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "6948",
+      "name" : "Config_unity_catalog_shared",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7556",
+      "name" : "ACLFabric_SDL_SharedWithLibs",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "5164",
+      "name" : "dev_s3",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json_9_1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "s3://prophecy-public-bucket/prophecy-libs/"
+        }
+      }
+    }, {
+      "id" : "7498",
+      "name" : "AdvJson_adv_json_power_shared",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json-1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "4887",
+      "name" : "dev_customartifactory",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://pypi.python.org/simple"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://repo1.maven.org/"
+        }
+      }
+    }, {
+      "id" : "2080",
+      "name" : "dev_gcp",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "medium" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7555",
+      "name" : "AdvJson_adv_json_all_custom_config",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json-1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "3855",
+      "name" : "dev_expired_donotdelete",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "4626",
+      "name" : "dev_12rt",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "5159",
+      "name" : "ebs_ssd",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "medium" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7524",
+      "name" : "Azure-TEST_Automated",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7510",
+      "name" : "AdvJson_adv_json_job_pool",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json-1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2394",
+      "name" : "dev_sdl_acl",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json-acl" ]
+      }
+    }, {
+      "id" : "4525",
+      "name" : "dev_10LTS",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "1962",
+      "name" : "dev_10rt",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "6932",
+      "name" : "dev_prophecy_donotdelete",
+      "clusterSizes" : {
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "3579",
+      "name" : "sanityFabric-sony",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7515",
+      "name" : "FabricAutomatedADVJobSize",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "small2", "small3", "adv-json1", "adv-json2" ]
+      },
+      "pylibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/python"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "DBFS" : {
+          "path" : "dbfs:/FileStore/Users/abhisheks/prophecy-libs/scala"
+        }
+      }
+    }, {
+      "id" : "7560",
+      "name" : "JobFabricMain_1",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1", "adv-json2" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7511",
+      "name" : "SingleCluster_1",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1", "adv-json2" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "2405",
+      "name" : "dev_custom_artifactory",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "medium" ]
+      },
+      "pylibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://pypi.python.org/simple"
+        }
+      },
+      "scalalibsResolutionMode" : {
+        "CustomArtifactory" : {
+          "url" : "https://repo1.maven.org/"
+        }
+      }
+    }, {
+      "id" : "2068",
+      "name" : "dev_shared",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "Medium", "adv-JobPool", "adv-unrestricted-multi-node", "adv-shared-compute", "adv-json-power-user-compute", "adv-personal", "adv-unrestricted-single" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7018",
+      "name" : "Config_shared_acl",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "7527",
+      "name" : "Automated-Databricks-ACLNewDude",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "adv-json1", "adv-json2", "small2" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "6991",
+      "name" : "Config_hc_acl",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    } ]
+  },
+  "processes" : {
+    "kRGG8Q7aHpVIjf_cOzpvp$$PmrNdsBic0PMuBeQwUIDX" : {
+      "id" : "kRGG8Q7aHpVIjf_cOzpvp$$PmrNdsBic0PMuBeQwUIDX",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : 210,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AOz-65wAziAP3_9hiIkjn$$95F1hYWwuOXYWzb89iN6f",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "A33CFNs9v7IR84pVSF4ro$$YeE-ER6jG5zjdBeNiCctm",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "code" : "print(\"hello\")"
+      }
+    },
+    "csb8lnh6oMBjUlsHfPWIr" : {
+      "id" : "csb8lnh6oMBjUlsHfPWIr",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "PythonStreamingRelease",
+        "slug" : "PythonStreamingRelease",
+        "x" : -150,
+        "y" : 20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/PythonStreamingRelease",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "all_type_main_1",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "c_dbsecrets",
+                "optional" : false,
+                "kind" : {
+                  "type" : "databricks_secret",
+                  "value" : "qasecrets_mysql:username"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "c_string",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "test"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "Subgraph_4_1_1",
+                "optional" : false,
+                "kind" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "c_dbsecrets",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "databricks_secret",
+                      "value" : "qasecrets_mysql:username"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "c_string",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "string",
+                      "value" : "test"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "Subgraph_3_1_1",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "record",
+                      "fields" : [ {
+                        "name" : "c_dbsecrets",
+                        "optional" : false,
+                        "kind" : {
+                          "type" : "databricks_secret",
+                          "value" : "qasecrets_mysql:username"
+                        },
+                        "isReferenced" : false,
+                        "isWorkflowNodeConfiguration" : false
+                      }, {
+                        "name" : "c_string",
+                        "optional" : false,
+                        "kind" : {
+                          "type" : "string",
+                          "value" : "test"
+                        },
+                        "isReferenced" : false,
+                        "isWorkflowNodeConfiguration" : false
+                      }, {
+                        "name" : "Subgraph_7_1_1",
+                        "optional" : false,
+                        "kind" : {
+                          "type" : "record",
+                          "fields" : [ {
+                            "name" : "c_dbsecrets",
+                            "optional" : false,
+                            "kind" : {
+                              "type" : "databricks_secret",
+                              "value" : "qasecrets_mysql:username"
+                            },
+                            "isReferenced" : false,
+                            "isWorkflowNodeConfiguration" : false
+                          }, {
+                            "name" : "c_string",
+                            "optional" : false,
+                            "kind" : {
+                              "type" : "string",
+                              "value" : "test"
+                            },
+                            "isReferenced" : false,
+                            "isWorkflowNodeConfiguration" : false
+                          }, {
+                            "name" : "Subgraph_8_1_1",
+                            "optional" : false,
+                            "kind" : {
+                              "type" : "record",
+                              "fields" : [ {
+                                "name" : "c_dbsecrets",
+                                "optional" : false,
+                                "kind" : {
+                                  "type" : "databricks_secret",
+                                  "value" : "qasecrets_mysql:username"
+                                },
+                                "isReferenced" : false,
+                                "isWorkflowNodeConfiguration" : false
+                              }, {
+                                "name" : "c_string",
+                                "optional" : false,
+                                "kind" : {
+                                  "type" : "string",
+                                  "value" : "test"
+                                },
+                                "isReferenced" : false,
+                                "isWorkflowNodeConfiguration" : false
+                              }, {
+                                "name" : "Subgraph_9_1_1",
+                                "optional" : false,
+                                "kind" : {
+                                  "type" : "record",
+                                  "fields" : [ {
+                                    "name" : "c_dbsecrets",
+                                    "optional" : false,
+                                    "kind" : {
+                                      "type" : "databricks_secret",
+                                      "value" : "qasecrets_mysql:username"
+                                    },
+                                    "isReferenced" : false,
+                                    "isWorkflowNodeConfiguration" : false
+                                  }, {
+                                    "name" : "c_string",
+                                    "optional" : false,
+                                    "kind" : {
+                                      "type" : "string",
+                                      "value" : "test"
+                                    },
+                                    "isReferenced" : false,
+                                    "isWorkflowNodeConfiguration" : false
+                                  }, {
+                                    "name" : "c_boolean_sg9_1_1",
+                                    "optional" : false,
+                                    "kind" : {
+                                      "type" : "boolean",
+                                      "value" : false
+                                    },
+                                    "isReferenced" : false,
+                                    "isWorkflowNodeConfiguration" : false
+                                  } ]
+                                },
+                                "isReferenced" : false,
+                                "isWorkflowNodeConfiguration" : true
+                              }, {
+                                "name" : "c_orderby",
+                                "optional" : false,
+                                "kind" : {
+                                  "type" : "spark_expression",
+                                  "value" : "`c-string`"
+                                },
+                                "isReferenced" : false,
+                                "isWorkflowNodeConfiguration" : false
+                              } ]
+                            },
+                            "isReferenced" : false,
+                            "isWorkflowNodeConfiguration" : true
+                          }, {
+                            "name" : "c_sg7_1_1_short",
+                            "optional" : false,
+                            "kind" : {
+                              "type" : "short",
+                              "value" : 12
+                            },
+                            "isReferenced" : false,
+                            "isWorkflowNodeConfiguration" : false
+                          } ]
+                        },
+                        "isReferenced" : false,
+                        "isWorkflowNodeConfiguration" : true
+                      }, {
+                        "name" : "c_sg3_1_1_c_long",
+                        "optional" : false,
+                        "kind" : {
+                          "type" : "long",
+                          "value" : 12212
+                        },
+                        "isReferenced" : false,
+                        "isWorkflowNodeConfiguration" : false
+                      } ]
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : true
+                  } ]
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : true
+              }, {
+                "name" : "c_sg1_array_string",
+                "optional" : false,
+                "kind" : {
+                  "type" : "array",
+                  "elementType" : {
+                    "type" : "string",
+                    "value" : null
+                  },
+                  "value" : [ "this is first $$", "this is second $$" ]
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "c_sg1_record",
+                "optional" : false,
+                "kind" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "c_sg1_record_c_string",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "string",
+                      "value" : "hello sir $$ yes this is me $$$$"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "c_sg1_record_c_boolean",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "boolean",
+                      "value" : false
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "c_sg1_record_c_float",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "float",
+                      "value" : 12.12
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  }, {
+                    "name" : "c_sg1_record_c_int",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "int",
+                      "value" : 12
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  } ]
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "c_sg1_spark_expressions",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "concat('a', 'b')"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              }, {
+                "name" : "Subgraph_1",
+                "optional" : false,
+                "kind" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "c_sg1_c_string",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "string",
+                      "value" : "dasdasdads"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  } ]
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : true
+              }, {
+                "name" : "Subgraph_2",
+                "optional" : false,
+                "kind" : {
+                  "type" : "record",
+                  "fields" : [ {
+                    "name" : "c_sg2_c_string",
+                    "optional" : false,
+                    "kind" : {
+                      "type" : "string",
+                      "value" : "sdasdasdasd"
+                    },
+                    "isReferenced" : false,
+                    "isWorkflowNodeConfiguration" : false
+                  } ]
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : true
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          }, {
+            "name" : "Subgraph_1",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : true
+          } ],
+          "instances" : {
+            "PythonProjectCloneExternalGit" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "7_ccZl0uTihEq7BXNignc",
+    "source" : "csb8lnh6oMBjUlsHfPWIr",
+    "target" : "kRGG8Q7aHpVIjf_cOzpvp$$PmrNdsBic0PMuBeQwUIDX",
+    "sourcePort" : "out",
+    "targetPort" : "AOz-65wAziAP3_9hiIkjn$$95F1hYWwuOXYWzb89iN6f"
+  } ]
+}

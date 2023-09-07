@@ -1,0 +1,19 @@
+{
+  "format" : "catalogTable",
+  "path" : "qa_20k_tables_test",
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "a",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    } ]
+  },
+  "tableName" : "table_number_10002",
+  "datasetType" : "Database"
+}

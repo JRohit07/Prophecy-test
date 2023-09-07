@@ -1,1 +1,0 @@
-# sql_basic_external Repository

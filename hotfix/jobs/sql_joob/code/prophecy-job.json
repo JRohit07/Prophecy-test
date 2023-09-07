@@ -1,0 +1,91 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "102",
+    "jobId" : "jobs/sql_joob",
+    "name" : "sql_joob",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "102",
+      "name" : "databricks_sql",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "LDFzuowGeQQCBGz5ipys8$$JJmzApA7HjD1txwzIA4SY" : {
+      "id" : "LDFzuowGeQQCBGz5ipys8$$JJmzApA7HjD1txwzIA4SY",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : 360,
+        "y" : 200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "VrEsJRYJI2RtQPauOOTk5$$Hcadcp1U0tI2--N19pJic",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ClAsDRzmt0xiuWSMSabv6$$BpKwbMX45MrCJtkUcvLhj",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "execSeed" : true,
+        "execRun" : true,
+        "gitEntity" : "branch",
+        "projectId" : "479",
+        "runOnlyModel" : "false",
+        "loadingModels" : false,
+        "profile" : "run_profile",
+        "sqlFabricId" : "102",
+        "gitEntityValue" : "dev/Rohit",
+        "execDeps" : true,
+        "execTest" : false,
+        "currentProjectModels" : [ {
+          "label" : "customer_dataset",
+          "value" : "customer_dataset",
+          "id" : "479/.prophecy/metadata/sqlmodels/customer_dataset",
+          "name" : "customer_dataset"
+        } ]
+      }
+    }
+  },
+  "connections" : [ ]
+}

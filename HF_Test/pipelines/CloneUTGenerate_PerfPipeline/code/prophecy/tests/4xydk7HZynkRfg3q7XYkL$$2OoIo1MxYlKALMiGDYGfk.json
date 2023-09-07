@@ -1,0 +1,62 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "kre-FsWPuuNZScVHDVJjh$$U0UTmsJZ7v7HTZP5eOkSX" : {
+        "values" : [ [ "E", "2019-07-20" ], [ "E", "2019-10-21" ], [ "E", "2019-05-04" ], [ "C", "2019-10-19" ], [ "E", "2020-02-19" ], [ "E", "2019-04-20" ], [ "E", "2020-01-14" ], [ "E", "2019-03-25" ], [ "A", "2019-07-19" ], [ "D", "2019-05-15" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "jCxItdrRsnqF7egz-5t5Q$$9CX2epHI0b89I3dnNd0ij" : {
+        "values" : [ [ "E", "2019-07-20" ], [ "E", "2019-10-21" ], [ "E", "2019-05-04" ], [ "C", "2019-10-19" ], [ "E", "2020-02-19" ], [ "E", "2019-04-20" ], [ "E", "2020-01-14" ], [ "E", "2019-03-25" ], [ "A", "2019-07-19" ], [ "D", "2019-05-15" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "scala"
+  } ],
+  "language" : "scala"
+}

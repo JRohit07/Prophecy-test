@@ -1,0 +1,30 @@
+version: 1
+dependencies:
+- type: workflow
+  id: '1658827323'
+  name: mysql
+  enabled: true
+- type: workflow
+  id: '410081255'
+  name: matplotlib
+  enabled: true
+- type: workflow
+  id: '171138274'
+  name: pandas
+  enabled: true
+- type: workflow
+  id: '2121735476'
+  name: numpy
+  enabled: true
+- type: workflow
+  id: '211888696'
+  name: requests
+  enabled: true
+- type: workflow
+  id: '69834547'
+  name: scipy
+  enabled: true
+- type: workflow
+  id: '1722369069'
+  name: torch
+  enabled: true

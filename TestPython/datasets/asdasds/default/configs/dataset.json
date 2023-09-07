@@ -1,0 +1,150 @@
+{
+  "textPassword" : "asdsad",
+  "format" : "Kafka",
+  "queryName" : null,
+  "minOffsetsPerTrigger" : "1",
+  "minPartitions" : "4",
+  "triggerInterval" : null,
+  "messageKey" : null,
+  "security" : "SASL_SSL",
+  "saslMechanism" : "SCRAM-SHA-256",
+  "writeMode" : null,
+  "description" : "",
+  "groupIdPrefix" : "asdasd",
+  "dummyState" : 0,
+  "offsetRetrievalType" : "startingOffsets",
+  "maxTriggerDelay" : "5m",
+  "includeHeaders" : true,
+  "sessionTimeout" : "6000",
+  "kafkaAssignTopic" : null,
+  "messageHeaders" : [ ],
+  "groupId" : "asdasd",
+  "isValueFormat" : "string",
+  "credentialScope" : null,
+  "fetchOffsetNumRetries" : "1",
+  "offsetMetaTable" : "",
+  "failOnDataLoss" : true,
+  "kafkaTopic" : "asdasd",
+  "partitionColumns" : null,
+  "schema" : {
+    "type" : "struct",
+    "fields" : [ {
+      "name" : "key",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "value",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "topic",
+      "type" : "string",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "partition",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "offset",
+      "type" : "long",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestamp",
+      "type" : "timestamp",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "timestampType",
+      "type" : "integer",
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    }, {
+      "name" : "headers",
+      "type" : {
+        "type" : "array",
+        "elementType" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "key",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "value",
+            "type" : "binary",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "containsNull" : true
+      },
+      "nullable" : true,
+      "metadata" : {
+        "description" : "",
+        "mappings" : [ ],
+        "tags" : [ ]
+      }
+    } ]
+  },
+  "kafkaConsumerPollTimeoutMs" : "1000",
+  "jsonSchemaConfig" : "{\n  \"type\": \"record\",\n  \"name\": \"Record\",\n  \"fields\": [\n    {\n      \"name\": \"order_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"customer_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"order_status\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_category\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_date\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"amount\",\n      \"type\": \"double\"\n    }\n  ]\n}",
+  "startingOffsetsByTimestamp" : null,
+  "currentJsonSchemaConfig" : "{\n  \"type\": \"record\",\n  \"name\": \"Record\",\n  \"fields\": [\n    {\n      \"name\": \"order_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"customer_id\",\n      \"type\": \"long\"\n    },\n    {\n      \"name\": \"order_status\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_category\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"order_date\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"amount\",\n      \"type\": \"double\"\n    }\n  ]\n}",
+  "kafkaGroupId" : "asdasd",
+  "fetchOffsetRetryIntervalMs" : "12000",
+  "checkpointLocation" : "",
+  "brokerList" : "asdasdas",
+  "textUsername" : "asdasd",
+  "startingTimestamp" : null,
+  "startingOffsets" : "latest",
+  "credentialScopeKeyPassword" : "password",
+  "startingOffsetsByTimestampStrategy" : "error",
+  "maxOffsetsPerTrigger" : "5",
+  "kafkaTopicSubscribePatternTopic" : null,
+  "credentialScopeKeyUsername" : "username",
+  "topicAssignmentType" : "subscribe",
+  "datasetType" : "File",
+  "credType" : "userPwd",
+  "trigger" : null
+}

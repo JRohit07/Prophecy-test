@@ -1,0 +1,189 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/Combined",
+    "name" : "Combined",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_Combined",
+    "schedule" : "*/10 8-10 * * *",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "PILfD-abKx5okDYLtcgdD" : {
+      "id" : "PILfD-abKx5okDYLtcgdD",
+      "component" : "EMRCreateCluster",
+      "metadata" : {
+        "label" : "EMRCreateCluster_1",
+        "slug" : "EMRCreateCluster_1",
+        "x" : -480,
+        "y" : -420
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "fN8p__0p4OkwcNb1bx1cv",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "yMd2TAAq15nPMmy_Gmxbx",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnId" : "aws_default",
+        "emrConnId" : "emr_small",
+        "jobFlowOverrides" : "{}",
+        "taskId" : null
+      }
+    },
+    "1WFj7Sq7sFmcJxsCD5Kft" : {
+      "id" : "1WFj7Sq7sFmcJxsCD5Kft",
+      "component" : "EMRPipeline",
+      "metadata" : {
+        "label" : "EMRPipeline_0",
+        "slug" : "EMRPipeline_0",
+        "x" : -140,
+        "y" : -420
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CEQrmDF9T_7jZsGNlqOYd",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "QstnntNgSCG_MtkZKEpwF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "actionOnFailure" : "TERMINATE_CLUSTER",
+        "clusterSize" : "10033/small_job_1",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "awsConnId" : "aws_default",
+        "steps" : null,
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "EMR_Synapse-python" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "taskId" : null,
+        "pipelineId" : "pipelines/Synapse_pipeline"
+      }
+    },
+    "1ihBLRNt8uOjQg0-EpNnd" : {
+      "id" : "1ihBLRNt8uOjQg0-EpNnd",
+      "component" : "EMRPipelineSensor",
+      "metadata" : {
+        "label" : "EMRPipelineSensor_1",
+        "slug" : "EMRPipelineSensor_1",
+        "x" : 60,
+        "y" : -480
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JJoZvg5H9pR8laTz-w_w0",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "DaPgPF9qS9_qYzSRoVc4f",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "10033",
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "awsConnId" : "aws_default",
+        "stepId" : "{{ ti.xcom_pull('EMRPipeline_0')[0] }}",
+        "taskId" : null
+      }
+    },
+    "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1" : {
+      "id" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
+      "component" : "EMRClusterSensor",
+      "metadata" : {
+        "label" : "EMRClusterSensor_1",
+        "slug" : "EMRClusterSensor_1",
+        "x" : -320,
+        "y" : -500
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-nH8l68x0IIAgrVnbDell$$A3Dm9qLIX0A-kH6lwTGCJ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "OU8U8_emKnAmcSndCkLXI$$vXA_Qm4QxX5bdbfY99JB9",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "failedStates" : [ "TERMINATING", "TERMINATED", "TERMINATED_WITH_ERRORS" ],
+        "targetStates" : [ "STARTING", "RUNNING", "WAITING" ],
+        "jobFlowId" : "{{ ti.xcom_pull('EMRCreateCluster_1') }}",
+        "awsConnId" : "aws_default",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ijyFmSZ2NAn0nLVfP3KJE",
+    "source" : "1WFj7Sq7sFmcJxsCD5Kft",
+    "target" : "1ihBLRNt8uOjQg0-EpNnd",
+    "sourcePort" : "QstnntNgSCG_MtkZKEpwF",
+    "targetPort" : "JJoZvg5H9pR8laTz-w_w0"
+  }, {
+    "id" : "L6farrEkT2DR_36dQh_Ar$$nIQdKAH5fb2VPXMsaFalf",
+    "source" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
+    "target" : "1WFj7Sq7sFmcJxsCD5Kft",
+    "sourcePort" : "OU8U8_emKnAmcSndCkLXI$$vXA_Qm4QxX5bdbfY99JB9",
+    "targetPort" : "CEQrmDF9T_7jZsGNlqOYd"
+  }, {
+    "id" : "1D2H9TSMpRabBjYn3_F-V",
+    "source" : "PILfD-abKx5okDYLtcgdD",
+    "target" : "7wo89uRc0w_LPmrKO9Fq1$$dF9L8rBBTCuV5jAjwJ0H1",
+    "sourcePort" : "yMd2TAAq15nPMmy_Gmxbx",
+    "targetPort" : "-nH8l68x0IIAgrVnbDell$$A3Dm9qLIX0A-kH6lwTGCJ"
+  } ]
+}

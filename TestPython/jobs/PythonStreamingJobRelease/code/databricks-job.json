@@ -1,0 +1,98 @@
+{
+  "fabric_id" : "2730",
+  "components" : [ {
+    "PipelineComponent" : {
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/PythonStreamingRelease-1.0-py3-none-any.whl",
+      "nodeName" : "PythonStreamingRelease",
+      "id" : "csb8lnh6oMBjUlsHfPWIr",
+      "language" : "python",
+      "pipelineId" : "pipelines/PythonStreamingRelease"
+    }
+  }, {
+    "ScriptComponent" : {
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/PythonStreamingJobRelease/Script_1--342935075.py",
+      "nodeName" : "Script_1",
+      "id" : "kRGG8Q7aHpVIjf_cOzpvp$$PmrNdsBic0PMuBeQwUIDX",
+      "language" : "python",
+      "content" : "print(\"hello\")"
+    }
+  } ],
+  "request" : {
+    "format" : "MULTI_TASK",
+    "name" : "PythonStreamingJobRelease",
+    "job_clusters" : [ {
+      "job_cluster_key" : "PythonStreamingJobRelease_default_small",
+      "new_cluster" : {
+        "spark_version" : "12.2.x-scala2.12",
+        "node_type_id" : "i3.xlarge",
+        "driver_node_type_id" : "i3.xlarge",
+        "num_workers" : 1,
+        "spark_conf" : {
+          "prophecy.metadata.fabric.id" : "2730",
+          "prophecy.metadata.job.uri" : "__PROJECT_ID_PLACEHOLDER__/jobs/PythonStreamingJobRelease",
+          "prophecy.metadata.is.interactive.run" : "false",
+          "prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
+          "prophecy.execution.service.url" : "wss://execution.dp.uitesting.prophecy.io/eventws",
+          "prophecy.packages.path" : "{\"pipelines/PythonStreamingRelease\":\"dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/PythonStreamingRelease-1.0-py3-none-any.whl\"}",
+          "prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
+          "prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
+          "prophecy.execution.metrics.interims.table" : "prophecy.interims_manual",
+          "prophecy.execution.metrics.pipeline-metrics.table" : "prophecy.pipeline_runs_manual",
+          "prophecy.execution.metrics.component-metrics.table" : "prophecy.component_runs_manual",
+          "prophecy.execution.metrics.disabled" : false
+        },
+        "aws_attributes" : {
+          "first_on_demand" : 1,
+          "availability" : "SPOT_WITH_FALLBACK"
+        }
+      }
+    } ],
+    "email_notifications" : {
+      "on_success" : [ "abhisheks@prophecy.io", "abhisheks@simpledatalabs.com" ]
+    },
+    "tasks" : [ {
+      "task_key" : "PythonStreamingRelease",
+      "job_cluster_key" : "PythonStreamingJobRelease_default_small",
+      "python_wheel_task" : {
+        "package_name" : "PythonStreamingRelease",
+        "entry_point" : "main",
+        "parameters" : [ "-i", "default", "-O", "{}" ]
+      },
+      "libraries" : [ {
+        "maven" : {
+          "coordinates" : "io.prophecy:prophecy-libs_2.12:3.3.0-7.0.48"
+        }
+      }, {
+        "pypi" : {
+          "package" : "prophecy-libs==1.5.5"
+        }
+      }, {
+        "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/pipeline/PythonStreamingRelease-1.0-py3-none-any.whl"
+      } ],
+      "email_notifications" : { },
+      "max_retries" : 0
+    }, {
+      "task_key" : "Script_1",
+      "depends_on" : [ {
+        "task_key" : "PythonStreamingRelease"
+      } ],
+      "job_cluster_key" : "PythonStreamingJobRelease_default_small",
+      "spark_python_task" : {
+        "python_file" : "dbfs:/FileStore/prophecy/artifacts/prophecy/uitesting/__PROJECT_ID_PLACEHOLDER__/__PROJECT_RELEASE_VERSION_PLACEHOLDER__/PythonStreamingJobRelease/Script_1--342935075.py"
+      },
+      "email_notifications" : { },
+      "max_retries" : 0
+    } ],
+    "max_concurrent_runs" : 1,
+    "schedule" : {
+      "quartz_cron_expression" : "0 0 0 * * ? 2090",
+      "timezone_id" : "GMT",
+      "pause_status" : "UNPAUSED"
+    }
+  },
+  "cluster_mode" : {
+    "clusterMode" : "Single"
+  },
+  "secret_scope" : "prophecy_jobs_778",
+  "sorted_processes" : [ "csb8lnh6oMBjUlsHfPWIr", "kRGG8Q7aHpVIjf_cOzpvp$$PmrNdsBic0PMuBeQwUIDX" ]
+}

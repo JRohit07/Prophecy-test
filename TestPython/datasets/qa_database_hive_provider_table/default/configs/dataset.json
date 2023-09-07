@@ -1,0 +1,1 @@
+{"format":"catalogTable","path":"qa_database","schema":{"type":"struct","fields":[{"name":"a","type":"integer","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}}]},"tableName":"hive_provider_table","datasetType":"Database"}

@@ -1,0 +1,16 @@
+version: 1
+configurations:
+- test-instance7
+- test-instance2
+- test-instance3
+- test-instance6
+- test-instance5
+- test-instance1
+- default
+- test-instance4
+- test-instance8
+dependencies:
+- name: mysql
+  id: '1658827323'
+  type: workflow
+  enabled: true

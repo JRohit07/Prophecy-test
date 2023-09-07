@@ -1,7 +1,7 @@
 name: SQL_HF_test
-description: localChange
-version: 0.0.1
-author: jrohit+e2e@prophecy.io
+description: local-Change
+version: 0.0.1-SNAPSHOT
+author: null
 language: sql
 buildSystem: ''
 buildSystemDetails: null
@@ -11,13 +11,25 @@ templates: {}
 jobs: {}
 functions:
   author: null
-  createdAt: '2023-08-22 07:07:37'
+  createdAt: '2023-08-22 06:54:57'
   gems: {}
   udfs: {}
   udafs: {}
   expressions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/newModel:
+    name: newModel
+    schema: null
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - models/newModel.sql
+    - .prophecy/ide/models/newModel.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-08-22 07:42:59'
 sqlMacros: {}
 sqlSeeds: {}
 sqlSources: {}
@@ -26,7 +38,7 @@ sqlPipeline:
   name: sqlPipeline
   description: null
   author: jrohit+e2e@prophecy.io
-  createdAt: '2023-08-22 07:07:37'
+  createdAt: '2023-08-22 06:54:57'
 dependencies: '[]'
 projectDependencies: {}
 pipelineConfigurations: {}

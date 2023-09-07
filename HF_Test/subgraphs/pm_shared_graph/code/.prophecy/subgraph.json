@@ -1,0 +1,278 @@
+{
+  "id" : "qJ4cQD5wbI0dTbuuL0V-T",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "var2",
+              "kind" : {
+                "type" : "float",
+                "value" : 2.1
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        }, {
+          "name" : "var1",
+          "kind" : {
+            "type" : "int",
+            "value" : 20
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      }
+    },
+    "passThrough" : "context.config.c_array_complex(0).car_record.carr_short < -10"
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "okLRmCUgOCIlvGVI8L4Ig",
+      "slug" : "in0",
+      "isStreaming" : false
+    } ],
+    "outputs" : [ {
+      "id" : "whfVBqQnJEAm4p6Oh_RDi",
+      "slug" : "out0",
+      "isStreaming" : false
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "pkgscala"
+  },
+  "connections" : [ {
+    "id" : "YwRO9bql7iWXpffCunZVC",
+    "source" : "qJ4cQD5wbI0dTbuuL0V-T",
+    "sourcePort" : "okLRmCUgOCIlvGVI8L4Ig",
+    "target" : "Ly2IBGE1CPgoC51992Ii-",
+    "targetPort" : "tqkqxGfF-z674tNuf9UF_"
+  }, {
+    "id" : "CmATCab9Hwd4w5aSmfz15",
+    "source" : "Ly2IBGE1CPgoC51992Ii-",
+    "sourcePort" : "dbBBb_rXY6Y3Tjj_5R8FF",
+    "target" : "lr18wchRAuN40Moyi6p1a",
+    "targetPort" : "tCM6WEgvNCSZgeZmSky8U"
+  }, {
+    "id" : "nuI-YIbT4-AqICnvCqFcm",
+    "source" : "lr18wchRAuN40Moyi6p1a",
+    "sourcePort" : "QB1foN13skAtZSzbJiVTH",
+    "target" : "qJ4cQD5wbI0dTbuuL0V-T",
+    "targetPort" : "whfVBqQnJEAm4p6Oh_RDi"
+  } ],
+  "processes" : {
+    "Ly2IBGE1CPgoC51992Ii-" : {
+      "id" : "Ly2IBGE1CPgoC51992Ii-",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_10",
+        "slug" : "Reformat_10",
+        "x" : -100,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tqkqxGfF-z674tNuf9UF_",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "dbBBb_rXY6Y3Tjj_5R8FF",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "683143510",
+          "target" : "c_int",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "udf_add_one('$var1')"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "lr18wchRAuN40Moyi6p1a" : {
+      "id" : "lr18wchRAuN40Moyi6p1a",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : 180,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tCM6WEgvNCSZgeZmSky8U",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "QB1foN13skAtZSzbJiVTH",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : { },
+      "connections" : [ {
+        "id" : "J556-4OuAwfr-GnBl0-KK",
+        "source" : "lr18wchRAuN40Moyi6p1a",
+        "sourcePort" : "tCM6WEgvNCSZgeZmSky8U",
+        "target" : "scquc15pv5AvPVXgGyWJy",
+        "targetPort" : "BhdCWsXBkt77kMbkWy6Eg"
+      }, {
+        "id" : "yWty-xlLBrC4o074mb6Y2",
+        "source" : "scquc15pv5AvPVXgGyWJy",
+        "sourcePort" : "QMcIIElLXTnydERZY6sjL",
+        "target" : "lr18wchRAuN40Moyi6p1a",
+        "targetPort" : "QB1foN13skAtZSzbJiVTH"
+      } ],
+      "processes" : {
+        "scquc15pv5AvPVXgGyWJy" : {
+          "id" : "scquc15pv5AvPVXgGyWJy",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "Reformat_11",
+            "slug" : "Reformat_11",
+            "x" : -440,
+            "y" : -20,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "BhdCWsXBkt77kMbkWy6Eg",
+              "slug" : "in"
+            } ],
+            "outputs" : [ {
+              "id" : "QMcIIElLXTnydERZY6sjL",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ ],
+            "expressions" : [ {
+              "_row_id" : "497771193",
+              "target" : "c_int",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "udf_add_one('$var2')"
+              },
+              "description" : ""
+            } ]
+          }
+        }
+      },
+      "externalDependencies" : [ ]
+    }
+  },
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "mysql:mysql-connector-java:8.0.29",
+    "name" : "mysql",
+    "enabled" : true,
+    "id" : "59965868",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.postgresql:postgresql:42.3.4",
+    "name" : "postgres",
+    "enabled" : false,
+    "id" : "1360721423",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.scalanlp:epic_2.12:0.5",
+    "name" : "epic",
+    "enabled" : false,
+    "id" : "418005485",
+    "exclusions" : [ ],
+    "repo" : "https://repo.maven.apache.org/maven2/"
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.typelevel:cats-core_2.12:2.6.1",
+    "name" : "cats",
+    "enabled" : true,
+    "id" : "1575366423",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.springframework:spring-beans:5.3.19",
+    "name" : "spring",
+    "enabled" : false,
+    "id" : "611418782",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "com.crealytics:spark-excel_2.12:3.2.1_0.17.1",
+    "name" : "spark-excel",
+    "enabled" : false,
+    "id" : "368609749",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "io.prophecy:prophecy-libs_2.12:4.0.0-3.2.0",
+    "name" : "prophecy-libs-4.0.0",
+    "enabled" : false,
+    "id" : "GXM_V",
+    "exclusions" : [ ],
+    "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "junit:junit:4.13.1",
+    "name" : "junit",
+    "enabled" : false,
+    "id" : "O0zCh",
+    "exclusions" : [ "" ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.apache.spark:spark-mllib_2.12:3.3.0",
+    "name" : "mllib",
+    "enabled" : false,
+    "id" : "WsJw2",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "com.crealytics:spark-excel_2.12:3.3.1_0.18.7",
+    "name" : "sparkexcel",
+    "enabled" : false,
+    "id" : "VJIAR",
+    "exclusions" : [ ]
+  } ]
+}

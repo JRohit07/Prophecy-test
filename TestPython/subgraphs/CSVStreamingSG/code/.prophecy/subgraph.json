@@ -1,0 +1,312 @@
+{
+  "id" : "3r66jRmaxc4hQVx8F6GjE",
+  "component" : "Subgraph",
+  "metadata" : {
+    "label" : "",
+    "slug" : "",
+    "x" : 0,
+    "y" : 0,
+    "phase" : 0,
+    "cache" : false,
+    "detailedStats" : false,
+    "isImported" : false,
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ {
+      "id" : "4kTg0BuwdFYU3XDStiZMH",
+      "slug" : "in0",
+      "isStreaming" : true
+    } ],
+    "outputs" : [ {
+      "id" : "y_YvB-i1rvCyS2VNmqGVU",
+      "slug" : "out0",
+      "isStreaming" : true
+    } ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false
+  },
+  "properties" : {
+    "packageName" : "pythonmain.CSVStreamingSG"
+  },
+  "connections" : [ {
+    "id" : "UgsbmAGb071M5-SdN-SvJ",
+    "source" : "qoHmJRkIGP-E_4bDetL4S",
+    "sourcePort" : "jqRSbIoYOBO-eGxe9qQKB",
+    "target" : "GGrUScq_YUUiPfD_OSPPt",
+    "targetPort" : "wrq-veJIppSN2upOUBlfg"
+  }, {
+    "id" : "rQWSTuqBqQ2YmniAM340L",
+    "source" : "qoHmJRkIGP-E_4bDetL4S",
+    "sourcePort" : "jqRSbIoYOBO-eGxe9qQKB",
+    "target" : "GGrUScq_YUUiPfD_OSPPt",
+    "targetPort" : "dUYTO2hm9oRRDMxHdzsdc"
+  }, {
+    "id" : "qTFLstHuY8XpnIb0NGbna",
+    "source" : "3r66jRmaxc4hQVx8F6GjE",
+    "sourcePort" : "4kTg0BuwdFYU3XDStiZMH",
+    "target" : "qoHmJRkIGP-E_4bDetL4S",
+    "targetPort" : "Jbyt-x-LF6lj2_EiaeRFL"
+  }, {
+    "id" : "EoO68gottjYMZ_iz-rId3",
+    "source" : "GGrUScq_YUUiPfD_OSPPt",
+    "sourcePort" : "5_qkks6El-0SH9qDwXwhm",
+    "target" : "3r66jRmaxc4hQVx8F6GjE",
+    "targetPort" : "y_YvB-i1rvCyS2VNmqGVU"
+  } ],
+  "processes" : {
+    "qoHmJRkIGP-E_4bDetL4S" : {
+      "id" : "qoHmJRkIGP-E_4bDetL4S",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1_1",
+        "slug" : "Reformat_1_1",
+        "x" : 520,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Jbyt-x-LF6lj2_EiaeRFL",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "jqRSbIoYOBO-eGxe9qQKB",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ ]
+      }
+    },
+    "GGrUScq_YUUiPfD_OSPPt" : {
+      "id" : "GGrUScq_YUUiPfD_OSPPt",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1_2",
+        "slug" : "Join_1_2",
+        "x" : 720,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wrq-veJIppSN2upOUBlfg",
+          "slug" : "in0"
+        }, {
+          "id" : "dUYTO2hm9oRRDMxHdzsdc",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "5_qkks6El-0SH9qDwXwhm",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "(in0.c_tinyint = in1.c_tinyint)"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "c_tinyint",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_tinyint"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_smallint",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_smallint"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_int",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in1.c_int"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_bigint",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_bigint"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_float",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_float"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_double",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_double"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_string",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_string"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "c_boolean",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.c_boolean"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "p_int",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.p_int"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "p_float",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.p_float"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "p_string",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.p_string"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "YQk1iC2ZP-ZGTAuAnVDZc$$pkzn9Dv1ze8mARLMkU_BT",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "YQk1iC2ZP-ZGTAuAnVDZc$$pkzn9Dv1ze8mARLMkU_BT##c_tinyint", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_tinyint", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##p_int", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_smallint", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##p_string", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_string", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##p_float", "YQk1iC2ZP-ZGTAuAnVDZc$$pkzn9Dv1ze8mARLMkU_BT##c_int", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_bigint", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_tinyint", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_boolean", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_double", "IFJc3KdisISt9TrgaTn5z$$wKB_x3dgHnNwhwezGsh-7##c_float" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    }
+  },
+  "externalDependencies" : [ {
+    "type" : "coordinates",
+    "coordinates" : "mysql:mysql-connector-java:8.0.29",
+    "name" : "mysql",
+    "enabled" : false,
+    "id" : "1658827323",
+    "exclusions" : [ ]
+  }, {
+    "type" : "pypi",
+    "id" : "410081255",
+    "name" : "matplotlib",
+    "enabled" : false,
+    "package" : "matplotlib==3.5.2"
+  }, {
+    "type" : "pypi",
+    "id" : "171138274",
+    "name" : "pandas",
+    "enabled" : false,
+    "package" : "pandas>=1.4.2"
+  }, {
+    "type" : "pypi",
+    "id" : "2121735476",
+    "name" : "numpy",
+    "enabled" : false,
+    "package" : "numpy==1.22.*"
+  }, {
+    "type" : "pypi",
+    "id" : "211888696",
+    "name" : "requests",
+    "enabled" : false,
+    "package" : "requests~=2.28.0"
+  }, {
+    "type" : "pypi",
+    "package" : "scipy>=1.6.3,<=1.8.1",
+    "name" : "scipy",
+    "enabled" : false,
+    "id" : "69834547",
+    "repo" : ""
+  }, {
+    "type" : "pypi",
+    "id" : "1722369069",
+    "name" : "torch",
+    "enabled" : false,
+    "package" : "torch==1.11.0"
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "com.crealytics:spark-excel_2.12:3.2.1_0.17.1",
+    "name" : "spark-excel",
+    "enabled" : false,
+    "id" : "40864959",
+    "exclusions" : [ ]
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "org.apache.commons:commons-lang3:3.8",
+    "name" : "apache-commons",
+    "enabled" : false,
+    "id" : "424233105",
+    "exclusions" : [ ]
+  }, {
+    "type" : "pypi",
+    "package" : "ComponentBuilderPython",
+    "name" : "component-builder-with-url",
+    "enabled" : false,
+    "id" : "701579940",
+    "repo" : "https://rajat@prophecy.io:AP6irTPPsV6xeRczg3vuuRAiQUo@prophecyio2.jfrog.io/artifactory/api/pypi/pypi-local/simple"
+  }, {
+    "type" : "coordinates",
+    "coordinates" : "com.crealytics:spark-excel_2.12:3.3.1_0.18.7",
+    "name" : "sparkexcel",
+    "enabled" : false,
+    "id" : "x_rzG",
+    "exclusions" : [ ]
+  } ]
+}

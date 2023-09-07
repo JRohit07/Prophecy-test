@@ -1,0 +1,44 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: c   short  --
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c-int-column type
+    type: string
+    nullable: true
+    metadata: {}
+  - name: -- c-long
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c-decimal
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c  float
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c--boolean
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c- - -double
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c___-- string
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c  date
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c_timestamp
+    type: string
+    nullable: true
+    metadata: {}

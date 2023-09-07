@@ -1,0 +1,72 @@
+{
+  "CONFIG_SHORT" : 22,
+  "CONFIG_FLOAT" : 22,
+  "CONFIG_DOUBLE" : 22,
+  "CONFIG_INT" : 22,
+  "PERF_SG" : {
+    "CONFIG_DOUBLE" : 22,
+    "CONFIG_FLOAT" : 22,
+    "Subgraph_4_1_1_1" : {
+      "CONFIG_DOUBLE" : 22,
+      "CONFIG_FLOAT" : 22,
+      "Subgraph_3_1_1_1" : {
+        "CONFIG_DOUBLE" : 22,
+        "CONFIG_FLOAT" : 22,
+        "Subgraph_7_1_1_1" : {
+          "CONFIG_DOUBLE" : 22,
+          "CONFIG_FLOAT" : 22,
+          "Subgraph_8_1_1_1" : {
+            "CONFIG_DOUBLE" : 22,
+            "CONFIG_FLOAT" : 22,
+            "CONFIG_INT" : 22,
+            "Subgraph_9_1_1_1" : {
+              "CONFIG_DOUBLE" : 22,
+              "CONFIG_FLOAT" : 22,
+              "CONFIG_INT" : 22,
+              "Subgraph_1" : {
+                "CONFIG_DOUBLE" : 22,
+                "CONFIG_FLOAT" : 22,
+                "Subgraph_2" : {
+                  "CONFIG_DOUBLE" : 22,
+                  "CONFIG_FLOAT" : 22,
+                  "CONFIG_INT" : 22,
+                  "Subgraph_3" : {
+                    "CONFIG_DOUBLE" : 22,
+                    "CONFIG_FLOAT" : 22,
+                    "CONFIG_INT" : 22,
+                    "CONFIG_SHORT" : 22,
+                    "Subgraph_4" : {
+                      "CONFIG_DOUBLE" : 22,
+                      "CONFIG_FLOAT" : 22,
+                      "CONFIG_INT" : 22,
+                      "CONFIG_SHORT" : 22,
+                      "Subgraph_5" : {
+                        "CONFIG_DOUBLE" : 22,
+                        "CONFIG_FLOAT" : 22,
+                        "CONFIG_INT" : 22,
+                        "CONFIG_SHORT" : 22
+                      }
+                    }
+                  },
+                  "CONFIG_SHORT" : 22
+                },
+                "CONFIG_INT" : 22,
+                "CONFIG_SHORT" : 22
+              },
+              "CONFIG_SHORT" : 22
+            },
+            "CONFIG_SHORT" : 22
+          },
+          "CONFIG_INT" : 22,
+          "CONFIG_SHORT" : 22
+        },
+        "CONFIG_INT" : 22,
+        "CONFIG_SHORT" : 22
+      },
+      "CONFIG_INT" : 22,
+      "CONFIG_SHORT" : 22
+    },
+    "CONFIG_INT" : 22,
+    "CONFIG_SHORT" : 22
+  }
+}

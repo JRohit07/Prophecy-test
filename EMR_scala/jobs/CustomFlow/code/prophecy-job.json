@@ -1,0 +1,76 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "10097",
+    "jobId" : "jobs/CustomFlow",
+    "name" : "CustomFlow",
+    "dagName" : "uitesting_jrohit_e2e_EMR_Synapse_CustomFlow",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "10097",
+      "name" : "EMR_airflow_operator_fabric"
+    }, {
+      "id" : "10173",
+      "name" : "EMR_composer"
+    }, {
+      "id" : "10127",
+      "name" : "ProphecyMangedAirflow",
+      "trialStartDate" : 1691581801780
+    } ],
+    "catchup" : true,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "XgsNQ7MWoKyTNRQ5I-fvs" : {
+      "id" : "XgsNQ7MWoKyTNRQ5I-fvs",
+      "component" : "EMRStepSensor",
+      "metadata" : {
+        "label" : "EMRStepSensor_1",
+        "slug" : "EMRStepSensor_1",
+        "x" : -100,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "39xNY6iUsS1SVkPA4uxms",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "xcWmvr5QQOInThQdQpT3U",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "fabricId" : "9537",
+        "jobFlowId" : "",
+        "awsConnId" : "aws_default",
+        "stepId" : "{{ ti.xcom_pull('EMRAddStep_0')[0] }}",
+        "taskId" : null
+      }
+    }
+  },
+  "connections" : [ ]
+}

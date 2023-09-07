@@ -1,0 +1,170 @@
+{
+  "unitTests" : [ {
+    "data" : {
+      "ywKEvEpEEzX3gsXozr2mX$$aUeLsKlYme3g71WfVjmJw" : {
+        "values" : [ [ "A", "2019-07-19", "CN", "9", "nbirdsey8@who.int", "Natka", "Birdsey", "655-623-0342" ], [ "A", "2019-04-28", "CM", "33", "gtocknellw@adobe.com", "Ginevra", "Tocknell", "736-426-9252" ], [ "A", "2019-10-03", "ID", "45", "lyurikov18@cam.ac.uk", "Leigha", "Yurikov", "456-397-1213" ], [ "A", "2019-07-05", "FI", "66", "sscorthorne1t@vk.com", "Sabrina", "Scorthorne", "433-729-6985" ], [ "A", "2019-10-05", "AR", "78", "tcalbrathe25@gnu.org", "Tabor", "Calbrathe", "571-154-2717" ], [ "B", "2019-08-22", "ID", "18", "brolinsonh@gizmodo.com", "Barnett", "Rolinson", "623-838-5064" ], [ "B", "2019-05-12", "PH", "34", "mpanyerx@dailymail.co.uk", "Mauricio", "Panyer", "353-614-6203" ], [ "B", "2019-04-07", "YE", "53", "ccridlon1g@bbb.org", "Cathe", "Cridlon", "684-152-4374" ], [ "C", "2019-04-15", "JP", "22", "vclubbl@netscape.com", "Valery", "Clubb", "918-244-6824" ], [ "C", "2019-12-17", "YE", "26", "wpetscheltp@cnn.com", "Waite", "Petschelt", "161-451-6662" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "customer_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : false,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      },
+      "CEeW7GbB9w2Q51CVPbnJi$$AP02Hcu_D4b2pinP1WLuL" : {
+        "values" : [ [ "A", "2019-07-19", "CN", "9", "nbirdsey8@who.int", "Natka", "Birdsey", "655-623-0342" ], [ "A", "2019-04-28", "CM", "33", "gtocknellw@adobe.com", "Ginevra", "Tocknell", "736-426-9252" ], [ "A", "2019-10-03", "ID", "45", "lyurikov18@cam.ac.uk", "Leigha", "Yurikov", "456-397-1213" ], [ "A", "2019-07-05", "FI", "66", "sscorthorne1t@vk.com", "Sabrina", "Scorthorne", "433-729-6985" ], [ "A", "2019-10-05", "AR", "78", "tcalbrathe25@gnu.org", "Tabor", "Calbrathe", "571-154-2717" ], [ "B", "2019-08-22", "ID", "18", "brolinsonh@gizmodo.com", "Barnett", "Rolinson", "623-838-5064" ], [ "B", "2019-05-12", "PH", "34", "mpanyerx@dailymail.co.uk", "Mauricio", "Panyer", "353-614-6203" ], [ "B", "2019-04-07", "YE", "53", "ccridlon1g@bbb.org", "Cathe", "Cridlon", "684-152-4374" ], [ "C", "2019-04-15", "JP", "22", "vclubbl@netscape.com", "Valery", "Clubb", "918-244-6824" ], [ "C", "2019-12-17", "YE", "26", "wpetscheltp@cnn.com", "Waite", "Petschelt", "161-451-6662" ] ],
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "account_flags",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "account_open_date",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "country_code",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "customer_id",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "email",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "first_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "last_name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "phone",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "predicates" : [ ]
+      }
+    },
+    "name" : "Unit Test 0",
+    "testType" : "outputRow",
+    "language" : "python"
+  } ],
+  "language" : "python"
+}
