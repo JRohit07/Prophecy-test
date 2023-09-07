@@ -1,4 +1,4 @@
-name: SQL_hotfix
+name: sql
 description: ''
 version: 0.0.1
 author: null
@@ -11,13 +11,36 @@ templates: {}
 jobs: {}
 functions:
   author: null
-  createdAt: '2023-09-06 11:07:43'
+  createdAt: '2023-09-06 11:26:53'
   gems: {}
   udfs: {}
   udafs: {}
   expressions: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/model1:
+    name: model1
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: sony@prophecy.io
+    files:
+    - models/model1.sql
+    - .prophecy/ide/models/model1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-09-06 11:27:42'
   .prophecy/metadata/sqlmodels/model2:
     name: model2
     schema:
@@ -40,7 +63,7 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
-    createdAt: '2023-09-06 11:08:49'
+    createdAt: '2023-09-06 11:27:56'
   .prophecy/metadata/sqlmodels/model3:
     name: model3
     schema:
@@ -63,34 +86,11 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
-    createdAt: '2023-09-06 11:09:04'
-  .prophecy/metadata/sqlmodels/model_1:
-    name: model_1
-    schema:
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-      - name: first_name
-        dataType:
-          type: String
-      - name: last_name
-        dataType:
-          type: String
-    description: null
-    author: sony@prophecy.io
-    files:
-    - models/model_1.sql
-    - .prophecy/ide/models/model_1.json
-    sqlDependencies:
-      models: []
-      datasets: []
-    createdAt: '2023-09-06 11:08:35'
+    createdAt: '2023-09-06 11:28:07'
 sqlMacros: {}
 sqlSeeds:
-  .prophecy/metadata/sqlseeds/customer_seed:
-    name: customer_seed
+  .prophecy/metadata/sqlseeds/newSeed:
+    name: newSeed
     schema:
       providerType: Databricks
       fields:
@@ -106,15 +106,15 @@ sqlSeeds:
     description: null
     author: sony@prophecy.io
     files:
-    - seeds/customer_seed.csv
-    createdAt: '2023-09-06 11:08:21'
+    - seeds/newSeed.csv
+    createdAt: '2023-09-06 11:27:27'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
   description: null
   author: sony@prophecy.io
-  createdAt: '2023-09-06 11:07:43'
+  createdAt: '2023-09-06 11:26:53'
 dependencies: '[]'
 projectDependencies: {}
 pipelineConfigurations: {}

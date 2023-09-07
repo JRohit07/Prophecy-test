@@ -1,11 +1,11 @@
-WITH newSeed AS (
+WITH customer_seed AS (
 
   SELECT * 
   
-  FROM {{ ref('newSeed')}}
+  FROM {{ ref('customer_seed')}}
 
 )
 
 SELECT *
 
-FROM newSeed
+FROM customer_seed

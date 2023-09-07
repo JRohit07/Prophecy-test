@@ -1,7 +1,7 @@
 {
-  "id" : "customerModel",
+  "id" : "model3",
   "metainfo" : {
-    "label" : "customerModel",
+    "label" : "model3",
     "autoLayout" : false,
     "staleState" : "none",
     "sourceSuggestions" : {
@@ -9,11 +9,11 @@
     }
   },
   "processes" : {
-    "customerModel##R7GiuFWC" : {
-      "id" : "customerModel##R7GiuFWC",
+    "model3##ormoxMhj" : {
+      "id" : "model3##ormoxMhj",
       "component" : "TargetModel",
       "metadata" : {
-        "label" : "customerModel",
+        "label" : "model3",
         "x" : 120,
         "y" : 120,
         "phase" : 0,
@@ -31,7 +31,7 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "cE7jnqKE",
+          "id" : "Xuw3ynDj",
           "schema" : {
             "providerType" : "Databricks",
             "fields" : [ {
@@ -54,7 +54,7 @@
           "slug" : "newSeed"
         } ],
         "outputs" : [ {
-          "id" : "nxB5Ja6P",
+          "id" : "Pe9gVnCR",
           "schema" : {
             "providerType" : "Databricks",
             "fields" : [ {
@@ -79,8 +79,8 @@
         "isCustomOutputSchema" : false
       }
     },
-    "ZJQV_5DY_7oRbm5A3zxW4" : {
-      "id" : "ZJQV_5DY_7oRbm5A3zxW4",
+    "TkYVVgeX0__K0zZ68zAh6" : {
+      "id" : "TkYVVgeX0__K0zZ68zAh6",
       "component" : "Seed",
       "metadata" : {
         "label" : "newSeed",
@@ -99,7 +99,7 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "qGklfddVdS09_OZ4TW34R",
+          "id" : "8to7Z4mUlbZgp6GGvGioi",
           "schema" : {
             "providerType" : "Databricks",
             "fields" : [ {
@@ -126,11 +126,11 @@
     }
   },
   "connections" : [ {
-    "id" : "Mpdc4rGGQl8BszmwFkkvH$$mgBRDkLzdut-Q8iESN9xd",
-    "source" : "ZJQV_5DY_7oRbm5A3zxW4",
-    "sourcePort" : "qGklfddVdS09_OZ4TW34R",
-    "target" : "customerModel##R7GiuFWC",
-    "targetPort" : "cE7jnqKE"
+    "id" : "xjOnsBYoeb8AflGahYZo1$$m2hq2UgSel8NfWYCQbP_u",
+    "source" : "TkYVVgeX0__K0zZ68zAh6",
+    "sourcePort" : "8to7Z4mUlbZgp6GGvGioi",
+    "target" : "model3##ormoxMhj",
+    "targetPort" : "Xuw3ynDj"
   } ],
   "component" : "Model"
 }
