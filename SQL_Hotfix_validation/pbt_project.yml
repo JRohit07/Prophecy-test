@@ -43,18 +43,7 @@ sqlModels:
     createdAt: '2023-09-06 07:36:07'
   .prophecy/metadata/sqlmodels/model2:
     name: model2
-    schema:
-      providerType: Databricks
-      fields:
-      - name: id
-        dataType:
-          type: Integer
-      - name: first_name
-        dataType:
-          type: String
-      - name: last_name
-        dataType:
-          type: String
+    schema: null
     description: null
     author: jrohit+e2e@prophecy.io
     files:
