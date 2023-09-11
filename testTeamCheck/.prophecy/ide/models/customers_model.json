@@ -14,8 +14,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "customers_model",
-        "x" : 200,
-        "y" : 120,
+        "x" : 120,
+        "y" : 60,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -125,8 +125,8 @@
       "metadata" : {
         "label" : "SetOperation_1",
         "slug" : "SetOperation_1",
-        "x" : 0,
-        "y" : 120,
+        "x" : -100,
+        "y" : 60,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -274,8 +274,8 @@
       "metadata" : {
         "label" : "customers",
         "slug" : "customers",
-        "x" : -200,
-        "y" : 60,
+        "x" : -360,
+        "y" : -40,
         "phase" : 0
       },
       "properties" : {
@@ -340,8 +340,8 @@
       "metadata" : {
         "label" : "customers_1",
         "slug" : "customers_1",
-        "x" : -220,
-        "y" : 180,
+        "x" : -360,
+        "y" : 160,
         "phase" : 0
       },
       "properties" : {
