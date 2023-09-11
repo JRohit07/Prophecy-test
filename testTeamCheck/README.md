@@ -33,3 +33,7 @@ khkj
 *** Release notes for version: v1 ***
 
 new 
+
+*** Release notes for version: V12345 ***
+
+NEW RELEASE

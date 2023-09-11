@@ -1,6 +1,6 @@
 name: Redshift_project_basic
 description: ''
-version: v1
+version: V12345
 author: null
 language: sql
 buildSystem: ''
