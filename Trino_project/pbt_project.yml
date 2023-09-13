@@ -29,8 +29,31 @@ jobs:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: null
+    enabled: false
     createdAt: '2023-09-12 11:35:00'
+    author: jrohit+e2e@prophecy.io
+  jobs/Composer_trino_job:
+    name: Composer_trino_job
+    description: ''
+    fabricUID: 10773
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-09-13 08:15:38'
     author: jrohit+e2e@prophecy.io
 gemContainer:
   languageVersion: ''
