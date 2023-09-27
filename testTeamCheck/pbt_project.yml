@@ -1,0 +1,234 @@
+name: Redshift_project_basic
+description: ''
+version: V12345
+author: null
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/Job_redshift:
+    name: Job_redshift
+    description: ''
+    fabricUID: 10920
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-09-11 03:41:16'
+    author: jrohit+e2e@prophecy.io
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+functions:
+  author: null
+  createdAt: '2023-09-05 09:09:09'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/customers_model:
+    name: customers_model
+    schema:
+      providerType: Redshift
+      fields:
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: first_order
+        dataType:
+          type: Date
+      - name: most_recent_order
+        dataType:
+          type: Date
+      - name: number_of_orders
+        dataType:
+          type: Bigint
+      - name: customer_lifetime_value
+        dataType:
+          type: Bigint
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - models/customers_model.sql
+    - .prophecy/ide/models/customers_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-09-05 09:11:16'
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/dev_jsr:
+    name: dev.jsr
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-09-05 09:11:21'
+    tables:
+    - name: customers
+      schema:
+        providerType: redshift
+        fields:
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: first_name
+          dataType:
+            type: String
+        - name: last_name
+          dataType:
+            type: String
+        - name: first_order
+          dataType:
+            type: Date
+        - name: most_recent_order
+          dataType:
+            type: Date
+        - name: number_of_orders
+          dataType:
+            type: Bigint
+        - name: customer_lifetime_value
+          dataType:
+            type: Bigint
+      description: null
+      author: jrohit+e2e@prophecy.io
+      createdAt: '2023-09-05 09:11:21'
+  .prophecy/metadata/sqlsources/dev_public:
+    name: dev.public
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-09-05 09:11:34'
+    tables:
+    - name: customers
+      schema:
+        providerType: redshift
+        fields:
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: first_name
+          dataType:
+            type: String
+        - name: last_name
+          dataType:
+            type: String
+        - name: first_order
+          dataType:
+            type: Date
+        - name: most_recent_order
+          dataType:
+            type: Date
+        - name: number_of_orders
+          dataType:
+            type: Bigint
+        - name: customer_lifetime_value
+          dataType:
+            type: Bigint
+      description: null
+      author: jrohit+e2e@prophecy.io
+      createdAt: '2023-09-05 09:11:34'
+  .prophecy/metadata/sqlsources/sample_data_dev_tpcds:
+    name: sample_data_dev.tpcds
+    description: null
+    author: jrohit+e2e@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-09-11 06:31:27'
+    tables:
+    - name: customer
+      schema:
+        providerType: redshift
+        fields:
+        - name: c_customer_sk
+          dataType:
+            type: Integer
+        - name: c_customer_id
+          dataType:
+            type: Char
+        - name: c_current_cdemo_sk
+          dataType:
+            type: Integer
+        - name: c_current_hdemo_sk
+          dataType:
+            type: Integer
+        - name: c_current_addr_sk
+          dataType:
+            type: Integer
+        - name: c_first_shipto_date_sk
+          dataType:
+            type: Integer
+        - name: c_first_sales_date_sk
+          dataType:
+            type: Integer
+        - name: c_salutation
+          dataType:
+            type: Char
+        - name: c_first_name
+          dataType:
+            type: Char
+        - name: c_last_name
+          dataType:
+            type: Char
+        - name: c_preferred_cust_flag
+          dataType:
+            type: Char
+        - name: c_birth_day
+          dataType:
+            type: Integer
+        - name: c_birth_month
+          dataType:
+            type: Integer
+        - name: c_birth_year
+          dataType:
+            type: Integer
+        - name: c_birth_country
+          dataType:
+            type: String
+        - name: c_login
+          dataType:
+            type: Char
+        - name: c_email_address
+          dataType:
+            type: Char
+        - name: c_last_review_date_sk
+          dataType:
+            type: Integer
+      description: null
+      author: jrohit+e2e@prophecy.io
+      createdAt: '2023-09-11 06:31:27'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: jrohit+e2e@prophecy.io
+  createdAt: '2023-09-05 09:09:09'
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
