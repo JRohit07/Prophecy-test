@@ -1,0 +1,91 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "102",
+    "jobId" : "jobs/job1",
+    "name" : "job1",
+    "schedule" : "0 0 0 1/1 * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "prophecy_internal_jobs",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "102",
+      "name" : "databricks_sql",
+      "clusterSizes" : {
+        "default" : "prophecy_internal_jobs",
+        "availableClusterSizes" : [ "prophecy_internal_jobs" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "QzOlLc_HZ6W7lr2rpJusb$$XE-x_pcgtx_CcNX0bhVl_" : {
+      "id" : "QzOlLc_HZ6W7lr2rpJusb$$XE-x_pcgtx_CcNX0bhVl_",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : 580,
+        "y" : 320
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Y6gcnc75nB_pmJk0Y8PVm$$i83JVUPryGrZf1Rf8xxsb",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "kqs1z8_p3GL9R_xdvqQAX$$jkAV0eu5rRIt76aPDIlZ0",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "execSeed" : true,
+        "execRun" : true,
+        "gitEntity" : "branch",
+        "projectId" : "490",
+        "runOnlyModel" : "false",
+        "loadingModels" : false,
+        "profile" : "run_profile",
+        "sqlFabricId" : "102",
+        "gitEntityValue" : "br1",
+        "execDeps" : true,
+        "execTest" : false,
+        "currentProjectModels" : [ {
+          "label" : "customer_model",
+          "value" : "customer_model",
+          "id" : "490/.prophecy/metadata/sqlmodels/customer_model",
+          "name" : "customer_model"
+        } ]
+      }
+    }
+  },
+  "connections" : [ ]
+}
