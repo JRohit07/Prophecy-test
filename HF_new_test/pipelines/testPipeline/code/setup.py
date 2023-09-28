@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'testPipeline',
+    name = 'testPipeline_new',
     version = '1.0',
     packages = find_packages(include = ('testpipeline*', )) + ['prophecy_config_instances'],
     package_dir = {'prophecy_config_instances' : 'configs/resources/config'},
