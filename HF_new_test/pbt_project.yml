@@ -12,7 +12,7 @@ buildSystemDetails:
   createdAt: '2023-09-28 12:07:05'
 pipelines:
   pipelines/testPipeline:
-    name: testPipeline_new_renamed_2
+    name: testPipeline_new_renamed_4
     description: ''
     author: sony@prophecy.io
     mode: batch
