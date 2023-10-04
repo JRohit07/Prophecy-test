@@ -1,6 +1,6 @@
 name: livy_scala_project
 description: ''
-version: 0.0.1
+version: v1
 author: jrohit+e2e@prophecy.io
 language: scala
 buildSystem: ''
