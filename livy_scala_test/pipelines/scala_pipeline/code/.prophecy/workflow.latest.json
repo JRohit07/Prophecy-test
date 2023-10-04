@@ -4,7 +4,7 @@
       "gemBuilderVersion" : "v1"
     },
     "id" : "1",
-    "uri" : "pipelines/workflow",
+    "uri" : "pipelines/scala_pipeline",
     "language" : "scala",
     "fabricId" : "11836",
     "frontEndLanguage" : "sql",
@@ -79,7 +79,7 @@
       "metadata" : {
         "label" : "customer_dataset",
         "slug" : "customer_dataset",
-        "x" : -400,
+        "x" : -460,
         "y" : -160,
         "phase" : 0,
         "cache" : false,
