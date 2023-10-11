@@ -1,5 +1,5 @@
 {
-  "name" : "newSQL",
+  "name" : "SQL_project",
   "fileSystem" : {
     "type" : "Folder",
     "name" : "",
@@ -19,5 +19,6 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
+  "sourcesToSync" : [ ],
   "frontEndLanguage" : "sql"
 }

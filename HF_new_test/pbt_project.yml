@@ -1,0 +1,46 @@
+name: TestHF_Project_newgame
+description: ''
+version: 0.0.1
+author: sony@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: testhf_project
+  parentArtefactID: sonyprophecy.io_team
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-09-28 12:07:05'
+pipelines:
+  pipelines/testPipeline:
+    name: testPipeline_new
+    description: ''
+    author: sony@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-09-28 12:07:05'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+functions:
+  author: null
+  createdAt: '2023-09-28 12:07:05'
+  gems: {}
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}

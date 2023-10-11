@@ -1,0 +1,79 @@
+name: livy_scala_project
+description: ''
+version: v2
+author: jrohit+e2e@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: livyscalaproject
+  parentArtefactID: jrohit@prophecyioteam
+  buildSystem: maven
+  author: null
+  createdAt: '2023-10-04 11:36:48'
+pipelines:
+  pipelines/scala_pipeline:
+    name: scala_pipeline
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-10-04 11:36:48'
+    datasets:
+      inputs:
+      - datasets/customer_dataset
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/customer_dataset:
+    name: customer_dataset
+    description: ''
+    author: jrohit+e2e@prophecy.io
+    createdAt: '2023-10-04 11:37:50'
+    mode: batch
+    physicalDatasets:
+      Livy_fabric:
+        fabricId: 11836
+        datasetType: File
+        description: ''
+        author: jrohit+e2e@prophecy.io
+        createdAt: '2023-10-04 11:37:50'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
+  gems: {}
+functions:
+  author: null
+  createdAt: '2023-10-04 11:36:48'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '34933':
+    projectUID: 34933
+    projectName: ProphecyWarehouseScala
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34933.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2023-10-04 11:36:31'
+  '34932':
+    projectUID: 34932
+    projectName: ProphecySparkBasicsScala
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34932.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2023-10-04 11:36:31'
+pipelineConfigurations: {}
