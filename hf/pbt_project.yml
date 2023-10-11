@@ -44,6 +44,29 @@ functions:
   expressions: {}
 subgraphs: {}
 sqlModels:
+  .prophecy/metadata/sqlmodels/customer:
+    name: customer
+    schema:
+      providerType: Databricks
+      fields:
+      - name: id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/customer.sql
+    - .prophecy/ide/models/customer.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-10-11 12:23:26'
   .prophecy/metadata/sqlmodels/test:
     name: test
     schema:
