@@ -1,6 +1,6 @@
 name: newSQL
 description: ''
-version: 0.0.1
+version: v2
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
