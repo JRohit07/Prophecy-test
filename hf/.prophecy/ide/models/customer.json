@@ -14,8 +14,8 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "customer",
-        "x" : 120,
-        "y" : 120,
+        "x" : 220,
+        "y" : 80,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
