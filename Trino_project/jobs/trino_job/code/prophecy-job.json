@@ -15,6 +15,7 @@
     },
     "maxConcurrentRuns" : 1,
     "processDefaultSettings" : {
+      "retries" : 3,
       "ignore_first_depends_on_past" : true,
       "do_xcom_push" : true
     },
@@ -30,7 +31,7 @@
       "trialStartDate" : 1693821784922
     }, {
       "id" : "10773",
-      "name" : "Redshift_airflow_composer"
+      "name" : "Redshift_trino_airflow_composer"
     }, {
       "id" : "10173",
       "name" : "EMR_redshift_composer"
@@ -39,6 +40,7 @@
       "name" : "MWAA_fabric"
     } ],
     "catchup" : true,
+    "tags" : [ ],
     "scheduleTimeZone" : "UTC",
     "dagParams" : {
       "instances" : {
@@ -55,8 +57,8 @@
       "metadata" : {
         "label" : "DBT_0",
         "slug" : "DBT_0",
-        "x" : -140,
-        "y" : -80
+        "x" : -360,
+        "y" : -140
       },
       "ports" : {
         "inputs" : [ {
