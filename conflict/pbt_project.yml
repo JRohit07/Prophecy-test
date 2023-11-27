@@ -68,7 +68,7 @@ projectDependencies:
     version: 0.0.7
     isDefault: true
     author: null
-    createdAt: '2023-11-27 08:37:22'
+    createdAt: '2023-11-27 09:08:08'
   '43':
     projectUID: 43
     projectName: ProphecyWarehousePython
@@ -76,5 +76,5 @@ projectDependencies:
     version: 0.0.2
     isDefault: true
     author: null
-    createdAt: '2023-11-27 08:37:22'
+    createdAt: '2023-11-27 09:08:08'
 pipelineConfigurations: {}
