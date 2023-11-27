@@ -30,7 +30,8 @@
       "trialStartDate" : 1700807995878
     } ],
     "catchup" : true,
-    "scheduleTimeZone" : "UTC",
+    "tags" : [ ],
+    "scheduleTimeZone" : "Asia/Calcutta",
     "dagParams" : {
       "instances" : {
         "default" : { }
