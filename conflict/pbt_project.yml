@@ -63,6 +63,19 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/p6:
+    name: p6
+    description: ''
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-11-27 09:27:38'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
