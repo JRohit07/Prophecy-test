@@ -6,7 +6,7 @@
     "name" : "snowflake_composer_2",
     "dagName" : "staging_jrohit_Snowflake_project_external_git_snowflake_composer_2",
     "schedule" : "0 15/1 * * *",
-    "enabled" : true,
+    "enabled" : false,
     "alerting" : {
       "emails" : "",
       "onStart" : false,

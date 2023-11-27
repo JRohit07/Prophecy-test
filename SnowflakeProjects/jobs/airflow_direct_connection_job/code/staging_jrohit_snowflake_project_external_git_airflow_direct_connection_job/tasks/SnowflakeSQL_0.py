@@ -5,7 +5,7 @@ def SnowflakeSQL_0():
         task_id = "SnowflakeSQL_0",
         sql = "select * from CUSTOMER",
         snowflake_conn_id = "snowflake_CICDAccount",
-        warehouse = "wrong_WAREHOUSE".strip(),
-        database = "wrong_database".strip(),
-        schema = "wrong_schema".strip(),
+        warehouse = "".strip(),
+        database = "".strip(),
+        schema = "".strip(),
     )

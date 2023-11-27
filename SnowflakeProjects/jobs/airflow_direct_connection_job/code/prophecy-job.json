@@ -6,7 +6,7 @@
     "name" : "airflow_direct_connection_job",
     "dagName" : "staging_jrohit_Snowflake_project_external_git_airflow_direct_connection_job",
     "schedule" : "None",
-    "enabled" : false,
+    "enabled" : true,
     "alerting" : {
       "emails" : "",
       "onStart" : false,
@@ -65,11 +65,11 @@
       "settings" : { },
       "properties" : {
         "connId" : "snowflake_CICDAccount",
-        "warehouseName" : "wrong_WAREHOUSE",
+        "warehouseName" : "",
         "code" : "select * from CUSTOMER",
         "language" : "sql",
-        "schemaName" : "wrong_schema",
-        "databaseName" : "wrong_database",
+        "schemaName" : "",
+        "databaseName" : "",
         "taskId" : null
       },
       "connections" : [ ],
