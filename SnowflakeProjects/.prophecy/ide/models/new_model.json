@@ -1,0 +1,48 @@
+{
+  "id" : "new_model",
+  "metainfo" : {
+    "label" : "new_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 0
+  },
+  "processes" : {
+    "new_model##mbnxtsZq" : {
+      "id" : "new_model##mbnxtsZq",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "new_model",
+        "x" : 120,
+        "y" : 120,
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xvAfxxyv",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "zmvQ7yRL",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}

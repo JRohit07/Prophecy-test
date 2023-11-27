@@ -1,0 +1,160 @@
+name: Snowflake_project_external_git
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/airflow_direct_connection_job:
+    name: airflow_direct_connection_job
+    description: ''
+    fabricUID: 372
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-10-27 09:45:03'
+    author: jrohit@prophecy.io
+  jobs/Snowflake_Composer:
+    name: Snowflake_Composer
+    description: ''
+    fabricUID: 793
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2023-11-24 12:37:33'
+    author: jrohit@prophecy.io
+  jobs/snowflake_composer_2:
+    name: snowflake_composer_2
+    description: ''
+    fabricUID: 793
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 15/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2023-11-27 09:48:11'
+    author: jrohit@prophecy.io
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2023-10-27 09:38:17'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/customer_model:
+    name: customer_model
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/customer_model.sql
+    - .prophecy/ide/models/customer_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-10-27 09:38:40'
+  .prophecy/metadata/sqlmodels/new_model:
+    name: new_model
+    schema: null
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/new_model.sql
+    - .prophecy/ide/models/new_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-11-07 07:03:45'
+sqlMacros: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_customer:
+    name: raw_customer
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_customer.csv
+    createdAt: '2023-10-27 09:40:36'
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: jrohit@prophecy.io
+  createdAt: '2023-10-27 09:38:17'
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}
