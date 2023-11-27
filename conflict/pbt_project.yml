@@ -24,6 +24,19 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/P3:
+    name: P3
+    description: ''
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-11-27 08:42:18'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
