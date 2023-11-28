@@ -58,7 +58,7 @@ jobs:
   jobs/snowflake_composer_2:
     name: snowflake_composer_2
     description: ''
-    fabricUID: 793
+    fabricUID: 949
     scheduler:
       Composer: {}
     cloudProvider: null

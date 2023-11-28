@@ -1,7 +1,7 @@
 {
   "metainfo" : {
     "type" : "Composer",
-    "fabricId" : "793",
+    "fabricId" : "949",
     "jobId" : "jobs/snowflake_composer_2",
     "name" : "snowflake_composer_2",
     "dagName" : "staging_jrohit_Snowflake_project_external_git_snowflake_composer_2",
@@ -22,12 +22,15 @@
       "id" : "372",
       "name" : "Airflow_MWAA_fabric"
     }, {
-      "id" : "793",
-      "name" : "Airflow_Composer_Fabric"
-    }, {
       "id" : "797",
       "name" : "pm_fabric_airflow",
       "trialStartDate" : 1700807995878
+    }, {
+      "id" : "793",
+      "name" : "Airflow_Composer_Fabric_253"
+    }, {
+      "id" : "949",
+      "name" : "Airflow_Composer_Fabric_243"
     } ],
     "catchup" : true,
     "tags" : [ ],
