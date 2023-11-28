@@ -50,7 +50,7 @@
         "label" : "SnowflakeSQL_0",
         "slug" : "SnowflakeSQL_0",
         "x" : -80,
-        "y" : -120
+        "y" : -140
       },
       "ports" : {
         "inputs" : [ {
@@ -62,7 +62,9 @@
           "slug" : ""
         } ]
       },
-      "settings" : { },
+      "settings" : {
+        "do_xcom_push" : false
+      },
       "properties" : {
         "connId" : "snowflake_CICD",
         "warehouseName" : "COMPUTE_WH",

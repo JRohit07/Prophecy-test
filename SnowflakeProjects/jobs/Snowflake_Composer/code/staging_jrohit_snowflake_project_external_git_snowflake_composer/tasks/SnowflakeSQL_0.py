@@ -8,4 +8,5 @@ def SnowflakeSQL_0():
         warehouse = "COMPUTE_WH".strip(),
         database = "QA_DATABASE".strip(),
         schema = "QA_SCHEMA".strip(),
+        do_xcom_push = False
     )

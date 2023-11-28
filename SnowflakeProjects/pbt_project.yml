@@ -78,6 +78,29 @@ jobs:
     enabled: false
     createdAt: '2023-11-27 09:48:11'
     author: jrohit@prophecy.io
+  jobs/airflow_Direct_connection_mwaa:
+    name: airflow_Direct_connection_mwaa
+    description: ''
+    fabricUID: 372
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0/1 * * *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-11-28 05:46:22'
+    author: jrohit@prophecy.io
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
