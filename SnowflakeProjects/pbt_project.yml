@@ -1,6 +1,6 @@
 name: Snowflake_project_external_git
 description: ''
-version: v7
+version: v8
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
