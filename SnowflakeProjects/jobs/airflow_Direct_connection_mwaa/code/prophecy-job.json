@@ -1,0 +1,80 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "372",
+    "jobId" : "jobs/airflow_Direct_connection_mwaa",
+    "name" : "airflow_Direct_connection_mwaa",
+    "dagName" : "staging_jrohit_Snowflake_project_external_git_airflow_Direct_connection_mwaa",
+    "schedule" : "0 0/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "372",
+      "name" : "Airflow_MWAA_fabric"
+    }, {
+      "id" : "793",
+      "name" : "Airflow_Composer_Fabric"
+    }, {
+      "id" : "797",
+      "name" : "pm_fabric_airflow",
+      "trialStartDate" : 1700807995878
+    } ],
+    "catchup" : true,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ]
+  },
+  "processes" : {
+    "8Uo0NViaIRSuaDKnWoPFp" : {
+      "id" : "8Uo0NViaIRSuaDKnWoPFp",
+      "component" : "SnowflakeSQL",
+      "metadata" : {
+        "label" : "SnowflakeSQL_0",
+        "slug" : "SnowflakeSQL_0",
+        "x" : -40,
+        "y" : -40
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NkaFm6meYyA03NwkPzrnj",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "2dg41LFlzIMAgf2DkeziD",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "do_xcom_push" : false
+      },
+      "properties" : {
+        "connId" : "snowflake_CICDAccount",
+        "warehouseName" : "",
+        "code" : "select * from ITEM",
+        "language" : "sql",
+        "schemaName" : "",
+        "databaseName" : "",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}

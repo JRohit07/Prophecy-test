@@ -1,0 +1,82 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "949",
+    "jobId" : "jobs/snowflake_composer_2",
+    "name" : "snowflake_composer_2",
+    "dagName" : "staging_jrohit_Snowflake_project_external_git_snowflake_composer_2",
+    "schedule" : "0 15/1 * * *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "372",
+      "name" : "Airflow_MWAA_fabric"
+    }, {
+      "id" : "797",
+      "name" : "pm_fabric_airflow",
+      "trialStartDate" : 1700807995878
+    }, {
+      "id" : "793",
+      "name" : "Airflow_Composer_Fabric_253"
+    }, {
+      "id" : "949",
+      "name" : "Airflow_Composer_Fabric_243"
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "Asia/Calcutta",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ]
+  },
+  "processes" : {
+    "igoJIFbySKRnL1EYbPtJn$$dPVC1jp-pRQtGrp24SSfo" : {
+      "id" : "igoJIFbySKRnL1EYbPtJn$$dPVC1jp-pRQtGrp24SSfo",
+      "component" : "SnowflakeSQL",
+      "metadata" : {
+        "label" : "SnowflakeSQL_0",
+        "slug" : "SnowflakeSQL_0",
+        "x" : -320,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9gpAqHZZNLhh4vPESDo-W$$hxDqKio2_CKmSTyHDFOLZ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "oxjRBtk_1p9PeUfiP1WEF$$coNiYrkboKxETAI2AHtHX",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "connId" : "snowflake_CICD",
+        "warehouseName" : "",
+        "code" : "select * from CUSTOMER",
+        "language" : "sql",
+        "schemaName" : "",
+        "databaseName" : "",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}

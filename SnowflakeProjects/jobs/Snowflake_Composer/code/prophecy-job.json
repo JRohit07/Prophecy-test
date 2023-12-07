@@ -1,0 +1,82 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "793",
+    "jobId" : "jobs/Snowflake_Composer",
+    "name" : "Snowflake_Composer",
+    "dagName" : "staging_jrohit_Snowflake_project_external_git_Snowflake_Composer",
+    "schedule" : "None",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "372",
+      "name" : "Airflow_MWAA_fabric"
+    }, {
+      "id" : "793",
+      "name" : "Airflow_Composer_Fabric"
+    }, {
+      "id" : "797",
+      "name" : "pm_fabric_airflow",
+      "trialStartDate" : 1700807995878
+    } ],
+    "catchup" : true,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ]
+  },
+  "processes" : {
+    "cV5nZadVeMSCU3wU5ybmq$$OEneRJRhCRYE6Hk3bphE9" : {
+      "id" : "cV5nZadVeMSCU3wU5ybmq$$OEneRJRhCRYE6Hk3bphE9",
+      "component" : "SnowflakeSQL",
+      "metadata" : {
+        "label" : "SnowflakeSQL_0",
+        "slug" : "SnowflakeSQL_0",
+        "x" : -80,
+        "y" : -140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZLwdeMAv-fUBar9A9UGZ9$$Wgmg93wFwJMt5_pAdxBuX",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "zftgzsnBAcSWuMHQ0dxMa$$cKgpbSv-Mm2X4nTzi14cX",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "do_xcom_push" : false
+      },
+      "properties" : {
+        "connId" : "snowflake_CICD",
+        "warehouseName" : "COMPUTE_WH",
+        "code" : "select * from ITEM",
+        "language" : "sql",
+        "schemaName" : "QA_SCHEMA",
+        "databaseName" : "QA_DATABASE",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}
