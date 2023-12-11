@@ -13,16 +13,148 @@ gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
   gems: {}
+  dependencies: null
 functions:
   author: null
   createdAt: '2023-10-27 09:27:35'
   udfs: {}
   udafs: {}
   expressions: {}
+  airflowFunctions: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/stg_orders:
+    name: stg_orders
+    schema: null
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_orders.sql
+    - .prophecy/ide/models/stg_orders.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlmodels/orders:
+    name: orders
+    schema: null
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
+    author: jrohit@prophecy.io
+    files:
+    - models/orders.sql
+    - .prophecy/ide/models/orders.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlmodels/customers:
+    name: customers
+    schema: null
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
+    author: jrohit@prophecy.io
+    files:
+    - models/customers.sql
+    - .prophecy/ide/models/customers.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlmodels/stg_payments:
+    name: stg_payments
+    schema: null
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_payments.sql
+    - .prophecy/ide/models/stg_payments.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlmodels/stg_customers:
+    name: stg_customers
+    schema: null
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_customers.sql
+    - .prophecy/ide/models/stg_customers.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-12-11 03:40:37'
 sqlMacros: {}
-sqlSeeds: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/raw_customers:
+    name: raw_customers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_customers.csv
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlseeds/raw_orders:
+    name: raw_orders
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: user_id
+        dataType:
+          type: Number
+      - name: order_date
+        dataType:
+          type: Date
+      - name: status
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_orders.csv
+    createdAt: '2023-12-11 03:40:37'
+  .prophecy/metadata/sqlseeds/raw_payments:
+    name: raw_payments
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: order_id
+        dataType:
+          type: Number
+      - name: payment_method
+        dataType:
+          type: String
+      - name: amount
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_payments.csv
+    createdAt: '2023-12-11 03:40:37'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:
@@ -32,4 +164,6 @@ sqlPipeline:
   createdAt: '2023-10-27 09:27:35'
 dependencies: '[]'
 projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
