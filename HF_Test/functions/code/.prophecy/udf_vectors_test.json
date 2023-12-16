@@ -1,1 +1,0 @@
-{"initCode":"//import org.apache.spark.ml.linalg.Vectors","code":"//udf(() => Vectors.dense(1.0, 2.0))\nudf(() => 2 * 6)"}

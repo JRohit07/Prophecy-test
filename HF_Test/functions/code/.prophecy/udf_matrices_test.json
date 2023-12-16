@@ -1,1 +1,0 @@
-{"initCode":"//import org.apache.spark.ml.linalg.Matrices","code":"//udf(() => Matrices.dense(2, 2, Array(1, 2, 3, 4)))\nudf(() => 2 * 4)"}

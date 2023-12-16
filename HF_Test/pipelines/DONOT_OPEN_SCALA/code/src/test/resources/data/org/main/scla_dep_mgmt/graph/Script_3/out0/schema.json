@@ -1,1 +1,0 @@
-{"type":"struct","fields":[{"name":"c   short  --","type":"string","nullable":true,"metadata":{"description":"test shorty","mappings":[],"tags":[{"type":"user","name":"primary"},{"type":"user","name":"tag1"},{"type":"user","name":"tag2"},{"type":"user","name":"tag3"},{"type":"user","name":"asdasdasd324234"}]}}]}

@@ -1,0 +1,83 @@
+name: livy_scala
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: scala
+buildSystem: ''
+buildSystemDetails:
+  artefactID: livyscala
+  parentArtefactID: jrohitprophecyioteam
+  buildSystem: maven
+  author: null
+  createdAt: '2023-12-16 19:51:11'
+pipelines:
+  pipelines/P2:
+    name: P2
+    description: ''
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2023-12-16 19:51:11'
+    datasets:
+      inputs:
+      - datasets/annual
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/annual:
+    name: annual
+    description: ''
+    author: jrohit@prophecy.io
+    createdAt: '2023-12-16 19:52:04'
+    mode: batch
+    physicalDatasets:
+      livy_300:
+        fabricId: 1389
+        datasetType: File
+        description: ''
+        author: jrohit@prophecy.io
+        createdAt: '2023-12-16 19:52:04'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: 2.12.15
+  gemLibsVersion: 1.0.4
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2023-12-16 19:51:11'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '40':
+    projectUID: 40
+    projectName: ProphecyWarehouseScala
+    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_40.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2023-12-16 19:44:03'
+  '39':
+    projectUID: 39
+    projectName: ProphecySparkBasicsScala
+    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=
+    version: 0.0.6
+    isDefault: true
+    author: null
+    createdAt: '2023-12-16 19:44:03'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
