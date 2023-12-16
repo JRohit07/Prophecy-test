@@ -1,1 +1,0 @@
-# Snowflake_project_external_git Repository
