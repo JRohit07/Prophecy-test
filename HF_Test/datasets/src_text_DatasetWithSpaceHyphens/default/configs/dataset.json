@@ -1,1 +1,0 @@
-{"format":"text","path":"dbfs:/Prophecy/qa_data/delimiter/tab/DatasetWithSpaceHyphens","writeMode":null,"compression":null,"wholetext":null,"recursiveFileLookup":null,"partitionColumns":null,"schema":{"type":"struct","fields":[{"name":"value","type":"string","nullable":true,"metadata":{}}]},"lineSep":null,"datasetType":"File","useSchema":true}

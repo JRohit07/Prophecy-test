@@ -1,1 +1,0 @@
-{"type":"struct","fields":[{"name":"c-decimal","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"c  float","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}},{"name":"c .float","type":"string","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}}]}

@@ -1,1 +1,0 @@
-{"format":"catalogTable","path":"qa_database","schema":{"type":"struct","fields":[{"name":"a","type":"integer","nullable":true,"metadata":{"description":"","mappings":[],"tags":[]}}]},"tableName":"two_thousand_rows_table","datasetType":"Database"}
