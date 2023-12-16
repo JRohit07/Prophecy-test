@@ -1,0 +1,83 @@
+name: livy_python
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: livypython
+  parentArtefactID: jrohitprophecyioteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-12-16 19:47:32'
+pipelines:
+  pipelines/P1:
+    name: P1
+    description: Python pipeline livy
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2023-12-16 19:47:32'
+    datasets:
+      inputs:
+      - datasets/annual_data
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/annual_data:
+    name: annual_data
+    description: ''
+    author: jrohit@prophecy.io
+    createdAt: '2023-12-16 19:50:09'
+    mode: batch
+    physicalDatasets:
+      livy_300:
+        fabricId: 1389
+        datasetType: File
+        description: ''
+        author: jrohit@prophecy.io
+        createdAt: '2023-12-16 19:50:09'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2023-12-16 19:47:32'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '42':
+    projectUID: 42
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=
+    version: 0.0.7
+    isDefault: true
+    author: null
+    createdAt: '2023-12-16 19:42:25'
+  '43':
+    projectUID: 43
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_43.git&subPath=
+    version: 0.0.2
+    isDefault: true
+    author: null
+    createdAt: '2023-12-16 19:42:25'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
