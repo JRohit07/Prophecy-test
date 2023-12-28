@@ -1,0 +1,480 @@
+name: Sql_project_snowflake
+description: ''
+version: 0.0.1
+author: null
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/TestJob1:
+    name: TestJob1
+    description: ''
+    fabricUID: 5295
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 1 1 *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2023-10-27 11:41:46'
+    author: abhisheks+e2etests@prophecy.io
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+functions:
+  author: null
+  createdAt: '2023-10-27 11:20:40'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/snowflake_test_model_1:
+    name: snowflake_test_model_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_NUM
+        dataType:
+          type: Number
+      - name: C_NUM10
+        dataType:
+          type: Number
+      - name: C_DEC
+        dataType:
+          type: Number
+      - name: C_NUMERIC
+        dataType:
+          type: Number
+      - name: C_INT
+        dataType:
+          type: Number
+      - name: C_INTEGER
+        dataType:
+          type: Number
+      - name: C_DOUBLE
+        dataType:
+          type: Float
+      - name: C_FLOAT
+        dataType:
+          type: Float
+      - name: C_COUBLE_PRECISION
+        dataType:
+          type: Float
+      - name: C_REAL
+        dataType:
+          type: Float
+      - name: C_VARCHAR
+        dataType:
+          type: String
+      - name: C_VARCHAR50
+        dataType:
+          type: String
+      - name: C_CHAR
+        dataType:
+          type: String
+      - name: C_CHAR10
+        dataType:
+          type: String
+      - name: C_STRING
+        dataType:
+          type: String
+      - name: C_STRING20
+        dataType:
+          type: String
+      - name: C_TEXT
+        dataType:
+          type: String
+      - name: C_TEXT30
+        dataType:
+          type: String
+      - name: C_BINARY
+        dataType:
+          type: Binary
+      - name: C_BINARY100
+        dataType:
+          type: Binary
+      - name: C_VARBINARY
+        dataType:
+          type: Binary
+      - name: C_BOOL
+        dataType:
+          type: Boolean
+      - name: C_TIMESTAMP
+        dataType:
+          type: Timestamp
+      - name: C_DATE
+        dataType:
+          type: Date
+      - name: C_DATETIME
+        dataType:
+          type: Timestamp
+      - name: C_TIME
+        dataType:
+          type: Time
+      - name: C_TIMESTAMPLTZ
+        dataType:
+          type: Timestamp
+      - name: C_TIMESTAMP_NTZ
+        dataType:
+          type: Timestamp
+      - name: C_VARIANT
+        dataType:
+          type: Variant
+      - name: C_ARRAY
+        dataType:
+          type: Array
+      - name: C_OBJECT
+        dataType:
+          type: Object
+      - name: C_GEOGRAPHY
+        dataType:
+          type: Geography
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/snowflake_test_model_1.sql
+    - .prophecy/ide/models/snowflake_test_model_1.json
+    sqlDependencies:
+      models: []
+      datasets: []
+    createdAt: '2023-10-27 11:33:31'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/default__language_specific_deduplicate:
+    name: default__language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_concat_macro_column:
+    name: qa_concat_macro_column
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_model_all_above_given_id:
+    name: qa_model_all_above_given_id
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/round_function:
+    name: round_function
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_concat_macro:
+    name: qa_concat_macro
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_epl_data_macro:
+    name: qa_epl_data_macro
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_number_macro:
+    name: qa_number_macro
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/language_specific_deduplicate:
+    name: language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/snowflake__language_specific_deduplicate:
+    name: snowflake__language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_macro_call_another_macro:
+    name: qa_macro_call_another_macro
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/postgres__language_specific_deduplicate:
+    name: postgres__language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_get_unique_count:
+    name: qa_get_unique_count
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_test_relationship:
+    name: qa_test_relationship
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_complex_macro:
+    name: qa_complex_macro
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_boolean_macro:
+    name: qa_boolean_macro
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/redshift__language_specific_deduplicate:
+    name: redshift__language_specific_deduplicate
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/generic_concat:
+    name: generic_concat
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    - .prophecy/ide/macros/generic_concat.json
+    createdAt: '2023-10-27 11:32:47'
+  .prophecy/metadata/sqlmacros/qa_all_not_null:
+    name: qa_all_not_null
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/generic_round:
+    name: generic_round
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/multi_macro_expressions:
+    name: multi_macro_expressions
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/bigquery__language_specific_deduplicate:
+    name: bigquery__language_specific_deduplicate
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_macro_call_another_macro_column:
+    name: qa_macro_call_another_macro_column
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+  .prophecy/metadata/sqlmacros/qa_all_null:
+    name: qa_all_null
+    macroType: query
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generic_concat.sql
+    createdAt: '2023-10-27 11:32:57'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/snowflake_seed_1:
+    name: snowflake_seed_1
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: c_int
+        dataType:
+          type: Number
+      - name: c_string
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - seeds/snowflake_seed_1.csv
+    createdAt: '2023-10-27 11:33:07'
+sqlSources:
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
+    name: QA_DATABASE.QA_SCHEMA
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2023-10-27 11:35:31'
+    tables:
+    - name: ALL_TYPE_TABLE
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: abhisheks+e2etests@prophecy.io
+      createdAt: '2023-10-27 11:35:31'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: abhisheks+e2etests@prophecy.io
+  createdAt: '2023-10-27 11:20:40'
+dependencies: '[]'
+projectDependencies: {}
+pipelineConfigurations: {}

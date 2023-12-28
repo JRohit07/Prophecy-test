@@ -1,0 +1,169 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "5295",
+    "jobId" : "jobs/TestJob1",
+    "name" : "TestJob1",
+    "dagName" : "uitesting_abhisheks_e2etests_Sql_project_snowflake_TestJob1",
+    "schedule" : "0 0 1 1 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "availableFabrics" : [ {
+      "id" : "5295",
+      "name" : "dev_airflow"
+    }, {
+      "id" : "7040",
+      "name" : "dev_airflow_mwaa"
+    }, {
+      "id" : "12390",
+      "name" : "dev_airflow_prophecy_managed",
+      "trialStartDate" : 1697439763347
+    }, {
+      "id" : "11397",
+      "name" : "test_air"
+    } ],
+    "catchup" : true,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    }
+  },
+  "processes" : {
+    "KoicSt8yyzDCMxtySsEfJ$$yqgReNeKLp40zpFz6QgpY" : {
+      "id" : "KoicSt8yyzDCMxtySsEfJ$$yqgReNeKLp40zpFz6QgpY",
+      "component" : "DBT",
+      "metadata" : {
+        "label" : "DBT_0",
+        "slug" : "DBT_0",
+        "x" : -760,
+        "y" : -260
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_j6AB7nVOOCzU7o2rDaEg$$FtYnL3_GX5VnAJgTpX0Zk",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "xxfdcEuk8o-SaVQng9mGI$$ufaSzVZhSFWLNBEtmReSP",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "40971",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "runTest" : false,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : false,
+        "printerWidth" : null,
+        "sqlFabricId" : "5287",
+        "gitEntityValue" : "main",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "models" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : true,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "snowflake_test_model_1",
+          "value" : "snowflake_test_model_1",
+          "id" : "40971/.prophecy/metadata/sqlmodels/snowflake_test_model_1",
+          "name" : "snowflake_test_model_1"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "j9CeTuqlYIHPiLiQEasKm$$PRc4zjwLEp9r18M6IcxsE" : {
+      "id" : "j9CeTuqlYIHPiLiQEasKm$$PRc4zjwLEp9r18M6IcxsE",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -500,
+        "y" : -160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KkM4frgj2ezqoLiiWkere$$IQes1G1-bR6zrgTYZPM7K",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "bfj0o7ni9TJNJiMuXmC1s$$z4DjaiobdLxpRh3MaVyWk",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "ls -ltr",
+        "language" : "bash",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "1q03r5DzVnJ0GBn13M8Tw$$7GZ2JkzRUZqhNFRVwh67t",
+    "source" : "KoicSt8yyzDCMxtySsEfJ$$yqgReNeKLp40zpFz6QgpY",
+    "target" : "j9CeTuqlYIHPiLiQEasKm$$PRc4zjwLEp9r18M6IcxsE",
+    "sourcePort" : "xxfdcEuk8o-SaVQng9mGI$$ufaSzVZhSFWLNBEtmReSP",
+    "targetPort" : "KkM4frgj2ezqoLiiWkere$$IQes1G1-bR6zrgTYZPM7K"
+  } ]
+}
