@@ -42,15 +42,7 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "12654",
-      "projectName" : "ProphecySparkBasicsPython",
-      "externalDependencies" : [ ]
-    }, {
-      "projectUID" : "12655",
-      "projectName" : "ProphecyWarehousePython",
-      "externalDependencies" : [ ]
-    } ],
+    "dependentProjectExternalDependencies" : [ ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -189,7 +181,7 @@
       "metadata" : {
         "label" : "test_uc_seed_1",
         "slug" : "test_uc_seed_1",
-        "x" : -420,
+        "x" : -460,
         "y" : -240,
         "phase" : 0,
         "cache" : false,
