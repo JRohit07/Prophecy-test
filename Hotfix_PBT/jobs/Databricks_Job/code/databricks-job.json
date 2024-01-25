@@ -30,14 +30,11 @@
           "spark.prophecy.metadata.is.interactive.run" : "false",
           "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
           "spark.prophecy.metadata.user.id" : 3374,
-          "spark.prophecy.tasks" : "{\"Pipeline_0\":\"\"}",
+          "spark.prophecy.tasks" : "{\"Pipeline_0\":\"pipelines/Pipeline\"}",
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
-          "spark.prophecy.execution.metrics.disabled" : false,
-          "spark.prophecy.execution.metrics.component-metrics.table" : "random123.random_table_componentttt",
-          "spark.prophecy.execution.metrics.pipeline-metrics.table" : "random123.random_table_pipeline_runssss",
-          "spark.prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws",
-          "spark.prophecy.execution.metrics.interims.table" : "random1234.random_table_interimsss"
+          "spark.prophecy.execution.metrics.disabled" : true,
+          "spark.prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws"
         },
         "spark_env_vars" : {
           "PYSPARK_PYTHON" : "/databricks/python3/bin/python3"
@@ -80,6 +77,6 @@
   "cluster_mode" : {
     "clusterMode" : "Single"
   },
-  "secret_scope" : "prophecy_jobs_6756",
+  "secret_scope" : "prophecy_jobs_4890",
   "sorted_processes" : [ "0ktW_jjhPvBUNK8Cy89fj$$hVbrC1qp0_9uxo9TY4KBS" ]
 }

@@ -9,7 +9,7 @@
     "jobClusterMode" : {
       "clusterMode" : "Single"
     },
-    "enabled" : false,
+    "enabled" : true,
     "defaultClusterSize" : "small_job",
     "alerting" : {
       "emails" : "",
@@ -90,7 +90,7 @@
         "configurations" : {
           "schema" : [ ],
           "instances" : {
-            "EM_Test_bug" : [ "default" ]
+            "Repro_DBX_UC" : [ "default" ]
           },
           "overrides" : { },
           "selectedInstance" : "default"

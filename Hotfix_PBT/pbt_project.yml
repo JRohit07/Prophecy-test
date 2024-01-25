@@ -62,7 +62,7 @@ jobs:
       clusterMode:
         Single: {}
       clusterId: null
-    enabled: null
+    enabled: true
     createdAt: '2024-01-25 09:10:18'
     author: jrohit+e2e@prophecy.io
 gemContainer:
