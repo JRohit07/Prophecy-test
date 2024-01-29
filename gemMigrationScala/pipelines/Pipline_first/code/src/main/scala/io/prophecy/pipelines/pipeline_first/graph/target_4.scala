@@ -15,13 +15,17 @@ object target_4 {
     val Config = context.config
     var writer = in.write.format("jdbc")
     writer = writer
-      .option("url",     "jdbc:mysql://3.101.152.38:3306/" + Config.JDBC_DATABASE)
+      .option("url",     s"jdbc:mysql://3.101.152.38:3306/${Config.JDBC_DATABASE}")
       .option("dbtable", Config.JDBC_DEST_TABLE)
-      .option("user",
-              dbutils.secrets.get(scope = "rohit_mysql", key = "username")
+      .option("user", {
+                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
+                dbutils.secrets.get(scope = "rohit_mysql", key = "username")
+              }
       )
-      .option("password",
-              dbutils.secrets.get(scope = "rohit_mysql", key = "password")
+      .option("password", {
+                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
+                dbutils.secrets.get(scope = "rohit_mysql", key = "password")
+              }
       )
       .option("driver", Config.DRIVER_NAME)
     writer = writer.mode("overwrite")

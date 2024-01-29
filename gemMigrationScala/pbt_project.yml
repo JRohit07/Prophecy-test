@@ -165,10 +165,10 @@ projectDependencies:
     projectUID: 10208
     projectName: tanmay-scala-gems
     repositoryPath: gitUri=https://github.com/prophecy-io/spark-basics-scala&subPath=/
-    version: tanmay-scala-gems/0.0.2
+    version: tanmay-scala-gems/0.0.1
     isDefault: false
     author: null
-    createdAt: '2024-01-29 09:11:03'
+    createdAt: '2024-01-29 08:23:19'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}

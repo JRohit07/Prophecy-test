@@ -16,11 +16,15 @@ object target_1 {
     writer = writer
       .option("url",     "jdbc:mysql://3.101.152.38:3306/test_database")
       .option("dbtable", "test_table_destination")
-      .option("user",
-              dbutils.secrets.get(scope = "rohit_mysql", key = "username")
+      .option("user", {
+                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
+                dbutils.secrets.get(scope = "rohit_mysql", key = "username")
+              }
       )
-      .option("password",
-              dbutils.secrets.get(scope = "rohit_mysql", key = "password")
+      .option("password", {
+                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
+                dbutils.secrets.get(scope = "rohit_mysql", key = "password")
+              }
       )
       .option("driver", "com.mysql.jdbc.Driver")
     writer = writer.mode("overwrite")
