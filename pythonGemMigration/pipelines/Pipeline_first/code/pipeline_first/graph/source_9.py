@@ -11,9 +11,9 @@ def source_9(spark: SparkSession) -> DataFrame:
 
     return spark.read\
         .format("jdbc")\
-        .option("url", f"{Config.JDBC}/{Config.JDBC_DATABASE}")\
-        .option("user", os.environ["JDBC_USERNAME"])\
-        .option("password", os.environ["JDBC_PASSWORD"])\
+        .option("url", Config.JDBC + "/" + Config.JDBC_DATABASE)\
+        .option("user", os.environ("JDBC_USERNAME"))\
+        .option("password", os.environ("JDBC_PASSWORD"))\
         .option("query", f"select * from {Config.JDBC_TABLE}")\
         .option("pushDownPredicate", True)\
         .option("driver", Config.DRIVER_NAME)\

@@ -7,13 +7,13 @@ from pipeline_first.config.ConfigStore import *
 from pipeline_first.udfs.UDFs import *
 
 def source_3(spark: SparkSession) -> DataFrame:
-    from pyspark.dbutils import DBUtils
+    import os
 
     return spark.read\
         .format("jdbc")\
-        .option("url", f"{Config.JDBC}/{Config.JDBC_DATABASE}")\
-        .option("user", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "username"))\
-        .option("password", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "password"))\
+        .option("url", Config.JDBC + "/" + Config.JDBC_DATABASE)\
+        .option("user", dbutils.secrets.get(scope = "rohit_mysql", key = "username"))\
+        .option("password", dbutils.secrets.get(scope = "rohit_mysql", key = "password"))\
         .option("dbtable", f"{Config.TEST}_table_automation")\
         .option("pushDownPredicate", True)\
         .option("driver", Config.DRIVER_NAME)\

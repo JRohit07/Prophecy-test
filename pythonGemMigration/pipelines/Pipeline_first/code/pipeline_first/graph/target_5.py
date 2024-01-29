@@ -7,6 +7,7 @@ from pipeline_first.config.ConfigStore import *
 from pipeline_first.udfs.UDFs import *
 
 def target_5(spark: SparkSession, in0: DataFrame):
+    import os
     in0.write\
         .format("jdbc")\
         .option("url", "jdbc:mysql://3.101.152.38:3306/test_database")\
