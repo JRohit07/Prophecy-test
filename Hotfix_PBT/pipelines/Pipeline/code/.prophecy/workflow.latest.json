@@ -1,0 +1,213 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/Pipeline",
+    "language" : "python",
+    "fabricId" : "8598",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "emenabledteam.emtestbug.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pipeline",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "GzPG5j96Cx5Lrm87GUxTM$$rGDBNdKA4mrNNog8I4qFw",
+    "source" : "TYT-9pmMgx9qEASz-qNIX$$1LDPwdaZoRYBcgW4K58t4",
+    "sourcePort" : "CqBmGVbNEnIjMCitJ-xox$$QQ7nQ2b6_ZK8umf-DPdWl",
+    "target" : "qOf9S8VZ2oMAbV2iBsweN$$QlEyo9WOD5eYzvezYDZzY",
+    "targetPort" : "_AKiz3H0jW1YhvQnTr_HF$$7BagaJ-ugC13jRyn92aVc"
+  }, {
+    "id" : "byt02NGksl74JwfTm18Yo$$mTZ0DlnsyLpmdRUjpdfrk",
+    "source" : "ozvgjAq0FvUOlMlsUzhnG$$A1V34SUdqT8uVNs7iseFU",
+    "sourcePort" : "0IH4j_7Ywi0NapOIaiuBM$$c6brkkEExCU1iVU_xWD3R",
+    "target" : "TYT-9pmMgx9qEASz-qNIX$$1LDPwdaZoRYBcgW4K58t4",
+    "targetPort" : "tgeOfbI6wt7U0JakvTDHw$$mWhD7-sddapKNM4pWDAD_"
+  } ],
+  "processes" : {
+    "TYT-9pmMgx9qEASz-qNIX$$1LDPwdaZoRYBcgW4K58t4" : {
+      "id" : "TYT-9pmMgx9qEASz-qNIX$$1LDPwdaZoRYBcgW4K58t4",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -240,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tgeOfbI6wt7U0JakvTDHw$$mWhD7-sddapKNM4pWDAD_",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_int",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "CqBmGVbNEnIjMCitJ-xox$$QQ7nQ2b6_ZK8umf-DPdWl",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "c_int",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "c_int"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "tgeOfbI6wt7U0JakvTDHw$$mWhD7-sddapKNM4pWDAD_##c_int" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "qOf9S8VZ2oMAbV2iBsweN$$QlEyo9WOD5eYzvezYDZzY" : {
+      "id" : "qOf9S8VZ2oMAbV2iBsweN$$QlEyo9WOD5eYzvezYDZzY",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "Limit_1",
+        "slug" : "Limit_1",
+        "x" : -40,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_AKiz3H0jW1YhvQnTr_HF$$7BagaJ-ugC13jRyn92aVc",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "c_int",
+              "type" : "long",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "6rbVxsLWppeuASFjo3ahr$$d8cEyJ0V7arWHK3yNxiGU",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "ozvgjAq0FvUOlMlsUzhnG$$A1V34SUdqT8uVNs7iseFU" : {
+      "id" : "ozvgjAq0FvUOlMlsUzhnG$$A1V34SUdqT8uVNs7iseFU",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "test_uc_seed_1",
+        "slug" : "test_uc_seed_1",
+        "x" : -460,
+        "y" : -240,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0IH4j_7Ywi0NapOIaiuBM$$c6brkkEExCU1iVU_xWD3R",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/qa_database_test_uc_seed_1"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
