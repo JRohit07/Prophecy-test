@@ -7,13 +7,12 @@ from pipeline_first.config.ConfigStore import *
 from pipeline_first.udfs.UDFs import *
 
 def target_7(spark: SparkSession, in0: DataFrame):
-    import os
     in0.write\
         .format("jdbc")\
-        .option("url", Config.JDBC + "/test_database")\
+        .option("url", f"{Config.JDBC}/test_database")\
         .option("dbtable", f"{Config.TEST}_table_destination")\
-        .option("user", Config.TEST + "_" + Config.USER)\
-        .option("password", Config.ADM + Config.IN)\
+        .option("user", "{}".format(f"{Config.TEST}_{Config.USER}"))\
+        .option("password", "{}".format(f"{Config.ADM}{Config.IN}"))\
         .option("driver", Config.DRIVER_NAME)\
         .mode("overwrite")\
         .save()

@@ -11,9 +11,9 @@ def source_8(spark: SparkSession) -> DataFrame:
 
     return spark.read\
         .format("jdbc")\
-        .option("url", "jdbc:mysql://3.101.152.38:3306/" + Config.JDBC_DATABASE)\
-        .option("user", os.environ("JDBC_USERNAME"))\
-        .option("password", os.environ("JDBC_PASSWORD"))\
+        .option("url", f"jdbc:mysql://3.101.152.38:3306/{Config.JDBC_DATABASE}")\
+        .option("user", os.environ["JDBC_USERNAME"])\
+        .option("password", os.environ["JDBC_PASSWORD"])\
         .option("dbtable", Config.JDBC_TABLE)\
         .option("pushDownPredicate", True)\
         .option("driver", Config.DRIVER_NAME)\

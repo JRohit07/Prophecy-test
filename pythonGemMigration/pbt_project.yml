@@ -320,10 +320,10 @@ projectDependencies:
     projectUID: 10229
     projectName: tt-python-gems
     repositoryPath: gitUri=https://github.com/prophecy-io/spark-basics-python&subPath=/
-    version: tt-python-gems/0.0.2
+    version: tt-python-gems/0.0.1
     isDefault: false
     author: null
-    createdAt: '2024-01-29 21:40:19'
+    createdAt: '2024-01-29 12:55:21'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
