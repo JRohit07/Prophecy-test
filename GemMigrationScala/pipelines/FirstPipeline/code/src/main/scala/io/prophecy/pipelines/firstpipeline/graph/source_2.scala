@@ -15,15 +15,17 @@ object source_2 {
     var reader = context.spark.read.format("jdbc")
     reader = reader
       .option("url", "jdbc:mysql://3.101.152.38:3306/test_database")
-      .option("user", {
+      .option("user",
+              s"${{
                 import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
                 dbutils.secrets.get(scope = "rohit_mysql", key = "username")
-              }
+              }}"
       )
-      .option("password", {
+      .option("password",
+              s"${{
                 import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
                 dbutils.secrets.get(scope = "rohit_mysql", key = "password")
-              }
+              }}"
       )
       .option("pushDownPredicate",    true)
       .option("driver",               context.config.DRIVER_NAME)

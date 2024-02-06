@@ -15,9 +15,15 @@ object source_4 {
     val Config = context.config
     var reader = context.spark.read.format("jdbc")
     reader = reader
-      .option("url",                  s"${Config.JDBC}${Config.JDBC_DATABASE}")
-      .option("user",                 "test_user")
-      .option("password",             "admin")
+      .option("url", s"${Config.JDBC}${Config.JDBC_DATABASE}")
+      .option(
+        "user",
+        s"${SecretManager.get("secrets/qa", "JDBC_USERNAME", "HashiCorp")}"
+      )
+      .option(
+        "password",
+        s"${SecretManager.get("secrets/qa", "JDBC_PASSWORD", "HashiCorp")}"
+      )
       .option("pushDownPredicate",    true)
       .option("driver",               Config.DRIVER_NAME)
     reader = reader.option("dbtable", Config.JDBC_TABLE)

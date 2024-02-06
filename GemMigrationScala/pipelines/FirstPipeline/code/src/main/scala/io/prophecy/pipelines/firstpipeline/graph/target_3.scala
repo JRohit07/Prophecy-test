@@ -19,7 +19,7 @@ object target_3 {
       .option("dbtable",  s"${Config.TEST}_table_destination")
       .option("user",     s"${Config.JDBC_USER_SECRET}")
       .option("password", s"${Config.JDBC_PASSWORD_SECRET}")
-      .option("driver",   Config.JDBC_USER_SECRET)
+      .option("driver",   Config.DRIVER_NAME)
     writer = writer.mode("overwrite")
     writer.save()
   }

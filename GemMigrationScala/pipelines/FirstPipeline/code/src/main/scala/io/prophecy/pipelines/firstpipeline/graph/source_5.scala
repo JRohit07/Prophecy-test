@@ -20,7 +20,7 @@ object source_5 {
       .option("password",           s"${Config.JDBC_PASSWORD_STRING}")
       .option("pushDownPredicate",  true)
       .option("driver",             Config.DRIVER_NAME)
-    reader = reader.option("query", None.get)
+    reader = reader.option("query", "select * from test_table")
     var df = reader.load()
     df
   }

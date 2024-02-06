@@ -17,8 +17,8 @@ object target_7 {
     writer = writer
       .option("url",      s"jdbc:mysql://3.101.152.38:3306/${Config.JDBC_DATABASE}")
       .option("dbtable",  s"${Config.TEST}_table_destination")
-      .option("user",     sys.env("JDBC_USERNAME"))
-      .option("password", sys.env("JDBC_PASSWORD"))
+      .option("user",     s"${sys.env("JDBC_USERNAME")}")
+      .option("password", s"${sys.env("JDBC_PASSWORD")}")
       .option("driver",   Config.DRIVER_NAME)
     writer = writer.mode("overwrite")
     writer.save()

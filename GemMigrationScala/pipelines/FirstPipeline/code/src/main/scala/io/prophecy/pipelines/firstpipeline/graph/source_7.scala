@@ -16,8 +16,8 @@ object source_7 {
     var reader = context.spark.read.format("jdbc")
     reader = reader
       .option("url",                s"jdbc:mysql://3.101.152.38:3306/${Config.JDBC_DATABASE}")
-      .option("user",               sys.env("JDBC_USERNAME"))
-      .option("password",           sys.env("JDBC_PASSWORD"))
+      .option("user",               s"${sys.env("JDBC_USERNAME")}")
+      .option("password",           s"${sys.env("JDBC_PASSWORD")}")
       .option("pushDownPredicate",  true)
       .option("driver",             "com.mysql.jdbc.Driver")
     reader = reader.option("query", s"select * from ${Config.JDBC_TABLE}")

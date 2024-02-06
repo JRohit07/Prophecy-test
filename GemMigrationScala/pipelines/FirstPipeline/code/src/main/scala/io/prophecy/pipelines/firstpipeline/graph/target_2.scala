@@ -17,17 +17,20 @@ object target_2 {
     writer = writer
       .option("url",     s"${Config.JDBC}${Config.JDBC_DATABASE}")
       .option("dbtable", s"${Config.TEST}_table_destination")
-      .option("user", {
+      .option("user",
+              s"${{
                 import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
                 dbutils.secrets.get(scope = "rohit_mysql", key = "username")
-              }
+              }}"
       )
-      .option("password", {
+      .option("password",
+              s"${{
                 import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
                 dbutils.secrets.get(scope = "rohit_mysql", key = "password")
-              }
+              }}"
       )
       .option("driver", Config.DRIVER_NAME)
+    writer = writer.mode("overwrite")
     writer.save()
   }
 
