@@ -3,17 +3,18 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from secondpipeline.config.ConfigStore import *
-from secondpipeline.udfs.UDFs import *
+from firstpipeline.config.ConfigStore import *
+from firstpipeline.udfs.UDFs import *
 
-def target_1(spark: SparkSession, in0: DataFrame):
+def source_1(spark: SparkSession) -> DataFrame:
     from pyspark.dbutils import DBUtils
-    in0.write\
+
+    return spark.read\
         .format("jdbc")\
-        .option("url", "jdbc:mysql://3.101.152.38:3306/test_database")\
-        .option("dbtable", "test_table_destination")\
+        .option("url", Config.JDBC_URL)\
         .option("user", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "username"))\
         .option("password", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "password"))\
+        .option("dbtable", Config.JDBC_TABLE_SOURCE)\
+        .option("pushDownPredicate", True)\
         .option("driver", "com.mysql.jdbc.Driver")\
-        .mode("overwrite")\
-        .save()
+        .load()
