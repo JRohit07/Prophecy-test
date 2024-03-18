@@ -9,7 +9,7 @@
     "id" : "1",
     "uri" : "pipelines/FirstPipeline",
     "language" : "python",
-    "fabricId" : "1389",
+    "fabricId" : "370",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -25,7 +25,52 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "JDBC_USER_SECRET",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "rohit_mysql:username"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_PASSWORD_SECRET",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "rohit_mysql:password"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_URL",
+          "kind" : {
+            "type" : "string",
+            "value" : "jdbc:mysql://3.101.152.38:3306/test_database"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_TABLE_SOURCE",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_table_automation"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_TABLE_DESTINATION",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_table_destination"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -62,8 +107,83 @@
     "topLevelPackage" : "firstpipeline",
     "configurationVersion" : "v1"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "GUlxyZr9KY4BxrDv2Wp0I",
+    "source" : "bZZiQuOwprc68O0luMBdM$$QRsNpSUuA-W1xkzRunIYP",
+    "sourcePort" : "9EvR1oaHufMLtcJ4BQXnH$$4IRh9VTxjk5t3ljmF83ci",
+    "target" : "JOcreIgZ9VwWvK8DbkQdI$$ohepJvX-heitW7_QUcg9T",
+    "targetPort" : "8awMfb2sS0Ef-Nchk8_qt$$dHS9VtNnarcotQBB0VrH0"
+  } ],
+  "processes" : {
+    "bZZiQuOwprc68O0luMBdM$$QRsNpSUuA-W1xkzRunIYP" : {
+      "id" : "bZZiQuOwprc68O0luMBdM$$QRsNpSUuA-W1xkzRunIYP",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_1",
+        "slug" : "source_1",
+        "x" : -240,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "9EvR1oaHufMLtcJ4BQXnH$$4IRh9VTxjk5t3ljmF83ci",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_1"
+      }
+    },
+    "JOcreIgZ9VwWvK8DbkQdI$$ohepJvX-heitW7_QUcg9T" : {
+      "id" : "JOcreIgZ9VwWvK8DbkQdI$$ohepJvX-heitW7_QUcg9T",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_1",
+        "slug" : "target_1",
+        "x" : -80,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8awMfb2sS0Ef-Nchk8_qt$$dHS9VtNnarcotQBB0VrH0",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_1"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

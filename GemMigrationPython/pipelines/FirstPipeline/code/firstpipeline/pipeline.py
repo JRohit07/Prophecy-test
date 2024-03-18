@@ -4,9 +4,11 @@ from pyspark.sql.types import *
 from firstpipeline.config.ConfigStore import *
 from firstpipeline.udfs.UDFs import *
 from prophecy.utils import *
+from firstpipeline.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_source_1 = source_1(spark)
+    target_1(spark, df_source_1)
 
 def main():
     spark = SparkSession.builder\

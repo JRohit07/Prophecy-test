@@ -3,8 +3,8 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from secondpipeline.config.ConfigStore import *
-from secondpipeline.udfs.UDFs import *
+from firstpipeline.config.ConfigStore import *
+from firstpipeline.udfs.UDFs import *
 
 def target_1(spark: SparkSession, in0: DataFrame):
     from pyspark.dbutils import DBUtils

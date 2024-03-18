@@ -14,7 +14,7 @@ def source_1(spark: SparkSession) -> DataFrame:
         .option("url", Config.JDBC_URL)\
         .option("user", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "username"))\
         .option("password", DBUtils(spark).secrets.get(scope = "rohit_mysql", key = "password"))\
-        .option("dbtable", Config.JDBC_TABLE)\
+        .option("dbtable", Config.JDBC_TABLE_SOURCE)\
         .option("pushDownPredicate", True)\
         .option("driver", "com.mysql.jdbc.Driver")\
         .load()

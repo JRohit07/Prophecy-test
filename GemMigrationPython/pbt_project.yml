@@ -20,8 +20,10 @@ pipelines:
     language: python
     createdAt: '2024-02-06 07:54:43'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/source_1
+      outputs:
+      - datasets/target_1
     subgraphs: []
     dependencies: {}
   pipelines/SecondPipeline:
