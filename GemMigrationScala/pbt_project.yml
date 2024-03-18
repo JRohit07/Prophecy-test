@@ -38,6 +38,21 @@ pipelines:
       - datasets/target_7
     subgraphs: []
     dependencies: {}
+  pipelines/Pipeline_with_configs:
+    name: Pipeline_with_configs
+    description: ''
+    author: jrohit@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: scala
+    createdAt: '2024-03-18 00:52:30'
+    datasets:
+      inputs:
+      - datasets/source_1
+      outputs:
+      - datasets/target_1
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/source_1:
     name: source_1
