@@ -9,7 +9,7 @@
     "id" : "1",
     "uri" : "pipelines/Pipeline",
     "language" : "python",
-    "fabricId" : "8598",
+    "fabricId" : "4658",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -42,7 +42,15 @@
     "codeMode" : "sparse",
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
-    "dependentProjectExternalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
     "isImported" : false,
     "interimMode" : "Full",
     "interimModeEnabled" : true,
@@ -123,7 +131,7 @@
         "columnsSelector" : [ "tgeOfbI6wt7U0JakvTDHw$$mWhD7-sddapKNM4pWDAD_##c_int" ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
@@ -171,7 +179,7 @@
         "limit" : "10"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.1.2&projectSubscriptionProjectId=12654&path=gems/Limit",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
