@@ -1,0 +1,755 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/FirstPipeline",
+    "language" : "scala",
+    "fabricId" : "370",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "scala",
+      "udfs" : [ ],
+      "functionPackageName" : "jrohitprophecyioteam.scalalatestgemmigration.functions",
+      "sharedFunctionPackageNames" : [ "io.prophecy.scalagems.functions", "io.prophecy.warehousegems.functions" ]
+    },
+    "udafs" : {
+      "language" : "scala",
+      "code" : "package udfs\n\nimport org.apache.spark.sql.expressions._\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql._\n\n/**\n  * Here you can define your custom aggregate functions.\n  *\n  * Make sure to register your `udafs` in the register_udafs function below.\n  *\n  * Example:\n  *\n  * object GeometricMean extends UserDefinedAggregateFunction {\n  *   // This is the input fields for your aggregate function.\n  *   override def inputSchema: org.apache.spark.sql.types.StructType =\n  *     StructType(StructField(\"value\", DoubleType) :: Nil)\n  *\n  *   // This is the internal fields you keep for computing your aggregate.\n  *   override def bufferSchema: StructType = StructType(\n  *     StructField(\"count\", LongType) ::\n  *     StructField(\"product\", DoubleType) :: Nil\n  *   )\n  *\n  *   // This is the output type of your aggregatation function.\n  *   override def dataType: DataType = DoubleType\n  *\n  *   override def deterministic: Boolean = true\n  *\n  *   // This is the initial value for your buffer schema.\n  *   override def initialize(buffer: MutableAggregationBuffer): Unit = {\n  *     buffer(0) = 0L\n  *     buffer(1) = 1.0\n  *   }\n  *\n  *   // This is how to update your buffer schema given an input.\n  *   override def update(buffer: MutableAggregationBuffer, input: Row): Unit = {\n  *     buffer(0) = buffer.getAs[Long](0) + 1\n  *     buffer(1) = buffer.getAs[Double](1) * input.getAs[Double](0)\n  *   }\n  *\n  *   // This is how to merge two objects with the bufferSchema type.\n  *   override def merge(buffer1: MutableAggregationBuffer, buffer2: Row): Unit = {\n  *     buffer1(0) = buffer1.getAs[Long](0) + buffer2.getAs[Long](0)\n  *     buffer1(1) = buffer1.getAs[Double](1) * buffer2.getAs[Double](1)\n  *   }\n  *\n  *   // This is where you output the final value, given the final value of your bufferSchema.\n  *   override def evaluate(buffer: Row): Any = {\n  *     math.pow(buffer.getDouble(1), 1.toDouble / buffer.getLong(0))\n  *   }\n  * }\n  *\n  */\n\n\nobject UDAFs {\n  /**\n    * Registers UDAFs with Spark SQL\n    */\n  def registerUDAFs(spark: SparkSession): Unit = {\n    /**\n      * Example:\n      *\n      * spark.udf.register(\"gm\", GeometricMean)\n      *\n      */\n\n\n  }\n}\n"
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "JDBC_URL",
+          "kind" : {
+            "type" : "string",
+            "value" : "jdbc:mysql://3.101.152.38:3306/test_database"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_TABLE",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_table_automation"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC",
+          "kind" : {
+            "type" : "string",
+            "value" : "jdbc:mysql://3.101.152.38:3306/"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_DATABASE",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_database"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "DRIVER_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "com.mysql.jdbc.Driver"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_USER_SECRET",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "rohit_mysql:username"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_PASSWORD_SECRET",
+          "kind" : {
+            "type" : "databricks_secret",
+            "value" : "rohit_mysql:password"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_USER_STRING",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_user"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_PASSWORD_STRING",
+          "kind" : {
+            "type" : "string",
+            "value" : "admin"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "ENV_JDBC_USERNAME",
+          "kind" : {
+            "type" : "string",
+            "value" : "JDBC_USERNAME"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "ENV_JDBC_PASSWORD",
+          "kind" : {
+            "type" : "string",
+            "value" : "JDBC_PASSWORD"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "TEST",
+          "kind" : {
+            "type" : "string",
+            "value" : "test"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "ADM",
+          "kind" : {
+            "type" : "string",
+            "value" : "adm"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "IN",
+          "kind" : {
+            "type" : "string",
+            "value" : "in"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_DEST_TABLE",
+          "kind" : {
+            "type" : "string",
+            "value" : "test_table_destination"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "USER",
+          "kind" : {
+            "type" : "string",
+            "value" : "user"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "39",
+      "projectName" : "ProphecySparkBasicsScala",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "40",
+      "projectName" : "ProphecyWarehouseScala",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "io.prophecy.pipelines.firstpipeline",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "ki38CCEEK85X7VNAOEr-C",
+    "source" : "6FvM0LGAQHDrypVqMyKor$$94GH8sXDF2jKM8nmvlIKT",
+    "sourcePort" : "xjjrR6L_M0m4wlSOQSjQs$$EVZGOCJQD4D3DgLjmJDZu",
+    "target" : "6BiMBcC2uSe6tsbIJZmWX$$Z1K67pgKotJUmYb1mWWGY",
+    "targetPort" : "N_TPEDnnqQZVrn_j8e4Yo$$aqwvdFezYWRobujkLO1gm"
+  }, {
+    "id" : "Aaym7ECeHCDZjfzt2olr9$$GyUHWhWQU4WSsMurB9UIF",
+    "source" : "ilkw9h_Bd4m2092UQ27-K$$kOZEbaDiJ2tsXepFGPkKU",
+    "sourcePort" : "kS9oY24U-FatOuxHzM5A6$$Q4Us4_qxcbUVHDFTqixM7",
+    "target" : "wcg15fuSCuMUAYGwyv7qa$$rhKfPk41CDSlMf8XA4p5X",
+    "targetPort" : "KBIl6-uLQUVdS_WI7j5yp$$lAGg8J2nt6XQU6XpF3g5n"
+  }, {
+    "id" : "A1euxlPMImIP97zuw03JN$$ZIiKreSTfOUXVVf5KT2yy",
+    "source" : "_iJBPQF4h8wgA9c8PP_2j$$WcEPINAEzE_Uc1G5BtCpm",
+    "sourcePort" : "k0HtOL7jKynK8Tg6bUHJK$$G6bdE1OaS9IOVB5GnFcCE",
+    "target" : "yIwsy9i3b4NuY2zIvKi5H$$ywbhcwCDmywyC2qJ5HFaG",
+    "targetPort" : "9OeRkuOkTG77ZzXdLGGeY$$ajWiwYkIW-oslNKKucHRG"
+  }, {
+    "id" : "7_qxImTQsf9v84JCR_9DY$$ZuZRf0exOAcy8Qypbr0fx",
+    "source" : "UQREa9Rfc4JnMuZp78Yad$$tgdzcQloZFTFKlMY74tRu",
+    "sourcePort" : "QEOKjPsY0CPH_0vErstsg$$NUd-XpOHpuP7TGOk5B4ia",
+    "target" : "WlX4rW-TBo038fxdVimNp$$caOg9nyy5JJ7n1a1IpXYL",
+    "targetPort" : "1HMN01gaH52qF3MKIkiFx$$8c1_3u_uKwrUwxwz5BJ9T"
+  }, {
+    "id" : "UrRKdBh6_eNmSavoy5kdk$$0dEGqAOyHzo1dbxugyiIt",
+    "source" : "dohmxorurNWME1RRLNP7D$$sJmNne-Px-crdYm5GgyUh",
+    "sourcePort" : "g_QWbJ_UP_cVHYDT02BPC$$_TZgRrETJwaWBO4ABd4IJ",
+    "target" : "amV_XxIi4a2trseyiQffK$$RTIIpJ-_R3SYQ2N-uaCr8",
+    "targetPort" : "ZpvMTqWisy2vZd_PLk3U5$$oOT92XP3N2DQ3mQP3o1wq"
+  }, {
+    "id" : "-yF_QOmRMTCwan1mS9Z1L",
+    "source" : "Q3NXK2ViYz5SEn8715U7K$$Mr4L8pcWS507I1cDsWnxv",
+    "sourcePort" : "YJWiPpoOZGEL4fCoBLHq8$$HgEAO00tVzprs3D_X7fKr",
+    "target" : "t0uDk7UAuQBCWLG7Km8MS$$081QXRAYUZV9kPxfdb5KE",
+    "targetPort" : "a9ojP_tCEXJFtbFaSdL0m$$B1zGHCfMltzqFBCr20_ko"
+  }, {
+    "id" : "kjkKmUywfYEmfDUbNBIvR$$wlHKxaxi8viAjK7c6PBMk",
+    "source" : "CpX4HSzpFoTrF_nyuSytm$$Mt3xNpJv4t-lnfi10k6Qs",
+    "sourcePort" : "l9ZoS_NbqzB9Ma9vosDX9$$GbGELZYdN0umoRt-T5G9l",
+    "target" : "AA2t5qcE-vomYAGIM0HVK$$6fxr2lNJ1DX7K7hwrG9Im",
+    "targetPort" : "4-Pd13p3HQF86WuzgvR-j$$BPsK0aEfHr6sXlEZmvnHs"
+  } ],
+  "processes" : {
+    "UQREa9Rfc4JnMuZp78Yad$$tgdzcQloZFTFKlMY74tRu" : {
+      "id" : "UQREa9Rfc4JnMuZp78Yad$$tgdzcQloZFTFKlMY74tRu",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_4",
+        "slug" : "source_4",
+        "x" : -640,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "QEOKjPsY0CPH_0vErstsg$$NUd-XpOHpuP7TGOk5B4ia",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_4"
+      }
+    },
+    "t0uDk7UAuQBCWLG7Km8MS$$081QXRAYUZV9kPxfdb5KE" : {
+      "id" : "t0uDk7UAuQBCWLG7Km8MS$$081QXRAYUZV9kPxfdb5KE",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_6",
+        "slug" : "target_6",
+        "x" : -160,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "a9ojP_tCEXJFtbFaSdL0m$$B1zGHCfMltzqFBCr20_ko",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_6"
+      }
+    },
+    "WlX4rW-TBo038fxdVimNp$$caOg9nyy5JJ7n1a1IpXYL" : {
+      "id" : "WlX4rW-TBo038fxdVimNp$$caOg9nyy5JJ7n1a1IpXYL",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_3",
+        "slug" : "target_3",
+        "x" : -480,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1HMN01gaH52qF3MKIkiFx$$8c1_3u_uKwrUwxwz5BJ9T",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_3"
+      }
+    },
+    "AA2t5qcE-vomYAGIM0HVK$$6fxr2lNJ1DX7K7hwrG9Im" : {
+      "id" : "AA2t5qcE-vomYAGIM0HVK$$6fxr2lNJ1DX7K7hwrG9Im",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_7",
+        "slug" : "target_7",
+        "x" : -180,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4-Pd13p3HQF86WuzgvR-j$$BPsK0aEfHr6sXlEZmvnHs",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_7"
+      }
+    },
+    "amV_XxIi4a2trseyiQffK$$RTIIpJ-_R3SYQ2N-uaCr8" : {
+      "id" : "amV_XxIi4a2trseyiQffK$$RTIIpJ-_R3SYQ2N-uaCr8",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_5",
+        "slug" : "target_5",
+        "x" : -480,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZpvMTqWisy2vZd_PLk3U5$$oOT92XP3N2DQ3mQP3o1wq",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_5"
+      }
+    },
+    "yIwsy9i3b4NuY2zIvKi5H$$ywbhcwCDmywyC2qJ5HFaG" : {
+      "id" : "yIwsy9i3b4NuY2zIvKi5H$$ywbhcwCDmywyC2qJ5HFaG",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_4",
+        "slug" : "target_4",
+        "x" : -820,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9OeRkuOkTG77ZzXdLGGeY$$ajWiwYkIW-oslNKKucHRG",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_4"
+      }
+    },
+    "CpX4HSzpFoTrF_nyuSytm$$Mt3xNpJv4t-lnfi10k6Qs" : {
+      "id" : "CpX4HSzpFoTrF_nyuSytm$$Mt3xNpJv4t-lnfi10k6Qs",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_7",
+        "slug" : "source_7",
+        "x" : -320,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "l9ZoS_NbqzB9Ma9vosDX9$$GbGELZYdN0umoRt-T5G9l",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_7"
+      }
+    },
+    "6FvM0LGAQHDrypVqMyKor$$94GH8sXDF2jKM8nmvlIKT" : {
+      "id" : "6FvM0LGAQHDrypVqMyKor$$94GH8sXDF2jKM8nmvlIKT",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_1",
+        "slug" : "source_1",
+        "x" : -960,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xjjrR6L_M0m4wlSOQSjQs$$EVZGOCJQD4D3DgLjmJDZu",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_1"
+      }
+    },
+    "_iJBPQF4h8wgA9c8PP_2j$$WcEPINAEzE_Uc1G5BtCpm" : {
+      "id" : "_iJBPQF4h8wgA9c8PP_2j$$WcEPINAEzE_Uc1G5BtCpm",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_3",
+        "slug" : "source_3",
+        "x" : -960,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "k0HtOL7jKynK8Tg6bUHJK$$G6bdE1OaS9IOVB5GnFcCE",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_3"
+      }
+    },
+    "ilkw9h_Bd4m2092UQ27-K$$kOZEbaDiJ2tsXepFGPkKU" : {
+      "id" : "ilkw9h_Bd4m2092UQ27-K$$kOZEbaDiJ2tsXepFGPkKU",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_2",
+        "slug" : "source_2",
+        "x" : -960,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "kS9oY24U-FatOuxHzM5A6$$Q4Us4_qxcbUVHDFTqixM7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_2"
+      }
+    },
+    "wcg15fuSCuMUAYGwyv7qa$$rhKfPk41CDSlMf8XA4p5X" : {
+      "id" : "wcg15fuSCuMUAYGwyv7qa$$rhKfPk41CDSlMf8XA4p5X",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_2",
+        "slug" : "target_2",
+        "x" : -820,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KBIl6-uLQUVdS_WI7j5yp$$lAGg8J2nt6XQU6XpF3g5n",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_2"
+      }
+    },
+    "6BiMBcC2uSe6tsbIJZmWX$$Z1K67pgKotJUmYb1mWWGY" : {
+      "id" : "6BiMBcC2uSe6tsbIJZmWX$$Z1K67pgKotJUmYb1mWWGY",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_1",
+        "slug" : "target_1",
+        "x" : -820,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "N_TPEDnnqQZVrn_j8e4Yo$$aqwvdFezYWRobujkLO1gm",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_1"
+      }
+    },
+    "dohmxorurNWME1RRLNP7D$$sJmNne-Px-crdYm5GgyUh" : {
+      "id" : "dohmxorurNWME1RRLNP7D$$sJmNne-Px-crdYm5GgyUh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_5",
+        "slug" : "source_5",
+        "x" : -640,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "g_QWbJ_UP_cVHYDT02BPC$$_TZgRrETJwaWBO4ABd4IJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_5"
+      }
+    },
+    "Q3NXK2ViYz5SEn8715U7K$$Mr4L8pcWS507I1cDsWnxv" : {
+      "id" : "Q3NXK2ViYz5SEn8715U7K$$Mr4L8pcWS507I1cDsWnxv",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_6",
+        "slug" : "source_6",
+        "x" : -320,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "YJWiPpoOZGEL4fCoBLHq8$$HgEAO00tVzprs3D_X7fKr",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_6"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.UQREa9Rfc4JnMuZp78Yad$$tgdzcQloZFTFKlMY74tRu.properties.textPassword",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Storing plain-text passwords poses a security risk and is not recommended.",
+    "tags" : [ ],
+    "relatedInformation" : [ ],
+    "diagnosticType" : 1
+  } ]
+}
