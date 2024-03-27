@@ -12,23 +12,21 @@ import java.time._
 object source_2 {
 
   def apply(context: Context): DataFrame = {
+    import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
     var reader = context.spark.read.format("jdbc")
     reader = reader
       .option("url", "jdbc:mysql://3.101.152.38:3306/test_database")
-      .option("user", {
-                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-                dbutils.secrets.get(scope = "rohit_mysql", key = "username")
-              }
+      .option("user",
+              s"${dbutils.secrets.get(scope = "rohit_mysql", key = "username")}"
       )
-      .option("password", {
-                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-                dbutils.secrets.get(scope = "rohit_mysql", key = "password")
-              }
+      .option("password",
+              s"${dbutils.secrets.get(scope = "rohit_mysql", key = "password")}"
       )
       .option("pushDownPredicate",    true)
       .option("driver",               context.config.DRIVER_NAME)
     reader = reader.option("dbtable", "test_table")
-    reader.load()
+    var df = reader.load()
+    df
   }
 
 }

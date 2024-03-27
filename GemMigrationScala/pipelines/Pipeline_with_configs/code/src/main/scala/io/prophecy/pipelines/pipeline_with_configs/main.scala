@@ -15,8 +15,12 @@ import java.time._
 object Main {
 
   def apply(context: Context): Unit = {
-    val df_source_1 = source_1(context)
-    target_1(context, df_source_1)
+    val df_source_1   = source_1(context)
+    val df_jdbc_fixed = jdbc_fixed(context)
+    target_1_1(context, df_jdbc_fixed)
+    val df_source_1_1 = source_1_1(context)
+    target_1_2(context, df_source_1_1)
+    target_1(context,   df_source_1)
   }
 
   def main(args: Array[String]): Unit = {
@@ -28,21 +32,13 @@ object Main {
       .config("spark.sql.legacy.allowUntypedScalaUDF", "true")
       .enableHiveSupport()
       .getOrCreate()
-      .newSession()
     val context = Context(spark, config)
     spark.conf
       .set("prophecy.metadata.pipeline.uri", "pipelines/Pipeline_with_configs")
     registerUDFs(spark)
-    try MetricsCollector.start(spark,
-                               "pipelines/Pipeline_with_configs",
-                               context.config
-    )
-    catch {
-      case _: Throwable =>
-        MetricsCollector.start(spark, "pipelines/Pipeline_with_configs")
+    MetricsCollector.instrument(spark, "pipelines/Pipeline_with_configs") {
+      apply(context)
     }
-    apply(context)
-    MetricsCollector.end(spark)
   }
 
 }

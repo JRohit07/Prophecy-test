@@ -48,6 +48,7 @@ pipelines:
     createdAt: '2024-03-18 00:52:30'
     datasets:
       inputs:
+      - datasets/jdbc_fixed
       - datasets/source_1
       outputs:
       - datasets/target_1
@@ -236,6 +237,19 @@ datasets:
         description: ''
         author: jrohit@prophecy.io
         createdAt: '2024-02-06 12:52:23'
+  datasets/jdbc_fixed:
+    name: jdbc_fixed
+    description: ''
+    author: jrohit@prophecy.io
+    createdAt: '2024-03-18 05:43:48'
+    mode: batch
+    physicalDatasets:
+      databricks_fabric_13_3_LTS:
+        fabricId: 370
+        datasetType: Warehouse
+        description: ''
+        author: jrohit@prophecy.io
+        createdAt: '2024-03-18 05:43:48'
 templates: {}
 jobs: {}
 gemContainer:
@@ -258,27 +272,32 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
-- description: ''
-  id: utDIMvCKJIWzr0VahaTr1
-  editable: true
-  enabled: true
-  coordinates: mysql:mysql-connector-java:8.0.29
-  type: coordinates
-  name: mysql
-  scope: Project
-  exclusions: []
-  entity: Project
+- type: plibMaven
+  modifiedAt: '2024-03-27T09:02:20.101756Z'
+  name: plibMaven
+  version: 7.1.82
+  id: '95072963'
+  createdAt: '2024-03-27T09:02:20.101702Z'
+- type: coordinates
   modifiedAt: '2024-02-06T11:40:26.871Z'
+  coordinates: mysql:mysql-connector-java:8.0.29
+  name: mysql
+  description: ''
+  enabled: true
+  id: utDIMvCKJIWzr0VahaTr1
   createdAt: '2024-02-06T11:40:26.871Z'
+  entity: Project
+  exclusions: []
+  editable: true
 projectDependencies:
   '39':
     projectUID: 39
     projectName: ProphecySparkBasicsScala
     repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_39.git&subPath=
-    version: 0.0.6
+    version: 0.1.4
     isDefault: false
     author: null
-    createdAt: '2024-02-06 11:15:04'
+    createdAt: '2024-03-27 09:02:34'
   '40':
     projectUID: 40
     projectName: ProphecyWarehouseScala

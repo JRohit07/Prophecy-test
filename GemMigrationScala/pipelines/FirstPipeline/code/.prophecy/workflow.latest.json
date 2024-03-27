@@ -4,7 +4,10 @@
       "gemBuilderVersion" : "v1"
     },
     "codeGenConfiguration" : {
-      "editableConfig" : true
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
     },
     "id" : "1",
     "uri" : "pipelines/FirstPipeline",
@@ -73,8 +76,35 @@
         }, {
           "name" : "JDBC_USER_SECRET",
           "kind" : {
-            "type" : "databricks_secret",
-            "value" : "rohit_mysql:username"
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "rohit_mysql"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "username"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "Databricks"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -82,8 +112,35 @@
         }, {
           "name" : "JDBC_PASSWORD_SECRET",
           "kind" : {
-            "type" : "databricks_secret",
-            "value" : "rohit_mysql:password"
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "rohit_mysql"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "password"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "Databricks"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -204,7 +261,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "io.prophecy.pipelines.firstpipeline",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "ki38CCEEK85X7VNAOEr-C",
@@ -733,23 +790,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.UQREa9Rfc4JnMuZp78Yad$$tgdzcQloZFTFKlMY74tRu.properties.textPassword",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "Storing plain-text passwords poses a security risk and is not recommended.",
-    "tags" : [ ],
-    "relatedInformation" : [ ],
-    "diagnosticType" : 1
-  } ]
+  }
 }

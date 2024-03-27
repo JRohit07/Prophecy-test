@@ -12,21 +12,14 @@ import java.time._
 object target_1 {
 
   def apply(context: Context, in: DataFrame): Unit = {
+    val Config = context.config
     var writer = in.write.format("jdbc")
     writer = writer
-      .option("url",     "jdbc:mysql://3.101.152.38:3306/test_database")
-      .option("dbtable", "test_table_destination")
-      .option("user", {
-                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-                dbutils.secrets.get(scope = "rohit_mysql", key = "username")
-              }
-      )
-      .option("password", {
-                import com.databricks.dbutils_v1.DBUtilsHolder.dbutils
-                dbutils.secrets.get(scope = "rohit_mysql", key = "password")
-              }
-      )
-      .option("driver", "com.mysql.jdbc.Driver")
+      .option("url",      s"${Config.jdbc_url_databricks}")
+      .option("dbtable",  "test_table_destination")
+      .option("user",     s"${Config.JDBC_USER_SECRET_databricks}")
+      .option("password", s"${Config.JDBC_PASSWORD_SECRET_databricks}")
+      .option("driver",   "com.mysql.jdbc.Driver")
     writer = writer.mode("overwrite")
     writer.save()
   }

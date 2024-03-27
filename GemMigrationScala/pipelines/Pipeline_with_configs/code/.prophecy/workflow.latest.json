@@ -4,10 +4,16 @@
       "gemBuilderVersion" : "v1"
     },
     "codeGenConfiguration" : {
-      "editableConfig" : true
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "7.1.82"
+      }
     },
     "id" : "1",
     "uri" : "pipelines/Pipeline_with_configs",
+    "pipelineSettingsInfo" : {
+      "hasApplication" : false
+    },
     "language" : "scala",
     "fabricId" : "370",
     "frontEndLanguage" : "sql",
@@ -26,19 +32,217 @@
       "common" : {
         "type" : "record",
         "fields" : [ {
-          "name" : "JDBC_USER_SECRET",
+          "name" : "JDBC_USER_SECRET_databricks",
           "kind" : {
-            "type" : "databricks_secret",
-            "value" : "rohit_mysql:username"
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "rohit_mysql"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "username"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "Databricks"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
           "isReferenced" : false
         }, {
-          "name" : "JDBC_PASSWORD_SECRET",
+          "name" : "JDBC_PASSWORD_SECRET_databricks",
           "kind" : {
-            "type" : "databricks_secret",
-            "value" : "rohit_mysql:password"
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "rohit_mysql"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "password"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "Databricks"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "jdbc_url_databricks",
+          "kind" : {
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "qasecrets"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "JDBC_URL"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "Databricks"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_USER_SECRET_hashicorp",
+          "kind" : {
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "secrets/qa"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "JDBC_USERNAME"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "HashiCorp"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_PASSWORD_SECRET_hashicorp",
+          "kind" : {
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "secrets/qa"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "JDBC_PASSWORD"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "HashiCorp"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JDBC_URL_SECRET_hashicorp",
+          "kind" : {
+            "type" : "secret",
+            "fields" : [ {
+              "name" : "secretScope",
+              "kind" : {
+                "type" : "string",
+                "value" : "secrets/qa"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "secretKey",
+              "kind" : {
+                "type" : "string",
+                "value" : "JDBC_URL"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "providerType",
+              "kind" : {
+                "type" : "string",
+                "value" : "HashiCorp"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
           },
           "optional" : false,
           "isWorkflowNodeConfiguration" : false,
@@ -78,7 +282,7 @@
       "value" : 1000
     },
     "topLevelPackage" : "io.prophecy.pipelines.pipeline_with_configs",
-    "configurationVersion" : "v1"
+    "configurationVersion" : "v2"
   },
   "connections" : [ {
     "id" : "WMH3b0ebCywzx_Z8P7PHM",
@@ -86,6 +290,18 @@
     "sourcePort" : "9oHfdMSRH4BAwNOjFoRUy$$lH9RR8tLrUbuRJ4FgDTKk",
     "target" : "JUpnoqjkLwLPNtKq8J2H8$$3pAutIcTeFcsGEidx_CpP",
     "targetPort" : "wQXkJZyliL7v2BLL6UA9R$$5ify3sEkdgtlXdB0Mk7jj"
+  }, {
+    "id" : "OiesGRWkKmfbWJ2TxQxTe",
+    "source" : "wZCo3pjWgbcwi2PZwT1xy$$TqbEYzYREFj5yYCt2u_1M",
+    "sourcePort" : "s4CT9J5aVYiM3-lz9cjBg$$9owDSbyxQNODH4tyqzWjz",
+    "target" : "Ybkz8rvP_gIDXZhlxBYVf$$bhSD1KF0QrT-QY152YA7E",
+    "targetPort" : "HOx3KyjU5Z5qIuYGDlofN$$zzwpSPlkYs8e0wiB3pA_g"
+  }, {
+    "id" : "0flTqoRFCu88et8xPOsH9",
+    "source" : "jYjxMrbTx1c0Fru7i9E5p$$UQDkaGU7AOqo-4QnEigMt",
+    "sourcePort" : "nahJ4qVDy-V5hpx-dspk1$$miLFUFsaXQXVO5A_iwigk",
+    "target" : "EPvo7PV9u_L2ntQqjlTqe$$ybYOzESFEp_2JHmjIq9M0",
+    "targetPort" : "dbthf6bsmCz7_c-a9akI5$$jgt1qLbrIVrvL3BTJAdZL"
   } ],
   "processes" : {
     "lLXTD8Zs90wIxDqGcOWOM$$r5B1Sic5BJGW5xhJQx-K_" : {
@@ -94,8 +310,8 @@
       "metadata" : {
         "label" : "source_1",
         "slug" : "source_1",
-        "x" : -560,
-        "y" : -220,
+        "x" : -1420,
+        "y" : -580,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -115,14 +331,150 @@
         "datasetId" : "datasets/source_1"
       }
     },
+    "Ybkz8rvP_gIDXZhlxBYVf$$bhSD1KF0QrT-QY152YA7E" : {
+      "id" : "Ybkz8rvP_gIDXZhlxBYVf$$bhSD1KF0QrT-QY152YA7E",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_1_1",
+        "slug" : "target_1_1",
+        "x" : -980,
+        "y" : -580,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HOx3KyjU5Z5qIuYGDlofN$$zzwpSPlkYs8e0wiB3pA_g",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_1"
+      }
+    },
+    "jYjxMrbTx1c0Fru7i9E5p$$UQDkaGU7AOqo-4QnEigMt" : {
+      "id" : "jYjxMrbTx1c0Fru7i9E5p$$UQDkaGU7AOqo-4QnEigMt",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "source_1_1",
+        "slug" : "source_1_1",
+        "x" : -1220,
+        "y" : -380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "nahJ4qVDy-V5hpx-dspk1$$miLFUFsaXQXVO5A_iwigk",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/source_1"
+      }
+    },
+    "EPvo7PV9u_L2ntQqjlTqe$$ybYOzESFEp_2JHmjIq9M0" : {
+      "id" : "EPvo7PV9u_L2ntQqjlTqe$$ybYOzESFEp_2JHmjIq9M0",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "target_1_2",
+        "slug" : "target_1_2",
+        "x" : -1100,
+        "y" : -380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "dbthf6bsmCz7_c-a9akI5$$jgt1qLbrIVrvL3BTJAdZL",
+          "slug" : "in",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/target_1"
+      }
+    },
+    "wZCo3pjWgbcwi2PZwT1xy$$TqbEYzYREFj5yYCt2u_1M" : {
+      "id" : "wZCo3pjWgbcwi2PZwT1xy$$TqbEYzYREFj5yYCt2u_1M",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "jdbc_fixed",
+        "slug" : "jdbc_fixed",
+        "x" : -1120,
+        "y" : -580,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "s4CT9J5aVYiM3-lz9cjBg$$9owDSbyxQNODH4tyqzWjz",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/jdbc_fixed"
+      }
+    },
     "JUpnoqjkLwLPNtKq8J2H8$$3pAutIcTeFcsGEidx_CpP" : {
       "id" : "JUpnoqjkLwLPNtKq8J2H8$$3pAutIcTeFcsGEidx_CpP",
       "component" : "Target",
       "metadata" : {
         "label" : "target_1",
         "slug" : "target_1",
-        "x" : -440,
-        "y" : -220,
+        "x" : -1300,
+        "y" : -580,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
