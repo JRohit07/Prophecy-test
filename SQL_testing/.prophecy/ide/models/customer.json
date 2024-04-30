@@ -1,0 +1,214 @@
+{
+  "id" : "customer",
+  "metainfo" : {
+    "label" : "customer",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "customer##SQhMoqpn" : {
+      "id" : "customer##SQhMoqpn",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customer",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "brb1oJmd",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "seed"
+        } ],
+        "outputs" : [ {
+          "id" : "ZddzqFzO",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Q7NL77h29h5AtUPqQwcK8" : {
+      "id" : "Q7NL77h29h5AtUPqQwcK8",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "seed",
+        "slug" : "seed",
+        "x" : -160,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "XSiyhMxaD4Rj0nBgqJx73",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "OymwGUYUm5UZEw3ex9XRj$$OFL7r7DIdLHb7FSGh9xJK",
+    "source" : "Q7NL77h29h5AtUPqQwcK8",
+    "sourcePort" : "XSiyhMxaD4Rj0nBgqJx73",
+    "target" : "customer##SQhMoqpn",
+    "targetPort" : "brb1oJmd"
+  } ],
+  "component" : "Model"
+}
