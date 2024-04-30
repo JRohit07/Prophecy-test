@@ -1,0 +1,635 @@
+{
+  "qa_concat_macro" : {
+    "name" : "qa_concat_macro",
+    "macroType" : "expression",
+    "definition" : "concat(\n  TRIM('{{input_string}}', '?-'), \n  REPLACE('{{input_string}}', 'bc'), \n  RIGHT('{{input_string}}', 3), \n  CAST(HASH(SEQ8()) AS string), \n  ASCII('A'), \n  REPEAT('xy', 5), \n  REVERSE('Hello, world!'), \n  SUBSTR('testing 1 2 3', 9, 5), \n  INSERT('abc', 1, 2, 'Z'), \n  RTRIM('$125.00', '0.'), \n  UUID_STRING(), \n  sha1('{{input_string}}'), \n  CAST(md5_binary('{{input_string}}') AS string), \n  LPAD(' hello ', 10, ' '), \n  DECOMPRESS_STRING(TO_BINARY('0920536E6F77666C616B65', 'HEX'), 'SNAPPY'), \n  LPAD('.  hi. ', 10, '$'), \n  DAYNAME(TO_DATE('2015-05-01')), \n  CAST(LAST_DAY(TO_DATE('2015-05-08T23:39:20.123-07:00')) AS string), \n  CAST(DATEADD(YEAR, 2, TO_DATE('2013-05-08')) AS string), \n  CAST(DATEDIFF(MONTH, '2021-01-01'::DATE, '2021-02-28'::DATE) AS string), \n  CAST(DATEDIFF(\n    HOUR, \n    '2013-05-08T23:39:20.123-07:00'::TIMESTAMP, \n    DATEADD(YEAR, 2, ('2013-05-08T23:39:20.123-07:00')::TIMESTAMP)) AS string), \n  CAST(TIMEDIFF(YEAR, '2017-01-01', '2019-01-01') AS string), \n  CAST(TIME_SLICE('2019-02-28'::DATE, 4, 'MONTH', 'START') AS string), \n  CAST(TRY_TO_TIME('12:30:00') AS string))",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "input_string",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_all_null" : {
+    "name" : "qa_all_null",
+    "macroType" : "query",
+    "definition" : "\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value",
+          "value" : "'customers'"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "column_name",
+        "kind" : {
+          "type" : "value",
+          "value" : "'id'"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "multi_macro_expressions" : {
+    "name" : "multi_macro_expressions",
+    "macroType" : "expression",
+    "definition" : "concat({{param_float}} + {{param_array[0]}}, 'hello')",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "param_float",
+        "kind" : {
+          "type" : "value",
+          "value" : "12"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "param_array",
+        "kind" : {
+          "type" : "value",
+          "value" : "[1, 2, 3]"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "param_dict",
+        "kind" : {
+          "type" : "value",
+          "value" : "[1, 2, 3]"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "round_function" : {
+    "name" : "round_function",
+    "macroType" : "expression",
+    "definition" : "ROUND({{n1}}, {{scale}})",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "n1",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "scale",
+        "kind" : {
+          "type" : "value",
+          "value" : "2"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_all_not_null" : {
+    "name" : "qa_all_not_null",
+    "macroType" : "query",
+    "definition" : "\n\n\nselect * from {{ model }} where {{ column_name }} is not null",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "column_name",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_model_all_above_given_id" : {
+    "name" : "qa_model_all_above_given_id",
+    "macroType" : "query",
+    "definition" : "\n\n\nSELECT * from {{model}} where {{col}} > {{ id_min }}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "col",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "id_min",
+        "kind" : {
+          "type" : "value",
+          "value" : "2"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "default__language_specific_deduplicate" : {
+    "name" : "default__language_specific_deduplicate",
+    "macroType" : "query",
+    "definition" : "\n\n\nwith row_numbered as (\n    select\n    _inner.*,\n    row_number() over (\n    partition by {{ partition_by }}\n    order by {{ order_by }}\n    ) as rn\n    from {{ relation }} as _inner\n    )\n\nselect\n    distinct data.*\nfrom {{ relation }} as data\n\n    natural join row_numbered\nwhere row_numbered.rn = 1",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_number_macro" : {
+    "name" : "qa_number_macro",
+    "macroType" : "expression",
+    "definition" : "(2 % 1.8)\n+ (MOD({{input_number}}, 1.8))\n+ ({{input_number}} & 5)\n+ (2 * {{input_number}})\n+ (5 + 10)\n- ({{input_number}} + 45)\n+ (3 / 2)\n+ (3 ^ 5)\n+ abs(-1)\n+ acos(1)\n+ acosh(1)\n+ array_position(array(3, 2, 1), 1)\n+ array_size(array('b', 'd', 'c', 'a'))\n+ ascii(2)\n+ asin(0)\n+ asinh(0)\n+ atan(0)\n+ atan2(0, 0)\n+ atanh(0)\n+ bit_count(0)\n+ bit_get(11, 0)\n+ bit_length('Spark SQL')\n+ bround(25, -1)\n+ cardinality(array('b', 'd', 'c', 'a'))\n+ cardinality(map('a', 1, 'b', 2))\n+ CAST('10' AS int)\n+ cbrt(27.0)\n+ ceil(3.1411, 3)\n+ ceiling(3.1411, 3)\n+ char_length('Spark SQL ')\n+ coalesce(NULL, 1, NULL)\n+ conv('100', 2, 10)\n+ cos(0)\n+ cosh(0)\n+ cot(1)\n+ csc(1)\n+ day('2009-07-30')\n+ dayofmonth('2009-07-30')\n+ dayofweek('2009-07-30')\n+ dayofyear('2016-04-09')\n+ degrees(3.141592653589793)\n+ element_at(array(1, 2, 3), 2)\n+ exp(0)\n+ expm1(0)\n+ EXTRACT(SECONDS FROM TIMESTAMP'2019-10-01 00:00:01.000001')\n+ EXTRACT(MINUTE FROM INTERVAL '123 23:55:59.002001' DAY TO SECOND)\n+ factorial(2)\n+ find_in_set('ab', 'abc,b,ab,c,def')\n+ floor(-0.1)\n+ getbit(11, 0)\n+ greatest(10, 9, 2, 4, 3)\n+ instr('SparkSQL', 'SQL')\n+ json_array_length('[1,2,3,{\"f1\":1,\"f2\":[5,6]},4]')\n+ least(10, 9, 2, 4, 3)\n+ length('Spark SQL ')\n+ levenshtein('kitten', 'sitting')\n+ ln(10)\n+ locate('bar', 'foobarbar')\n+ log(10, 100)\n+ log10(10)\n+ log1p(0)\n+ log2(2)\n+ minute('2009-07-30 12:58:59')\n+ (2 % 1.8)\n+ month('2016-07-30')\n+ months_between('1997-02-28 10:30:00', '1996-10-30', false)\n+ nanvl(CAST('NaN' AS double), 123)\n+ negative(100)\n+ nvl2(NULL, 2, 1)\n+ octet_length('Spark SQL')\n+ pi()\n+ pmod(10, 3)\n+ position('bar', 'foobarbar')\n+ positive(1)\n+ pow(2, 3)\n+ power(2, 3)\n+ quarter('2016-08-31')\n+ radians(180)\n+ rand()\n+ randn()\n+ random()\n+ rint(12.3456)\n+ round(2.5, 0)\n+ sec(0)\n+ second('2009-07-30 12:58:59')\n+ shiftleft(2, 1)\n+ shiftright(4, 1)\n+ shiftrightunsigned(4, 1)\n+ sign(40)\n+ signum(40)\n+ sin(0)\n+ sinh(0)\n+ size(array('b', 'd', 'c', 'a'))",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "input_number",
+        "kind" : {
+          "type" : "value",
+          "value" : "10"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_macro_call_another_macro" : {
+    "name" : "qa_macro_call_another_macro",
+    "macroType" : "expression",
+    "definition" : "concat({{ __PROJECT_NAME__.qa_concat_macro(final_param_string_only) }}, '{{final_param_string_only}}')",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "final_param_string_only",
+        "kind" : {
+          "type" : "value",
+          "value" : "'random data'"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_epl_data_macro" : {
+    "name" : "qa_epl_data_macro",
+    "macroType" : "query",
+    "definition" : "\n\n                            {% set status = ['HomeTeam','AwayTeam'] %}\n\nwith summary as (\n    {% for club in football_clubs %}\n    {% for st in status %}\n    select\n    {{ st }} as team,\n    {% if st == 'HomeTeam' %}\n    case\n    when FTR = 'H' then 3\n    when FTR = 'D' then 1\n    else 0 end points\n    {% else %}\n    case\n    when FTR = 'A' then 3\n    when FTR = 'D' then 1\n    else 0 end points\n    {% endif %}\n    from {{ table_name }}\n    where season = 'season-1819'\n    and {{ st }} = '{{ club }}'\n    {% if not loop.last %} UNION ALL {% endif %}\n    {% endfor %}\n    {% if not loop.last %} UNION ALL {% endif %}\n    {% endfor %}\n    )\n\n\nselect\n    team,\n    sum(points) as total_points\nfrom summary\ngroup by team\norder by total_points desc",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "table_name",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "football_clubs",
+        "kind" : {
+          "type" : "value",
+          "value" : "['Liverpool', 'Man City']"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_get_unique_count" : {
+    "name" : "qa_get_unique_count",
+    "macroType" : "query",
+    "definition" : "\n\n\nselect count(*)\nfrom (\n         select\n             {{ column_name }}\n         from {{ model }}\n         where {{ column_name }} is not null\n         group by {{ column_name }}\n         having count(*) >= 1\n     ) validation_errors",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "column_name",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_complex_macro" : {
+    "name" : "qa_complex_macro",
+    "macroType" : "query",
+    "definition" : "\n\n\nwith all_values as (\n    select distinct {{column_name_int}} as col_int from {{model}}\n    ),\n    payments_validation_errors as (\n    select\n    col_int\n    from all_values\n    where col_int not in (\n    {% for accepted_value in accepted_values %}\n    {% if accepted_value >= 5 %}\n    5\n    {% else %}\n    {{ accepted_value }}\n    {% endif %}\n    {% if not loop.last %},{% endif %}\n    {% endfor %}\n    )\n    )\nselect * from payments_validation_errors",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "column_name_int",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "accepted_values",
+        "kind" : {
+          "type" : "value",
+          "value" : "[1, 2]"
+        },
+        "optional" : true,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "generic_concat" : {
+    "name" : "generic_concat",
+    "macroType" : "expression",
+    "definition" : "concat({{input_string}}, {{input_int}})",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "input_string",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "input_int",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "snowflake__language_specific_deduplicate" : {
+    "name" : "snowflake__language_specific_deduplicate",
+    "macroType" : "query",
+    "definition" : "\n\n\nselect *\nfrom {{ relation }}\n    qualify\n        row_number() over (\n            partition by {{ partition_by }}\n            order by {{ order_by }}\n        ) = 1",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "bigquery__language_specific_deduplicate" : {
+    "name" : "bigquery__language_specific_deduplicate",
+    "macroType" : "query",
+    "definition" : "\n\n\nselect unique.*\nfrom (\n         select\n             array_agg (\n                     original\n                         order by {{ order_by }}\n                limit 1\n            )[offset(0)] unique\n         from {{ relation }} original\n         group by {{ partition_by }}\n     )",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_test_relationship" : {
+    "name" : "qa_test_relationship",
+    "macroType" : "query",
+    "definition" : "\n\nselect count(*)\nfrom (\n         select {{ model1_col }} as id from {{ model }}\n     ) as child\n         left join (\n    select {{ model2_col }} as id from {{ model2 }}\n) as parent on parent.id = child.id\nwhere child.id is not null\n  and parent.id is null",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "model1",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "model2",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "model1_col",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "model2_col",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_concat_macro_column" : {
+    "name" : "qa_concat_macro_column",
+    "macroType" : "expression",
+    "definition" : "concat({{param1_column}}, 'hellomain')",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "param1_column",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "language_specific_deduplicate" : {
+    "name" : "language_specific_deduplicate",
+    "macroType" : "query",
+    "definition" : "{{ return(adapter.dispatch('language_specific_deduplicate', '__PROJECT_NAME__')(relation, partition_by, order_by)) }}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "generic_round" : {
+    "name" : "generic_round",
+    "macroType" : "expression",
+    "definition" : "round(1034.212, 2)",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ ]
+    },
+    "staleState" : "none"
+  },
+  "qa_macro_call_another_macro_column" : {
+    "name" : "qa_macro_call_another_macro_column",
+    "macroType" : "expression",
+    "definition" : "concat({{ __PROJECT_NAME__.qa_concat_macro_column(param_column) }}, {{param_column}})",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "param_column",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "redshift__language_specific_deduplicate" : {
+    "name" : "redshift__language_specific_deduplicate",
+    "macroType" : "expression",
+    "definition" : "{{ return(dbt_utils.default__language_specific_deduplicate(relation, partition_by, order_by = order_by)) }}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "qa_boolean_macro" : {
+    "name" : "qa_boolean_macro",
+    "macroType" : "expression",
+    "definition" : "startswith('sasd', 'te')\nor REGEXP_LIKE({{input_column}}, 'san.*')\nor RLIKE({{input_column}}, 'san.*', 'i')\nor CONTAINS({{input_column}}, 'te')\nor ({{input_column}} LIKE '%j%h%do%')",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "input_column",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  },
+  "postgres__language_specific_deduplicate" : {
+    "name" : "postgres__language_specific_deduplicate",
+    "macroType" : "query",
+    "definition" : "\nselect\n    distinct on ({{ partition_by }}) *\nfrom {{ relation }}\norder by {{ partition_by }}{{ ',' ~ order_by }}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "relation",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "partition_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      }, {
+        "name" : "order_by",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "staleState" : "none"
+  }
+}
