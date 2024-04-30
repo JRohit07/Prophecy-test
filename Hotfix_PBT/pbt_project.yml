@@ -1,6 +1,6 @@
 name: EM_Test_bug
 description: ''
-version: 0.0.1
+version: v1-release
 author: jrohit+e2e@prophecy.io
 language: python
 buildSystem: ''

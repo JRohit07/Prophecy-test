@@ -29,6 +29,19 @@
       }
     },
     "availableFabrics" : [ {
+      "id" : "10365",
+      "name" : "Non_admin_fabric",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
       "id" : "8598",
       "name" : "dbx_uc",
       "clusterSizes" : {
