@@ -1,0 +1,134 @@
+{
+  "id" : "RawDataTest",
+  "metainfo" : {
+    "label" : "RawDataTest",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "RawDataTest##KeOpQ25x" : {
+      "id" : "RawDataTest##KeOpQ25x",
+      "component" : "TargetSingularDataTest",
+      "metadata" : {
+        "label" : "RawDataTest",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "query" : "SELECT * \n\nFROM raw_customers\n",
+        "customQuery" : false,
+        "customQueryDisabled" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "E8W9VvaF",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "raw_customers"
+        } ],
+        "outputs" : [ {
+          "id" : "ca2nuNuL",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "pvCHGcJFDggiBG9DBa0ka" : {
+      "id" : "pvCHGcJFDggiBG9DBa0ka",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "raw_customers",
+        "slug" : "raw_customers",
+        "x" : -140,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_customers",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "enwD9iY8H7TFON4KnQwyj",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "GylaGDrY8xR9YqkZV0ILC$$6mGVRFDkyF1WJ8GRfAcgb",
+    "source" : "pvCHGcJFDggiBG9DBa0ka",
+    "sourcePort" : "enwD9iY8H7TFON4KnQwyj",
+    "target" : "RawDataTest##KeOpQ25x",
+    "targetPort" : "E8W9VvaF"
+  } ],
+  "component" : "SingularDataTest"
+}

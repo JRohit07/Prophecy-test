@@ -1,0 +1,265 @@
+{
+  "id" : "CustomerDataTests",
+  "metainfo" : {
+    "label" : "CustomerDataTests",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "severity" : "'warn'",
+        "type" : "TestConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "CustomerDataTests##CdavzBZj" : {
+      "id" : "CustomerDataTests##CdavzBZj",
+      "component" : "TargetSingularDataTest",
+      "metadata" : {
+        "label" : "CustomerDataTests",
+        "x" : 0,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "new gem"
+      },
+      "properties" : {
+        "query" : "SELECT ID * ID as SQID, FIRST_NAME, LAST_NAME \n\nFROM Join_1\n",
+        "customQuery" : true,
+        "customQueryDisabled" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "h1AC5DXF",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "Join_1"
+        } ],
+        "outputs" : [ {
+          "id" : "uaefrVfQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SQID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "QPKDm6ItpGhEzNjZb7EY-" : {
+      "id" : "QPKDm6ItpGhEzNjZb7EY-",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "raw_customers",
+        "slug" : "raw_customers",
+        "x" : -480,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "raw_customers",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ZvXLaEss6gE5zQ_c6RC-r",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "r0kFguCXRXfWLL8gICIqI$$uoDuUgbEiK_zQ7-9ILGWL" : {
+      "id" : "r0kFguCXRXfWLL8gICIqI$$uoDuUgbEiK_zQ7-9ILGWL",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : -240,
+        "y" : 0,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in0.first_name=in1.first_name"
+          },
+          "joinType" : ""
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.id"
+          },
+          "alias" : "id"
+        }, {
+          "expression" : {
+            "expression" : "in0.first_name"
+          },
+          "alias" : "first_name"
+        }, {
+          "expression" : {
+            "expression" : "in0.last_name"
+          },
+          "alias" : "last_name"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC##first_name", "_8MTmCdyv9izgI4BF4Gqm$$q5tfIZbm49yep5TzNZPJb##first_name", "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC##id", "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC##first_name", "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC##last_name" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        }, {
+          "id" : "_8MTmCdyv9izgI4BF4Gqm$$q5tfIZbm49yep5TzNZPJb",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "PnEz2zCb5kvb3nlYliHe1$$SaaDQG0cYT3TnNn8gYtU_",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Dw7eEkcLpAhnv7OkxMeaG",
+    "source" : "QPKDm6ItpGhEzNjZb7EY-",
+    "sourcePort" : "ZvXLaEss6gE5zQ_c6RC-r",
+    "target" : "r0kFguCXRXfWLL8gICIqI$$uoDuUgbEiK_zQ7-9ILGWL",
+    "targetPort" : "7FQ2CZ1fEl3ktBd1dCDTw$$zox6tBsLGAh5dQeUZRSIC"
+  }, {
+    "id" : "ts76UOohO7ePpgFO2L0Sk",
+    "source" : "QPKDm6ItpGhEzNjZb7EY-",
+    "sourcePort" : "ZvXLaEss6gE5zQ_c6RC-r",
+    "target" : "r0kFguCXRXfWLL8gICIqI$$uoDuUgbEiK_zQ7-9ILGWL",
+    "targetPort" : "_8MTmCdyv9izgI4BF4Gqm$$q5tfIZbm49yep5TzNZPJb"
+  }, {
+    "id" : "YWvSfBduD-7XKcixhEC2Q",
+    "source" : "r0kFguCXRXfWLL8gICIqI$$uoDuUgbEiK_zQ7-9ILGWL",
+    "sourcePort" : "PnEz2zCb5kvb3nlYliHe1$$SaaDQG0cYT3TnNn8gYtU_",
+    "target" : "CustomerDataTests##CdavzBZj",
+    "targetPort" : "h1AC5DXF"
+  } ],
+  "component" : "SingularDataTest"
+}

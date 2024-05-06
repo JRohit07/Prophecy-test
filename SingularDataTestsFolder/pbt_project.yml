@@ -306,7 +306,25 @@ sqlModels:
       snapshots: []
     createdAt: '2023-11-07 12:54:43'
 sqlSnapshots: {}
-sqlTests: {}
+sqlTests:
+  .prophecy/metadata/sqltests/CustomerDataTests:
+    name: CustomerDataTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/customer/customerData/CustomerDataTests.sql
+    - .prophecy/ide/tests/data/singular/CustomerDataTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-06 11:11:18'
+  .prophecy/metadata/sqltests/RawDataTest:
+    name: RawDataTest
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/customer/rawCustomerDataTeest/RawDataTest.sql
+    - .prophecy/ide/tests/data/singular/RawDataTest.json
+    testType: SingularDataTest
+    createdAt: '2024-05-06 11:14:27'
 sqlMacros:
   .prophecy/metadata/sqlmacros/amount_squared:
     name: amount_squared
