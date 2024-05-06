@@ -56,6 +56,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2024-01-02 06:23:12'
   .prophecy/metadata/sqlmodels/stg_orders:
     name: stg_orders
@@ -83,6 +86,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 12:54:43'
   .prophecy/metadata/sqlmodels/pivot_unpivot_model:
     name: pivot_unpivot_model
@@ -106,6 +112,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2024-03-08 13:00:44'
   .prophecy/metadata/sqlmodels/orders:
     name: orders
@@ -149,6 +158,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 12:54:43'
   .prophecy/metadata/sqlmodels/customers:
     name: customers
@@ -186,6 +198,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 12:54:43'
   .prophecy/metadata/sqlmodels/stg_payments:
     name: stg_payments
@@ -213,6 +228,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 12:54:43'
   .prophecy/metadata/sqlmodels/staging:
     name: staging
@@ -236,6 +254,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-12-11 09:05:31'
   .prophecy/metadata/sqlmodels/test_version_model:
     name: test_version_model
@@ -253,6 +274,9 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 13:26:55'
   .prophecy/metadata/sqlmodels/stg_customers:
     name: stg_customers
@@ -277,7 +301,12 @@ sqlModels:
     sqlDependencies:
       models: []
       datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
     createdAt: '2023-11-07 12:54:43'
+sqlSnapshots: {}
+sqlTests: {}
 sqlMacros:
   .prophecy/metadata/sqlmacros/amount_squared:
     name: amount_squared
