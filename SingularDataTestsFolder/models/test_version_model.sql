@@ -1,0 +1,19 @@
+WITH TABLE_10_BILLION_ROWS AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE.QA_SCHEMA', 'TABLE_10_BILLION_ROWS') }}
+
+),
+
+Reformat_4 AS (
+
+  SELECT C_INT AS C_INT
+  
+  FROM TABLE_10_BILLION_ROWS AS in0
+
+)
+
+SELECT *
+
+FROM Reformat_4

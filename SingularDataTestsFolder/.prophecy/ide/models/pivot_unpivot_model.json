@@ -1,0 +1,745 @@
+{
+  "id" : "pivot_unpivot_model",
+  "metainfo" : {
+    "label" : "pivot_unpivot_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "q2Y9eRU5NG6yUb5hkMFVD" : {
+      "id" : "q2Y9eRU5NG6yUb5hkMFVD",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "orders",
+        "slug" : "orders",
+        "x" : -520,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "orders",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "eBEcFDeAtTraEnjjMBgjY",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CREDIT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "COUPON_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "BANK_TRANSFER_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "GIFT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "JdfWyRMlydK2HtNveCbH8$$h_ERIHHzzx9F31ie6ii6_" : {
+      "id" : "JdfWyRMlydK2HtNveCbH8$$h_ERIHHzzx9F31ie6ii6_",
+      "component" : "Unpivot",
+      "metadata" : {
+        "label" : "Unpivot_2",
+        "slug" : "Unpivot_2",
+        "x" : 20,
+        "y" : -80,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "inputAlias" : "in02",
+        "expressions" : [ ],
+        "activeTab" : "unpivot",
+        "valueColumn" : {
+          "expression" : {
+            "expression" : "order_count"
+          }
+        },
+        "columnList" : [ {
+          "expression" : {
+            "expression" : "RETURNED"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "SHIPPED"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "COMPLETED"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "PLACED"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "RETURN_PENDING"
+          },
+          "alias" : ""
+        } ],
+        "nameColumn" : {
+          "expression" : {
+            "expression" : "order_status"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "r6E4PrtWhHAdbLz3n8kqM$$4FZg0cvWhU5pySQJ1mBKy",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "COMPLETED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "RETURN_PENDING",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "PLACED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "RETURNED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SHIPPED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in02"
+        } ],
+        "outputs" : [ {
+          "id" : "zT8EqN-2OkEM6o1zgCGsS$$a1Sw5llXM_pGlOD8HmVHE",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "s97VZopE7ZWiTykYWNu_P$$Q9KBwYlRO2eOL9Epd43lg" : {
+      "id" : "s97VZopE7ZWiTykYWNu_P$$Q9KBwYlRO2eOL9Epd43lg",
+      "component" : "Pivot",
+      "metadata" : {
+        "label" : "order_status_pivot",
+        "slug" : "order_status_pivot",
+        "x" : -160,
+        "y" : -80,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "inputAlias" : "in0",
+        "pivotColumnValues" : [ {
+          "expression" : {
+            "expression" : "'completed'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'return_pending'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'placed'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'returned'"
+          },
+          "alias" : ""
+        }, {
+          "expression" : {
+            "expression" : "'shipped'"
+          },
+          "alias" : ""
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID"
+        }, {
+          "expression" : {
+            "expression" : "\"'completed'\""
+          },
+          "alias" : "COMPLETED"
+        }, {
+          "expression" : {
+            "expression" : "\"'return_pending'\""
+          },
+          "alias" : "RETURN_PENDING"
+        }, {
+          "expression" : {
+            "expression" : "\"'placed'\""
+          },
+          "alias" : "PLACED"
+        }, {
+          "expression" : {
+            "expression" : "\"'returned'\""
+          },
+          "alias" : "RETURNED"
+        }, {
+          "expression" : {
+            "expression" : "\"'shipped'\""
+          },
+          "alias" : "SHIPPED"
+        } ],
+        "pivotColumn" : {
+          "expression" : {
+            "expression" : "STATUS"
+          }
+        },
+        "activeTab" : "pivot",
+        "aggregateExpression" : {
+          "expression" : {
+            "expression" : "COUNT( order_id )"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "83tot4P_QUo4nwoPeByuL$$Y1spaipoEmuq_JSjOjucy",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "vVeg42xbt471TvXH_xiqS$$_5hszaCL6m03YNHAKpnzV",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "COMPLETED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "RETURN_PENDING",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "PLACED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "RETURNED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SHIPPED",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg" : {
+      "id" : "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : -340,
+        "y" : -20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "QD4eQiRwXPsP63jTR3AWJ$$yi3rSRR28bEj6VI8dS565##ORDER_ID", "QD4eQiRwXPsP63jTR3AWJ$$yi3rSRR28bEj6VI8dS565##STATUS", "QD4eQiRwXPsP63jTR3AWJ$$yi3rSRR28bEj6VI8dS565##CUSTOMER_ID" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "ORDER_ID"
+          },
+          "alias" : "ORDER_ID"
+        }, {
+          "expression" : {
+            "expression" : "STATUS"
+          },
+          "alias" : "STATUS"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QD4eQiRwXPsP63jTR3AWJ$$yi3rSRR28bEj6VI8dS565",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CREDIT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "COUPON_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "BANK_TRANSFER_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "GIFT_CARD_AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "AMOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "rEefw0Et3WopejsTvmeXv$$XYQskeD2VEVmDekVYeKgA",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "sHskto0FNsNMx_I-x6_Qs$$kqDdkOYLakBDBELUvvSU5" : {
+      "id" : "sHskto0FNsNMx_I-x6_Qs$$kqDdkOYLakBDBELUvvSU5",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "reformatted_data_1",
+        "slug" : "reformatted_data_1",
+        "x" : -160,
+        "y" : 100,
+        "phase" : 0,
+        "macroDependencies" : [ "dbt_utils.pivot", "dbt_utils.get_column_values" ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID"
+        }, {
+          "expression" : {
+            "expression" : "{{ dbt_utils.pivot(column = 'STATUS', values = dbt_utils.get_column_values( ref('orders'), 'STATUS')) }}"
+          },
+          "alias" : ""
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "8KINMkCmCGhk_o9YJnrKQ$$lUDmBDflEUkiwc7PW8MkA##CUSTOMER_ID" ],
+        "groupBy" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8KINMkCmCGhk_o9YJnrKQ$$lUDmBDflEUkiwc7PW8MkA",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "zu2Ett5wa8B3eirNTBgvN$$nB64UWOeLOB3qMffKXydQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "pivot_unpivot_model##feXbqdMQ" : {
+      "id" : "pivot_unpivot_model##feXbqdMQ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "pivot_unpivot_model",
+        "x" : 220,
+        "y" : -80,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Unpivot_2\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CMBUp7be",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "Unpivot_2"
+        } ],
+        "outputs" : [ {
+          "id" : "rcHVUtwj",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ORDER_COUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "zN6U9ptxGlrEily2eLra7$$eu5j1hOihOIVzDOu0lm2g" : {
+      "id" : "zN6U9ptxGlrEily2eLra7$$eu5j1hOihOIVzDOu0lm2g",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "reformatted_data",
+        "slug" : "reformatted_data",
+        "x" : -160,
+        "y" : -300,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "ORDER_ID"
+          },
+          "alias" : "ORDER_ID"
+        }, {
+          "expression" : {
+            "expression" : "STATUS"
+          },
+          "alias" : "STATUS"
+        }, {
+          "expression" : {
+            "expression" : "CUSTOMER_ID"
+          },
+          "alias" : "CUSTOMER_ID"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "nCsV5oRcEp13WnU9nFLZ_$$qowMTmL5YyMklY7TO39NZ##ORDER_ID", "nCsV5oRcEp13WnU9nFLZ_$$qowMTmL5YyMklY7TO39NZ##STATUS", "nCsV5oRcEp13WnU9nFLZ_$$qowMTmL5YyMklY7TO39NZ##CUSTOMER_ID" ],
+        "groupBy" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nCsV5oRcEp13WnU9nFLZ_$$qowMTmL5YyMklY7TO39NZ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "FiXHSdpxYXdSscSBxDFDz$$GaS9qHRayziMDmfRVF2cj",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ORDER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "52nGPNUKrmm9HFCiUtRNX$$OqZz9NdhIuoLXajQg-2ZM",
+    "source" : "q2Y9eRU5NG6yUb5hkMFVD",
+    "sourcePort" : "eBEcFDeAtTraEnjjMBgjY",
+    "target" : "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg",
+    "targetPort" : "QD4eQiRwXPsP63jTR3AWJ$$yi3rSRR28bEj6VI8dS565"
+  }, {
+    "id" : "83dboj50UNtif2ufdkzpv$$kjhNtMrM42NnTxngPVBOZ",
+    "source" : "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg",
+    "sourcePort" : "rEefw0Et3WopejsTvmeXv$$XYQskeD2VEVmDekVYeKgA",
+    "target" : "s97VZopE7ZWiTykYWNu_P$$Q9KBwYlRO2eOL9Epd43lg",
+    "targetPort" : "83tot4P_QUo4nwoPeByuL$$Y1spaipoEmuq_JSjOjucy"
+  }, {
+    "id" : "Q1aAd-2Sqp4vrRhx0pLWf",
+    "source" : "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg",
+    "sourcePort" : "rEefw0Et3WopejsTvmeXv$$XYQskeD2VEVmDekVYeKgA",
+    "target" : "zN6U9ptxGlrEily2eLra7$$eu5j1hOihOIVzDOu0lm2g",
+    "targetPort" : "nCsV5oRcEp13WnU9nFLZ_$$qowMTmL5YyMklY7TO39NZ"
+  }, {
+    "id" : "D4dnU903C0FtQ_oK8CFvN$$a4tqvecDAO2URp-3HXyFe",
+    "source" : "JdfWyRMlydK2HtNveCbH8$$h_ERIHHzzx9F31ie6ii6_",
+    "sourcePort" : "zT8EqN-2OkEM6o1zgCGsS$$a1Sw5llXM_pGlOD8HmVHE",
+    "target" : "pivot_unpivot_model##feXbqdMQ",
+    "targetPort" : "CMBUp7be"
+  }, {
+    "id" : "LSJ204WjmP9Qa4KU5ohtq",
+    "source" : "nVt25PVbfHoPMWYlJRdgz$$0qEAJBU2U7aq3iyxFd8Zg",
+    "sourcePort" : "rEefw0Et3WopejsTvmeXv$$XYQskeD2VEVmDekVYeKgA",
+    "target" : "sHskto0FNsNMx_I-x6_Qs$$kqDdkOYLakBDBELUvvSU5",
+    "targetPort" : "8KINMkCmCGhk_o9YJnrKQ$$lUDmBDflEUkiwc7PW8MkA"
+  }, {
+    "id" : "zw2oPumYd_3oukIZ4SeMG$$LmHYjfU9zbzbHJbc2b3QP",
+    "source" : "s97VZopE7ZWiTykYWNu_P$$Q9KBwYlRO2eOL9Epd43lg",
+    "sourcePort" : "vVeg42xbt471TvXH_xiqS$$_5hszaCL6m03YNHAKpnzV",
+    "target" : "JdfWyRMlydK2HtNveCbH8$$h_ERIHHzzx9F31ie6ii6_",
+    "targetPort" : "r6E4PrtWhHAdbLz3n8kqM$$4FZg0cvWhU5pySQJ1mBKy"
+  } ],
+  "component" : "Model"
+}

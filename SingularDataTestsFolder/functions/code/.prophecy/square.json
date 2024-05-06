@@ -1,0 +1,1 @@
+{"initCode":"import math","code":"def square(value: int):\n    return math.pow(value, 2)"}
