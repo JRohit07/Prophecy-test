@@ -9186,7 +9186,15 @@
     }, {
       "type" : "Database",
       "name" : "\"jaffle_shop\"",
-      "children" : [ ]
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "INFORMATION_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "PUBLIC",
+        "tables" : { }
+      } ]
     }, {
       "type" : "Database",
       "name" : "\"qa_database\"",
@@ -9194,7 +9202,19 @@
     }, {
       "type" : "Database",
       "name" : "\"qa_database_lower_case_only\"",
-      "children" : [ ]
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "INFORMATION_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "PUBLIC",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "\"qa_schema_lower_case\"",
+        "children" : [ ]
+      } ]
     } ]
   },
   "dependenciesContainer" : {

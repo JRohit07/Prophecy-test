@@ -305,26 +305,88 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2023-11-07 12:54:43'
-sqlSnapshots: {}
+sqlSnapshots:
+  .prophecy/metadata/sqlsnapshots/customer_snapshot:
+    name: customer_snapshot
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
+      - name: CREDIT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: COUPON_AMOUNT
+        dataType:
+          type: Number
+      - name: BANK_TRANSFER_AMOUNT
+        dataType:
+          type: Number
+      - name: GIFT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: AMOUNT
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - snapshots/customer_snapshot.sql
+    - .prophecy/ide/snapshots/customer_snapshot.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-07 09:12:33'
 sqlTests:
-  .prophecy/metadata/sqltests/CustomerDataTests:
-    name: CustomerDataTests
+  .prophecy/metadata/sqltests/ModelDataTests:
+    name: ModelDataTests
     description: null
     author: jrohit@prophecy.io
     files:
-    - tests/customer/customerData/CustomerDataTests.sql
-    - .prophecy/ide/tests/data/singular/CustomerDataTests.json
+    - tests/ModelDataTests.sql
+    - .prophecy/ide/tests/data/singular/ModelDataTests.json
     testType: SingularDataTest
-    createdAt: '2024-05-06 11:11:18'
-  .prophecy/metadata/sqltests/RawDataTest:
-    name: RawDataTest
+    createdAt: '2024-05-07 09:12:33'
+  .prophecy/metadata/sqltests/SnapShotDataTests:
+    name: SnapShotDataTests
     description: null
     author: jrohit@prophecy.io
     files:
-    - tests/customer/rawCustomerDataTeest/RawDataTest.sql
-    - .prophecy/ide/tests/data/singular/RawDataTest.json
+    - tests/SnapShotDataTests.sql
+    - .prophecy/ide/tests/data/singular/SnapShotDataTests.json
     testType: SingularDataTest
-    createdAt: '2024-05-06 11:14:27'
+    createdAt: '2024-05-07 09:12:33'
+  .prophecy/metadata/sqltests/customerDataTests:
+    name: customerDataTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/customerDataTests.sql
+    - .prophecy/ide/tests/data/singular/customerDataTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 06:05:44'
+  .prophecy/metadata/sqltests/emptySeedTests:
+    name: emptySeedTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/emptySeedTests.sql
+    - .prophecy/ide/tests/data/singular/emptySeedTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 09:16:00'
 sqlMacros:
   .prophecy/metadata/sqlmacros/amount_squared:
     name: amount_squared
@@ -391,6 +453,16 @@ sqlSeeds:
     files:
     - seeds/raw_orders.csv
     createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlseeds/emptySeed:
+    name: emptySeed
+    schema:
+      providerType: Snowflake
+      fields: []
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/emptySeed.csv
+    createdAt: '2024-05-07 06:06:01'
   .prophecy/metadata/sqlseeds/raw_payments:
     name: raw_payments
     schema:

@@ -1,24 +1,6 @@
-WITH raw_customers AS (
 
-  SELECT * 
-  
-  FROM {{ ref('raw_customers')}}
 
-),
-
-get_full_name_1 AS (
-
-  {{
-    HelloWorld_SQL.get_full_name(
-      customer = 'raw_customers', 
-      first_name = 'first_name', 
-      last_name = 'last_name'
-    )
-  }}
-
-),
-
-orders AS (
+WITH orders AS (
 
   SELECT * 
   
@@ -86,6 +68,26 @@ final AS (
      ON customers.customer_id = customer_orders.customer_id
   LEFT JOIN customer_payments
      ON customers.customer_id = customer_payments.customer_id
+
+),
+
+raw_customers AS (
+
+  SELECT * 
+  
+  FROM {{ ref('raw_customers')}}
+
+),
+
+get_full_name_1 AS (
+
+  {{
+    HelloWorld_SQL.get_full_name(
+      customer = 'raw_customers', 
+      first_name = 'first_name', 
+      last_name = 'last_name'
+    )
+  }}
 
 )
 
