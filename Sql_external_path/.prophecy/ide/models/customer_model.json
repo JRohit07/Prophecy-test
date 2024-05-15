@@ -137,8 +137,8 @@
       "metadata" : {
         "label" : "customer_seed",
         "slug" : "customer_seed",
-        "x" : -500,
-        "y" : -40,
+        "x" : -640,
+        "y" : -120,
         "phase" : 0
       },
       "properties" : {
