@@ -1,0 +1,115 @@
+name: ExternalSQLProject
+description: ''
+version: 0.0.1
+author: abhisheks+e2etests@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-05-15 08:33:11'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/customer_model:
+    name: customer_model
+    schema:
+      providerType: Databricks
+      fields:
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: phone
+        dataType:
+          type: Date
+      - name: email
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: account_open_date
+        dataType:
+          type: Date
+      - name: account_flags
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/customer_model.sql
+    - .prophecy/ide/models/customer_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-15 08:33:55'
+sqlSnapshots: {}
+sqlMacros: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/customer_seed:
+    name: customer_seed
+    schema:
+      providerType: Databricks
+      fields:
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: phone
+        dataType:
+          type: Date
+      - name: email
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: account_open_date
+        dataType:
+          type: Date
+      - name: account_flags
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - seeds/customer_seed.csv
+    createdAt: '2024-05-15 08:34:55'
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: abhisheks+e2etests@prophecy.io
+  createdAt: '2024-05-15 08:33:11'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
