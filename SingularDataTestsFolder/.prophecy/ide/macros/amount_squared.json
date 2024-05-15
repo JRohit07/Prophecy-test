@@ -1,0 +1,60 @@
+{
+  "amount_squared" : {
+    "name" : "amount_squared",
+    "macroType" : "expression",
+    "definition" : "{{ return(amount ** 4) }}",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ {
+        "name" : "amount",
+        "kind" : {
+          "type" : "value"
+        },
+        "optional" : false,
+        "isWorkflowNodeConfiguration" : false,
+        "isReferenced" : false
+      } ]
+    },
+    "description" : "Macro to return the amount squared 4 times",
+    "staleState" : "none",
+    "propertiesFile" : {
+      "name" : "macros",
+      "content" : "---\nversion: 2\nmacros:\n- name: \"get_full_name\"\n  description: \"gem to geenrate full name\"\n  arguments:\n  - name: \"customer\"\n    type: \"table\"\n    description: \"{\\\"ProphecyType\\\": \\\"table\\\"}\"\n  - name: \"first_name\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  - name: \"last_name\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  macroType: \"query\"\n- name: \"amount_squared\"\n  description: \"Macro to return the square of a given amount\"\n  arguments:\n  - name: \"amount\"\n    type: \"value\"\n    description: \"{\\\"ProphecyType\\\": \\\"value\\\"}\"\n  macroType: \"expression\"\n",
+      "path" : "HelloWorld_SQL/macros/macros.yml",
+      "projectConfiguration" : null,
+      "folderConfiguration" : {
+        "version" : 2,
+        "macros" : [ {
+          "name" : "get_full_name",
+          "description" : "gem to geenrate full name",
+          "arguments" : [ {
+            "name" : "customer",
+            "type" : "table",
+            "description" : "{\"ProphecyType\": \"table\"}"
+          }, {
+            "name" : "first_name",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          }, {
+            "name" : "last_name",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          } ],
+          "macroType" : "query"
+        }, {
+          "name" : "amount_squared",
+          "description" : "Macro to return the square of a given amount",
+          "arguments" : [ {
+            "name" : "amount",
+            "type" : "value",
+            "description" : "{\"ProphecyType\": \"value\"}"
+          } ],
+          "macroType" : "expression"
+        } ]
+      },
+      "packagesYml" : null,
+      "editable" : true
+    },
+    "version" : 0
+  }
+}

@@ -1,0 +1,23 @@
+---
+version: 2
+macros:
+- name: "get_full_name"
+  description: "gem to geenrate full name"
+  arguments:
+  - name: "customer"
+    type: "table"
+    description: "{\"ProphecyType\": \"table\"}"
+  - name: "first_name"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  - name: "last_name"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"
+- name: "amount_squared"
+  description: "Macro to return the amount squared 4 times"
+  arguments:
+  - name: "amount"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "expression"

@@ -1,0 +1,1074 @@
+name: HelloWorld_SQL
+description: ''
+version: v1
+author: null
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2023-10-27 09:27:35'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions:
+    airflowFunctions/square:
+      name: square
+      description: ''
+      tags: []
+      inputs: []
+      outputs: []
+      author: jrohit@prophecy.io
+      createdAt: '2022-12-15 18:04:50'
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/test_dynamic_table:
+    name: test_dynamic_table
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: FULL_NAME
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/test_dynamic_table.sql
+    - .prophecy/ide/models/test_dynamic_table.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-01-02 06:23:12'
+  .prophecy/metadata/sqlmodels/stg_orders:
+    name: stg_orders
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_orders.sql
+    - .prophecy/ide/models/stg_orders.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlmodels/pivot_unpivot_model:
+    name: pivot_unpivot_model
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_STATUS
+        dataType:
+          type: String
+      - name: ORDER_COUNT
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/pivot_unpivot_model.sql
+    - .prophecy/ide/models/pivot_unpivot_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-03-08 13:00:44'
+  .prophecy/metadata/sqlmodels/orders:
+    name: orders
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
+      - name: CREDIT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: COUPON_AMOUNT
+        dataType:
+          type: Number
+      - name: BANK_TRANSFER_AMOUNT
+        dataType:
+          type: Number
+      - name: GIFT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: AMOUNT
+        dataType:
+          type: Number
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
+    author: jrohit@prophecy.io
+    files:
+    - models/orders.sql
+    - .prophecy/ide/models/orders.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlmodels/customers:
+    name: customers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: FIRST_ORDER
+        dataType:
+          type: Date
+      - name: MOST_RECENT_ORDER
+        dataType:
+          type: Date
+      - name: NUMBER_OF_ORDERS
+        dataType:
+          type: Number
+      - name: CUSTOMER_LIFETIME_VALUE
+        dataType:
+          type: Number
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
+    author: jrohit@prophecy.io
+    files:
+    - models/customers.sql
+    - .prophecy/ide/models/customers.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlmodels/stg_payments:
+    name: stg_payments
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: PAYMENT_ID
+        dataType:
+          type: Number
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: PAYMENT_METHOD
+        dataType:
+          type: String
+      - name: AMOUNT
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_payments.sql
+    - .prophecy/ide/models/stg_payments.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlmodels/staging:
+    name: staging
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/staging.sql
+    - .prophecy/ide/models/staging.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-12-11 09:05:31'
+  .prophecy/metadata/sqlmodels/test_version_model:
+    name: test_version_model
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: C_INT
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/test_version_model.sql
+    - .prophecy/ide/models/test_version_model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 13:26:55'
+  .prophecy/metadata/sqlmodels/stg_customers:
+    name: stg_customers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/staging/stg_customers.sql
+    - .prophecy/ide/models/stg_customers.json
+    - models/staging/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2023-11-07 12:54:43'
+sqlSnapshots:
+  .prophecy/metadata/sqlsnapshots/customer_snapshot:
+    name: customer_snapshot
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: ORDER_ID
+        dataType:
+          type: Number
+      - name: CUSTOMER_ID
+        dataType:
+          type: Number
+      - name: ORDER_DATE
+        dataType:
+          type: Date
+      - name: STATUS
+        dataType:
+          type: String
+      - name: CREDIT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: COUPON_AMOUNT
+        dataType:
+          type: Number
+      - name: BANK_TRANSFER_AMOUNT
+        dataType:
+          type: Number
+      - name: GIFT_CARD_AMOUNT
+        dataType:
+          type: Number
+      - name: AMOUNT
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - snapshots/customer_snapshot.sql
+    - .prophecy/ide/snapshots/customer_snapshot.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-05-07 09:12:33'
+sqlTests:
+  .prophecy/metadata/sqltests/ModelDataTests:
+    name: ModelDataTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/ModelDataTests.sql
+    - .prophecy/ide/tests/data/singular/ModelDataTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 09:12:33'
+  .prophecy/metadata/sqltests/SnapShotDataTests:
+    name: SnapShotDataTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/SnapShotDataTests.sql
+    - .prophecy/ide/tests/data/singular/SnapShotDataTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 09:12:33'
+  .prophecy/metadata/sqltests/customerDataTests:
+    name: customerDataTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/customerDataTests.sql
+    - .prophecy/ide/tests/data/singular/customerDataTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 06:05:44'
+  .prophecy/metadata/sqltests/emptySeedTests:
+    name: emptySeedTests
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/emptySeedTests.sql
+    - .prophecy/ide/tests/data/singular/emptySeedTests.json
+    testType: SingularDataTest
+    createdAt: '2024-05-07 09:16:00'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/amount_squared:
+    name: amount_squared
+    macroType: expression
+    description: Macro to return the amount squared 4 times
+    author: jrohit@prophecy.io
+    files:
+    - macros/amount_squared.sql
+    - .prophecy/ide/macros/amount_squared.json
+    - macros/macros.yml
+    createdAt: '2024-02-14 08:19:47'
+  .prophecy/metadata/sqlmacros/get_full_name:
+    name: get_full_name
+    macroType: query
+    description: gem to geenrate full name
+    author: jrohit@prophecy.io
+    files:
+    - macros/get_full_name.sql
+    - .prophecy/ide/macros/get_full_name.json
+    - macros/macros.yml
+    createdAt: '2024-02-14 08:00:57'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/dummy_seed:
+    name: dummy_seed
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: version
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/dummy_seed.csv
+    createdAt: '2023-11-07 13:21:07'
+  .prophecy/metadata/sqlseeds/raw_orders:
+    name: raw_orders
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: user_id
+        dataType:
+          type: Number
+      - name: order_date
+        dataType:
+          type: Date
+      - name: status
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_orders.csv
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlseeds/emptySeed:
+    name: emptySeed
+    schema:
+      providerType: Snowflake
+      fields: []
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/emptySeed.csv
+    createdAt: '2024-05-07 06:06:01'
+  .prophecy/metadata/sqlseeds/raw_payments:
+    name: raw_payments
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: order_id
+        dataType:
+          type: Number
+      - name: payment_method
+        dataType:
+          type: String
+      - name: amount
+        dataType:
+          type: Number
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_payments.csv
+    createdAt: '2023-11-07 12:54:43'
+  .prophecy/metadata/sqlseeds/testSnapshotSeed:
+    name: testSnapshotSeed
+    schema:
+      providerType: Snowflake
+      fields: []
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/testSnapshotSeed.csv
+    createdAt: '2024-02-16 09:15:24'
+  .prophecy/metadata/sqlseeds/numbers:
+    name: numbers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: amount
+        dataType:
+          type: Float
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/numbers.csv
+    createdAt: '2024-02-14 08:17:41'
+  .prophecy/metadata/sqlseeds/raw_customers:
+    name: raw_customers
+    schema:
+      providerType: Snowflake
+      fields:
+      - name: id
+        dataType:
+          type: Number
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/raw_customers.csv
+    createdAt: '2023-11-07 12:54:43'
+sqlSources:
+  .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
+    name: QA_DATABASE.QA_SCHEMA
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-01-02 08:26:33'
+    tables:
+    - name: ALL_TYPE_TABLE_100K_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 08:26:33'
+    - name: ALL_TYPE_TABLE_1MILLION_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 08:31:17'
+    - name: ALL_TYPE_TABLE_10MILLION_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 08:37:10'
+    - name: ALL_TYPE_TABLE_100MILLION_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 08:37:43'
+    - name: ALL_TYPE_TABLE_1BILLION_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_NUM
+          dataType:
+            type: Number
+        - name: C_NUM10
+          dataType:
+            type: Number
+        - name: C_DEC
+          dataType:
+            type: Number
+        - name: C_NUMERIC
+          dataType:
+            type: Number
+        - name: C_INT
+          dataType:
+            type: Number
+        - name: C_INTEGER
+          dataType:
+            type: Number
+        - name: C_DOUBLE
+          dataType:
+            type: Float
+        - name: C_FLOAT
+          dataType:
+            type: Float
+        - name: C_COUBLE_PRECISION
+          dataType:
+            type: Float
+        - name: C_REAL
+          dataType:
+            type: Float
+        - name: C_VARCHAR
+          dataType:
+            type: String
+        - name: C_VARCHAR50
+          dataType:
+            type: String
+        - name: C_CHAR
+          dataType:
+            type: String
+        - name: C_CHAR10
+          dataType:
+            type: String
+        - name: C_STRING
+          dataType:
+            type: String
+        - name: C_STRING20
+          dataType:
+            type: String
+        - name: C_TEXT
+          dataType:
+            type: String
+        - name: C_TEXT30
+          dataType:
+            type: String
+        - name: C_BINARY
+          dataType:
+            type: Binary
+        - name: C_BINARY100
+          dataType:
+            type: Binary
+        - name: C_VARBINARY
+          dataType:
+            type: Binary
+        - name: C_BOOL
+          dataType:
+            type: Boolean
+        - name: C_TIMESTAMP
+          dataType:
+            type: Timestamp
+        - name: C_DATE
+          dataType:
+            type: Date
+        - name: C_DATETIME
+          dataType:
+            type: Timestamp
+        - name: C_TIME
+          dataType:
+            type: Time
+        - name: C_TIMESTAMPLTZ
+          dataType:
+            type: Timestamp
+        - name: C_TIMESTAMP_NTZ
+          dataType:
+            type: Timestamp
+        - name: C_VARIANT
+          dataType:
+            type: Variant
+        - name: C_ARRAY
+          dataType:
+            type: Array
+        - name: C_OBJECT
+          dataType:
+            type: Object
+        - name: C_GEOGRAPHY
+          dataType:
+            type: Geography
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 09:53:55'
+    - name: TABLE_10_BILLION_ROWS
+      schema:
+        providerType: snowflake
+        fields:
+        - name: C_INT
+          dataType:
+            type: Number
+      description: null
+      author: jrohit@prophecy.io
+      createdAt: '2024-01-02 10:23:14'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: jrohit@prophecy.io
+  createdAt: '2023-10-27 09:27:35'
+dependencies: '[]'
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
