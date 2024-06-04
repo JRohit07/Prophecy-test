@@ -1,1 +1,0 @@
-# Snowflake_Project_external Repository
