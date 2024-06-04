@@ -1,6 +1,6 @@
 name: Snowflake_Project_external
 description: ''
-version: 0.0.1
+version: v1
 author: jrohit+e2e@prophecy.io
 language: sql
 buildSystem: ''
