@@ -142,17 +142,7 @@ sqlModels:
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros: {}
-sqlSeeds:
-  .prophecy/metadata/sqlseeds/customer_seed:
-    name: customer_seed
-    schema:
-      providerType: Snowflake
-      fields: []
-    description: null
-    author: jrohit+e2e@prophecy.io
-    files:
-    - seeds/customer_seed.csv
-    createdAt: '2024-06-04 09:29:47'
+sqlSeeds: {}
 sqlSources:
   .prophecy/metadata/sqlsources/QA_DATABASE_QA_SCHEMA:
     name: QA_DATABASE.QA_SCHEMA
