@@ -1,0 +1,180 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "10795",
+    "jobId" : "jobs/Airflow_job_composer_sql_databricks_job",
+    "name" : "Airflow_job_composer_sql_databricks_job",
+    "dagName" : "test_jrohit_e2e_databricks_sql_project_external_Airflow_job_composer_sql_databricks_job",
+    "schedule" : "None",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "6653",
+      "name" : "Airflow_mwaa"
+    }, {
+      "id" : "10795",
+      "name" : "AirflowComposer253"
+    } ],
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "cYJoT39894hxkf9S-cFJp$$rXUhsJ4TSSMLNphcgQVIF" : {
+      "id" : "cYJoT39894hxkf9S-cFJp$$rXUhsJ4TSSMLNphcgQVIF",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : -40,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9WyKpSzngDpOrZ-JfN4xo$$j0F2PA94u092bO4JSnRyw",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "q3Tp5Aj4iazDbaCz2Pvj5$$2ErKR1QM_QnUTIq13vOwT",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "runSnapshots" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "46683",
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "10797",
+        "gitEntityValue" : "dev2",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : "dev2",
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "customer_orders",
+          "value" : "customer_orders",
+          "id" : "46683/.prophecy/metadata/sqlmodels/customer_orders",
+          "name" : "customer_orders"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "mGpAC-F6EmYnET9n0ZeQ-$$xc1Y7nfb-P-S95PqERq06" : {
+      "id" : "mGpAC-F6EmYnET9n0ZeQ-$$xc1Y7nfb-P-S95PqERq06",
+      "component" : "SFTPSensor",
+      "metadata" : {
+        "label" : "SFTPSensor_1",
+        "slug" : "SFTPSensor_1",
+        "x" : -240,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "XrG1ID-fzPTiNEPydMMcw$$pkstaR7pvP6umAv2epWPe",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "MWPZxla2IHLh8z2_j4Poj$$W9BWv4xm46CW9B92ciBe6",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "file_pattern" : "*.csv",
+        "pokeInterval" : 60,
+        "sftpConnectionId" : "sftp_ashish",
+        "use_file_pattern" : true,
+        "file_path" : "sftp_user/QA/",
+        "timeout" : 600,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "d9YHkUms1tn5C010uyACc$$onVhVzgCkKbb3emTM3E5Z",
+    "source" : "mGpAC-F6EmYnET9n0ZeQ-$$xc1Y7nfb-P-S95PqERq06",
+    "target" : "cYJoT39894hxkf9S-cFJp$$rXUhsJ4TSSMLNphcgQVIF",
+    "sourcePort" : "MWPZxla2IHLh8z2_j4Poj$$W9BWv4xm46CW9B92ciBe6",
+    "targetPort" : "9WyKpSzngDpOrZ-JfN4xo$$j0F2PA94u092bO4JSnRyw"
+  } ]
+}
