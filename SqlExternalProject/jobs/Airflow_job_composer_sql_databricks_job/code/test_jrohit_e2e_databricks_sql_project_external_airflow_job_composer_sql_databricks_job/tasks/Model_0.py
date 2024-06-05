@@ -14,11 +14,11 @@ def Model_0():
                "set -euxo pipefail && tmpDir=`mktemp -d` && git clone "
                + "{} --branch {} --single-branch $tmpDir".format(
                  "https://github.com/JRohit07/Prophecy-test",
-                 "dev2"
+                 "main"
                )
              ),
              "SqlExternalProject"
-           ),            "dbt seed --profile run_profile",  "dbt run --profile run_profile",  "dbt test --profile run_profile"]
+           ),            "dbt seed --profile run_profile -m customer_orders",            "dbt run --profile run_profile -m customer_orders",            "dbt test --profile run_profile -m customer_orders"]
         ),
         env = {"DBT_DATABRICKS_INVOCATION_ENV" : "prophecy", "DBT_PROFILES_DIR" : "/home/airflow/gcs/data"},
         append_env = True,
