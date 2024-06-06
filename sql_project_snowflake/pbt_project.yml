@@ -1,6 +1,6 @@
 name: sql_snowflake_external
 description: ''
-version: 0.0.1
+version: v12
 author: null
 language: sql
 buildSystem: ''
