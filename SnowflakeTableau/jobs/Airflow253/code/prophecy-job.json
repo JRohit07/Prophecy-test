@@ -1,0 +1,217 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "10795",
+    "jobId" : "jobs/Airflow253",
+    "name" : "Airflow253",
+    "dagName" : "test_jrohit_e2e_Snowflake_Project_external_Airflow253",
+    "schedule" : "None",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "6653",
+      "name" : "Airflow_mwaa"
+    }, {
+      "id" : "10795",
+      "name" : "AirflowComposer253"
+    } ],
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "tags" : [ ],
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "TUtbM38UpGRTtRLUzBXkm$$PoeAFudS_ibJQ2thG7EWv" : {
+      "id" : "TUtbM38UpGRTtRLUzBXkm$$PoeAFudS_ibJQ2thG7EWv",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_1",
+        "slug" : "Model_1",
+        "x" : -260,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MuOmH-HFY1R8BPv39rvlj$$2bkGnAlvOxlO6s9uwofvH",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "VVbpY7h1G9Pjs7MgzZAil$$d-VuvNI3mGfK6qQnRG1lX",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : "customers_by_country",
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : true,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : false,
+        "runSnapshots" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "46601",
+        "runMode" : "model",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "10796",
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "adakeK5r5RK7n7fv6LVhZ$$ji7tTDbneuoQkNI33kjNs" : {
+      "id" : "adakeK5r5RK7n7fv6LVhZ$$ji7tTDbneuoQkNI33kjNs",
+      "component" : "SFTPToSnowflake",
+      "metadata" : {
+        "label" : "SFTPToSnowflake_1",
+        "slug" : "SFTPToSnowflake_1",
+        "x" : -460,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0Y1EoWb4TKcFAQNOYpZxi$$YSQt85RwK3GZCIhKMHNws",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "qYGlPTfuJX0G0HZXz3ghp$$dkfnbJlGEff5gFUmi18oY",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "sftp_operation" : "put",
+        "snowflake_conn_id" : "snowflake_CICD_253",
+        "file_format" : "CSV",
+        "write_mode" : "APPEND",
+        "sftp_conn_id" : "sftp_ashish",
+        "sftp_file_path" : "/sftp_user/QA/CustomersDatasetInput.csv",
+        "csv_field_delimiter" : ",",
+        "snowflake_table" : "CUSTOMER_DATA_QA",
+        "csv_header_settings" : "PARSE_HEADER",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "Mz555sZSEwbkmvVWBtiiv$$VHpifXk4BJy-m8pAyKR3_" : {
+      "id" : "Mz555sZSEwbkmvVWBtiiv$$VHpifXk4BJy-m8pAyKR3_",
+      "component" : "SFTPSensor",
+      "metadata" : {
+        "label" : "SFTPSensor_0",
+        "slug" : "SFTPSensor_0",
+        "x" : -660,
+        "y" : -100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "PvOtPcDEwtM1QO8RtZ7gk$$gcAUovPcbaJs5ev5WzG1d",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "C-w_hIUq0EbsHwrEFatwg$$CGfq2bBUNYCWLlkI1MueZ",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "file_pattern" : null,
+        "pokeInterval" : 60,
+        "sftpConnectionId" : "sftp_ashish",
+        "use_file_pattern" : false,
+        "file_path" : "/sftp_user/QA/CustomersDatasetInput.csv",
+        "timeout" : 600,
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "Gix-VByYDkTP6gKhXz0qt$$JlL28bRFqg-jko98MUxVI",
+    "source" : "Mz555sZSEwbkmvVWBtiiv$$VHpifXk4BJy-m8pAyKR3_",
+    "target" : "adakeK5r5RK7n7fv6LVhZ$$ji7tTDbneuoQkNI33kjNs",
+    "sourcePort" : "C-w_hIUq0EbsHwrEFatwg$$CGfq2bBUNYCWLlkI1MueZ",
+    "targetPort" : "0Y1EoWb4TKcFAQNOYpZxi$$YSQt85RwK3GZCIhKMHNws"
+  }, {
+    "id" : "O7yATCX4epmH1Oh3fzzuX",
+    "source" : "adakeK5r5RK7n7fv6LVhZ$$ji7tTDbneuoQkNI33kjNs",
+    "target" : "TUtbM38UpGRTtRLUzBXkm$$PoeAFudS_ibJQ2thG7EWv",
+    "sourcePort" : "qYGlPTfuJX0G0HZXz3ghp$$dkfnbJlGEff5gFUmi18oY",
+    "targetPort" : "MuOmH-HFY1R8BPv39rvlj$$2bkGnAlvOxlO6s9uwofvH"
+  } ]
+}

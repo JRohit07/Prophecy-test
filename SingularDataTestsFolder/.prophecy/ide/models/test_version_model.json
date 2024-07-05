@@ -1,0 +1,173 @@
+{
+  "id" : "test_version_model",
+  "metainfo" : {
+    "label" : "test_version_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "yoD4GpUnYnEFROJjNzScA$$PgJKzH2dKVslCC6JI9KNa" : {
+      "id" : "yoD4GpUnYnEFROJjNzScA$$PgJKzH2dKVslCC6JI9KNa",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_4",
+        "slug" : "Reformat_4",
+        "x" : 220,
+        "y" : 760,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "BGR0lFwE-n_RdR5MeOYTU$$N40AdtaH4Dm8oGDryP-NF##C_INT" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "C_INT"
+          },
+          "alias" : "C_INT"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BGR0lFwE-n_RdR5MeOYTU$$N40AdtaH4Dm8oGDryP-NF",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "b2lg9467LfB9UH-VfCuXA$$gU9z2E1IK1tciD6bS_LD2",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "KIfTinKKpcagdBREehULo" : {
+      "id" : "KIfTinKKpcagdBREehULo",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "TABLE_10_BILLION_ROWS",
+        "slug" : "TABLE_10_BILLION_ROWS",
+        "x" : 20,
+        "y" : 760,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "TABLE_10_BILLION_ROWS",
+          "sourceType" : "Source",
+          "sourceName" : "QA_DATABASE.QA_SCHEMA",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SgHTC8IClf1aANgVlCWed",
+          "schema" : {
+            "providerType" : "snowflake",
+            "fields" : [ {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "test_version_model##yaVBOybJ" : {
+      "id" : "test_version_model##yaVBOybJ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test_version_model",
+        "x" : 420,
+        "y" : 760,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Reformat_4\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "vSNxLEEw",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "Reformat_4"
+        } ],
+        "outputs" : [ {
+          "id" : "Phgtujji",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "3geJYIujSi8cMLl8Vgur2$$PUSSx9ydbzlZb9PIvS_tU",
+    "source" : "KIfTinKKpcagdBREehULo",
+    "sourcePort" : "SgHTC8IClf1aANgVlCWed",
+    "target" : "yoD4GpUnYnEFROJjNzScA$$PgJKzH2dKVslCC6JI9KNa",
+    "targetPort" : "BGR0lFwE-n_RdR5MeOYTU$$N40AdtaH4Dm8oGDryP-NF"
+  }, {
+    "id" : "BgLfe1ydDTNk1FFUH78wy",
+    "source" : "yoD4GpUnYnEFROJjNzScA$$PgJKzH2dKVslCC6JI9KNa",
+    "sourcePort" : "b2lg9467LfB9UH-VfCuXA$$gU9z2E1IK1tciD6bS_LD2",
+    "target" : "test_version_model##yaVBOybJ",
+    "targetPort" : "vSNxLEEw"
+  } ],
+  "component" : "Model"
+}

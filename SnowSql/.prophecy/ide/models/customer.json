@@ -1,0 +1,376 @@
+{
+  "id" : "customer",
+  "metainfo" : {
+    "label" : "customer",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "customer##GBqGxgwm" : {
+      "id" : "customer##GBqGxgwm",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customer",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "whFWUsoG",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "seed"
+        } ],
+        "outputs" : [ {
+          "id" : "LVQwwDy0",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "YajsECgmchKgPf3KTXDXM" : {
+      "id" : "YajsECgmchKgPf3KTXDXM",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "seed",
+        "slug" : "seed",
+        "x" : -160,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "bpNkkNmyOJIOzxi4unn-P",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "CUrcqd-saG5ZaigZO6QWv$$z4bvtxXube19IchB60VtO" : {
+      "id" : "CUrcqd-saG5ZaigZO6QWv$$z4bvtxXube19IchB60VtO",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "seed_data",
+        "slug" : "seed_data",
+        "x" : -60,
+        "y" : -100,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "columnsSelector" : [ "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##customer_id", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##last_name", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##phone", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##first_name", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##country_code", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##email", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##account_open_date", "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj##account_flags" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "customer_id"
+          },
+          "alias" : "customer_id"
+        }, {
+          "expression" : {
+            "expression" : "last_name"
+          },
+          "alias" : "last_name"
+        }, {
+          "expression" : {
+            "expression" : "phone"
+          },
+          "alias" : "phone"
+        }, {
+          "expression" : {
+            "expression" : "first_name"
+          },
+          "alias" : "first_name"
+        }, {
+          "expression" : {
+            "expression" : "country_code"
+          },
+          "alias" : "country_code"
+        }, {
+          "expression" : {
+            "expression" : "email"
+          },
+          "alias" : "email"
+        }, {
+          "expression" : {
+            "expression" : "account_open_date"
+          },
+          "alias" : "account_open_date"
+        }, {
+          "expression" : {
+            "expression" : "account_flags"
+          },
+          "alias" : "account_flags"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "lpCIBsdKVr38y_FAnz2Z6$$rAYOoXfGoKpRYDjMmzq5X",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY_CODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ACCOUNT_OPEN_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "ACCOUNT_FLAGS",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "G07sOc6y_EKWv3idY6X8E$$ODZ0KMzpNuWojxCpb1NPk",
+    "source" : "YajsECgmchKgPf3KTXDXM",
+    "sourcePort" : "bpNkkNmyOJIOzxi4unn-P",
+    "target" : "customer##GBqGxgwm",
+    "targetPort" : "whFWUsoG"
+  }, {
+    "id" : "ANmv8R9MJXr1XCAujchIv",
+    "source" : "YajsECgmchKgPf3KTXDXM",
+    "sourcePort" : "bpNkkNmyOJIOzxi4unn-P",
+    "target" : "CUrcqd-saG5ZaigZO6QWv$$z4bvtxXube19IchB60VtO",
+    "targetPort" : "NVM-UIXg4lIAd1YeTZIk7$$nbGLuk9CtiEnG_SuwddSj"
+  } ],
+  "component" : "Model"
+}

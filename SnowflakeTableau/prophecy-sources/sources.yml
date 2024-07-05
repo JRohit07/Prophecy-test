@@ -1,0 +1,83 @@
+---
+version: 2
+sources:
+- name: "QA_DATABASE.QA_SCHEMA"
+  database: "QA_DATABASE"
+  schema: "QA_SCHEMA"
+  config:
+    enabled: true
+  tables:
+  - name: "CUSTOMER"
+    description: "Customer data including their personal information, contact details,\
+      \ account details, and account flags. This dataset provides insights into customer\
+      \ profiles and account information."
+    columns:
+    - name: "CUSTOMER_ID"
+      description: "Unique identifier for the customer"
+      tags: []
+      dataType:
+        type: "Number"
+    - name: "FIRST_NAME"
+      description: "The first name of the customer"
+      tags: []
+      dataType:
+        type: "String"
+    - name: "LAST_NAME"
+      description: "The last name of the customer"
+      tags: []
+      dataType:
+        type: "String"
+    - name: "PHONE"
+      description: "The phone number associated with the customer"
+      tags: []
+      dataType:
+        type: "String"
+    - name: "EMAIL"
+      description: "The email address associated with the customer's account"
+      tags: []
+      dataType:
+        type: "String"
+    - name: "COUNTRY_CODE"
+      description: "The country code associated with the customer's location"
+      tags: []
+      dataType:
+        type: "String"
+    - name: "ACCOUNT_OPEN_DATE"
+      description: "The date when the customer's account was opened"
+      tags: []
+      dataType:
+        type: "Date"
+    - name: "ACCOUNT_FLAGS"
+      description: "Flags associated with the customer's account"
+      tags: []
+      dataType:
+        type: "String"
+  - name: "ORDERS"
+    columns:
+    - name: "ORDER_ID"
+      dataType:
+        type: "Number"
+    - name: "CUSTOMER_ID"
+      dataType:
+        type: "Number"
+    - name: "ORDER_DATE"
+      dataType:
+        type: "Date"
+    - name: "STATUS"
+      dataType:
+        type: "String"
+    - name: "CREDIT_CARD_AMOUNT"
+      dataType:
+        type: "Number"
+    - name: "COUPON_AMOUNT"
+      dataType:
+        type: "Number"
+    - name: "BANK_TRANSFER_AMOUNT"
+      dataType:
+        type: "Number"
+    - name: "GIFT_CARD_AMOUNT"
+      dataType:
+        type: "Number"
+    - name: "AMOUNT"
+      dataType:
+        type: "Number"

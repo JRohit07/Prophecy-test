@@ -1,0 +1,115 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "8598",
+    "jobId" : "jobs/Databricks_Job",
+    "name" : "Databricks_Job",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : true,
+    "defaultClusterSize" : "small_job",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "10365",
+      "name" : "Non_admin_fabric",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "8598",
+      "name" : "dbx_uc",
+      "clusterSizes" : {
+        "default" : "small_job",
+        "availableClusterSizes" : [ "small_job" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    }, {
+      "id" : "4658",
+      "name" : "databricks",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small", "3_5_0_version" ]
+      },
+      "pylibsResolutionMode" : {
+        "PublicCentral" : { }
+      },
+      "scalalibsResolutionMode" : {
+        "PublicCentral" : { }
+      }
+    } ]
+  },
+  "processes" : {
+    "0ktW_jjhPvBUNK8Cy89fj$$hVbrC1qp0_9uxo9TY4KBS" : {
+      "id" : "0ktW_jjhPvBUNK8Cy89fj$$hVbrC1qp0_9uxo9TY4KBS",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : -180,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EtXhY6cAqN4RGZpLCNoQA$$ORUFaiFaSg6hN37IsjM_D",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "tZAoF3d4NMPhFfSNXC_gG$$dR5hl52WeJJ0Itn0vd6TF",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/Pipeline",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "Repro_DBX_UC" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}
