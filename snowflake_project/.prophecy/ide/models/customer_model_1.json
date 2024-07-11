@@ -1,0 +1,2280 @@
+{
+  "id" : "customer_model_1",
+  "metainfo" : {
+    "label" : "customer_model_1",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "ALL_TYPE_TABLE",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "ALL_TYPE_TABLE",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_TABLE",
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY = ALL_TYPE_TABLE.C_ARRAY AND customer_orders_1.C_BINARY = ALL_TYPE_TABLE.C_BINARY AND customer_orders_1.C_BINARY100 = ALL_TYPE_TABLE.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "ALL_TYPE_TABLE",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "ALL_TYPE_TABLE_100MILLION_ROWS",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "ALL_TYPE_TABLE_100MILLION_ROWS",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "ALL_TYPE_TABLE_100MILLION_ROWS",
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY = ALL_TYPE_TABLE_100MILLION_ROWS.C_ARRAY AND customer_orders_1.C_BINARY = ALL_TYPE_TABLE_100MILLION_ROWS.C_BINARY AND customer_orders_1.C_BINARY100 = ALL_TYPE_TABLE_100MILLION_ROWS.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "ALL_TYPE_TABLE_100MILLION_ROWS",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "SANITY_SIMPLE_MODEL_1",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "SANITY_SIMPLE_MODEL_1",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+            "conditions" : [ {
+              "alias" : "SANITY_SIMPLE_MODEL_1",
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY = SANITY_SIMPLE_MODEL_1.C_ARRAY AND customer_orders_1.C_BINARY = SANITY_SIMPLE_MODEL_1.C_BINARY AND customer_orders_1.C_BINARY100 = SANITY_SIMPLE_MODEL_1.C_BINARY100"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "SANITY_SIMPLE_MODEL_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_ARRAY", "C_BINARY", "C_BINARY100" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_STRING", "C_FLOAT" ],
+            "conditions" : [ {
+              "alias" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED.C_BOOL AND customer_orders_1.C_FLOAT = TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED.C_FLOAT64 AND customer_orders_1.C_STRING = TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED.C_INT64"
+              },
+              "alias" : "C_INT64"
+            }, {
+              "expression" : {
+                "expression" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTMODELSCHDRUN_AUTOMATION_SNOWFLAKE_PROJECT_AIRFLOWSCHEDULED",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_STRING", "C_FLOAT" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTSEED_PARTIAL_1699380524358",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTSEED_PARTIAL_1699380524358",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TESTSEED_PARTIAL_1699380524358",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTSEED_PARTIAL_1699380524358.C_BOOL AND customer_orders_1.C_INT = TESTSEED_PARTIAL_1699380524358.C_INT AND customer_orders_1.C_STRING = TESTSEED_PARTIAL_1699380524358.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1699380524358.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1699380524358.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTSEED_PARTIAL_1699380524358",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "NEW",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "NEW",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_INT" ],
+            "conditions" : [ {
+              "alias" : "NEW",
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT = NEW.C_INT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "NEW.UUID"
+              },
+              "alias" : "UUID"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "NEW",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_INT" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTSEED_PARTIAL_1699513497908",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTSEED_PARTIAL_1699513497908",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TESTSEED_PARTIAL_1699513497908",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTSEED_PARTIAL_1699513497908.C_BOOL AND customer_orders_1.C_INT = TESTSEED_PARTIAL_1699513497908.C_INT AND customer_orders_1.C_STRING = TESTSEED_PARTIAL_1699513497908.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1699513497908.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1699513497908.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTSEED_PARTIAL_1699513497908",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTSEED_PARTIAL_1704918591677",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTSEED_PARTIAL_1704918591677",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TESTSEED_PARTIAL_1704918591677",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTSEED_PARTIAL_1704918591677.C_BOOL AND customer_orders_1.C_INT = TESTSEED_PARTIAL_1704918591677.C_INT AND customer_orders_1.C_STRING = TESTSEED_PARTIAL_1704918591677.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1704918591677.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1704918591677.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTSEED_PARTIAL_1704918591677",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTSEED_PARTIAL_1717664426274",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTSEED_PARTIAL_1717664426274",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TESTSEED_PARTIAL_1717664426274",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTSEED_PARTIAL_1717664426274.C_BOOL AND customer_orders_1.C_INT = TESTSEED_PARTIAL_1717664426274.C_INT AND customer_orders_1.C_STRING = TESTSEED_PARTIAL_1717664426274.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1717664426274.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1717664426274.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTSEED_PARTIAL_1717664426274",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "TESTSEED_PARTIAL_1719281850438",
+            "sourceName" : "QA_DATABASE.QA_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "TESTSEED_PARTIAL_1719281850438",
+        "canJoinWith" : [ {
+          "processLabel" : "customer_orders_1",
+          "processId" : "BnciAmNrQvW_iPHhu_igH",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "C_BOOL", "C_INT", "C_STRING" ],
+            "conditions" : [ {
+              "alias" : "TESTSEED_PARTIAL_1719281850438",
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL = TESTSEED_PARTIAL_1719281850438.C_BOOL AND customer_orders_1.C_INT = TESTSEED_PARTIAL_1719281850438.C_INT AND customer_orders_1.C_STRING = TESTSEED_PARTIAL_1719281850438.C_STRING"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1719281850438.C_BIGNUMERIC"
+              },
+              "alias" : "C_BIGNUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "TESTSEED_PARTIAL_1719281850438.C_FLOAT64"
+              },
+              "alias" : "C_FLOAT64"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUMERIC"
+              },
+              "alias" : "C_NUMERIC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATE"
+              },
+              "alias" : "C_DATE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY"
+              },
+              "alias" : "C_BINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR10"
+              },
+              "alias" : "C_CHAR10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_GEOGRAPHY"
+              },
+              "alias" : "C_GEOGRAPHY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMPLTZ"
+              },
+              "alias" : "C_TIMESTAMPLTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_REAL"
+              },
+              "alias" : "C_REAL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INT"
+              },
+              "alias" : "C_INT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP"
+              },
+              "alias" : "C_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING20"
+              },
+              "alias" : "C_STRING20"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIMESTAMP_NTZ"
+              },
+              "alias" : "C_TIMESTAMP_NTZ"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM10"
+              },
+              "alias" : "C_NUM10"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT30"
+              },
+              "alias" : "C_TEXT30"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TIME"
+              },
+              "alias" : "C_TIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_FLOAT"
+              },
+              "alias" : "C_FLOAT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_STRING"
+              },
+              "alias" : "C_STRING"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BINARY100"
+              },
+              "alias" : "C_BINARY100"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DATETIME"
+              },
+              "alias" : "C_DATETIME"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_OBJECT"
+              },
+              "alias" : "C_OBJECT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DOUBLE"
+              },
+              "alias" : "C_DOUBLE"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_ARRAY"
+              },
+              "alias" : "C_ARRAY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARIANT"
+              },
+              "alias" : "C_VARIANT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_CHAR"
+              },
+              "alias" : "C_CHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_NUM"
+              },
+              "alias" : "C_NUM"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARBINARY"
+              },
+              "alias" : "C_VARBINARY"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_INTEGER"
+              },
+              "alias" : "C_INTEGER"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_DEC"
+              },
+              "alias" : "C_DEC"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_BOOL"
+              },
+              "alias" : "C_BOOL"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_TEXT"
+              },
+              "alias" : "C_TEXT"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR"
+              },
+              "alias" : "C_VARCHAR"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_COUBLE_PRECISION"
+              },
+              "alias" : "C_COUBLE_PRECISION"
+            }, {
+              "expression" : {
+                "expression" : "customer_orders_1.C_VARCHAR50"
+              },
+              "alias" : "C_VARCHAR50"
+            } ],
+            "headAlias" : "TESTSEED_PARTIAL_1719281850438",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "C_BOOL", "C_INT", "C_STRING" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "customer_model_1##A2bSq6lW" : {
+      "id" : "customer_model_1##A2bSq6lW",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "customer_model_1",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM dummy_seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KeBwfdjn",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "dummy_seed"
+        } ],
+        "outputs" : [ {
+          "id" : "UU4qS0IQ",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "BnciAmNrQvW_iPHhu_igH" : {
+      "id" : "BnciAmNrQvW_iPHhu_igH",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "customer_orders_1",
+        "slug" : "customer_orders_1",
+        "x" : -300,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "customer_orders_1",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "aZy8AKrLhiqr2v4pQYYuE",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "C_NUM",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUM10",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DEC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_NUMERIC",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_INTEGER",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "C_DOUBLE",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_FLOAT",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_COUBLE_PRECISION",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_REAL",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "C_VARCHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_VARCHAR50",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_CHAR10",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_STRING20",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_TEXT30",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "C_BINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BINARY100",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_VARBINARY",
+              "dataType" : {
+                "type" : "Binary"
+              }
+            }, {
+              "name" : "C_BOOL",
+              "dataType" : {
+                "type" : "Boolean"
+              }
+            }, {
+              "name" : "C_TIMESTAMP",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "C_DATETIME",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIME",
+              "dataType" : {
+                "type" : "Time"
+              }
+            }, {
+              "name" : "C_TIMESTAMPLTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_TIMESTAMP_NTZ",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            }, {
+              "name" : "C_VARIANT",
+              "dataType" : {
+                "type" : "Variant"
+              }
+            }, {
+              "name" : "C_ARRAY",
+              "dataType" : {
+                "type" : "Array"
+              }
+            }, {
+              "name" : "C_OBJECT",
+              "dataType" : {
+                "type" : "Object"
+              }
+            }, {
+              "name" : "C_GEOGRAPHY",
+              "dataType" : {
+                "type" : "Geography"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "m55cqQNB7eFrSSyQf52iK" : {
+      "id" : "m55cqQNB7eFrSSyQf52iK",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "dummy_seed",
+        "slug" : "dummy_seed",
+        "x" : -140,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "dummy_seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Z2gOlL5yMYaxLq4_t3UC-",
+          "schema" : {
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "adpMtG5KFu5NMrAo5WsPB$$HNr3Xcczfam9SBTI20SEP",
+    "source" : "m55cqQNB7eFrSSyQf52iK",
+    "sourcePort" : "Z2gOlL5yMYaxLq4_t3UC-",
+    "target" : "customer_model_1##A2bSq6lW",
+    "targetPort" : "KeBwfdjn"
+  } ],
+  "component" : "Model"
+}
