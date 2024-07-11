@@ -1,0 +1,177 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "86",
+    "jobId" : "jobs/Airflow",
+    "name" : "Airflow",
+    "dagName" : "uitesting_abhisheks_e2etests_Snowflake_project_hotfix_Airflow",
+    "schedule" : "None",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "availableFabrics" : [ {
+      "id" : "34",
+      "name" : "dev_mwaa_assumed_role"
+    }, {
+      "id" : "35",
+      "name" : "mwaa_assumed_role_fabric"
+    }, {
+      "id" : "40",
+      "name" : "ExtendPMAirflowTrialFabric",
+      "trialStartDate" : 1709901156245
+    }, {
+      "id" : "48",
+      "name" : "dev_airflow_opensource",
+      "artifactsLocation" : "/mnt/airflow/artifacts"
+    }, {
+      "id" : "66",
+      "name" : "MWAA-AssumedRole-Instance-Profile-Auth"
+    }, {
+      "id" : "75",
+      "name" : "airflow_new_fabric",
+      "trialStartDate" : 1718788733814
+    }, {
+      "id" : "86",
+      "name" : "dev_airflow"
+    }, {
+      "id" : "45",
+      "name" : "dev_airflow_mwaa"
+    }, {
+      "id" : "18",
+      "name" : "dev_airflow_253"
+    }, {
+      "id" : "167",
+      "name" : "dev_airflow_prophecy_managed",
+      "trialStartDate" : 1719032238657
+    }, {
+      "id" : "274",
+      "name" : "dev_pm_airflow",
+      "trialStartDate" : 1719310181597
+    }, {
+      "id" : "881",
+      "name" : "Automation_scala_AirflowOpenSource",
+      "artifactsLocation" : "/mnt/airflow/artifacts"
+    }, {
+      "id" : "874",
+      "name" : "Automation_python_AirflowOpenSource",
+      "artifactsLocation" : "/mnt/airflow/artifacts"
+    } ],
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "g8FGJi0NZalj7T_FZUNkj$$aVHG0NWgUl0z7tHJ6J1hf" : {
+      "id" : "g8FGJi0NZalj7T_FZUNkj$$aVHG0NWgUl0z7tHJ6J1hf",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_1",
+        "slug" : "Model_1",
+        "x" : -100,
+        "y" : -20
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xj90ziUYrDvhl0ku_1IqG$$AjqSG1Vwl2K03rSp7VoZQ",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "YadjkXjLvoN0ewZXFEObc$$6_Y-rIQQ2ZmHyWdzWMNnx",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "runRun" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "1846",
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "6",
+        "gitEntityValue" : null,
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : null,
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}
