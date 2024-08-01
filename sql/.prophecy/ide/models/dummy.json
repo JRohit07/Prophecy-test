@@ -1,0 +1,48 @@
+{
+  "id" : "dummy",
+  "metainfo" : {
+    "label" : "dummy",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "dummy##E7xMUzpp" : {
+      "id" : "dummy##E7xMUzpp",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "dummy",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "NspJfvYL",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "UZ5iw3GZ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Model"
+}

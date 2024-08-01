@@ -23,7 +23,22 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/dummy:
+    name: dummy
+    schema: null
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/dummy.sql
+    - .prophecy/ide/models/dummy.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-08-01 07:18:07'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
