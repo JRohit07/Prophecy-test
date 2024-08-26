@@ -9,6 +9,7 @@ from pipfirst.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_dataset = dataset(spark)
     df_Filter_1 = Filter_1(spark, df_dataset)
+    df_aggregate_by_c0 = aggregate_by_c0(spark, df_dataset)
 
 def main():
     spark = SparkSession.builder\
