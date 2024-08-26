@@ -113,8 +113,8 @@
       "metadata" : {
         "label" : "Filter_1",
         "slug" : "Filter_1",
-        "x" : -300,
-        "y" : -200,
+        "x" : -320,
+        "y" : -340,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
