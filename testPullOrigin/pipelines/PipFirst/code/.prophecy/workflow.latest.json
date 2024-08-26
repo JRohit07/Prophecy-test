@@ -78,6 +78,12 @@
     "sourcePort" : "v5eJELaZFidezLz-PJnRu$$wV7tAavO71eROU8Ygq-iM",
     "target" : "mRbCxS2sgDtZGSTfaNJP7$$1Oklfk_DqdhzC868LPvrJ",
     "targetPort" : "mm8nTbwfuUv-i1hevtqsa$$JIyOTyz0xzEBNxCvBYWdI"
+  }, {
+    "id" : "_aPkdpYIaxNcSqhdNQrcM",
+    "source" : "_rolyToAxY3jNjiZkCU_b$$JY5vCawQH_SSXBiNnPkA0",
+    "sourcePort" : "v5eJELaZFidezLz-PJnRu$$wV7tAavO71eROU8Ygq-iM",
+    "target" : "yahUzJ6DjleNqg304EBmQ$$Yd68fshdKDAehw754vVqZ",
+    "targetPort" : "ThHJPCeeXa08RZ9lhiXP9$$tbE45C24fPPcDFWCxi7D4"
   } ],
   "processes" : {
     "_rolyToAxY3jNjiZkCU_b$$JY5vCawQH_SSXBiNnPkA0" : {
@@ -237,6 +243,161 @@
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.26&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "yahUzJ6DjleNqg304EBmQ$$Yd68fshdKDAehw754vVqZ" : {
+      "id" : "yahUzJ6DjleNqg304EBmQ$$Yd68fshdKDAehw754vVqZ",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "aggregate_by_c0",
+        "slug" : "aggregate_by_c0",
+        "x" : -360,
+        "y" : -420,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Groups data by a specific column and retrieves the first entry for each group.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ThHJPCeeXa08RZ9lhiXP9$$tbE45C24fPPcDFWCxi7D4",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "_c0",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c3",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c4",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c5",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c6",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c7",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c8",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c9",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "VcOFbWTNHaGG-m5UC8VIP$$V6u3OMAcJlZlLG5Dbwx2m",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "_c0",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "first(_c0)"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ "ThHJPCeeXa08RZ9lhiXP9$$tbE45C24fPPcDFWCxi7D4##_c0" ],
+        "groupBy" : [ {
+          "target" : "_c0",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "_c0"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.26&projectSubscriptionProjectId=12654&path=gems/Aggregate",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
