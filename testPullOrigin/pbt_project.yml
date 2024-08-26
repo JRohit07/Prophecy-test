@@ -80,7 +80,6 @@ dependencies:
   type: plibPypi
   enabled: true
   entity: Project
-  __path: '[2]'
 projectDependencies:
   '42':
     projectUID: 42
