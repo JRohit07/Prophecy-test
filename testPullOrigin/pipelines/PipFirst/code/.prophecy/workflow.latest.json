@@ -19,7 +19,7 @@
       "isFunctionsPackageDirDefined" : true
     },
     "language" : "python",
-    "fabricId" : "3",
+    "fabricId" : "9",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -252,8 +252,8 @@
       "metadata" : {
         "label" : "aggregate_by_c0",
         "slug" : "aggregate_by_c0",
-        "x" : -360,
-        "y" : -420,
+        "x" : -200,
+        "y" : -440,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
