@@ -64,22 +64,18 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
-- modifiedAt: '2024-08-26T00:24:15.844409Z'
+- type: plibMaven
+  modifiedAt: '2024-08-28T12:06:13.002286Z'
   name: plibMaven
   version: 8.1.4
-  id: '1885227001'
-  createdAt: '2024-08-26T00:24:15.844409Z'
-  type: plibMaven
-  enabled: true
-  entity: Project
-- modifiedAt: '2024-08-26T00:24:15.844409Z'
+  id: '918627989'
+  createdAt: '2024-08-28T12:06:13.002109Z'
+- type: plibPypi
+  modifiedAt: '2024-08-28T12:06:13.003289Z'
   name: plibPypi
-  version: 1.9.13
-  id: '181610729'
-  createdAt: '2024-08-26T00:24:15.844409Z'
-  type: plibPypi
-  enabled: true
-  entity: Project
+  version: 1.9.14
+  id: '1015187337'
+  createdAt: '2024-08-28T12:06:13.003254Z'
 projectDependencies:
   '42':
     projectUID: 42
