@@ -1,0 +1,424 @@
+name: GenericDataTests_SQL_Databricks
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-09-19 03:21:41'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/GenericDataTestModel:
+    name: GenericDataTestModel
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/GenericDataTestModel.sql
+    - .prophecy/ide/models/GenericDataTestModel.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-09-19 03:22:33'
+  .prophecy/metadata/sqlmodels/modelSecond:
+    name: modelSecond
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: phone
+        dataType:
+          type: Date
+      - name: email
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: account_open_date
+        dataType:
+          type: Date
+      - name: account_flags
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/modelSecond.sql
+    - .prophecy/ide/models/modelSecond.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-09-20 05:29:09'
+sqlSnapshots: {}
+sqlTests:
+  .prophecy/metadata/sqltests/check_is_not_null:
+    name: check_is_not_null
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/generic/check_is_not_null.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-19 05:49:38'
+  .prophecy/metadata/sqltests/fsdbfdgb:
+    name: fsdbfdgb
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/generic/newTest/fsdbfdgb.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-20 06:23:07'
+  .prophecy/metadata/sqltests/fsgvdagbfgb:
+    name: fsgvdagbfgb
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/generic/newPath/fsgvdagbfgb.sql
+    testType: GenericDataTest
+    createdAt: '2024-09-20 06:23:30'
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2024-09-19 03:21:49'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/customerData:
+    name: customerData
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: phone
+        dataType:
+          type: Date
+      - name: email
+        dataType:
+          type: String
+      - name: country_code
+        dataType:
+          type: String
+      - name: account_open_date
+        dataType:
+          type: Date
+      - name: account_flags
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/customerData.csv
+    createdAt: '2024-09-19 03:24:47'
+  .prophecy/metadata/sqlseeds/rohit_seed:
+    name: rohit_seed
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - seeds/rohit_seed.csv
+    createdAt: '2024-09-19 11:29:25'
+sqlSources:
+  .prophecy/metadata/sqlsources/hive_metastore_qa_database:
+    name: hive_metastore.qa_database
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-09-19 03:53:08'
+    tables:
+    - name: all_type_parquet
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: c_tinyint
+          dataType:
+            type: TinyInt
+        - name: c_smallint
+          dataType:
+            type: SmallInt
+        - name: c_int
+          dataType:
+            type: Integer
+        - name: c_bigint
+          dataType:
+            type: Bigint
+        - name: c_float
+          dataType:
+            type: Float
+        - name: c_double
+          dataType:
+            type: Double
+        - name: c_string
+          dataType:
+            type: String
+        - name: c_boolean
+          dataType:
+            type: Boolean
+        - name: c_array
+          dataType:
+            type: Array
+            dataType:
+              type: String
+        - name: c_struct
+          dataType:
+            type: Struct
+            fields:
+            - name: city
+              dataType:
+                type: String
+              description: City name associated with the structured data
+            - name: state
+              dataType:
+                type: String
+              description: The state associated with the structured address data
+            - name: pin
+              dataType:
+                type: Bigint
+              description: The postal code associated with the address in the structured
+                data
+      description: Comprehensive dataset capturing various data types, enabling diverse
+        analytical capabilities across multiple dimensions.
+      author: jrohit@prophecy.io
+      createdAt: '2024-09-19 03:53:08'
+    - name: all_map_type_table
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: c_int
+          dataType:
+            type: Integer
+        - name: c_string
+          dataType:
+            type: String
+        - name: c_map_ts_int_int
+          dataType:
+            type: Map
+            keyType:
+              type: Integer
+            valueType:
+              type: Integer
+        - name: c_map_ts_string_string
+          dataType:
+            type: Map
+            keyType:
+              type: String
+            valueType:
+              type: String
+        - name: c_map_ts_timestamp_int
+          dataType:
+            type: Map
+            keyType:
+              type: Timestamp
+            valueType:
+              type: Integer
+        - name: c_map_complex
+          dataType:
+            type: Map
+            keyType:
+              type: Struct
+              fields:
+              - name: w1
+                dataType:
+                  type: String
+              - name: w2
+                dataType:
+                  type: String
+            valueType:
+              type: String
+      description: Mapping data across various types, enabling flexible data representation
+        and analysis.
+      author: jrohit@prophecy.io
+      createdAt: '2024-09-19 03:53:12'
+    - name: all_type_non_partitioned
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: c_tinyint
+          dataType:
+            type: TinyInt
+        - name: c_smallint
+          dataType:
+            type: SmallInt
+        - name: c_int
+          dataType:
+            type: Integer
+        - name: c_bigint
+          dataType:
+            type: Bigint
+        - name: c_float
+          dataType:
+            type: Float
+        - name: c_double
+          dataType:
+            type: Double
+        - name: c_string
+          dataType:
+            type: String
+        - name: c_boolean
+          dataType:
+            type: Boolean
+        - name: c_array
+          dataType:
+            type: Array
+            dataType:
+              type: String
+        - name: c_struct
+          dataType:
+            type: Struct
+            fields:
+            - name: city
+              dataType:
+                type: String
+              description: City name associated with the structured data
+            - name: state
+              dataType:
+                type: String
+              description: The state associated with the structured data
+            - name: pin
+              dataType:
+                type: Bigint
+              description: The postal code associated with the address in the structured
+                data
+      description: Comprehensive dataset capturing various data types, including location
+        details and multiple attributes, enabling diverse analytical insights.
+      author: jrohit@prophecy.io
+      createdAt: '2024-09-19 03:53:14'
+    - name: all_type_partitioned
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: c_tinyint
+          dataType:
+            type: TinyInt
+        - name: c_smallint
+          dataType:
+            type: SmallInt
+        - name: c_int
+          dataType:
+            type: Integer
+        - name: c_bigint
+          dataType:
+            type: Bigint
+        - name: c_float
+          dataType:
+            type: Float
+        - name: c_double
+          dataType:
+            type: Double
+        - name: c_string
+          dataType:
+            type: String
+        - name: c_boolean
+          dataType:
+            type: Boolean
+        - name: c_array
+          dataType:
+            type: Array
+            dataType:
+              type: String
+        - name: c_struct
+          dataType:
+            type: Struct
+            fields:
+            - name: city
+              dataType:
+                type: String
+              description: City name associated with the structured data
+            - name: state
+              dataType:
+                type: String
+              description: The state associated with the structured data
+            - name: pin
+              dataType:
+                type: Bigint
+              description: Pin code associated with the address in the structured
+                data
+        - name: p_int
+          dataType:
+            type: Integer
+        - name: p_string
+          dataType:
+            type: String
+      description: Comprehensive dataset capturing various data types, enabling versatile
+        data analysis and insights.
+      author: jrohit@prophecy.io
+      createdAt: '2024-09-19 03:53:16'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: jrohit@prophecy.io
+  createdAt: '2024-09-19 03:21:41'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}

@@ -1,0 +1,29 @@
+---
+version: 2
+models:
+- name: "GenericDataTestModel"
+  columns:
+  - name: "first_name"
+    tests:
+    - unique:
+        config: {}
+        enabled: false
+    - accepted_values:
+        config: {}
+    dataType:
+      type: "String"
+  - name: "last_name"
+    dataType:
+      type: "String"
+  tests:
+  - check_is_not_null:
+      config: {}
+      column_name: "GenericDataTestModel"
+      threshold: "'10'"
+- name: "modelSecond"
+  columns: []
+  tests:
+  - not_null:
+      config: {}
+      column_name: "first_name"
+sources: []
