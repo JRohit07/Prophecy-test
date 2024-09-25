@@ -254,53 +254,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: c_tinyint
-          dataType:
-            type: TinyInt
-        - name: c_smallint
-          dataType:
-            type: SmallInt
-        - name: c_int
-          dataType:
-            type: Integer
-        - name: c_bigint
-          dataType:
-            type: Bigint
-        - name: c_float
-          dataType:
-            type: Float
-        - name: c_double
-          dataType:
-            type: Double
-        - name: c_string
-          dataType:
-            type: String
-        - name: c_boolean
-          dataType:
-            type: Boolean
-        - name: c_array
-          dataType:
-            type: Array
-            dataType:
-              type: String
-        - name: c_struct
-          dataType:
-            type: Struct
-            fields:
-            - name: city
-              dataType:
-                type: String
-              description: City name associated with the structured data
-            - name: state
-              dataType:
-                type: String
-              description: The state associated with the structured address data
-            - name: pin
-              dataType:
-                type: Bigint
-              description: The postal code associated with the address in the structured
-                data
+        fields: []
       description: Comprehensive dataset capturing various data types, enabling diverse
         analytical capabilities across multiple dimensions.
       author: jrohit@prophecy.io
@@ -309,48 +263,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: c_int
-          dataType:
-            type: Integer
-        - name: c_string
-          dataType:
-            type: String
-        - name: c_map_ts_int_int
-          dataType:
-            type: Map
-            keyType:
-              type: Integer
-            valueType:
-              type: Integer
-        - name: c_map_ts_string_string
-          dataType:
-            type: Map
-            keyType:
-              type: String
-            valueType:
-              type: String
-        - name: c_map_ts_timestamp_int
-          dataType:
-            type: Map
-            keyType:
-              type: Timestamp
-            valueType:
-              type: Integer
-        - name: c_map_complex
-          dataType:
-            type: Map
-            keyType:
-              type: Struct
-              fields:
-              - name: w1
-                dataType:
-                  type: String
-              - name: w2
-                dataType:
-                  type: String
-            valueType:
-              type: String
+        fields: []
       description: Mapping data across various types, enabling flexible data representation
         and analysis.
       author: jrohit@prophecy.io
@@ -359,53 +272,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: c_tinyint
-          dataType:
-            type: TinyInt
-        - name: c_smallint
-          dataType:
-            type: SmallInt
-        - name: c_int
-          dataType:
-            type: Integer
-        - name: c_bigint
-          dataType:
-            type: Bigint
-        - name: c_float
-          dataType:
-            type: Float
-        - name: c_double
-          dataType:
-            type: Double
-        - name: c_string
-          dataType:
-            type: String
-        - name: c_boolean
-          dataType:
-            type: Boolean
-        - name: c_array
-          dataType:
-            type: Array
-            dataType:
-              type: String
-        - name: c_struct
-          dataType:
-            type: Struct
-            fields:
-            - name: city
-              dataType:
-                type: String
-              description: City name associated with the structured data
-            - name: state
-              dataType:
-                type: String
-              description: The state associated with the structured data
-            - name: pin
-              dataType:
-                type: Bigint
-              description: The postal code associated with the address in the structured
-                data
+        fields: []
       description: Comprehensive dataset capturing various data types, including location
         details and multiple attributes, enabling diverse analytical insights.
       author: jrohit@prophecy.io
@@ -414,59 +281,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: c_tinyint
-          dataType:
-            type: TinyInt
-        - name: c_smallint
-          dataType:
-            type: SmallInt
-        - name: c_int
-          dataType:
-            type: Integer
-        - name: c_bigint
-          dataType:
-            type: Bigint
-        - name: c_float
-          dataType:
-            type: Float
-        - name: c_double
-          dataType:
-            type: Double
-        - name: c_string
-          dataType:
-            type: String
-        - name: c_boolean
-          dataType:
-            type: Boolean
-        - name: c_array
-          dataType:
-            type: Array
-            dataType:
-              type: String
-        - name: c_struct
-          dataType:
-            type: Struct
-            fields:
-            - name: city
-              dataType:
-                type: String
-              description: City name associated with the structured data
-            - name: state
-              dataType:
-                type: String
-              description: The state associated with the structured data
-            - name: pin
-              dataType:
-                type: Bigint
-              description: Pin code associated with the address in the structured
-                data
-        - name: p_int
-          dataType:
-            type: Integer
-        - name: p_string
-          dataType:
-            type: String
+        fields: []
       description: Comprehensive dataset capturing various data types, enabling versatile
         data analysis and insights.
       author: jrohit@prophecy.io
