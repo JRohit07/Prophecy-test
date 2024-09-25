@@ -1,0 +1,247 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.qa_database"
+  database: "hive_metastore"
+  schema: "qa_database"
+  config:
+    enabled: true
+  tables:
+  - name: "all_type_parquet"
+    description: "Comprehensive dataset capturing various data types, enabling diverse\
+      \ analytical capabilities across multiple dimensions."
+    columns:
+    - name: "c_tinyint"
+      description: "A small integer value representing a specific attribute."
+      dataType:
+        type: "TinyInt"
+    - name: "c_smallint"
+      description: "A small integer value representing a specific metric or identifier."
+      dataType:
+        type: "SmallInt"
+    - name: "c_int"
+      description: "An integer value representing a specific metric or count."
+      dataType:
+        type: "Integer"
+    - name: "c_bigint"
+      description: "A large integer value representing significant data points."
+      dataType:
+        type: "Bigint"
+    - name: "c_float"
+      description: "A floating-point number representing a value with decimal precision."
+      dataType:
+        type: "Float"
+    - name: "c_double"
+      description: "A double-precision floating-point number representing a value."
+      dataType:
+        type: "Double"
+    - name: "c_string"
+      description: "A text field for storing string data."
+      dataType:
+        type: "String"
+    - name: "c_boolean"
+      description: "Indicates a true or false value for a specific condition"
+      dataType:
+        type: "Boolean"
+    - name: "c_array"
+      description: "A collection of string values related to the entity."
+      dataType:
+        type: "Array"
+        dataType:
+          type: "String"
+    - name: "c_struct"
+      description: "Structured data containing city, state, and pin information."
+      dataType:
+        type: "Struct"
+        fields:
+        - name: "city"
+          dataType:
+            type: "String"
+          description: "City name associated with the structured data"
+        - name: "state"
+          dataType:
+            type: "String"
+          description: "The state associated with the structured address data"
+        - name: "pin"
+          dataType:
+            type: "Bigint"
+          description: "The postal code associated with the address in the structured\
+            \ data"
+  - name: "all_map_type_table"
+    description: "Mapping data across various types, enabling flexible data representation\
+      \ and analysis."
+    columns:
+    - name: "c_int"
+      description: "An integer value representing a specific attribute."
+      dataType:
+        type: "Integer"
+    - name: "c_string"
+      description: "A string value representing a specific attribute"
+      dataType:
+        type: "String"
+    - name: "c_map_ts_int_int"
+      description: "Mapping of timestamps to integer values."
+      dataType:
+        type: "Map"
+        keyType:
+          type: "Integer"
+        valueType:
+          type: "Integer"
+    - name: "c_map_ts_string_string"
+      description: "A mapping of timestamps to string values."
+      dataType:
+        type: "Map"
+        keyType:
+          type: "String"
+        valueType:
+          type: "String"
+    - name: "c_map_ts_timestamp_int"
+      description: "A mapping of timestamps to integer values."
+      dataType:
+        type: "Map"
+        keyType:
+          type: "Timestamp"
+        valueType:
+          type: "Integer"
+    - name: "c_map_complex"
+      description: "A complex map structure containing various related data points."
+      dataType:
+        type: "Map"
+        keyType:
+          type: "Struct"
+          fields:
+          - name: "w1"
+            dataType:
+              type: "String"
+          - name: "w2"
+            dataType:
+              type: "String"
+        valueType:
+          type: "String"
+  - name: "all_type_non_partitioned"
+    description: "Comprehensive dataset capturing various data types, including location\
+      \ details and multiple attributes, enabling diverse analytical insights."
+    columns:
+    - name: "c_tinyint"
+      description: "A small integer value representing a specific attribute."
+      dataType:
+        type: "TinyInt"
+    - name: "c_smallint"
+      description: "A small integer value representing a specific metric or identifier."
+      dataType:
+        type: "SmallInt"
+    - name: "c_int"
+      description: "An integer value representing a specific metric or identifier."
+      dataType:
+        type: "Integer"
+    - name: "c_bigint"
+      description: "A large integer value representing significant data points."
+      dataType:
+        type: "Bigint"
+    - name: "c_float"
+      description: "A floating-point number representing a value with decimal precision."
+      dataType:
+        type: "Float"
+    - name: "c_double"
+      description: "A double-precision floating-point number representing a value."
+      dataType:
+        type: "Double"
+    - name: "c_string"
+      description: "A string value representing textual information"
+      dataType:
+        type: "String"
+    - name: "c_boolean"
+      description: "Indicates a true or false condition related to the data"
+      dataType:
+        type: "Boolean"
+    - name: "c_array"
+      description: "Array of string values representing multiple items or attributes."
+      dataType:
+        type: "Array"
+        dataType:
+          type: "String"
+    - name: "c_struct"
+      description: "Structured data containing city, state, and pin information."
+      dataType:
+        type: "Struct"
+        fields:
+        - name: "city"
+          dataType:
+            type: "String"
+          description: "City name associated with the structured data"
+        - name: "state"
+          dataType:
+            type: "String"
+          description: "The state associated with the structured data"
+        - name: "pin"
+          dataType:
+            type: "Bigint"
+          description: "The postal code associated with the address in the structured\
+            \ data"
+  - name: "all_type_partitioned"
+    description: "Comprehensive dataset capturing various data types, enabling versatile\
+      \ data analysis and insights."
+    columns:
+    - name: "c_tinyint"
+      description: "A small integer value representing a specific attribute."
+      dataType:
+        type: "TinyInt"
+    - name: "c_smallint"
+      description: "A small integer value representing a specific metric."
+      dataType:
+        type: "SmallInt"
+    - name: "c_int"
+      description: "An integer value representing a specific metric or identifier."
+      dataType:
+        type: "Integer"
+    - name: "c_bigint"
+      description: "A large integer value representing significant data points."
+      dataType:
+        type: "Bigint"
+    - name: "c_float"
+      description: "A floating-point number representing a value with decimal precision."
+      dataType:
+        type: "Float"
+    - name: "c_double"
+      description: "A double-precision floating-point number representing a value."
+      dataType:
+        type: "Double"
+    - name: "c_string"
+      description: "A string value representing textual information."
+      dataType:
+        type: "String"
+    - name: "c_boolean"
+      description: "Indicates a true or false condition related to the data"
+      dataType:
+        type: "Boolean"
+    - name: "c_array"
+      description: "Array of string values representing multiple items."
+      dataType:
+        type: "Array"
+        dataType:
+          type: "String"
+    - name: "c_struct"
+      description: "Structured data containing city, state, and pin information."
+      dataType:
+        type: "Struct"
+        fields:
+        - name: "city"
+          dataType:
+            type: "String"
+          description: "City name associated with the structured data"
+        - name: "state"
+          dataType:
+            type: "String"
+          description: "The state associated with the structured data"
+        - name: "pin"
+          dataType:
+            type: "Bigint"
+          description: "Pin code associated with the address in the structured data"
+    - name: "p_int"
+      description: "An integer value representing a specific parameter."
+      dataType:
+        type: "Integer"
+    - name: "p_string"
+      description: "A string value representing a specific property or attribute."
+      dataType:
+        type: "String"

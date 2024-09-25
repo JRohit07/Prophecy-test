@@ -1,0 +1,959 @@
+{
+  "id" : "GenericDataTestModel",
+  "metainfo" : {
+    "label" : "GenericDataTestModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "GenericDataTestModel",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "GenericDataTestModel_1",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "GenericDataTestModel_1",
+              "expression" : {
+                "expression" : "GenericDataTestModel_1.first_name = customerData.first_name AND GenericDataTestModel_1.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "GenericDataTestModel_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "country_classification",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "country_classification",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "country_code" ],
+            "conditions" : [ {
+              "alias" : "country_classification",
+              "expression" : {
+                "expression" : "country_classification.country_code = customerData.country_code"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "country_classification.country_label"
+              },
+              "alias" : "country_label"
+            }, {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "country_classification",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "country_code" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "modelSecond",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "modelSecond",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "customer_id", "country_code", "account_flags" ],
+            "conditions" : [ {
+              "alias" : "modelSecond",
+              "expression" : {
+                "expression" : "modelSecond.account_flags = customerData.account_flags AND modelSecond.country_code = customerData.country_code AND modelSecond.customer_id = customerData.customer_id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "modelSecond",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "customer_id", "country_code", "account_flags" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "rohit_seed",
+            "sourceType" : "Seed"
+          }
+        },
+        "sourceComponentKind" : "Seed",
+        "sourceLabel" : "rohit_seed_1",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "rohit_seed_1",
+              "expression" : {
+                "expression" : "rohit_seed_1.first_name = customerData.first_name AND rohit_seed_1.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "rohit_seed_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "stg_customers",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "stg_customers",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "stg_customers",
+              "expression" : {
+                "expression" : "stg_customers.first_name = customerData.first_name AND stg_customers.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "stg_customers",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "address2",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "address2",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "address2",
+              "expression" : {
+                "expression" : "address2.first_name = customerData.first_name AND address2.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "address2.first_order"
+              },
+              "alias" : "first_order"
+            }, {
+              "expression" : {
+                "expression" : "address2.most_recent_order"
+              },
+              "alias" : "most_recent_order"
+            }, {
+              "expression" : {
+                "expression" : "address2.number_of_orders"
+              },
+              "alias" : "number_of_orders"
+            }, {
+              "expression" : {
+                "expression" : "address2.customer_lifetime_value"
+              },
+              "alias" : "customer_lifetime_value"
+            }, {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "address2",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "asdasd",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "asdasd",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "country_code", "account_flags", "account_open_date" ],
+            "conditions" : [ {
+              "alias" : "asdasd",
+              "expression" : {
+                "expression" : "asdasd.account_flags = customerData.account_flags AND asdasd.account_open_date = customerData.account_open_date AND asdasd.country_code = customerData.country_code"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "asdasd",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "country_code", "account_flags", "account_open_date" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "customer_seed",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "customer_seed",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "customer_seed",
+              "expression" : {
+                "expression" : "customer_seed.first_name = customerData.first_name AND customer_seed.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "customer_seed.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "customer_seed",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "model_with_only_seed_base",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "model_with_only_seed_base",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "country_code" ],
+            "conditions" : [ {
+              "alias" : "model_with_only_seed_base",
+              "expression" : {
+                "expression" : "model_with_only_seed_base.country_code = customerData.country_code"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "model_with_only_seed_base.country_label"
+              },
+              "alias" : "country_label"
+            }, {
+              "expression" : {
+                "expression" : "model_with_only_seed_base.code_1"
+              },
+              "alias" : "code_1"
+            }, {
+              "expression" : {
+                "expression" : "model_with_only_seed_base.service_label_1"
+              },
+              "alias" : "service_label_1"
+            }, {
+              "expression" : {
+                "expression" : "model_with_only_seed_base.c_macro2"
+              },
+              "alias" : "c_macro2"
+            }, {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "model_with_only_seed_base",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "country_code" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_customers",
+            "sourceName" : "hive_metastore.qa_database",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_customers",
+        "canJoinWith" : [ {
+          "processLabel" : "customerData",
+          "processId" : "Xju17Mt3ZsR4eUi7u6GZc",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "first_name", "last_name" ],
+            "conditions" : [ {
+              "alias" : "raw_customers",
+              "expression" : {
+                "expression" : "raw_customers.first_name = customerData.first_name AND raw_customers.last_name = customerData.last_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_customers.id"
+              },
+              "alias" : "id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_flags"
+              },
+              "alias" : "account_flags"
+            }, {
+              "expression" : {
+                "expression" : "customerData.customer_id"
+              },
+              "alias" : "customer_id"
+            }, {
+              "expression" : {
+                "expression" : "customerData.email"
+              },
+              "alias" : "email"
+            }, {
+              "expression" : {
+                "expression" : "customerData.phone"
+              },
+              "alias" : "phone"
+            }, {
+              "expression" : {
+                "expression" : "customerData.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "customerData.account_open_date"
+              },
+              "alias" : "account_open_date"
+            }, {
+              "expression" : {
+                "expression" : "customerData.country_code"
+              },
+              "alias" : "country_code"
+            } ],
+            "headAlias" : "raw_customers",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "first_name", "last_name" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "GenericDataTestModel##fcvxldk5" : {
+      "id" : "GenericDataTestModel##fcvxldk5",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "GenericDataTestModel",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Retrieves all records from the rohit_seed dataset for analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM rohit_seed\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "roVw5W19",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "rohit_seed"
+        } ],
+        "outputs" : [ {
+          "id" : "LJDilViE",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Xju17Mt3ZsR4eUi7u6GZc" : {
+      "id" : "Xju17Mt3ZsR4eUi7u6GZc",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "customerData",
+        "slug" : "customerData",
+        "x" : -520,
+        "y" : -40,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "customerData",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "GHlGYcbA_vYqd0fWlijVd",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "MdiL5p5sLIjUSACp5kRp3" : {
+      "id" : "MdiL5p5sLIjUSACp5kRp3",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "rohit_seed",
+        "slug" : "rohit_seed",
+        "x" : -140,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "rohit_seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Vj4GqNNJ6Ky8pe3naPqKU",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "dVXiaGlzJHn8na1xjg8uQ$$nP0blueUC2F3wzdVl0IZ4",
+    "source" : "MdiL5p5sLIjUSACp5kRp3",
+    "sourcePort" : "Vj4GqNNJ6Ky8pe3naPqKU",
+    "target" : "GenericDataTestModel##fcvxldk5",
+    "targetPort" : "roVw5W19"
+  } ],
+  "component" : "Model"
+}
