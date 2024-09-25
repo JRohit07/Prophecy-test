@@ -20,7 +20,7 @@ customerData AS (
 
 )
 
-{#Retrieves all data from the specified seed dataset for testing purposes.#}
+{#Retrieves all records from the rohit_seed dataset for analysis.#}
 SELECT *
 
 FROM rohit_seed

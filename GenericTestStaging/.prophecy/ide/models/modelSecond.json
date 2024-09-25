@@ -7,6 +7,12 @@
     "sourceSuggestions" : {
       "sources" : [ ]
     },
+    "graphConfig" : {
+      "entityConfig" : {
+        "schema" : "\"rohit\"",
+        "type" : "ModelConfig"
+      }
+    },
     "version" : 3
   },
   "processes" : {
@@ -19,7 +25,7 @@
         "y" : 20,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Retrieves all available customer data for analysis.",
+        "comment" : "Retrieves all customer data for comprehensive analysis.",
         "autoUpdateComment" : true
       },
       "properties" : {

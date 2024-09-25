@@ -6,13 +6,14 @@ models:
   - name: "first_name"
     tests:
     - unique:
-        config: {}
+        config:
+          store_failures: false
         enabled: false
-    - accepted_values:
-        config: {}
+        column_name: "first_name"
     dataType:
       type: "String"
   - name: "last_name"
+    tests: []
     dataType:
       type: "String"
   tests:
@@ -21,7 +22,59 @@ models:
       column_name: "GenericDataTestModel"
       threshold: "'10'"
 - name: "modelSecond"
-  columns: []
+  columns:
+  - name: "customer_id"
+    tests:
+    - is_even:
+        config:
+          where: "customer_id < 5"
+          severity: "error"
+        column_name: "\"customer_id\""
+    dataType:
+      type: "Integer"
+  - name: "first_name"
+    tests:
+    - unique:
+        config:
+          store_failures: true
+          error_if: " < 0"
+          severity: "error"
+          warn_if: " > 0"
+        column_name: "first_name"
+    dataType:
+      type: "String"
+  - name: "last_name"
+    dataType:
+      type: "String"
+  - name: "phone"
+    dataType:
+      type: "Date"
+  - name: "email"
+    dataType:
+      type: "String"
+  - name: "country_code"
+    dataType:
+      type: "String"
+  - name: "account_open_date"
+    dataType:
+      type: "Date"
+  - name: "account_flags"
+    tests:
+    - accepted_values:
+        config:
+          error_if: " > 10"
+          warn_if: " IS NOT NULL"
+          fail_calc: "count(*)"
+          severity: "warn"
+        column_name: "account_flags"
+        values:
+        - "A"
+        - "B"
+        - "C"
+        - "D"
+        - "E"
+    dataType:
+      type: "String"
   tests:
   - not_null:
       config: {}

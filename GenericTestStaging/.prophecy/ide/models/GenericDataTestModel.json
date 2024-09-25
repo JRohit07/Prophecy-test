@@ -777,7 +777,7 @@
         "y" : 20,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Retrieves all data from the specified seed dataset for testing purposes.",
+        "comment" : "Retrieves all records from the rohit_seed dataset for analysis.",
         "autoUpdateComment" : true
       },
       "properties" : {
