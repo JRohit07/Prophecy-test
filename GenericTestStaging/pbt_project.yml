@@ -34,7 +34,7 @@ jobs:
     author: jrohit@prophecy.io
     models: []
     sqlProjects:
-    - '74'
+    - '14304'
   jobs/AirflowJob:
     name: AirflowJob
     description: ''
@@ -59,7 +59,8 @@ jobs:
     createdAt: '2024-09-20 11:22:50'
     author: jrohit@prophecy.io
     models: []
-    sqlProjects: []
+    sqlProjects:
+    - '14304'
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
