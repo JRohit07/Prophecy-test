@@ -1,6 +1,6 @@
 name: GenericDataTests_SQL_Databricks
 description: ''
-version: v3
+version: v4
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
