@@ -1,0 +1,42 @@
+---
+version: 2
+models:
+- name: "test_dummy_modle"
+  columns:
+  - name: "customer_id"
+    tests:
+    - unique:
+        config:
+          fail_calc: "count(*)"
+          warn_if: ""
+        column_name: "\"customer_id\""
+    - checkThreshold:
+        config:
+          fail_calc: "count(*)"
+    dataType:
+      type: "Integer"
+  - name: "first_name"
+    dataType:
+      type: "String"
+  - name: "last_name"
+    dataType:
+      type: "String"
+  - name: "phone"
+    dataType:
+      type: "Date"
+  - name: "email"
+    dataType:
+      type: "String"
+  - name: "country_code"
+    dataType:
+      type: "String"
+  - name: "account_open_date"
+    dataType:
+      type: "Date"
+  - name: "account_flags"
+    dataType:
+      type: "String"
+  tests:
+  - isThresholdReached:
+      config:
+        fail_calc: "count(*)"

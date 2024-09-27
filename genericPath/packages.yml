@@ -1,0 +1,5 @@
+---
+packages:
+- revision: "genericTestsBaseProject/v6"
+  git: "https://github.com/JRohit07/Prophecy-test"
+  subdirectory: "GenericTests"
