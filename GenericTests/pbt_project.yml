@@ -1,6 +1,6 @@
 name: GenericDataTests_SQL_Databricks
 description: ''
-version: v5
+version: v6
 author: jrohit@prophecy.io
 language: sql
 buildSystem: ''
@@ -170,14 +170,6 @@ sqlTests:
     - tests/generic/is_even.sql
     testType: GenericDataTest
     createdAt: '2024-09-20 09:22:31'
-  .prophecy/metadata/sqltests/t11:
-    name: t11
-    description: null
-    author: jrohit@prophecy.io
-    files:
-    - tests/generic/t11.sql
-    testType: GenericDataTest
-    createdAt: '2024-09-24 04:35:20'
 sqlMacros:
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
