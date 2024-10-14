@@ -1,0 +1,751 @@
+{
+  "id" : "FlattenSchemaModel",
+  "metainfo" : {
+    "label" : "FlattenSchemaModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "COMPLEX_VARIANT",
+            "sourceName" : "ROHIT.VARIANT_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "COMPLEX_VARIANT",
+        "canJoinWith" : [ {
+          "processLabel" : "COMPLEX_VARIANT_NESTED_JSON",
+          "processId" : "qtJeyPJjje-8xnW6VRcRq",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+            "conditions" : [ {
+              "alias" : "COMPLEX_VARIANT",
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT.ADDRESS = COMPLEX_VARIANT_NESTED_JSON.ADDRESS AND COMPLEX_VARIANT.AGE = COMPLEX_VARIANT_NESTED_JSON.AGE AND COMPLEX_VARIANT.DEPARTMENT = COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_LOGIN_TIME"
+              },
+              "alias" : "LAST_LOGIN_TIME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR"
+              },
+              "alias" : "MY_STRUCT_VAR"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LOGIN_TIMESTAMP"
+              },
+              "alias" : "LOGIN_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "alias" : "DEPARTMENT"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "alias" : "IS_ACTIVE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.AGE"
+              },
+              "alias" : "AGE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.SALARY"
+              },
+              "alias" : "SALARY"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.JOIN_DATE"
+              },
+              "alias" : "JOIN_DATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "alias" : "PHONE_NUMBER"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HOURLY_RATE"
+              },
+              "alias" : "HOURLY_RATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.EMAIL"
+              },
+              "alias" : "EMAIL"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.ADDRESS"
+              },
+              "alias" : "ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HIRE_DATE"
+              },
+              "alias" : "HIRE_DATE"
+            } ],
+            "headAlias" : "COMPLEX_VARIANT",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "COMPLEX_VARIANT_MORE_ROWS",
+            "sourceName" : "ROHIT.VARIANT_SCHEMA",
+            "sourceType" : "Source"
+          }
+        },
+        "sourceComponentKind" : "Source",
+        "sourceLabel" : "COMPLEX_VARIANT_MORE_ROWS_1",
+        "canJoinWith" : [ {
+          "processLabel" : "COMPLEX_VARIANT_NESTED_JSON",
+          "processId" : "qtJeyPJjje-8xnW6VRcRq",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+            "conditions" : [ {
+              "alias" : "COMPLEX_VARIANT_MORE_ROWS_1",
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_MORE_ROWS_1.ADDRESS = COMPLEX_VARIANT_NESTED_JSON.ADDRESS AND COMPLEX_VARIANT_MORE_ROWS_1.AGE = COMPLEX_VARIANT_NESTED_JSON.AGE AND COMPLEX_VARIANT_MORE_ROWS_1.DEPARTMENT = COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_LOGIN_TIME"
+              },
+              "alias" : "LAST_LOGIN_TIME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR"
+              },
+              "alias" : "MY_STRUCT_VAR"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LOGIN_TIMESTAMP"
+              },
+              "alias" : "LOGIN_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "alias" : "DEPARTMENT"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "alias" : "IS_ACTIVE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.AGE"
+              },
+              "alias" : "AGE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.SALARY"
+              },
+              "alias" : "SALARY"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.JOIN_DATE"
+              },
+              "alias" : "JOIN_DATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "alias" : "PHONE_NUMBER"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HOURLY_RATE"
+              },
+              "alias" : "HOURLY_RATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.EMAIL"
+              },
+              "alias" : "EMAIL"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.ADDRESS"
+              },
+              "alias" : "ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HIRE_DATE"
+              },
+              "alias" : "HIRE_DATE"
+            } ],
+            "headAlias" : "COMPLEX_VARIANT_MORE_ROWS_1",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "DeduplicateModel",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "DeduplicateModel",
+        "canJoinWith" : [ {
+          "processLabel" : "COMPLEX_VARIANT_NESTED_JSON",
+          "processId" : "qtJeyPJjje-8xnW6VRcRq",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "IS_ACTIVE" ],
+            "conditions" : [ {
+              "alias" : "DeduplicateModel",
+              "expression" : {
+                "expression" : "DeduplicateModel.IS_STILL_ACTIVE = COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "DeduplicateModel.NAME"
+              },
+              "alias" : "NAME"
+            }, {
+              "expression" : {
+                "expression" : "DeduplicateModel.C_MIDDLE_NAME"
+              },
+              "alias" : "C_MIDDLE_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_LOGIN_TIME"
+              },
+              "alias" : "LAST_LOGIN_TIME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR"
+              },
+              "alias" : "MY_STRUCT_VAR"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LOGIN_TIMESTAMP"
+              },
+              "alias" : "LOGIN_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "alias" : "DEPARTMENT"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "alias" : "IS_ACTIVE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.AGE"
+              },
+              "alias" : "AGE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.SALARY"
+              },
+              "alias" : "SALARY"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.JOIN_DATE"
+              },
+              "alias" : "JOIN_DATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "alias" : "PHONE_NUMBER"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HOURLY_RATE"
+              },
+              "alias" : "HOURLY_RATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.EMAIL"
+              },
+              "alias" : "EMAIL"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.ADDRESS"
+              },
+              "alias" : "ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HIRE_DATE"
+              },
+              "alias" : "HIRE_DATE"
+            } ],
+            "headAlias" : "DeduplicateModel",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "IS_ACTIVE" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "VARIANT_ALL_TYPES",
+            "sourceName" : "ROHIT.VARIANT_SCHEMA",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "VARIANT_ALL_TYPES",
+        "canJoinWith" : [ {
+          "processLabel" : "COMPLEX_VARIANT_NESTED_JSON",
+          "processId" : "qtJeyPJjje-8xnW6VRcRq",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+            "conditions" : [ {
+              "alias" : "VARIANT_ALL_TYPES",
+              "expression" : {
+                "expression" : "VARIANT_ALL_TYPES.ADDRESS = COMPLEX_VARIANT_NESTED_JSON.ADDRESS AND VARIANT_ALL_TYPES.AGE = COMPLEX_VARIANT_NESTED_JSON.AGE AND VARIANT_ALL_TYPES.DEPARTMENT = COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_LOGIN_TIME"
+              },
+              "alias" : "LAST_LOGIN_TIME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR"
+              },
+              "alias" : "MY_STRUCT_VAR"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LOGIN_TIMESTAMP"
+              },
+              "alias" : "LOGIN_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "alias" : "DEPARTMENT"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "alias" : "IS_ACTIVE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.AGE"
+              },
+              "alias" : "AGE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.SALARY"
+              },
+              "alias" : "SALARY"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.JOIN_DATE"
+              },
+              "alias" : "JOIN_DATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "alias" : "PHONE_NUMBER"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HOURLY_RATE"
+              },
+              "alias" : "HOURLY_RATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.EMAIL"
+              },
+              "alias" : "EMAIL"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.ADDRESS"
+              },
+              "alias" : "ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HIRE_DATE"
+              },
+              "alias" : "HIRE_DATE"
+            } ],
+            "headAlias" : "VARIANT_ALL_TYPES",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "ADDRESS", "AGE", "DEPARTMENT" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "VariantModel",
+            "sourceType" : "Model"
+          }
+        },
+        "sourceComponentKind" : "Model",
+        "sourceLabel" : "VariantModel",
+        "canJoinWith" : [ {
+          "processLabel" : "COMPLEX_VARIANT_NESTED_JSON",
+          "processId" : "qtJeyPJjje-8xnW6VRcRq",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "EMAIL", "MY_STRUCT_VAR", "PHONE_NUMBER" ],
+            "conditions" : [ {
+              "alias" : "VariantModel",
+              "expression" : {
+                "expression" : "VariantModel.EMAIL = COMPLEX_VARIANT_NESTED_JSON.EMAIL AND VariantModel.MY_STRUCT_VAR = COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR AND VariantModel.PHONE_NUMBER = COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "VariantModel.MY_STRUCT_VAR_BUSINESS_ADDRESS"
+              },
+              "alias" : "MY_STRUCT_VAR_BUSINESS_ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_LOGIN_TIME"
+              },
+              "alias" : "LAST_LOGIN_TIME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.MY_STRUCT_VAR"
+              },
+              "alias" : "MY_STRUCT_VAR"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LOGIN_TIMESTAMP"
+              },
+              "alias" : "LOGIN_TIMESTAMP"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.DEPARTMENT"
+              },
+              "alias" : "DEPARTMENT"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.IS_ACTIVE"
+              },
+              "alias" : "IS_ACTIVE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.FIRST_NAME"
+              },
+              "alias" : "FIRST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.AGE"
+              },
+              "alias" : "AGE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.SALARY"
+              },
+              "alias" : "SALARY"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.LAST_NAME"
+              },
+              "alias" : "LAST_NAME"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.JOIN_DATE"
+              },
+              "alias" : "JOIN_DATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.PHONE_NUMBER"
+              },
+              "alias" : "PHONE_NUMBER"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HOURLY_RATE"
+              },
+              "alias" : "HOURLY_RATE"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.EMAIL"
+              },
+              "alias" : "EMAIL"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.ADDRESS"
+              },
+              "alias" : "ADDRESS"
+            }, {
+              "expression" : {
+                "expression" : "COMPLEX_VARIANT_NESTED_JSON.HIRE_DATE"
+              },
+              "alias" : "HIRE_DATE"
+            } ],
+            "headAlias" : "VariantModel",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "EMAIL", "MY_STRUCT_VAR", "PHONE_NUMBER" ],
+          "isRecommended" : true
+        } ]
+      } ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "_Rd_Y5TeMgw9SfbdvBmMh" : {
+      "id" : "_Rd_Y5TeMgw9SfbdvBmMh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMPLEX_VARIANT_MORE_ROWS",
+        "slug" : "COMPLEX_VARIANT_MORE_ROWS",
+        "x" : -300,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "COMPLEX_VARIANT_MORE_ROWS",
+          "sourceType" : "Source",
+          "sourceName" : "ROHIT.VARIANT_SCHEMA",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Ia0yJ8PxbjiFKGJGc14PM",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "pNYebl-CcNQXwrW5doZE7" : {
+      "id" : "pNYebl-CcNQXwrW5doZE7",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 100,
+        "y" : -200,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Extracts and organizes contact information from complex business data for better accessibility.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "RrPJut6zhxZ-G7_XR0UxA##CONTENT" ],
+        "condition" : {
+          "expression" : "CONTENT = 'kishore@prophecy.io'"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RrPJut6zhxZ-G7_XR0UxA",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Ni9SjfmLFqFa7j-7HqGSU",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "qtJeyPJjje-8xnW6VRcRq" : {
+      "id" : "qtJeyPJjje-8xnW6VRcRq",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMPLEX_VARIANT_NESTED_JSON",
+        "slug" : "COMPLEX_VARIANT_NESTED_JSON",
+        "x" : -300,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "COMPLEX_VARIANT_NESTED_JSON",
+          "sourceType" : "Source",
+          "sourceName" : "ROHIT.VARIANT_SCHEMA",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "e5KlNdF4JD9bkrpQuGHNq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "1ZGKD0nN_FuWiMUiLC_7l$$W1G-QCAggZrDBDchxq-zi" : {
+      "id" : "1ZGKD0nN_FuWiMUiLC_7l$$W1G-QCAggZrDBDchxq-zi",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "FlattenSchema_1",
+        "slug" : "FlattenSchema_1",
+        "x" : -100,
+        "y" : -200,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Extracts and organizes contact information from complex business data for better accessibility.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "flattenExpressions" : [ {
+          "alias" : "business",
+          "expression" : {
+            "expression" : "MY_STRUCT_VAR:business"
+          }
+        }, {
+          "alias" : "address",
+          "expression" : {
+            "expression" : "business.value:address"
+          }
+        }, {
+          "alias" : "contact",
+          "expression" : {
+            "expression" : "address.value:contact"
+          }
+        } ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "CAST(contact.value:content AS STRING)"
+          },
+          "alias" : "content"
+        }, {
+          "expression" : {
+            "expression" : "CAST(contact.value:type AS STRING)"
+          },
+          "alias" : "type"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xlLWy1pWGNogfWZRkmmwB$$LjP-Js5DdLseMb4rHA9ik",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "vqVHp3o5V4HzZnXn6znnc$$saUsV7Ve53rVaIdE3RUfq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "FlattenSchemaModel##dFlYd1vW" : {
+      "id" : "FlattenSchemaModel##dFlYd1vW",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "FlattenSchemaModel",
+        "x" : 380,
+        "y" : -240,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Filter_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Z9fgQboF",
+          "slug" : "Filter_1"
+        } ],
+        "outputs" : [ {
+          "id" : "EEnoHsTz",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "EVX4soJM0TaJjGDqdhEwK",
+    "source" : "1ZGKD0nN_FuWiMUiLC_7l$$W1G-QCAggZrDBDchxq-zi",
+    "sourcePort" : "vqVHp3o5V4HzZnXn6znnc$$saUsV7Ve53rVaIdE3RUfq",
+    "target" : "pNYebl-CcNQXwrW5doZE7",
+    "targetPort" : "RrPJut6zhxZ-G7_XR0UxA"
+  }, {
+    "id" : "kSu3fgjowipLrKiidGLTp",
+    "source" : "pNYebl-CcNQXwrW5doZE7",
+    "sourcePort" : "Ni9SjfmLFqFa7j-7HqGSU",
+    "target" : "FlattenSchemaModel##dFlYd1vW",
+    "targetPort" : "Z9fgQboF"
+  }, {
+    "id" : "RTV31YTbHhHt4S6gmbD1G$$W_gza7yDyToPdZHMEwpqH",
+    "source" : "_Rd_Y5TeMgw9SfbdvBmMh",
+    "sourcePort" : "Ia0yJ8PxbjiFKGJGc14PM",
+    "target" : "1ZGKD0nN_FuWiMUiLC_7l$$W1G-QCAggZrDBDchxq-zi",
+    "targetPort" : "xlLWy1pWGNogfWZRkmmwB$$LjP-Js5DdLseMb4rHA9ik"
+  } ],
+  "component" : "Model"
+}

@@ -1,0 +1,340 @@
+{
+  "id" : "VariantModel",
+  "metainfo" : {
+    "label" : "VariantModel",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "hq0mtsxr87apjJw7P3E6R" : {
+      "id" : "hq0mtsxr87apjJw7P3E6R",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMPLEX_VARIANT_NESTED_JSON",
+        "slug" : "COMPLEX_VARIANT_NESTED_JSON",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "COMPLEX_VARIANT_NESTED_JSON",
+          "sourceType" : "Source",
+          "sourceName" : "ROHIT.VARIANT_SCHEMA",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "wKGDPfLXMesMep-Wrd5oO",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Bg3nr0aGVe8mxj1uNTNJC$$q61a0krbyLrVbzcqtN_2D" : {
+      "id" : "Bg3nr0aGVe8mxj1uNTNJC$$q61a0krbyLrVbzcqtN_2D",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Identifies discrepancies between business address names and employee names in complex data structures.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:name AS VARIANT) != MY_STRUCT_VAR:business[0]:employees[0]:name"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qoEJF6_reG2n16wI5Rx-h$$EUGsRf4E35jI7Kgplp8Vp",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "BQQ7_4e1S1Ndw-IOtvXpG$$P4HufVrR35lUvP4IolQtr",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "VariantModel##Kwhbnb8V" : {
+      "id" : "VariantModel##Kwhbnb8V",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "VariantModel",
+        "x" : 620,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Join_1\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ikdvhdFv",
+          "slug" : "Join_1"
+        } ],
+        "outputs" : [ {
+          "id" : "MlkmfxZE",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "JI_X1DFkAMe3k5eqpOyPM$$_mwtSLfR0WjLltPkGXd1u" : {
+      "id" : "JI_X1DFkAMe3k5eqpOyPM$$_mwtSLfR0WjLltPkGXd1u",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 220,
+        "y" : 220,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Reformats employee data for clearer presentation and analysis.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##FIRST_NAME", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##LAST_NAME", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##AGE", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##MY_STRUCT_VAR", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##EMAIL", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##PHONE_NUMBER", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##ADDRESS", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##JOIN_DATE", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##SALARY", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##IS_ACTIVE", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##DEPARTMENT", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##HIRE_DATE", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##LAST_LOGIN_TIME", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##LOGIN_TIMESTAMP", "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m##HOURLY_RATE" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME"
+        }, {
+          "expression" : {
+            "expression" : "LAST_NAME"
+          },
+          "alias" : "LAST_NAME"
+        }, {
+          "expression" : {
+            "expression" : "AGE"
+          },
+          "alias" : "AGE"
+        }, {
+          "expression" : {
+            "expression" : "MY_STRUCT_VAR"
+          },
+          "alias" : "MY_STRUCT_VAR"
+        }, {
+          "expression" : {
+            "expression" : "EMAIL"
+          },
+          "alias" : "EMAIL"
+        }, {
+          "expression" : {
+            "expression" : "PHONE_NUMBER"
+          },
+          "alias" : "PHONE_NUMBER"
+        }, {
+          "expression" : {
+            "expression" : "ADDRESS"
+          },
+          "alias" : "ADDRESS"
+        }, {
+          "expression" : {
+            "expression" : "JOIN_DATE"
+          },
+          "alias" : "JOIN_DATE"
+        }, {
+          "expression" : {
+            "expression" : "SALARY"
+          },
+          "alias" : "SALARY"
+        }, {
+          "expression" : {
+            "expression" : "IS_ACTIVE"
+          },
+          "alias" : "IS_ACTIVE"
+        }, {
+          "expression" : {
+            "expression" : "DEPARTMENT"
+          },
+          "alias" : "DEPARTMENT"
+        }, {
+          "expression" : {
+            "expression" : "HIRE_DATE"
+          },
+          "alias" : "HIRE_DATE"
+        }, {
+          "expression" : {
+            "expression" : "LAST_LOGIN_TIME"
+          },
+          "alias" : "LAST_LOGIN_TIME"
+        }, {
+          "expression" : {
+            "expression" : "LOGIN_TIMESTAMP"
+          },
+          "alias" : "LOGIN_TIMESTAMP"
+        }, {
+          "expression" : {
+            "expression" : "HOURLY_RATE"
+          },
+          "alias" : "HOURLY_RATE"
+        }, {
+          "expression" : {
+            "expression" : "CAST(MY_STRUCT_VAR:business[0]:name AS STRING)"
+          },
+          "alias" : "name"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "r-FMF05Rw0xn9SooeKigD$$wc8HcXYBggO2TvxBDarE3",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "tF22-0FB8FE5QKyxHTM4i" : {
+      "id" : "tF22-0FB8FE5QKyxHTM4i",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMPLEX_VARIANT_MORE_ROWS",
+        "slug" : "COMPLEX_VARIANT_MORE_ROWS",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "COMPLEX_VARIANT_MORE_ROWS",
+          "sourceType" : "Source",
+          "sourceName" : "ROHIT.VARIANT_SCHEMA",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "tsw4XdUBlYqj5naW35iRP",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "T2Bv5w_p52B75IwbkJapR$$K6PiBjjL0RKz7YBYpymQW" : {
+      "id" : "T2Bv5w_p52B75IwbkJapR$$K6PiBjjL0RKz7YBYpymQW",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : 420,
+        "y" : 120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Combines contact information with business addresses for targeted outreach.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "expression" : "in1.FIRST_NAME = in0.FIRST_NAME"
+          },
+          "joinType" : "inner"
+        } ],
+        "allowSelection" : false,
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "in0.EMAIL"
+          },
+          "alias" : "EMAIL"
+        }, {
+          "expression" : {
+            "expression" : "in0.PHONE_NUMBER"
+          },
+          "alias" : "PHONE_NUMBER"
+        }, {
+          "expression" : {
+            "expression" : "in0.MY_STRUCT_VAR"
+          },
+          "alias" : "MY_STRUCT_VAR"
+        }, {
+          "expression" : {
+            "expression" : "in0.MY_STRUCT_VAR:business[0]:address"
+          },
+          "alias" : "MY_STRUCT_VAR_business_address"
+        } ],
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "90lI3hUktocHi-waZI1DK$$hvqWMXWxnq6kPbQUCtW_-##FIRST_NAME", "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG##FIRST_NAME", "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG##EMAIL", "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG##PHONE_NUMBER", "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG##MY_STRUCT_VAR" ],
+        "headAlias" : "in0"
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG",
+          "slug" : "in0"
+        }, {
+          "id" : "90lI3hUktocHi-waZI1DK$$hvqWMXWxnq6kPbQUCtW_-",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "e1neHa2Duxkj3c1-dpweh$$yoI5EldBo0gvs59x0raZY",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "zvH6B1kSgowRRaXj2FfUh$$keXwLiQJWPumiRDu0tUSm",
+    "source" : "hq0mtsxr87apjJw7P3E6R",
+    "sourcePort" : "wKGDPfLXMesMep-Wrd5oO",
+    "target" : "Bg3nr0aGVe8mxj1uNTNJC$$q61a0krbyLrVbzcqtN_2D",
+    "targetPort" : "qoEJF6_reG2n16wI5Rx-h$$EUGsRf4E35jI7Kgplp8Vp"
+  }, {
+    "id" : "CeOIDX0ecM3Aa_1lTOy4z$$jjp43Dr2TVo57AUV4Fd9T",
+    "source" : "tF22-0FB8FE5QKyxHTM4i",
+    "sourcePort" : "tsw4XdUBlYqj5naW35iRP",
+    "target" : "JI_X1DFkAMe3k5eqpOyPM$$_mwtSLfR0WjLltPkGXd1u",
+    "targetPort" : "9TBhyrQcfiI1bUy8dHzzY$$jb1ub9Kg3BdZOgFH2_f7m"
+  }, {
+    "id" : "aCc4oeK8VRm1mpjZKPvJJ$$MgcZZqUBJ9Chy9CNurLs6",
+    "source" : "JI_X1DFkAMe3k5eqpOyPM$$_mwtSLfR0WjLltPkGXd1u",
+    "sourcePort" : "r-FMF05Rw0xn9SooeKigD$$wc8HcXYBggO2TvxBDarE3",
+    "target" : "T2Bv5w_p52B75IwbkJapR$$K6PiBjjL0RKz7YBYpymQW",
+    "targetPort" : "90lI3hUktocHi-waZI1DK$$hvqWMXWxnq6kPbQUCtW_-"
+  }, {
+    "id" : "q5CX8TrBsvbnxuef4DNn4$$7x1opO-hYGWkF8IbY_IMU",
+    "source" : "Bg3nr0aGVe8mxj1uNTNJC$$q61a0krbyLrVbzcqtN_2D",
+    "sourcePort" : "BQQ7_4e1S1Ndw-IOtvXpG$$P4HufVrR35lUvP4IolQtr",
+    "target" : "T2Bv5w_p52B75IwbkJapR$$K6PiBjjL0RKz7YBYpymQW",
+    "targetPort" : "qSHuJtsUEQ9RTNtaIgDW7$$QG4jDXCkTVmHejthWlVOG"
+  }, {
+    "id" : "YtQZ7t0hpVPclWclpmUUN",
+    "source" : "T2Bv5w_p52B75IwbkJapR$$K6PiBjjL0RKz7YBYpymQW",
+    "sourcePort" : "e1neHa2Duxkj3c1-dpweh$$yoI5EldBo0gvs59x0raZY",
+    "target" : "VariantModel##Kwhbnb8V",
+    "targetPort" : "ikdvhdFv"
+  } ],
+  "component" : "Model"
+}

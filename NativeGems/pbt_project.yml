@@ -1,0 +1,253 @@
+name: NativeGemsProject
+description: ''
+version: 0.0.1
+author: jrohit@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-10-14 04:09:39'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/DeduplicateModel:
+    name: DeduplicateModel
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: ADDRESS
+        dataType:
+          type: Variant
+      - name: IS_STILL_ACTIVE
+        dataType:
+          type: Boolean
+      - name: NAME
+        dataType:
+          type: String
+      - name: C_MIDDLE_NAME
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/newGems/DeduplicateModel.sql
+    - .prophecy/ide/models/DeduplicateModel.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-10-14 04:11:52'
+  .prophecy/metadata/sqlmodels/FlattenSchemaModel:
+    name: FlattenSchemaModel
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: CONTENT
+        dataType:
+          type: String
+      - name: TYPE
+        dataType:
+          type: String
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/newGems/FlattenSchemaModel.sql
+    - .prophecy/ide/models/FlattenSchemaModel.json
+    - models/newGems/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-10-14 04:11:22'
+  .prophecy/metadata/sqlmodels/VariantModel:
+    name: VariantModel
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: EMAIL
+        dataType:
+          type: String
+      - name: PHONE_NUMBER
+        dataType:
+          type: String
+      - name: MY_STRUCT_VAR
+        dataType:
+          type: Variant
+      - name: MY_STRUCT_VAR_BUSINESS_ADDRESS
+        dataType:
+          type: Variant
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - models/VariantModel.sql
+    - .prophecy/ide/models/VariantModel.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-10-14 04:10:12'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2024-10-14 04:09:48'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/ROHIT_VARIANT_SCHEMA:
+    name: ROHIT.VARIANT_SCHEMA
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-10-14 04:12:44'
+    tables:
+    - name: COMPLEX_VARIANT_NESTED_JSON
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+        - name: AGE
+          dataType:
+            type: Number
+        - name: MY_STRUCT_VAR
+          dataType:
+            type: Variant
+        - name: EMAIL
+          dataType:
+            type: String
+        - name: PHONE_NUMBER
+          dataType:
+            type: String
+        - name: ADDRESS
+          dataType:
+            type: String
+        - name: JOIN_DATE
+          dataType:
+            type: String
+        - name: SALARY
+          dataType:
+            type: Number
+        - name: IS_ACTIVE
+          dataType:
+            type: Boolean
+        - name: DEPARTMENT
+          dataType:
+            type: String
+        - name: HIRE_DATE
+          dataType:
+            type: String
+        - name: LAST_LOGIN_TIME
+          dataType:
+            type: String
+        - name: LOGIN_TIMESTAMP
+          dataType:
+            type: String
+        - name: HOURLY_RATE
+          dataType:
+            type: Number
+      description: Employee information encompassing personal details, employment
+        status, and salary data, aiding in workforce management and analysis.
+      author: jrohit@prophecy.io
+      createdAt: '2024-10-14 04:12:44'
+    - name: COMPLEX_VARIANT_MORE_ROWS
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+        - name: AGE
+          dataType:
+            type: Number
+        - name: MY_STRUCT_VAR
+          dataType:
+            type: Variant
+        - name: EMAIL
+          dataType:
+            type: String
+        - name: PHONE_NUMBER
+          dataType:
+            type: String
+        - name: ADDRESS
+          dataType:
+            type: String
+        - name: JOIN_DATE
+          dataType:
+            type: String
+        - name: SALARY
+          dataType:
+            type: Number
+        - name: IS_ACTIVE
+          dataType:
+            type: Boolean
+        - name: DEPARTMENT
+          dataType:
+            type: String
+        - name: HIRE_DATE
+          dataType:
+            type: String
+        - name: LAST_LOGIN_TIME
+          dataType:
+            type: String
+        - name: LOGIN_TIMESTAMP
+          dataType:
+            type: String
+        - name: HOURLY_RATE
+          dataType:
+            type: Number
+      description: Employee information encompassing personal details, employment
+        status, and salary data, aiding in workforce management and analysis.
+      author: jrohit@prophecy.io
+      createdAt: '2024-10-14 04:13:51'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: jrohit@prophecy.io
+  createdAt: '2024-10-14 04:09:39'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
