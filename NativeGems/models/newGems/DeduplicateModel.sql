@@ -53,6 +53,22 @@ structured_boolean_tests AS (
   
   FROM COMPLEX_VARIANT_MORE_ROWS AS in0
 
+),
+
+COMPLEX_VARIANT_NESTED_JSON AS (
+
+  SELECT * 
+  
+  FROM {{ source('ROHIT.VARIANT_SCHEMA', 'COMPLEX_VARIANT_NESTED_JSON') }}
+
+),
+
+Deduplicate_2 AS (
+
+  SELECT DISTINCT *
+  
+  FROM COMPLEX_VARIANT_NESTED_JSON AS in0
+
 )
 
 SELECT *

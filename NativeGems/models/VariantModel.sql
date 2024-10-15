@@ -63,6 +63,14 @@ Join_1 AS (
   INNER JOIN Reformat_1 AS in1
      ON in1.FIRST_NAME = in0.FIRST_NAME
 
+),
+
+Deduplicate_1 AS (
+
+  SELECT DISTINCT *
+  
+  FROM COMPLEX_VARIANT_NESTED_JSON AS in0
+
 )
 
 SELECT *

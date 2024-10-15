@@ -37,6 +37,17 @@ COMPLEX_VARIANT_NESTED_JSON AS (
   
   FROM {{ source('ROHIT.VARIANT_SCHEMA', 'COMPLEX_VARIANT_NESTED_JSON') }}
 
+),
+
+nested_json_structure AS (
+
+  {#Extracts last names and structured data from complex JSON records.#}
+  SELECT 
+    LAST_NAME AS LAST_NAME,
+    MY_STRUCT_VAR AS MY_STRUCT_VAR
+  
+  FROM COMPLEX_VARIANT_NESTED_JSON AS in0
+
 )
 
 SELECT *

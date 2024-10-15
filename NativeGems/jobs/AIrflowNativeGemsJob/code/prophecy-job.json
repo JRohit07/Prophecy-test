@@ -1,0 +1,148 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "2394",
+    "jobId" : "jobs/AIrflowNativeGemsJob",
+    "name" : "AIrflowNativeGemsJob",
+    "dagName" : "staging_jrohit_NativeGemsProject_AIrflowNativeGemsJob",
+    "schedule" : "None",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "zdc_L3Ssq9pIZFmfbwora$$ZYn9xEbREdXaFXo9NcGY7" : {
+      "id" : "zdc_L3Ssq9pIZFmfbwora$$ZYn9xEbREdXaFXo9NcGY7",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : -120,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZD5JwENmbhOZzUxHTFXc9$$pRRUGbVuBiF3X7pScHGqi",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "yA2s2088xg-aPGbM3oEa2$$OipIqCPFrvfylZ4otSV6t",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "15218",
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : null,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "gitEntityValueTag" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "3701",
+        "gitEntityValue" : "nativeBranch",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "gitEntityValueCommit" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : "nativeBranch",
+        "noAnonymousUsageStats" : null,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "DeduplicateModel",
+          "value" : "DeduplicateModel",
+          "id" : "15218/.prophecy/metadata/sqlmodels/DeduplicateModel",
+          "name" : "DeduplicateModel"
+        }, {
+          "label" : "FlattenSchemaModel",
+          "value" : "FlattenSchemaModel",
+          "id" : "15218/.prophecy/metadata/sqlmodels/FlattenSchemaModel",
+          "name" : "FlattenSchemaModel"
+        }, {
+          "label" : "VariantModel",
+          "value" : "VariantModel",
+          "id" : "15218/.prophecy/metadata/sqlmodels/VariantModel",
+          "name" : "VariantModel"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}

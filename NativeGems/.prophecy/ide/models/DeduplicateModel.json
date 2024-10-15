@@ -84,6 +84,34 @@
         "autoUpdateOnRun" : false
       }
     },
+    "GsnoEwvlQ9jj4s9UoTBqT" : {
+      "id" : "GsnoEwvlQ9jj4s9UoTBqT",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMPLEX_VARIANT_NESTED_JSON",
+        "slug" : "COMPLEX_VARIANT_NESTED_JSON",
+        "x" : -260,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "COMPLEX_VARIANT_NESTED_JSON",
+          "sourceType" : "Source",
+          "sourceName" : "ROHIT.VARIANT_SCHEMA",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "yuWHYW6gH9EOkafpCNi1l",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "h5t53L-zYtG7D4ThI5WDA$$J0JfEeBb3InkLnT6fu8r1" : {
       "id" : "h5t53L-zYtG7D4ThI5WDA$$J0JfEeBb3InkLnT6fu8r1",
       "component" : "Deduplicate",
@@ -254,6 +282,37 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
+    },
+    "5vKAjhKv_B6hTGm2c6ZV6$$lMj0wO2em0A854HzvXIbm" : {
+      "id" : "5vKAjhKv_B6hTGm2c6ZV6$$lMj0wO2em0A854HzvXIbm",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "Deduplicate_2",
+        "slug" : "Deduplicate_2",
+        "x" : -120,
+        "y" : -160,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "distinct",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "iqvc5KpCerGj4TQ7uPNyc$$9UAWIe2Q_e1ON9SUOaamh",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "MI2hMedrLifGmnvdGwaw5$$TsdFEaAXc69Tu2iDZFfCu",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     }
   },
   "connections" : [ {
@@ -280,6 +339,12 @@
     "sourcePort" : "NNl61rYlZbM36ml3zeb55$$42HEbnDmfyBIOIwFG4H3y",
     "target" : "DeduplicateModel##YHJ82b0P",
     "targetPort" : "CNb61iRP"
+  }, {
+    "id" : "jMCDwyLNTwhedoCs5A9Yi",
+    "source" : "GsnoEwvlQ9jj4s9UoTBqT",
+    "sourcePort" : "yuWHYW6gH9EOkafpCNi1l",
+    "target" : "5vKAjhKv_B6hTGm2c6ZV6$$lMj0wO2em0A854HzvXIbm",
+    "targetPort" : "iqvc5KpCerGj4TQ7uPNyc$$9UAWIe2Q_e1ON9SUOaamh"
   } ],
   "component" : "Model"
 }
