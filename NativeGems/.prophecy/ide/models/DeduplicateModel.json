@@ -7,6 +7,12 @@
     "sourceSuggestions" : {
       "sources" : [ ]
     },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
     "version" : 3
   },
   "processes" : {
@@ -15,16 +21,18 @@
       "component" : "TargetModel",
       "metadata" : {
         "label" : "DeduplicateModel",
-        "x" : 620,
-        "y" : 20,
+        "x" : 200,
+        "y" : -240,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "comment" : "Removes duplicate entries from a complex dataset to ensure data integrity.",
+        "autoUpdateComment" : true
       },
       "properties" : {
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM Reformat_1\n",
+        "query" : "SELECT * \n\nFROM COMPLEX_VARIANT_MORE_ROWS\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -33,7 +41,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "CNb61iRP",
-          "slug" : "Reformat_1"
+          "slug" : "COMPLEX_VARIANT_MORE_ROWS"
         } ],
         "outputs" : [ {
           "id" : "amHS5W40",
@@ -53,22 +61,37 @@
         "y" : 220,
         "phase" : 0,
         "macroDependencies" : [ ],
-        "comment" : "Extracts boolean test values from a structured variable for analysis.",
+        "comment" : "Extracts and organizes contact information from complex data structures for better accessibility.",
         "autoUpdateComment" : true,
         "isLabelGrayed" : false
       },
       "properties" : {
-        "columnsSelector" : [ "iHgggamiDX3UtOLeXq5ay$$YgDk-kXs5tA6yIG3BpPzl##MY_STRUCT_VAR" ],
+        "columnsSelector" : [ "iHgggamiDX3UtOLeXq5ay$$YgDk-kXs5tA6yIG3BpPzl##FIRST_NAME" ],
         "expressions" : [ {
-          "alias" : "c1",
           "expression" : {
-            "expression" : "MY_STRUCT_VAR['boolean_test']"
-          }
+            "expression" : "FIRST_NAME"
+          },
+          "alias" : "FIRST_NAME"
         }, {
-          "alias" : "c2",
           "expression" : {
-            "expression" : "MY_STRUCT_VAR:boolean_test"
-          }
+            "expression" : "MY_STRUCT_VAR:business[0]:address"
+          },
+          "alias" : "address"
+        }, {
+          "expression" : {
+            "expression" : "MY_STRUCT_VAR:business[0]:address[0]:contact"
+          },
+          "alias" : "contact"
+        }, {
+          "expression" : {
+            "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:contact[0]:content AS STRING)"
+          },
+          "alias" : "content"
+        }, {
+          "expression" : {
+            "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:contact[0]:type AS STRING)"
+          },
+          "alias" : "type"
         } ]
       },
       "ports" : {
@@ -84,14 +107,14 @@
         "autoUpdateOnRun" : false
       }
     },
-    "GsnoEwvlQ9jj4s9UoTBqT" : {
-      "id" : "GsnoEwvlQ9jj4s9UoTBqT",
+    "JP3UYrYgEN1RqyPn79syG" : {
+      "id" : "JP3UYrYgEN1RqyPn79syG",
       "component" : "Source",
       "metadata" : {
         "label" : "COMPLEX_VARIANT_NESTED_JSON",
         "slug" : "COMPLEX_VARIANT_NESTED_JSON",
-        "x" : -260,
-        "y" : 20,
+        "x" : -360,
+        "y" : -80,
         "phase" : 0
       },
       "properties" : {
@@ -105,12 +128,770 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "yuWHYW6gH9EOkafpCNi1l",
+          "id" : "zQgURisQE1o2b9bFRZWwi",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
+    },
+    "rMpISfjJ8fCe0B_05PVDS$$4J75ar3XuDMo6dROHsPPY" : {
+      "id" : "rMpISfjJ8fCe0B_05PVDS$$4J75ar3XuDMo6dROHsPPY",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : -160,
+        "y" : 40,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "processes" : {
+        "XTI16uHx16y3EPshbG1aa$$EKMkVfUbHHkADRfnnoOhs" : {
+          "id" : "XTI16uHx16y3EPshbG1aa$$EKMkVfUbHHkADRfnnoOhs",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "COMPLEX_VARIANT_NESTED_JSON_1",
+            "slug" : "COMPLEX_VARIANT_NESTED_JSON_1",
+            "x" : -480,
+            "y" : -140,
+            "phase" : 0
+          },
+          "properties" : {
+            "table" : {
+              "name" : "COMPLEX_VARIANT_NESTED_JSON",
+              "sourceType" : "Source",
+              "sourceName" : "ROHIT.VARIANT_SCHEMA",
+              "alias" : ""
+            }
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "DvYfgFDthW-ZXYEAnDDMK$$42xkDSdT9sKVgUTKYLmzv",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "snowflake",
+                "fields" : [ {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "AGE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE_NUMBER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "JOIN_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "SALARY",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "IS_ACTIVE",
+                  "dataType" : {
+                    "type" : "Boolean"
+                  }
+                }, {
+                  "name" : "DEPARTMENT",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HIRE_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_LOGIN_TIME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LOGIN_TIMESTAMP",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HOURLY_RATE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                } ]
+              },
+              "slug" : "out"
+            } ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false,
+            "lastFetchedTime" : 1729038320076
+          }
+        },
+        "_KvlM49smjgv_yscETocg$$eLkTYaXlNI-1jlhym01KQ" : {
+          "id" : "_KvlM49smjgv_yscETocg$$eLkTYaXlNI-1jlhym01KQ",
+          "component" : "Deduplicate",
+          "metadata" : {
+            "label" : "distinct_businesses_1",
+            "slug" : "distinct_businesses_1",
+            "x" : -240,
+            "y" : -220,
+            "phase" : 0,
+            "macroDependencies" : [ ],
+            "comment" : "Extracts unique business contacts along with employee details for better relationship management.",
+            "autoUpdateComment" : true,
+            "isLabelGrayed" : false
+          },
+          "properties" : {
+            "dedupColumns" : [ {
+              "expression" : {
+                "expression" : "FIRST_NAME"
+              },
+              "alias" : "c1"
+            }, {
+              "expression" : {
+                "expression" : "MY_STRUCT_VAR:array_test"
+              },
+              "alias" : "c2"
+            }, {
+              "expression" : {
+                "expression" : "MY_STRUCT_VAR:business"
+              },
+              "alias" : "c3"
+            }, {
+              "expression" : {
+                "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:contact[0]:content AS STRING)"
+              },
+              "alias" : "c4"
+            }, {
+              "expression" : {
+                "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:contact[0]:content AS STRING)"
+              },
+              "alias" : "c5"
+            }, {
+              "expression" : {
+                "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:is_still_active AS BOOLEAN)"
+              },
+              "alias" : "c6"
+            }, {
+              "expression" : {
+                "expression" : "FIRST_NAME"
+              }
+            }, {
+              "expression" : {
+                "expression" : "LAST_NAME"
+              }
+            }, {
+              "expression" : {
+                "expression" : "AGE"
+              }
+            }, {
+              "expression" : {
+                "expression" : "MY_STRUCT_VAR"
+              }
+            }, {
+              "expression" : {
+                "expression" : "EMAIL"
+              }
+            }, {
+              "expression" : {
+                "expression" : "PHONE_NUMBER"
+              }
+            }, {
+              "expression" : {
+                "expression" : "ADDRESS"
+              }
+            }, {
+              "expression" : {
+                "expression" : "JOIN_DATE"
+              }
+            }, {
+              "expression" : {
+                "expression" : "SALARY"
+              }
+            }, {
+              "expression" : {
+                "expression" : "IS_ACTIVE"
+              }
+            }, {
+              "expression" : {
+                "expression" : "DEPARTMENT"
+              }
+            }, {
+              "expression" : {
+                "expression" : "HIRE_DATE"
+              }
+            }, {
+              "expression" : {
+                "expression" : "LAST_LOGIN_TIME"
+              }
+            }, {
+              "expression" : {
+                "expression" : "LOGIN_TIMESTAMP"
+              }
+            }, {
+              "expression" : {
+                "expression" : "HOURLY_RATE"
+              }
+            } ],
+            "dedupType" : "distinct",
+            "columnsSelector" : [ "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##FIRST_NAME", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##LAST_NAME", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##AGE", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##MY_STRUCT_VAR", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##EMAIL", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##PHONE_NUMBER", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##ADDRESS", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##JOIN_DATE", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##SALARY", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##IS_ACTIVE", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##DEPARTMENT", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##HIRE_DATE", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##LAST_LOGIN_TIME", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##LOGIN_TIMESTAMP", "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536##HOURLY_RATE" ],
+            "orders" : [ ],
+            "useOrderBy" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "snowflake",
+                "fields" : [ {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "AGE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE_NUMBER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "JOIN_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "SALARY",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "IS_ACTIVE",
+                  "dataType" : {
+                    "type" : "Boolean"
+                  }
+                }, {
+                  "name" : "DEPARTMENT",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HIRE_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_LOGIN_TIME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LOGIN_TIMESTAMP",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HOURLY_RATE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                } ]
+              },
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "rL7eAfDtVMWq8eRZEawBm$$uVvPCx3fKwvsAknbcGdgf",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "Snowflake",
+                "fields" : [ {
+                  "name" : "C1",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "C2",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "C3",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "C4",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "C5",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "C6",
+                  "dataType" : {
+                    "type" : "Boolean"
+                  }
+                }, {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "AGE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE_NUMBER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "JOIN_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "SALARY",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "IS_ACTIVE",
+                  "dataType" : {
+                    "type" : "Boolean"
+                  }
+                }, {
+                  "name" : "DEPARTMENT",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HIRE_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_LOGIN_TIME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LOGIN_TIMESTAMP",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HOURLY_RATE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                } ]
+              },
+              "slug" : "out"
+            } ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          }
+        },
+        "NzlnsKA_akUQQLPcYuf_l$$ep0bKTFKShPOm07OFMsZZ" : {
+          "id" : "NzlnsKA_akUQQLPcYuf_l$$ep0bKTFKShPOm07OFMsZZ",
+          "component" : "Subgraph",
+          "metadata" : {
+            "label" : "Subgraph_2",
+            "slug" : "Subgraph_2",
+            "x" : -120,
+            "y" : -460,
+            "phase" : 0,
+            "macroDependencies" : [ ]
+          },
+          "processes" : {
+            "DGma74rBxAAg-XKfwvYPh$$BGLaCNO23qvfSBHAtqeNN" : {
+              "id" : "DGma74rBxAAg-XKfwvYPh$$BGLaCNO23qvfSBHAtqeNN",
+              "component" : "Deduplicate",
+              "metadata" : {
+                "label" : "distinct_businesses_1_1",
+                "slug" : "distinct_businesses_1_1",
+                "x" : -40,
+                "y" : -260,
+                "phase" : 0,
+                "macroDependencies" : [ ],
+                "comment" : "Identifies unique businesses associated with distinct first names from complex data.",
+                "autoUpdateComment" : true,
+                "isLabelGrayed" : false
+              },
+              "properties" : {
+                "dedupColumns" : [ {
+                  "expression" : {
+                    "expression" : "FIRST_NAME"
+                  }
+                }, {
+                  "expression" : {
+                    "expression" : "MY_STRUCT_VAR:array_test"
+                  }
+                }, {
+                  "expression" : {
+                    "expression" : "MY_STRUCT_VAR:business"
+                  }
+                }, {
+                  "expression" : {
+                    "expression" : "CAST(MY_STRUCT_VAR AS )"
+                  }
+                } ],
+                "dedupType" : "distinct",
+                "columnsSelector" : [ ],
+                "orders" : [ ],
+                "useOrderBy" : false
+              },
+              "ports" : {
+                "inputs" : [ {
+                  "id" : "gQh_FT8kWlyRUXvA5Nzeb$$QFd2TlbAjznj8ZXJvXmNY",
+                  "schema" : {
+                    "entityType" : "",
+                    "providerType" : "snowflake",
+                    "fields" : [ {
+                      "name" : "FIRST_NAME",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "LAST_NAME",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "AGE",
+                      "dataType" : {
+                        "type" : "Number"
+                      }
+                    }, {
+                      "name" : "MY_STRUCT_VAR",
+                      "dataType" : {
+                        "type" : "Variant"
+                      }
+                    }, {
+                      "name" : "EMAIL",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "PHONE_NUMBER",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "ADDRESS",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "JOIN_DATE",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "SALARY",
+                      "dataType" : {
+                        "type" : "Number"
+                      }
+                    }, {
+                      "name" : "IS_ACTIVE",
+                      "dataType" : {
+                        "type" : "Boolean"
+                      }
+                    }, {
+                      "name" : "DEPARTMENT",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "HIRE_DATE",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "LAST_LOGIN_TIME",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "LOGIN_TIMESTAMP",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "HOURLY_RATE",
+                      "dataType" : {
+                        "type" : "Number"
+                      }
+                    } ]
+                  },
+                  "slug" : "in0"
+                } ],
+                "outputs" : [ {
+                  "id" : "eX2NwFX5MKvhCF1oHj1KG$$Nf_HelLy01G1FvhMwnEAL",
+                  "schema" : {
+                    "entityType" : "",
+                    "providerType" : "Snowflake",
+                    "fields" : [ {
+                      "name" : "FIRST_NAME",
+                      "dataType" : {
+                        "type" : "String"
+                      }
+                    }, {
+                      "name" : "MY_STRUCT_VAR:ARRAY_TEST",
+                      "dataType" : {
+                        "type" : "Variant"
+                      }
+                    }, {
+                      "name" : "MY_STRUCT_VAR:BUSINESS",
+                      "dataType" : {
+                        "type" : "Variant"
+                      }
+                    } ]
+                  },
+                  "slug" : "out"
+                } ],
+                "isCustomOutputSchema" : false,
+                "autoUpdateOnRun" : false
+              }
+            }
+          },
+          "connections" : [ {
+            "id" : "Q-vumytuZDKS06NrtQevb",
+            "source" : "NzlnsKA_akUQQLPcYuf_l$$ep0bKTFKShPOm07OFMsZZ",
+            "sourcePort" : "rD5yKc4IKIDV97wXN7dd6$$BrrRKOFl7ItTO4FO1AeUk",
+            "target" : "DGma74rBxAAg-XKfwvYPh$$BGLaCNO23qvfSBHAtqeNN",
+            "targetPort" : "gQh_FT8kWlyRUXvA5Nzeb$$QFd2TlbAjznj8ZXJvXmNY"
+          }, {
+            "id" : "VrZpgpCqHA7rcCa6eOVRH",
+            "source" : "DGma74rBxAAg-XKfwvYPh$$BGLaCNO23qvfSBHAtqeNN",
+            "sourcePort" : "eX2NwFX5MKvhCF1oHj1KG$$Nf_HelLy01G1FvhMwnEAL",
+            "target" : "NzlnsKA_akUQQLPcYuf_l$$ep0bKTFKShPOm07OFMsZZ",
+            "targetPort" : "muvYloTOIsIXcb9Z5W-GX$$EWOjdnB0GFU4UGchoYJsI"
+          } ],
+          "ports" : {
+            "inputs" : [ {
+              "id" : "rD5yKc4IKIDV97wXN7dd6$$BrrRKOFl7ItTO4FO1AeUk",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "snowflake",
+                "fields" : [ {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "AGE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE_NUMBER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ADDRESS",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "JOIN_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "SALARY",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "IS_ACTIVE",
+                  "dataType" : {
+                    "type" : "Boolean"
+                  }
+                }, {
+                  "name" : "DEPARTMENT",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HIRE_DATE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_LOGIN_TIME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LOGIN_TIMESTAMP",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "HOURLY_RATE",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                } ]
+              },
+              "slug" : "COMPLEX_VARIANT_NESTED_JSON_1"
+            } ],
+            "outputs" : [ {
+              "id" : "muvYloTOIsIXcb9Z5W-GX$$EWOjdnB0GFU4UGchoYJsI",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "Snowflake",
+                "fields" : [ {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR:ARRAY_TEST",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                }, {
+                  "name" : "MY_STRUCT_VAR:BUSINESS",
+                  "dataType" : {
+                    "type" : "Variant"
+                  }
+                } ]
+              },
+              "slug" : "out"
+            } ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : { },
+          "canonical" : false
+        }
+      },
+      "connections" : [ {
+        "id" : "GUSPabcrsvfrD0lEJj1k5",
+        "source" : "XTI16uHx16y3EPshbG1aa$$EKMkVfUbHHkADRfnnoOhs",
+        "sourcePort" : "DvYfgFDthW-ZXYEAnDDMK$$42xkDSdT9sKVgUTKYLmzv",
+        "target" : "_KvlM49smjgv_yscETocg$$eLkTYaXlNI-1jlhym01KQ",
+        "targetPort" : "oSqvRkhEbbmVBgWoMIwpr$$xvuJrf3t3hBkkWrkIH536"
+      }, {
+        "id" : "8gr2go2C5AimBUeq4yYOX",
+        "source" : "_KvlM49smjgv_yscETocg$$eLkTYaXlNI-1jlhym01KQ",
+        "sourcePort" : "rL7eAfDtVMWq8eRZEawBm$$uVvPCx3fKwvsAknbcGdgf",
+        "target" : "rMpISfjJ8fCe0B_05PVDS$$4J75ar3XuDMo6dROHsPPY",
+        "targetPort" : "B20yaM2zIc--M68ohmbMv$$-8NDXzNwp-KrixdHyluny"
+      }, {
+        "id" : "LNfoc11AxwJOD_H7HlkG5",
+        "source" : "XTI16uHx16y3EPshbG1aa$$EKMkVfUbHHkADRfnnoOhs",
+        "sourcePort" : "DvYfgFDthW-ZXYEAnDDMK$$42xkDSdT9sKVgUTKYLmzv",
+        "target" : "NzlnsKA_akUQQLPcYuf_l$$ep0bKTFKShPOm07OFMsZZ",
+        "targetPort" : "rD5yKc4IKIDV97wXN7dd6$$BrrRKOFl7ItTO4FO1AeUk"
+      } ],
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "B20yaM2zIc--M68ohmbMv$$-8NDXzNwp-KrixdHyluny",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { },
+      "canonical" : false
     },
     "h5t53L-zYtG7D4ThI5WDA$$J0JfEeBb3InkLnT6fu8r1" : {
       "id" : "h5t53L-zYtG7D4ThI5WDA$$J0JfEeBb3InkLnT6fu8r1",
@@ -287,17 +1068,40 @@
       "id" : "5vKAjhKv_B6hTGm2c6ZV6$$lMj0wO2em0A854HzvXIbm",
       "component" : "Deduplicate",
       "metadata" : {
-        "label" : "Deduplicate_2",
-        "slug" : "Deduplicate_2",
+        "label" : "distinct_businesses",
+        "slug" : "distinct_businesses",
         "x" : -120,
         "y" : -160,
         "phase" : 0,
-        "macroDependencies" : [ ]
+        "macroDependencies" : [ ],
+        "comment" : "Identifies unique businesses along with their contact details from a complex dataset.",
+        "autoUpdateComment" : true,
+        "isLabelGrayed" : false
       },
       "properties" : {
-        "dedupColumns" : [ ],
+        "dedupColumns" : [ {
+          "expression" : {
+            "expression" : "FIRST_NAME"
+          }
+        }, {
+          "expression" : {
+            "expression" : "MY_STRUCT_VAR:array_test"
+          }
+        }, {
+          "expression" : {
+            "expression" : "MY_STRUCT_VAR:business"
+          }
+        }, {
+          "expression" : {
+            "expression" : "CAST(MY_STRUCT_VAR:business[0]:address[0]:contact[0]:type AS STRING)"
+          }
+        }, {
+          "expression" : {
+            "expression" : "EMAIL"
+          }
+        } ],
         "dedupType" : "distinct",
-        "columnsSelector" : [ ],
+        "columnsSelector" : [ "iqvc5KpCerGj4TQ7uPNyc$$9UAWIe2Q_e1ON9SUOaamh##FIRST_NAME", "iqvc5KpCerGj4TQ7uPNyc$$9UAWIe2Q_e1ON9SUOaamh##EMAIL" ],
         "orders" : [ ],
         "useOrderBy" : false
       },
@@ -334,15 +1138,15 @@
     "target" : "tABl3jdjZFJkIRnK_evqp$$6GwCALymOJ7Hk9orcR8B5",
     "targetPort" : "iHgggamiDX3UtOLeXq5ay$$YgDk-kXs5tA6yIG3BpPzl"
   }, {
-    "id" : "EHkx2ylY_dMSuDtTn_tb4$$pQRqB8DMJK6JX87n_DIp7",
-    "source" : "SPalfLk7Fw1Axa7fG-ayn$$OvZUfhAwcDo02twrFLAAw",
-    "sourcePort" : "NNl61rYlZbM36ml3zeb55$$42HEbnDmfyBIOIwFG4H3y",
+    "id" : "3u9QS3M33CzTQz-0ac1_a",
+    "source" : "N58CgWWr80YCQD-TEsiWD$$oPUnigWp8RrNHjOMqyZZR",
+    "sourcePort" : "NyabyXGKiQStnejvPhcWh$$Z5wmz2Pi329waa69FNoKu",
     "target" : "DeduplicateModel##YHJ82b0P",
     "targetPort" : "CNb61iRP"
   }, {
-    "id" : "jMCDwyLNTwhedoCs5A9Yi",
-    "source" : "GsnoEwvlQ9jj4s9UoTBqT",
-    "sourcePort" : "yuWHYW6gH9EOkafpCNi1l",
+    "id" : "JdNGAvF6DETj4GKiVaB4A$$gSi4w6EmEJNWDec78igmd",
+    "source" : "JP3UYrYgEN1RqyPn79syG",
+    "sourcePort" : "zQgURisQE1o2b9bFRZWwi",
     "target" : "5vKAjhKv_B6hTGm2c6ZV6$$lMj0wO2em0A854HzvXIbm",
     "targetPort" : "iqvc5KpCerGj4TQ7uPNyc$$9UAWIe2Q_e1ON9SUOaamh"
   } ],

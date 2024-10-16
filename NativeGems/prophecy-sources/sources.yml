@@ -13,63 +13,76 @@ sources:
     columns:
     - name: "FIRST_NAME"
       description: "The first name of the employee"
+      tags: []
       dataType:
         type: "String"
     - name: "LAST_NAME"
       description: "The last name of the employee"
+      tags: []
       dataType:
         type: "String"
     - name: "AGE"
       description: "The age of the employee"
+      tags: []
       dataType:
         type: "Number"
     - name: "MY_STRUCT_VAR"
       description: "A variable structure containing additional details related to\
         \ the employee."
+      tags: []
       dataType:
         type: "Variant"
     - name: "EMAIL"
       description: "Email address of the employee"
+      tags: []
       dataType:
         type: "String"
     - name: "PHONE_NUMBER"
       description: "Contact number of the individual"
+      tags: []
       dataType:
         type: "String"
     - name: "ADDRESS"
       description: "The residential address of the employee"
+      tags: []
       dataType:
         type: "String"
     - name: "JOIN_DATE"
       description: "The date when the employee joined the organization"
+      tags: []
       dataType:
         type: "String"
     - name: "SALARY"
       description: "The annual salary of the employee"
+      tags: []
       dataType:
         type: "Number"
     - name: "IS_ACTIVE"
       description: "Indicates whether the employee is currently active in the organization"
+      tags: []
       dataType:
         type: "Boolean"
     - name: "DEPARTMENT"
       description: "Department where the employee is assigned"
+      tags: []
       dataType:
         type: "String"
     - name: "HIRE_DATE"
       description: "The date when the employee was hired"
+      tags: []
       dataType:
         type: "String"
     - name: "LAST_LOGIN_TIME"
       description: "The timestamp of the user's last login"
+      tags: []
       dataType:
         type: "String"
     - name: "LOGIN_TIMESTAMP"
       description: "Timestamp of the user's last login"
+      tags: []
       dataType:
         type: "String"
     - name: "HOURLY_RATE"
-      description: "The hourly wage of the employee"
       dataType:
         type: "Number"
   - name: "COMPLEX_VARIANT_MORE_ROWS"

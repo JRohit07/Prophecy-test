@@ -56,23 +56,57 @@ sqlModels:
       entityType: ''
       providerType: Snowflake
       fields:
-      - name: ADDRESS
+      - name: FIRST_NAME
+        dataType:
+          type: String
+      - name: LAST_NAME
+        dataType:
+          type: String
+      - name: AGE
+        dataType:
+          type: Number
+      - name: MY_STRUCT_VAR
         dataType:
           type: Variant
-      - name: IS_STILL_ACTIVE
+      - name: EMAIL
+        dataType:
+          type: String
+      - name: PHONE_NUMBER
+        dataType:
+          type: String
+      - name: ADDRESS
+        dataType:
+          type: String
+      - name: JOIN_DATE
+        dataType:
+          type: String
+      - name: SALARY
+        dataType:
+          type: Number
+      - name: IS_ACTIVE
         dataType:
           type: Boolean
-      - name: NAME
+      - name: DEPARTMENT
         dataType:
           type: String
-      - name: C_MIDDLE_NAME
+      - name: HIRE_DATE
         dataType:
           type: String
+      - name: LAST_LOGIN_TIME
+        dataType:
+          type: String
+      - name: LOGIN_TIMESTAMP
+        dataType:
+          type: String
+      - name: HOURLY_RATE
+        dataType:
+          type: Number
     description: null
     author: jrohit@prophecy.io
     files:
     - models/newGems/DeduplicateModel.sql
     - .prophecy/ide/models/DeduplicateModel.json
+    - models/newGems/schema.yml
     sqlDependencies:
       models: []
       datasets: []
@@ -137,7 +171,15 @@ sqlModels:
       snapshots: []
     createdAt: '2024-10-14 04:10:12'
 sqlSnapshots: {}
-sqlTests: {}
+sqlTests:
+  .prophecy/metadata/sqltests/isThreashholdReached:
+    name: isThreashholdReached
+    description: null
+    author: jrohit@prophecy.io
+    files:
+    - tests/generic/isThreashholdReached.sql
+    testType: GenericDataTest
+    createdAt: '2024-10-15 06:20:55'
 sqlMacros:
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name

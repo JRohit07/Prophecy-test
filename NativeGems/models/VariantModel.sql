@@ -71,6 +71,14 @@ Deduplicate_1 AS (
   
   FROM COMPLEX_VARIANT_NESTED_JSON AS in0
 
+),
+
+Reformat_2 AS (
+
+  SELECT * 
+  
+  FROM Reformat_1 AS in0
+
 )
 
 SELECT *
